@@ -4,10 +4,11 @@
   "private": true,
   "description": "Smart Library Kiosk System - IoT Self-Service Station",
   "scripts": {
+    "setup": "npm --prefix server install && npm --prefix client install && npm --prefix tools/device-simulator install && node -e \"const fs=require('fs'); if(!fs.existsSync('server/.env')) fs.copyFileSync('server/.env.example','server/.env'); if(!fs.existsSync('client/.env')) fs.copyFileSync('client/.env.example','client/.env'); console.log('Setup completed! Ready to run.');\"",
+    "seed": "npm --prefix server run seed",
     "server:dev": "npm --prefix server run dev",
     "client:dev": "npm --prefix client run dev",
     "sim": "npm --prefix tools/device-simulator start"
   },
   "keywords": ["iot", "esp32", "rfid", "library", "kiosk", "mqtt"]
 }
-
