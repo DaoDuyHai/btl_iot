@@ -1,0 +1,73 @@
+# ==========================================================
+# 1. DEPENDENCIES (Thư mục cài đặt thư viện)
+# ==========================================================
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+
+# ==========================================================
+# 2. ENVIRONMENT & SECRETS (Bảo mật tài khoản, DB, Email, WiFi)
+# ==========================================================
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# File cấu hình WiFi / MQTT thật của mạch ESP32
+firmware/include/config.h
+!firmware/include/config.example.h
+
+# ==========================================================
+# 3. BUILD & BUNDLER OUTPUT (Thư mục biên dịch Frontend/Backend)
+# ==========================================================
+dist/
+**/dist/
+build/
+**/build/
+.vite/
+**/.vite/
+out/
+coverage/
+
+# ==========================================================
+# 4. IOT / PLATFORMIO / ARDUINO (Biên dịch mạch vi điều khiển)
+# ==========================================================
+.pio/
+**/.pio/
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch/
+*.bin
+*.elf
+*.map
+
+# ==========================================================
+# 5. LOGS & RUNTIME DATA (File nhật ký hệ thống)
+# ==========================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.pid
+*.seed
+*.pid.lock
+
+# ==========================================================
+# 6. OS & IDE / EDITOR FILES (File rác hệ điều hành & trình sửa code)
+# ==========================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

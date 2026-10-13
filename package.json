@@ -1,0 +1,13 @@
+{
+  "name": "library-kiosk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart Library Kiosk System - IoT Self-Service Station",
+  "scripts": {
+    "server:dev": "npm --prefix server run dev",
+    "client:dev": "npm --prefix client run dev",
+    "sim": "npm --prefix tools/device-simulator start"
+  },
+  "keywords": ["iot", "esp32", "rfid", "library", "kiosk", "mqtt"]
+}
+

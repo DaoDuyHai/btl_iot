@@ -1,0 +1,14 @@
+{
+  "name": "device-simulator",
+  "version": "1.0.0",
+  "description": "ESP32 MQTT Device Simulator for Library Kiosk",
+  "main": "simulate.js",
+  "scripts": {
+    "start": "node simulate.js",
+    "sim:gui": "node simulate.js"
+  },
+  "dependencies": {
+    "mqtt": "^5.5.2"
+  }
+}
+

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTIT IoT Simulator - Bảng Điều Khiển Thiết Bị Kiosk</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #10b981;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --info: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Header Bar */
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-title h1 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #34d399;
+      letter-spacing: 0.5px;
+    }
+
+    .header-title p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .status-badges {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #334155;
+    }
+
+    .badge-online {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .dot-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 10px #34d399;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* Main Layout */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 20px;
+      flex: 1;
+    }
+
+    @media (max-width: 992px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Left: Hardware Mockup */
+    .hardware-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .panel-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* LCD 1602 Screen */
+    .lcd-screen {
+      background: #79a552;
+      color: #173204;
+      font-family: "Courier New", Courier, monospace;
+      padding: 16px;
+      border-radius: 8px;
+      border: 4px solid #142a04;
+      box-shadow: inset 0 0 12px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-weight: 900;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 0 rgba(255,255,255,0.2);
+    }
+
+    /* Actuators: LEDs & Buzzer */
+    .actuators-box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #0f172a;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 12px;
+    }
+
+    .actuator-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .led-indicator {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #334155;
+      border: 2px solid #475569;
+      transition: all 0.2s;
+    }
+
+    .led-green.active {
+      background: #10b981;
+      border-color: #34d399;
+      box-shadow: 0 0 20px #10b981, inset 0 0 8px #a7f3d0;
+    }
+
+    .led-red.active {
+      background: #ef4444;
+      border-color: #f87171;
+      box-shadow: 0 0 20px #ef4444, inset 0 0 8px #fecaca;
+    }
+
+    .buzzer-icon {
+      font-size: 26px;
+      transition: transform 0.1s;
+    }
+
+    .buzzer-icon.active {
+      animation: vibrate 0.2s infinite;
+    }
+
+    @keyframes vibrate {
+      0% { transform: scale(1.2) rotate(-5deg); }
+      50% { transform: scale(1.2) rotate(5deg); }
+      100% { transform: scale(1); }
+    }
+
+    /* Right: RFID Cards Board */
+    .rfid-board {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .rfid-card-btn {
+      background: #0f172a;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 16px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rfid-card-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      border-color: #64748b;
+    }
+
+    .rfid-card-btn:active {
+      transform: scale(0.98);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-icon {
+      font-size: 24px;
+    }
+
+    .card-uid {
+      font-family: monospace;
+      font-size: 11px;
+      background: #1e293b;
+      padding: 3px 8px;
+      border-radius: 6px;
+      color: #94a3b8;
+      border: 1px solid #334155;
+    }
+
+    .card-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .card-action-bar {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Distinct Card Theme Colors */
+    .card-reader {
+      border-left: 4px solid #10b981;
+    }
+    .card-reader .card-action-bar { color: #34d399; }
+
+    .card-overdue {
+      border-left: 4px solid #ef4444;
+      background: rgba(239, 68, 68, 0.05);
+    }
+    .card-overdue .card-action-bar { color: #f87171; }
+
+    .card-renew {
+      border-left: 4px solid #f59e0b;
+    }
+    .card-renew .card-action-bar { color: #fbbf24; }
+
+    .card-borrow {
+      border-left: 4px solid #3b82f6;
+    }
+    .card-borrow .card-action-bar { color: #60a5fa; }
+
+    .card-unknown {
+      border-left: 4px solid #6b7280;
+    }
+    .card-unknown .card-action-bar { color: #9ca3af; }
+
+    /* Custom UID Bar */
+    .custom-uid-bar {
+      background: #0f172a;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .custom-input {
+      flex: 1;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: #ffffff;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .custom-input:focus {
+      border-color: #10b981;
+    }
+
+    .btn-send {
+      background: #10b981;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-send:hover {
+      background: #059669;
+    }
+
+    /* Logs Terminal Box */
+    .logs-panel {
+      background: #090d16;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px;
+      font-family: monospace;
+      font-size: 12px;
+      height: 180px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .log-item {
+      line-height: 1.4;
+      display: flex;
+      gap: 8px;
+    }
+
+    .log-time { color: #64748b; }
+    .log-type-scan { color: #60a5fa; font-weight: 700; }
+    .log-type-recv { color: #34d399; font-weight: 700; }
+    .log-type-err { color: #f87171; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header>
+    <div class="header-left">
+      <div style="font-size: 32px;">📟</div>
+      <div class="header-title">
+        <h1>PTIT SMART LIBRARY - BẢNG ĐIỀU KHIỂN THIẾT BỊ IOT</h1>
+        <p>Giao diện mô phỏng phần cứng Kiosk ESP32 NodeMCU-32S & Module RFID RC522</p>
+      </div>
+    </div>
+
+    <div class="status-badges">
+      <div class="badge badge-online">
+        <div class="dot-pulse"></div>
+        <span>MQTT: ONLINE</span>
+      </div>
+      <div class="badge">
+        <span>Device: <strong>kiosk_01</strong></span>
+      </div>
+      <div class="badge">
+        <span>📶 WiFi: -54 dBm</span>
+      </div>
+      <button 
+        id="soundToggleBtn"
+        onclick="toggleSound()" 
+        class="badge" 
+        style="background: #1e293b; border: 1px solid #475569; color: #f8fafc; cursor: pointer;"
+      >
+        🔊 Còi Buzzer: BẬT
+      </button>
+      <button 
+        onclick="sendHeartbeat()" 
+        class="badge" 
+        style="background: #1e293b; border: 1px solid #475569; color: #38bdf8; cursor: pointer;"
+      >
+        💓 Ping Nhịp Tim
+      </button>
+    </div>
+  </header>
+
+  <!-- Dashboard Grid -->
+  <div class="dashboard-grid">
+    <!-- Cột Trái: Phần cứng mô phỏng (LCD, LED, Buzzer) -->
+    <div class="hardware-panel">
+      <div class="panel-title">
+        <span>⚡</span> Ngoại Vi Phần Cứng (Actuators)
+      </div>
+
+      <!-- Màn hình LCD 1602 -->
+      <div>
+        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 6px; font-weight: 600;">
+          MÀN HÌNH I2C LCD 1602 (ESP32):
+        </div>
+        <div class="lcd-screen">
+          <div id="lcdLine1">PTIT KIOSK 01   </div>
+          <div id="lcdLine2">SAN SANG QUET...</div>
+        </div>
+      </div>
+
+      <!-- Đèn LED & Còi Buzzer -->
+      <div class="actuators-box">
+        <!-- LED Xanh -->
+        <div class="actuator-item">
+          <div id="ledGreen" class="led-indicator led-green"></div>
+          <span>LED XANH (D26)</span>
+          <span style="font-size: 9px; opacity: 0.7;">THÀNH CÔNG</span>
+        </div>
+
+        <!-- Còi Buzzer -->
+        <div class="actuator-item">
+          <div id="buzzerIcon" class="buzzer-icon">🔔</div>
+          <span>BUZZER (D25)</span>
+          <span style="font-size: 9px; opacity: 0.7;">BÍP ÂM THANH</span>
+        </div>
+
+        <!-- LED Đỏ -->
+        <div class="actuator-item">
+          <div id="ledRed" class="led-indicator led-red"></div>
+          <span>LED ĐỎ (D27)</span>
+          <span style="font-size: 9px; opacity: 0.7;">TỪ CHỐI / LỖI</span>
+        </div>
+      </div>
+
+      <!-- Live Log -->
+      <div style="flex: 1; display: flex; flexDirection: column; gap: 8px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+            NHẬT KÝ SỰ KIỆN MQTT
+          </span>
+          <button 
+            onclick="clearLogs()" 
+            style="background: transparent; border: none; color: #64748b; font-size: 11px; cursor: pointer;"
+          >
+            Xóa log
+          </button>
+        </div>
+        <div id="logsBox" class="logs-panel">
+          <div class="log-item">
+            <span class="log-time">[Khởi động]</span>
+            <span style="color: #34d399;">✅ Đã kết nối MQTT Broker và sẵn sàng mô phỏng phần cứng.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cột Phải: Bảng Quẹt Thẻ RFID 1-Click -->
+    <div class="rfid-board">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="panel-title">
+          <span>🏷️</span> Bảng Quẹt Thẻ RFID Tự Phục Vụ (Bấm Là Nhận)
+        </div>
+        <span style="font-size: 12px; color: var(--text-muted);">
+          Bấm nút bên dưới để phát tín hiệu quẹt thẻ RFID tức thì sang Kiosk
+        </span>
+      </div>
+
+      <!-- 8 Thẻ Mẫu -->
+      <div class="cards-grid">
+        <!-- 1. Thẻ Bạn Đọc Nguyễn Văn A -->
+        <button class="rfid-card-btn card-reader" onclick="scanCard('E2801192', 'Thẻ Bạn Đọc: Nguyễn Văn A (MSSV: B21DCCN001)')">
+          <div class="card-top">
+            <span class="card-icon">🪪</span>
+            <span class="card-uid">UID: E2801192</span>
+          </div>
+          <div class="card-name">Nguyễn Văn A (B21DCCN001)</div>
+          <div class="card-desc">Thẻ sinh viên PTIT chính thức. Dùng để đăng nhập tài khoản trên màn hình Kiosk.</div>
+          <div class="card-action-bar">
+            <span>Gmail: haicoder.journey@gmail.com</span>
+            <span>👉 BẤM QUẸT ➔</span>
+          </div>
+        </button>
+
+        <!-- 2. Sách Quá Hạn 3 Ngày (Test VietQR) -->
+        <button class="rfid-card-btn card-overdue" onclick="scanCard('A1B2C3D4', 'Sách QUÁ HẠN 3 NGÀY: Lập trình C++ Nâng Cao')">
+          <div class="card-top">
+            <span class="card-icon">📕</span>
+            <span class="card-uid">UID: A1B2C3D4</span>
+          </div>
+          <div class="card-name">Lập trình C++ Nâng Cao</div>
+          <div class="card-desc">Sách đang mượn QUÁ HẠN 3 NGÀY. Dùng để test Trả sách phát sinh phạt 15.000đ & mã VietQR!</div>
+          <div class="card-action-bar">
+            <span>Tác giả: GS. Phạm Văn B</span>
+            <span>👉 BẤM TRẢ SÁCH ➔</span>
+          </div>
+        </button>
+
+        <!-- 3. Sách Đang Mượn Đúng Hạn -->
+        <button class="rfid-card-btn card-renew" onclick="scanCard('D4C3B2A1', 'Sách ĐANG MƯỢN ĐÚNG HẠN: Cấu Trúc Dữ Liệu')">
+          <div class="card-top">
+            <span class="card-icon">📗</span>
+            <span class="card-uid">UID: D4C3B2A1</span>
+          </div>
+          <div class="card-name">Cấu Trúc Dữ Liệu & Giải Thuật</div>
+          <div class="card-desc">Sách đang mượn đúng hạn (còn 10 ngày). Dùng để test Gia hạn thêm 14 ngày hoặc Trả sách phí 0đ.</div>
+          <div class="card-action-bar">
+            <span>Tác giả: TS. Lê Thị C</span>
+            <span>👉 BẤM QUẸT SÁCH ➔</span>
+          </div>
+        </button>
+
+        <!-- 4. Sách Mượn 1 -->
+        <button class="rfid-card-btn card-borrow" onclick="scanCard('B3C4D5E6', 'Sách Kho: IoT & Hệ Thống Kiosk')">
+          <div class="card-top">
+            <span class="card-icon">📘</span>
+            <span class="card-uid">UID: B3C4D5E6</span>
+          </div>
+          <div class="card-name">IoT & Kiosk Tự Phục Vụ</div>
+          <div class="card-desc">Sách có sẵn trong kho. Dùng để test Mượn mới tài liệu (tự động thêm vào giỏ mượn).</div>
+          <div class="card-action-bar">
+            <span>Thể loại: IoT & Phần cứng</span>
+            <span>👉 BẤM MƯỢN MỚI ➔</span>
+          </div>
+        </button>
+
+        <!-- 5. Sách Mượn 2 -->
+        <button class="rfid-card-btn card-borrow" onclick="scanCard('C5D6E7F8', 'Sách Kho: Mạng Máy Tính & Viễn Thông')">
+          <div class="card-top">
+            <span class="card-icon">📙</span>
+            <span class="card-uid">UID: C5D6E7F8</span>
+          </div>
+          <div class="card-name">Mạng Máy Tính & Viễn Thông</div>
+          <div class="card-desc">Sách có sẵn trong kho. Dùng để test Mượn thêm cuốn thứ 2 (Batch Borrow nhiều cuốn).</div>
+          <div class="card-action-bar">
+            <span>Tác giả: PGS.TS Nguyễn Văn E</span>
+            <span>👉 BẤM MƯỢN MỚI ➔</span>
+          </div>
+        </button>
+
+        <!-- 6. Sách Mượn 3 -->
+        <button class="rfid-card-btn card-borrow" onclick="scanCard('E9F0A1B2', 'Sách Kho: Trí Tuệ Nhân Tạo & Học Máy')">
+          <div class="card-top">
+            <span class="card-icon">📔</span>
+            <span class="card-uid">UID: E9F0A1B2</span>
+          </div>
+          <div class="card-name">Trí Tuệ Nhân Tạo & Học Máy</div>
+          <div class="card-desc">Sách có sẵn trong kho. Dùng để test Mượn thêm cuốn thứ 3 vào giỏ.</div>
+          <div class="card-action-bar">
+            <span>Tác giả: TS. Vũ Hoàng Nam</span>
+            <span>👉 BẤM MƯỢN MỚI ➔</span>
+          </div>
+        </button>
+
+        <!-- 7. Thẻ Sinh Viên 2 -->
+        <button class="rfid-card-btn card-reader" onclick="scanCard('A8B9C0D1', 'Thẻ Sinh Viên 2: Trần Thị Mai')">
+          <div class="card-top">
+            <span class="card-icon">🪪</span>
+            <span class="card-uid">UID: A8B9C0D1</span>
+          </div>
+          <div class="card-name">Trần Thị Mai (B21DCVT002)</div>
+          <div class="card-desc">Thẻ sinh viên thứ 2. Dùng để kiểm thử đăng nhập bằng bạn đọc khác.</div>
+          <div class="card-action-bar">
+            <span>Khoa Viễn Thông 1 - PTIT</span>
+            <span>👉 BẤM QUẸT ➔</span>
+          </div>
+        </button>
+
+        <!-- 8. Thẻ Lạ Không Hợp Lệ -->
+        <button class="rfid-card-btn card-unknown" onclick="scanCard('99999999', 'Thẻ Lạ Chưa Đăng Ký Hệ Thống')">
+          <div class="card-top">
+            <span class="card-icon">⚠️</span>
+            <span class="card-uid">UID: 99999999</span>
+          </div>
+          <div class="card-name">Thẻ Lạ / Chưa Đăng Ký</div>
+          <div class="card-desc">Dùng để test tính năng Kiosk từ chối, nháy LED ĐỎ và phát còi báo động lỗi.</div>
+          <div class="card-action-bar">
+            <span>Trạng thái: Không hợp lệ</span>
+            <span>👉 BẤM TEST LỖI ➔</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Ô Nhập UID Tùy Ý -->
+      <div class="custom-uid-bar">
+        <span style="font-size: 20px;">✍️</span>
+        <input 
+          id="customUidInput" 
+          type="text" 
+          class="custom-input" 
+          placeholder="Nhập mã thẻ RFID UID tùy ý (ví dụ: F1E2D3C4)..." 
+          onkeydown="if(event.key === 'Enter') sendCustomUid()"
+        />
+        <button class="btn-send" onclick="sendCustomUid()">
+          Quẹt Thẻ Này ➔
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let soundEnabled = true;
+    let audioCtx = null;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      return audioCtx;
+    }
+
+    function toggleSound() {
+      soundEnabled = !soundEnabled;
+      const btn = document.getElementById('soundToggleBtn');
+      btn.innerText = soundEnabled ? '🔊 Còi Buzzer: BẬT' : '🔇 Còi Buzzer: TẮT';
+      btn.style.color = soundEnabled ? '#f8fafc' : '#94a3b8';
+    }
+
+    // Âm thanh còi chíp vật lý qua Web Audio API
+    function playBeep(type = 'success') {
+      if (!soundEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        if (ctx.state === 'suspended') ctx.resume();
+
+        if (type === 'success') {
+          // Bíp 1 tiếng ngắn 2.4kHz
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(2400, ctx.currentTime);
+          gain.gain.setValueAtTime(0.15, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.12);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.12);
+        } else {
+          // 3 tiếng bíp lỗi
+          for (let i = 0; i < 3; i++) {
+            setTimeout(() => {
+              const osc = ctx.createOscillator();
+              const gain = ctx.createGain();
+              osc.type = 'sawtooth';
+              osc.frequency.setValueAtTime(800, ctx.currentTime);
+              gain.gain.setValueAtTime(0.2, ctx.currentTime);
+              gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+              osc.connect(gain);
+              gain.connect(ctx.destination);
+              osc.start();
+              osc.stop(ctx.currentTime + 0.1);
+            }, i * 150);
+          }
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    // Phản hồi cơ cấu chấp hành phần cứng
+    function triggerFeedback(status) {
+      const ledGreen = document.getElementById('ledGreen');
+      const ledRed = document.getElementById('ledRed');
+      const buzzerIcon = document.getElementById('buzzerIcon');
+      const lcd2 = document.getElementById('lcdLine2');
+
+      if (status === 'success') {
+        playBeep('success');
+        ledGreen.classList.add('active');
+        buzzerIcon.classList.add('active');
+        lcd2.innerText = 'XAC THUC OKE!  ';
+
+        setTimeout(() => {
+          ledGreen.classList.remove('active');
+          buzzerIcon.classList.remove('active');
+          lcd2.innerText = 'SAN SANG QUET...';
+        }, 1200);
+      } else {
+        playBeep('error');
+        buzzerIcon.classList.add('active');
+        lcd2.innerText = 'THE KHONG DUNG ';
+
+        let blinks = 0;
+        const blinkInterval = setInterval(() => {
+          ledRed.classList.toggle('active');
+          blinks++;
+          if (blinks >= 6) {
+            clearInterval(blinkInterval);
+            ledRed.classList.remove('active');
+            buzzerIcon.classList.remove('active');
+            lcd2.innerText = 'SAN SANG QUET...';
+          }
+        }, 150);
+      }
+    }
+
+    // Gửi sự kiện quét thẻ lên Backend qua HTTP API
+    async function scanCard(uid, label) {
+      addLog('SCAN', `Đang quẹt thẻ: ${label} (UID: ${uid})`);
+      try {
+        const res = await fetch('/api/scan', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ uid, label })
+        });
+        const data = await res.json();
+        if (data.success) {
+          addLog('MQTT', `Đã bắn gói tin kiosk/kiosk_01/scan -> UID: ${uid}`);
+        }
+      } catch (err) {
+        addLog('ERR', `Lỗi gửi thẻ: ${err.message}`);
+      }
+    }
+
+    function sendCustomUid() {
+      const input = document.getElementById('customUidInput');
+      const uid = input.value.trim();
+      if (!uid) return;
+      scanCard(uid, `Thẻ quét thủ công: ${uid}`);
+      input.value = '';
+    }
+
+    async function sendHeartbeat() {
+      addLog('PING', 'Đang gửi gói tin Heartbeat nhịp tim Online...');
+      try {
+        await fetch('/api/ping', { method: 'POST' });
+        addLog('MQTT', 'Đã bắn gói tin kiosk/kiosk_01/status (Online)');
+      } catch (err) {
+        addLog('ERR', `Lỗi ping: ${err.message}`);
+      }
+    }
+
+    function addLog(type, text) {
+      const box = document.getElementById('logsBox');
+      const item = document.createElement('div');
+      item.className = 'log-item';
+
+      const time = new Date().toLocaleTimeString('vi-VN');
+      let typeClass = 'log-type-scan';
+      if (type === 'RECV') typeClass = 'log-type-recv';
+      if (type === 'ERR') typeClass = 'log-type-err';
+
+      item.innerHTML = `
+        <span class="log-time">[${time}]</span>
+        <span class="${typeClass}">[${type}]</span>
+        <span>${text}</span>
+      `;
+
+      box.appendChild(item);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function clearLogs() {
+      document.getElementById('logsBox').innerHTML = '';
+    }
+
+    // Kết nối Server-Sent Events (SSE) để nhận phản hồi từ MQTT realtime
+    function setupEventStream() {
+      const eventSource = new EventSource('/api/events');
+
+      eventSource.onmessage = (event) => {
+        try {
+          const payload = JSON.parse(event.data);
+          if (payload.type === 'COMMAND') {
+            const cmd = payload.data;
+            addLog('RECV', `Lệnh điều khiển phần cứng từ Server: action="${cmd.action}", status="${cmd.status}"`);
+            if (cmd.action === 'feedback') {
+              triggerFeedback(cmd.status);
+            }
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      };
+
+      eventSource.onerror = () => {
+        console.warn('Mất kết nối SSE, đang tự động kết nối lại...');
+      };
+    }
+
+    // Khởi động
+    setupEventStream();
+  </script>
+</body>
+</html>
+

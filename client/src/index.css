@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* PTIT Official Red & White Design Tokens */
+  --ptit-red-dark: #881337;       /* Đỏ đô đậm */
+  --ptit-red-deep: #991b1b;       /* Đỏ cờ PTIT Deep */
+  --ptit-red-primary: #b91c1c;    /* Đỏ PTIT chủ đạo */
+  --ptit-red-bright: #dc2626;     /* Đỏ tươi nổi bật */
+  --ptit-red-light: #fee2e2;      /* Đỏ nhạt nền */
+  --ptit-red-subtle: #fef2f2;     /* Nền tinted */
+  --ptit-gold: #f59e0b;           /* Vàng đồng huy hiệu */
+  
+  --kiosk-bg: #f8fafc;            /* Nền xám bạc sang trọng */
+  --kiosk-card: #ffffff;          /* Thẻ trắng tinh */
+  --kiosk-border: #e2e8f0;        /* Viền mỏng shadcn */
+  --kiosk-text: #0f172a;          /* Chữ đen đậm nét */
+  --kiosk-muted: #64748b;         /* Chữ phụ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--kiosk-bg);
+  color: var(--kiosk-text);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+/* Khung màn hình Kiosk cảm ứng (Kiosk Screen Shell) */
+.kiosk-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--kiosk-bg);
+}
+
+/* Thanh Header Đỏ PTIT Thương Hiệu Học Viện */
+.kiosk-header {
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 35%, #b91c1c 70%, #dc2626 100%);
+  color: #ffffff;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(153, 27, 27, 0.28);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 30;
+}
+
+.kiosk-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ptit-logo-container {
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.ptit-logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.kiosk-header-title {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.3;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.kiosk-header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 6px 22px;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kiosk-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Màn hình chính 4 nút to (Home 4 Big Buttons) - Shadcn/UI Luxury Cards */
+.home-buttons-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.kiosk-big-btn {
+  width: 190px;
+  height: 190px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.12), 0 4px 8px -2px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #ffffff;
+  text-align: center;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kiosk-big-btn:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 32px -4px rgba(185, 28, 28, 0.35);
+}
+
+.kiosk-big-btn:active {
+  transform: scale(0.97);
+}
+
+/* 4 Màu Nút Home theo Tông Đỏ & Trắng PTIT */
+.kiosk-big-btn.btn-borrow {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  border: 2px solid rgba(254, 226, 226, 0.3);
+}
+
+.kiosk-big-btn.btn-return {
+  background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+  border: 2px solid rgba(254, 226, 226, 0.25);
+}
+
+.kiosk-big-btn.btn-reader {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.kiosk-big-btn.btn-renew {
+  background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+  border: 2px solid rgba(254, 226, 226, 0.3);
+}
+
+.kiosk-big-btn-icon {
+  font-size: 52px;
+  line-height: 1;
+}
+
+.kiosk-big-btn-label {
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+}
+
+/* Bố cục chia 2 cột: 1/4 Trái & 3/4 Phải (Split Layout) */
+.kiosk-workspace {
+  flex: 1;
+  display: flex;
+  padding: 24px 32px;
+  gap: 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.kiosk-sidebar-left {
+  width: 300px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--kiosk-border);
+}
+
+.kiosk-content-right {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--kiosk-border);
+}
+
+/* Khung đồ họa đầu đọc RFID (Reader Area Animation Box) */
+.reader-graphic-box {
+  background: #fef2f2;
+  border: 2px dashed #fca5a5;
+  border-radius: 16px;
+  padding: 24px 16px;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reader-graphic-box.active {
+  border-color: #dc2626;
+  background: #fff1f2;
+}
+
+.reader-book-icon-anim {
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+  animation: floatBook 2.5s ease-in-out infinite;
+  border: 1px solid #fee2e2;
+}
+
+@keyframes floatBook {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.reader-pulse-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ef4444;
+  opacity: 0;
+  animation: pulseRfid 2s infinite;
+}
+
+@keyframes pulseRfid {
+  0% { transform: scale(0.6); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Bảng hiển thị sách chuẩn Shadcn/UI Table */
+.kiosk-table-header {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-bottom: 2px solid var(--kiosk-border);
+  font-weight: 800;
+  color: #475569;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kiosk-table-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px;
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  align-items: center;
+  font-size: 15px;
+  transition: background 0.15s;
+}
+
+.kiosk-table-row:hover {
+  background: #fef2f2;
+}
+
+/* ==========================================================================
+   6 THẺ THỐNG KÊ BẠN ĐỌC (PREMIUM METRIC CARDS - PTIT RED & MODERN SAAS)
+   ========================================================================== */
+.reader-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.stat-card-premium {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1.5px solid #f1f5f9;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 2px 4px -1px rgba(15, 23, 42, 0.03);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+.stat-card-premium:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 32px -6px rgba(185, 28, 28, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Card variants */
+.stat-card-premium.variant-primary::before {
+  background: linear-gradient(90deg, #b91c1c 0%, #dc2626 100%);
+}
+.stat-card-premium.variant-primary:hover {
+  border-color: #fecaca;
+}
+
+.stat-card-premium.variant-warning::before {
+  background: linear-gradient(90deg, #ea580c 0%, #f97316 100%);
+}
+.stat-card-premium.variant-warning:hover {
+  border-color: #fed7aa;
+}
+
+.stat-card-premium.variant-danger {
+  background: #fffdfd;
+  border-color: #fecaca;
+}
+.stat-card-premium.variant-danger::before {
+  background: linear-gradient(90deg, #dc2626 0%, #ef4444 100%);
+}
+.stat-card-premium.variant-danger:hover {
+  border-color: #fca5a5;
+  box-shadow: 0 16px 32px -6px rgba(220, 38, 38, 0.2);
+}
+
+.stat-card-premium.variant-success::before {
+  background: linear-gradient(90deg, #16a34a 0%, #22c55e 100%);
+}
+.stat-card-premium.variant-success:hover {
+  border-color: #bbf7d0;
+}
+
+/* Backwards compatibility for stat-card-green */
+.stat-card-green {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 18px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06);
+  border: 1.5px solid #f1f5f9;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card-green:hover {
+  transform: translateY(-3px);
+  border-color: #fca5a5;
+  box-shadow: 0 14px 28px -4px rgba(185, 28, 28, 0.15);
+}
+
+.stat-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.stat-card-text {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+/* ==========================================================================
+   THẺ SINH VIÊN ĐIỆN TỬ PTIT (SMART STUDENT ID BADGE)
+   ========================================================================== */
+.ptit-id-badge {
+  background: linear-gradient(145deg, #ffffff 0%, #fdf2f2 100%);
+  border: 1.5px solid #fecaca;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 25px -4px rgba(185, 28, 28, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.ptit-id-badge::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(185, 28, 28, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ptit-chip-visual {
+  width: 44px;
+  height: 32px;
+  background: linear-gradient(135deg, #d97706 0%, #fbbf24 50%, #b45309 100%);
+  border-radius: 6px;
+  border: 1px solid #78350f;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.ptit-chip-visual::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(120, 53, 15, 0.5);
+  border-radius: 3px;
+  background: repeating-linear-gradient(90deg, transparent, transparent 6px, rgba(120, 53, 15, 0.3) 6px, rgba(120, 53, 15, 0.3) 8px);
+}
+
+/* ==========================================================================
+   NÚT BẤM KIOSK CAO CẤP (TOUCHSCREEN OPTIMIZED ACTION BUTTONS)
+   ========================================================================== */
+.kiosk-bottom-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1.5px solid var(--kiosk-border);
+}
+
+/* Nút Hoàn Thành - PTIT Red Gradient Siêu Sang & Nổi Bật */
+.btn-kiosk-finish {
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #7f1d1d 100%);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 14px 38px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -4px rgba(185, 28, 28, 0.45), 0 4px 6px -2px rgba(185, 28, 28, 0.2);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn-kiosk-finish::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-20deg);
+  transition: 0.75s;
+}
+
+.btn-kiosk-finish:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+  box-shadow: 0 16px 32px -4px rgba(185, 28, 28, 0.55), 0 6px 12px -2px rgba(185, 28, 28, 0.25);
+}
+
+.btn-kiosk-finish:hover:not(:disabled)::after {
+  left: 150%;
+}
+
+.btn-kiosk-finish:active:not(:disabled) {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.35);
+}
+
+.btn-kiosk-finish:disabled {
+  background: #94a3b8 !important;
+  color: #f1f5f9 !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  cursor: not-allowed !important;
+  opacity: 0.65;
+  transform: none !important;
+}
+
+/* Nút hành động chuyển hướng (Mượn, Gia hạn,...) */
+.btn-kiosk-action {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 13px 26px;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn-kiosk-action:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.28);
+}
+
+.btn-kiosk-action:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn-kiosk-action:disabled {
+  background: #cbd5e1 !important;
+  color: #64748b !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+/* Nút phụ / Quay lại */
+.btn-kiosk-secondary {
+  background: #f8fafc;
+  color: #334155;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 13px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.btn-kiosk-secondary:hover:not(:disabled) {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+.btn-kiosk-secondary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* ==========================================================================
+   MODAL GLASSMORPHISM & HỘP THOẠI THÔNG BÁO (LUXURY KIOSK DIALOGS)
+   ========================================================================== */
+.swipe-modal-backdrop, .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 24px;
+  animation: modalFadeIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.swipe-modal-box, .modal-content {
+  background: #ffffff;
+  border-radius: 28px;
+  max-width: 560px;
+  width: 100%;
+  padding: 38px 36px;
+  text-align: center;
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  animation: modalScaleUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+@keyframes modalScaleUp {
+  from { opacity: 0; transform: scale(0.93) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Modal Icon Orb */
+.modal-icon-orb {
+  width: 68px;
+  height: 68px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+  box-shadow: 0 8px 20px -4px rgba(185, 28, 28, 0.2);
+}
+
+/* ==========================================================================
+   ANIMATION QUẸT THẺ RFID VÀ RADAR SÓNG KHÔNG TIẾP XÚC
+   ========================================================================== */
+.swipe-card-anim-container {
+  height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+  overflow: visible;
+}
+
+/* Sóng Radar tỏa ra từ cảm biến */
+.rfid-radar-wave {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid rgba(185, 28, 28, 0.35);
+  animation: rfidPulse 2.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  pointer-events: none;
+}
+
+.rfid-radar-wave:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.rfid-radar-wave:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+@keyframes rfidPulse {
+  0% { transform: scale(0.5); opacity: 0.9; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.reader-slot {
+  width: 220px;
+  height: 20px;
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 10px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(255, 255, 255, 0.1);
+  border: 1px solid #334155;
+}
+
+.rfid-card-visual {
+  width: 150px;
+  height: 96px;
+  background: linear-gradient(135deg, #991b1b 0%, #b91c1c 50%, #dc2626 100%);
+  border-radius: 12px;
+  position: absolute;
+  color: #ffffff;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 16px 30px rgba(185, 28, 28, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  animation: swipeHover 2.6s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+@keyframes swipeHover {
+  0% { transform: translateY(-46px) rotate(-3deg); opacity: 0.85; }
+  50% { transform: translateY(18px) rotate(1deg); opacity: 1; }
+  100% { transform: translateY(-46px) rotate(-3deg); opacity: 0.85; }
+}
+
+/* ==========================================================================
+   KHUNG QUÉT VIETQR CHUẨN TECH VỚI CORNER BRACKETS
+   ========================================================================== */
+.qr-scanner-frame {
+  position: relative;
+  display: inline-block;
+  padding: 14px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px -4px rgba(185, 28, 28, 0.12), 0 0 0 1px #fecaca;
+}
+
+.qr-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: #b91c1c;
+  pointer-events: none;
+}
+
+.qr-corner-tl { top: 6px; left: 6px; border-top: 3px solid #b91c1c; border-left: 3px solid #b91c1c; border-top-left-radius: 8px; }
+.qr-corner-tr { top: 6px; right: 6px; border-top: 3px solid #b91c1c; border-right: 3px solid #b91c1c; border-top-right-radius: 8px; }
+.qr-corner-bl { bottom: 6px; left: 6px; border-bottom: 3px solid #b91c1c; border-left: 3px solid #b91c1c; border-bottom-left-radius: 8px; }
+.qr-corner-br { bottom: 6px; right: 6px; border-bottom: 3px solid #b91c1c; border-right: 3px solid #b91c1c; border-bottom-right-radius: 8px; }
+
+/* ==========================================================================
+   BIÊN LAI ĐIỆN TỬ E-TICKET (RECEIPT LUXURY STYLE)
+   ========================================================================== */
+.receipt-ticket {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1.5px solid #fecaca;
+  padding: 22px 24px;
+  position: relative;
+  box-shadow: 0 8px 24px -4px rgba(185, 28, 28, 0.08);
+  text-align: left;
+}
+
+.receipt-stamp {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  border: 2px solid #16a34a;
+  color: #16a34a;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  transform: rotate(8deg);
+  text-transform: uppercase;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   FLOATING TOAST NOTIFICATION (SHADCN / MODERN GLASS TOAST)
+   ========================================================================== */
+.kiosk-toast-container {
+  position: fixed;
+  top: 84px;
+  right: 28px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.kiosk-toast {
+  pointer-events: auto;
+  min-width: 360px;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 20px 40px -8px rgba(15, 23, 42, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes toastSlideIn {
+  from { transform: translateX(110%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.kiosk-toast-error {
+  border-left: 6px solid #dc2626;
+  background: #fffafa;
+}
+
+.kiosk-toast-warning {
+  border-left: 6px solid #f59e0b;
+  background: #fffdf5;
+}
+
+.kiosk-toast-success {
+  border-left: 6px solid #16a34a;
+  background: #f7fef9;
+}
+
+.kiosk-toast-info {
+  border-left: 6px solid #2563eb;
+  background: #f8faff;
+}
+
