@@ -40,7 +40,7 @@ function broadcastSSE(type, data) {
   sseClients.forEach(client => {
     try {
       client.write(payload);
-    } catch (e) {}
+    } catch (_e) {}
   });
 }
 
@@ -187,7 +187,7 @@ const server = http.createServer((req, res) => {
           res.writeHead(200, { 'Content-Type': 'application/json' });
           return res.end(JSON.stringify({ success: true, uid }));
         }
-      } catch (e) {}
+      } catch (_e) {}
       res.writeHead(400, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: false, message: 'Invalid payload' }));
     });

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AlertTriangle, CheckCircle2, QrCode, Building2, CreditCard, Loader2, ArrowRight, X } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, Loader2, X } from 'lucide-react';
 
 export default function VietQrModal({ data, onClose, onConfirmPaid }) {
   const [isSubmitting, setIsSubmitting] = useState(false);

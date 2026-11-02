@@ -9,7 +9,6 @@ import {
   CheckCircle2, 
   ArrowRight, 
   X, 
-  Calendar, 
   Sparkles,
   Info
 } from 'lucide-react';

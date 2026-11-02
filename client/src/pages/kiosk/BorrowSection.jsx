@@ -1,6 +1,6 @@
 import React from 'react';
 import ReaderInfoSidebar from '../../components/ReaderInfoSidebar.jsx';
-import { BookOpen, Trash2, CheckCircle2, Clock } from 'lucide-react';
+import { BookOpen, Trash2, CheckCircle2 } from 'lucide-react';
 
 export default function BorrowSection({ 
   reader, 

@@ -73,7 +73,7 @@ export async function handleCardScan(deviceId, payload) {
     sendFeedback(deviceId, 'error');
     await logEvent(deviceId, 'scan', { uid, role: 'unknown' });
 
-  } catch (err) {
+  } catch (_err) {
     console.error(`❌ [Card Handler] Lỗi xử lý thẻ:`, err);
     sendFeedback(deviceId, 'error');
   }
@@ -82,7 +82,7 @@ export async function handleCardScan(deviceId, payload) {
 async function logEvent(deviceId, event, payload) {
   try {
     await DeviceLog.create({ deviceId, event, payload });
-  } catch (err) {
+  } catch (_err) {
     // Không chặn luồng nếu log lỗi
   }
 }

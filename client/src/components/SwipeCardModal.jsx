@@ -1,5 +1,5 @@
 import React from 'react';
-import { CreditCard, Radio, ArrowLeft, Wifi, Sparkles, X } from 'lucide-react';
+import { Radio, ArrowLeft, Wifi, X } from 'lucide-react';
 
 export default function SwipeCardModal({ targetFunction, onClose }) {
   return (

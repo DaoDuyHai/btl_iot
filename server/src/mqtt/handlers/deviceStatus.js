@@ -27,7 +27,7 @@ export async function handleDeviceStatus(deviceId, payload) {
         uptime,
         payload
       });
-    } catch (err) {}
+    } catch (_err) {}
   }
 }
 

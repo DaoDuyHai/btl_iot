@@ -40,7 +40,14 @@ export default [
       }
     },
     rules: {
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(_|React)' }],
+      'no-unused-vars': [
+        'warn',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^(_|React)',
+          caughtErrorsIgnorePattern: '^_'
+        }
+      ],
       'no-console': 'off',
       'no-constant-condition': 'warn'
     }

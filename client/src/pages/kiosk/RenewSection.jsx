@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RefreshCw, Printer, CheckCircle2, AlertCircle, BookOpen } from 'lucide-react';
+import { RefreshCw, Printer, CheckCircle2, BookOpen } from 'lucide-react';
 
 export default function RenewSection({ 
   reader, 

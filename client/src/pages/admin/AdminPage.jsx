@@ -35,7 +35,7 @@ export default function AdminPage() {
       setReaders(r);
       setLoans(l);
       setDeviceLogs(d);
-    } catch (err) {
+    } catch (_err) {
       console.error('Lỗi tải dữ liệu admin:', err);
     }
   }
@@ -53,7 +53,7 @@ export default function AdminPage() {
       setNewBook({ isbn: '', title: '', author: '', category: 'CNTT', rfidTag: '' });
       const updated = await apiService.getBooks();
       setBooks(updated);
-    } catch (err) {
+    } catch (_err) {
       alert(err.response?.data?.message || err.message);
     }
   }
@@ -66,7 +66,7 @@ export default function AdminPage() {
       setNewReader({ studentId: '', name: '', email: '', rfidCard: '' });
       const updated = await apiService.getReaders();
       setReaders(updated);
-    } catch (err) {
+    } catch (_err) {
       alert(err.response?.data?.message || err.message);
     }
   }
@@ -75,7 +75,7 @@ export default function AdminPage() {
     try {
       await apiService.sendDeviceCommand('kiosk_01', 'feedback', status);
       showToast(`Đã gửi lệnh test còi & đèn (${status}) tới Kiosk!`);
-    } catch (err) {
+    } catch (_err) {
       alert('Lỗi gửi lệnh tới Kiosk');
     }
   }

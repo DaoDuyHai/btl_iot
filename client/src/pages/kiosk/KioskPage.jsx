@@ -25,7 +25,7 @@ export default function KioskPage() {
   const [receiptData, setReceiptData] = useState(null);
   const [qrModalData, setQrModalData] = useState(null);
   const [deviceStatus, setDeviceStatus] = useState({ status: 'offline' });
-  const [timeoutCounter, setTimeoutCounter] = useState(60);
+  const [_timeoutCounter, setTimeoutCounter] = useState(60);
   const [toasts, setToasts] = useState([]);
 
   // Hàm hiển thị Toast thông báo kiểu shadcn/ui

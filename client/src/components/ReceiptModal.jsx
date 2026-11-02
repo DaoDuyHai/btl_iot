@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, Mail, FileText, Calendar, User, ArrowRight, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Mail, Calendar, User, ArrowRight } from 'lucide-react';
 
 export default function ReceiptModal({ title, reader, items, actionType, onClose }) {
   if (!items) return null;

@@ -2,8 +2,6 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import request from 'supertest';
 import app from '../../src/app.js';
 import Book from '../../src/models/Book.js';
-import Reader from '../../src/models/Reader.js';
-import DeviceLog from '../../src/models/DeviceLog.js';
 
 vi.mock('../../src/models/Book.js');
 vi.mock('../../src/models/Reader.js');

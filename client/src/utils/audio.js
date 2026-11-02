@@ -29,7 +29,7 @@ export function playKioskBeep(type = 'success') {
         osc.stop(ctx.currentTime + timeOffset + 0.1);
       });
     }
-  } catch (e) {
+  } catch (_e) {
     // Không chặn nếu trình duyệt chưa cấp quyền audio
   }
 }

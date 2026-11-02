@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookMarked, User } from 'lucide-react';
+import { BookMarked } from 'lucide-react';
 
 export default function ReaderInfoSidebar({ reader, isReadingActive = true }) {
   if (!reader) return null;
