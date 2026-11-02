@@ -10,6 +10,7 @@
     "server:dev": "npm --prefix server run dev",
     "client:dev": "npm --prefix client run dev",
     "sim": "npm --prefix tools/device-simulator start",
+    "sim:local": "npm --prefix tools/device-simulator run start:local",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",

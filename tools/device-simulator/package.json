@@ -5,6 +5,7 @@
   "main": "simulate.js",
   "scripts": {
     "start": "node simulate.js",
+    "start:local": "node simulate.js --local",
     "sim:gui": "node simulate.js"
   },
   "dependencies": {

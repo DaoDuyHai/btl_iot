@@ -4,7 +4,10 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const BROKER_URL = process.env.MQTT_BROKER_URL || 'mqtt://localhost:1883';
+const args = process.argv.slice(2);
+const isLocal = args.includes('--local');
+const defaultBroker = isLocal ? 'mqtt://localhost:1883' : 'mqtt://broker.hivemq.com:1883';
+const BROKER_URL = process.env.MQTT_BROKER_URL || defaultBroker;
 const DEVICE_ID = 'kiosk_01';
 const WEB_PORT = process.env.PORT || 8888;
 
@@ -60,7 +63,10 @@ const mqttClient = mqtt.connect(BROKER_URL, {
 let heartbeatInterval = null;
 
 mqttClient.on('connect', () => {
-  console.log(`${C.bright}${C.green}✅ [MQTT] Đã kết nối Mosquitto Broker thành công!${C.reset}`);
+  const brokerName = BROKER_URL.includes('hivemq')
+    ? 'Cloud HiveMQ Broker (Singapore) 🌐 [Đồng bộ Vercel & Fly.io]'
+    : 'Local Mosquitto Broker (localhost:1883) 💻';
+  console.log(`${C.bright}${C.green}✅ [MQTT] Đã kết nối ${brokerName} thành công!${C.reset}`);
   sendHeartbeat();
 
   if (heartbeatInterval) clearInterval(heartbeatInterval);
