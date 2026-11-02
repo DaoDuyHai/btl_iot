@@ -59,7 +59,7 @@ Hệ thống giải quyết triệt để 3 bài toán nhức nhối trong quả
 2. **Kiểm soát tính toàn vẹn và chống thất thoát:** Tự động đối soát thời hạn mượn, tính toán chính xác tiền phạt trễ hạn theo ngày ($5.000\text{ VNĐ/ngày}$), khóa cưỡng chế nút hoàn thành trả sách và sinh mã thanh toán trực tuyến tức thì theo chuẩn **VietQR Napas247**.
 3. **Trải nghiệm người dùng cao cấp & Bảo mật phiên:** Ứng dụng giao diện Kiosk cảm ứng chuyên dụng mang bản sắc nhận diện Đỏ Đô Học viện (PTIT Crimson Theme), tích hợp thuật toán chống chiếm quyền phiên làm việc (Anti-Session Hijacking) và cơ chế tự động gộp một biên lai điện tử duy nhất gửi về hòm thư Gmail của sinh viên thông qua dịch vụ SMTP.
 
-Hệ thống được chứng minh đạt chuẩn kiến trúc **IoT Level 3** thực nghiệm chuẩn mực và có kiến trúc sẵn sàng mở rộng lên **IoT Level 6** đa trạm tập trung, sở hữu tính linh hoạt cao, chi phí phần cứng biên cực thấp (dưới $150.000\text{ VNĐ}$), có khả năng mở rộng quy mô đa trạm đọc độc lập và kết nối liền mạch vào các hệ thống quản lý thư viện tích hợp (ILS) như Koha.
+Hệ thống được thiết kế và hiện thực hóa chuẩn mực theo kiến trúc **IoT Level 3** (theo tiêu chuẩn phân loại kinh điển của Arshdeep Bahga và Vijay Madisetti): nút thiết bị biên tinh gọn thực hiện thu thập dữ liệu thẻ và phản hồi tín hiệu, toàn bộ cơ sở dữ liệu và thuật toán phân tích nghiệp vụ được xử lý tập trung trên nền tảng Đám mây (Cloud-based Application & Database). Hệ thống sở hữu độ ổn định cao, bảo vệ tính toàn vẹn dữ liệu, chi phí phần cứng biên cực thấp (dưới $150.000\text{ VNĐ}$) và kết nối liền mạch vào các hệ thống quản lý thư viện tích hợp (ILS) như Koha.
 
 ---
 
@@ -100,7 +100,7 @@ Hệ thống được chứng minh đạt chuẩn kiến trúc **IoT Level 3** t
 - Hình 2.5: Quy trình bắt tay nâng cấp kết nối từ HTTP sang Full-Duplex WebSocket
 - Hình 3.1: Biểu đồ trường hợp sử dụng (Use Case Diagram) toàn diện của hệ thống Kiosk
 - Hình 3.2: Sơ đồ kiến trúc 3 tầng (3-Tier Physical Architecture) của hệ thống
-- Hình 3.3: Sơ đồ kiến trúc phân cấp IoT Level 3 thực nghiệm và mở rộng IoT Level 6 của đề tài
+- Hình 3.3: Lược đồ kiến trúc hệ thống chuẩn IoT Level 3 (Bahga & Madisetti) của Smart Library Kiosk
 - Hình 3.4: Sơ đồ phân tích 6 khối chức năng Logic cốt lõi của hệ thống IoT
 - Hình 3.5: Sơ đồ khối nguyên lý phần cứng trạm Kiosk tại nút biên
 - Hình 3.6: Lược đồ cấu trúc cơ sở dữ liệu thực thể liên kết (ERD) trên MongoDB
@@ -219,7 +219,7 @@ _Bảng 1.1: Ma trận phân tích điểm nghẽn giữa Thư viện truyền t
   - Hệ thống thanh toán mở Open Banking VietQR và thư viện gửi mail SMTP.
 - **Phạm vi nghiên cứu:**
   - Giới hạn trong khuôn khổ giải pháp trạm Kiosk tự phục vụ mượn/trả sách dành cho sinh viên trường đại học.
-  - Triển khai thực nghiệm trên 1 trạm Kiosk hoàn chỉnh (đạt chuẩn IoT Level 3) và một bộ công cụ giả lập đa trạm (Multi-Device Simulator) để chứng minh tính khả thi của kiến trúc mở rộng IoT Level 6 tập trung.
+  - Triển khai thực nghiệm trên 1 trạm Kiosk hoàn chỉnh đạt chuẩn kiến trúc **IoT Level 3** chuẩn mực, kết hợp bộ công cụ giả lập thiết bị (Device Simulator) để kiểm thử toàn diện khả năng đáp ứng thời gian thực của hệ thống.
 
 ### 1.4. Phương pháp luận nghiên cứu (Methodology)
 
@@ -555,51 +555,72 @@ _Hình 3.2: Sơ đồ kiến trúc vật lý 3 tầng hoàn chỉnh của hệ s
 
 #### b) Phân tích Cấp độ Kiến trúc IoT theo Tiêu chuẩn Bahga & Madisetti
 
-Theo mô hình phân loại chuẩn 6 cấp độ IoT kinh điển của **Arshdeep Bahga và Vijay Madisetti** (*"Internet of Things: A Hands-On Approach"*):
+Theo tài liệu học thuật kinh điển *"Internet of Things: A Hands-On Approach"* của **Arshdeep Bahga và Vijay Madisetti**, hệ thống **IoT Level 3** được định nghĩa với cấu trúc đặc trưng:
+> *"An IoT Level 3 system has a single node. The data is stored in the cloud and application is cloud-based. Data analysis is performed in the cloud."*  
+> *(Hệ thống IoT Level 3 bao gồm một nút cảm nhận/tác động đơn. Dữ liệu được lưu trữ trên Đám mây và ứng dụng được xây dựng trên Đám mây. Toàn bộ quá trình phân tích dữ liệu được thực thi tập trung trên Đám mây).*
 
-- **IoT Level 1 & Level 2:** Dữ liệu và giải thuật nghiệp vụ được xử lý cục bộ trên chính vi điều khiển (hoặc xử lý cục bộ rồi đẩy báo cáo lên mạng). Các cấp độ này không phù hợp vì vi điều khiển ESP32 không thể lưu trữ kho dữ liệu hàng vạn cuốn sách và ảnh hưởng tính đồng bộ.
-- **Hiện thực hóa chuẩn mực IoT Level 3 cho Trạm Kiosk Thực nghiệm:**
-  - **Cấu trúc Nút đơn hoàn chỉnh (Single Node):** Trạm Kiosk thực nghiệm bao gồm vi điều khiển ESP32 đóng vai trò nút biên thu thập (Sensing - RFID RC522) và phản hồi thị giác/âm thanh (Actuation - Buzzer & LED).
-  - **Lưu trữ & Phân tích tập trung trên Đám mây (Cloud Storage & Analytics):** Nút ESP32 không thực hiện phân tích nghiệp vụ tại biên (Edge Analytics) nhằm tối ưu hóa chi phí phần cứng và giữ cho vi điều khiển hoạt động siêu nhẹ, ổn định. Toàn bộ cơ sở dữ liệu (`MongoDB Atlas`) và các thuật toán phân tích nghiệp vụ phức tạp (kiểm tra hạn mượn, xác thực giỏ hàng, tính phí phạt trễ hạn $5.000\text{ đ/ngày}$, tạo mã VietQR Napas247, gộp biên lai và phát hành email SMTP) đều được thực hiện tập trung $100\%$ trên tầng máy chủ Đám mây (**Node.js Cloud Engine**).
-  - **Ứng dụng Đám mây (Cloud-based Application):** Màn hình Kiosk tự phục vụ (`/kiosk`) và Trung tâm giám sát thủ thư (`/admin`) đều được lưu trữ và phân phối từ Đám mây.
-- **Lý do hệ thống không lựa chọn kiến trúc IoT Level 4:**
-  - Theo định nghĩa của Bahga & Madisetti, hệ thống IoT Level 4 đòi hỏi các nút thiết bị biên phải chạy giải thuật phân tích cục bộ (**Local Analysis**) trước khi đẩy dữ liệu lên Cloud. Trong nghiệp vụ thư viện đại học, việc phân tán cơ sở dữ liệu hàng ngàn bạn đọc và chạy logic phạt tiền cục bộ trên bộ nhớ RAM hữu hạn của vi điều khiển ESP32 là không cần thiết, làm tăng nguy cơ sai lệch đồng bộ dữ liệu (Data Inconsistency) và dễ bị tấn công can thiệp phần cứng.
-- **Định hướng Mở rộng Quy mô tiệm cận chuẩn IoT Level 6:**
-  - **Hỗ trợ đa nút độc lập (Multiple Independent End Nodes):** Tầng giao thức MQTT được thiết kế động theo kênh truyền `kiosk/{deviceId}/#` với ký tự đại diện wildcard `+` (`kiosk/+/scan`, `kiosk/+/status`), cho phép cắm thêm hàng loạt trạm Kiosk độc lập (`kiosk_01`, `kiosk_02`, `kiosk_N`...) tại các giảng đường mà không cần viết lại mã nguồn máy chủ.
-  - **Bộ điều khiển trung tâm (Centralized Controller):** Máy chủ Cloud Node.js đóng vai trò bộ điều khiển trung tâm nhận thức trạng thái toàn bộ các trạm Kiosk qua nhịp tim (Heartbeat) và chủ động gửi lệnh điều khiển cấu hình, còi báo hoặc khởi động lại ngược xuống từng nút biên (`kiosk/{deviceId}/control`). Kiến trúc này cho phép hệ sinh thái mở rộng thẳng lên mô hình **IoT Level 6** khi nhà trường triển khai phủ kín toàn bộ khuôn viên học viện.
+Đề tài **Smart Library Kiosk** được thiết kế và hiện thực hóa chuẩn mực theo đúng các thành phần cốt lõi của **IoT Level 3**:
+
+1. **Nút cảm nhận & chấp hành biên (Sensing & Actuation Node):**  
+   Trạm Kiosk vật lý sử dụng vi điều khiển ESP32 đóng vai trò nút biên (Single Node), kết nối module RFID RC522 (Cảm nhận thẻ độc giả/thẻ sách) và các cơ cấu chấp hành chỉ thị âm thanh/ánh sáng (Active Buzzer, LED trạng thái). Nút biên này vận hành siêu nhẹ (Lightweight), chỉ đảm nhiệm việc đọc mã UID thô và phản hồi cơ cấu ngoại vi theo lệnh, hoàn toàn không lưu trữ dữ liệu nghiệp vụ tại chỗ.
+2. **Lưu trữ và Phân tích Dữ liệu trên Đám mây (Cloud-based Storage & Analytics):**  
+   Mọi dữ liệu định danh, trạng thái sách, lịch sử mượn trả đều được lưu trữ phân tán trên **MongoDB Atlas Cloud**. Toàn bộ giải thuật xử lý và phân tích nghiệp vụ phức tạp (kiểm tra điều kiện mượn, phát hiện xung đột dữ liệu đồng thời, tính toán phí phạt trễ hạn $5.000\text{ đ/ngày}$, sinh chuỗi thanh toán VietQR Napas247, gộp biên lai và phát hành email SMTP) được thực thi tập trung $100\%$ tại tầng máy chủ Đám mây (**Node.js Cloud Engine** trên nền tảng Fly.io).
+3. **Ứng dụng trên nền tảng Đám mây (Cloud-based Application):**  
+   Cả giao diện màn hình Kiosk tự phục vụ (`/kiosk`) và Trung tâm điều hành của thủ thư (`/admin`) đều là ứng dụng đám mây độc lập được triển khai trên mạng lưới CDN toàn cầu của Vercel, kết nối song công thời gian thực với Cloud Server qua WebSocket (Socket.IO).
+
+##### *Biện luận Học thuật: Khẳng định tính chuẩn xác của Kiến trúc IoT Level 3*
+Để chứng minh sự lựa chọn kiến trúc IoT Level 3 là hoàn toàn tối ưu và chuẩn xác cho bài toán Kiosk thư viện, nhóm đã thực hiện phân tích đối chiếu với các cấp độ khác:
+- **So sánh với IoT Level 1 & Level 2:** Các cấp độ này đòi hỏi việc lưu trữ hoặc phân tích dữ liệu phải diễn ra cục bộ (Locally) ngay trên thiết bị biên. Điều này hoàn toàn bất khả thi trong quản lý thư viện hiện đại vì tài nguyên phần cứng của vi điều khiển không thể lưu trữ hàng vạn bản ghi sách và độc giả, đồng thời gây phân mảnh và mất tính toàn vẹn dữ liệu giữa các phiên giao dịch.
+- **So sánh với IoT Level 4:** Theo định nghĩa của Bahga & Madisetti, hệ thống IoT Level 4 bắt buộc nút thiết bị biên phải thực hiện **Local Analysis** (phân tích cục bộ) trước khi gửi kết quả lên Đám mây. Trong nghiệp vụ Kiosk thư viện, việc đẩy thuật toán tính phạt hay kiểm tra sách về vi điều khiển biên là thừa thãi, làm tăng chi phí phần cứng không cần thiết, gia tăng nguy cơ không nhất quán dữ liệu (Data Inconsistency) và dễ bị tấn công can thiệp phần cứng. Do đó, việc tập trung toàn bộ năng lực phân tích lên Cloud chính là giải pháp kinh điển, an toàn và tối ưu nhất của **IoT Level 3**.
 
 ```mermaid
 flowchart TB
-    subgraph CLOUD_CORE ["HẠ TẦNG ĐÁM MÂY TẬP TRUNG & BỘ ĐIỀU KHIỂN TRUNG TÂM (CENTRAL CONTROLLER)"]
-        BRK["MQTT Broker (Eclipse Mosquitto / Cloud MQTT)"]
-        ENG["Bộ máy phân tích nghiệp vụ & REST Engine (Node.js)"]
-        DAT[("Cơ sở dữ liệu tập trung MongoDB Atlas")]
-        BRK <===> ENG
-        ENG <===> DAT
+    %% NÚT BIÊN THIẾT BỊ
+    subgraph SENSING_NODE ["1. NÚT BIÊN CẢM NHẬN & CHẤP HÀNH (SENSING & ACTUATION NODE)"]
+        ESP32["Vi điều khiển ESP32<br/>(Wi-Fi SoC Dual-Core)"]
+        RC522["Module RFID RC522<br/>(Thu thập UID thẻ 13.56MHz)"]
+        BUZZER["Còi Buzzer 5V<br/>(Chấp hành âm thanh)"]
+        LED["LED Trạng thái Xanh/Đỏ<br/>(Chấp hành ánh sáng)"]
+        
+        ESP32 --- RC522
+        ESP32 --- BUZZER
+        ESP32 --- LED
     end
 
-    subgraph OBSERVERS ["CÁC NÚT QUAN SÁT THỜI GIAN THỰC (OBSERVER NODES)"]
-        O1["Trạm Kiosk Cảm ứng #1 (/kiosk)"]
-        O2["Trạm Kiosk Cảm ứng #2 (/kiosk)"]
-        OA["Trung tâm Điều hành của Thủ thư (/admin)"]
+    %% TẦNG ĐÁM MÂY LƯU TRỮ VÀ PHÂN TÍCH
+    subgraph CLOUD_ANALYTICS ["2. LƯU TRỮ & PHÂN TÍCH TẬP TRUNG TRÊN ĐÁM MÂY (CLOUD STORAGE & ANALYTICS)"]
+        BRK["Mosquitto MQTT Broker<br/>(Định tuyến gói tin IoT thời gian thực)"]
+        CLOUD_APP["Node.js / Express Cloud Server<br/>(Bộ máy phân tích nghiệp vụ mượn/trả, VietQR, Socket.IO)"]
+        DB[("Cơ sở dữ liệu MongoDB Atlas<br/>(Lưu trữ tập trung sách, bạn đọc, giao dịch)")]
+        
+        BRK <===>|"Publish / Subscribe"| CLOUD_APP
+        CLOUD_APP <===>|"Truy vấn Mongoose"| DB
     end
 
-    subgraph EDGES ["HỆ THỐNG CÁC TRẠM KIOSK VẬT LÝ ĐỘC LẬP (INDEPENDENT END NODES)"]
-        N1["Trạm Kiosk Tầng 1 (kiosk_01)"]
-        N2["Trạm Kiosk Tầng 2 (kiosk_02)"]
-        NN["Trạm Kiosk Sảnh KTX (kiosk_N)"]
+    %% ỨNG DỤNG ĐÁM MÂY
+    subgraph CLOUD_APPLICATIONS ["3. ỨNG DỤNG TRÊN ĐÁM MÂY (CLOUD-BASED APPLICATIONS)"]
+        UI_KIOSK["Giao diện Kiosk Tự phục vụ (/kiosk)<br/>(Vercel Edge Network)"]
+        UI_ADMIN["Cổng Quản trị Thủ thư (/admin)<br/>(Vercel Edge Network)"]
+        SMTP_SERVICE["Dịch vụ Gửi Biên lai Email<br/>(Google SMTP TLS Port 587)"]
+        
+        CLOUD_APP <===>|"WebSocket Song công & REST API"| UI_KIOSK
+        CLOUD_APP <===>|"WebSocket Song công & REST API"| UI_ADMIN
+        CLOUD_APP ===>|"Gửi email biên lai"| SMTP_SERVICE
     end
 
-    N1 <===>|"MQTT: kiosk/kiosk_01/#"| BRK
-    N2 <===>|"MQTT: kiosk/kiosk_02/#"| BRK
-    NN <===>|"MQTT: kiosk/kiosk_N/#"| BRK
+    %% Giao tiếp giữa Nút biên và Đám mây
+    ESP32 <===>|"Giao thức MQTT qua Internet (kiosk/kiosk_01/#)"| BRK
 
-    ENG <===>|"WebSocket Socket.IO"| O1
-    ENG <===>|"WebSocket Socket.IO"| O2
-    ENG <===>|"WebSocket Socket.IO"| OA
+    classDef edgeBox fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e3a8a;
+    classDef cloudBox fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#14532d;
+    classDef appBox fill:#fdf4ff,stroke:#c026d3,stroke-width:2px,color:#701a75;
+
+    class ESP32,RC522,BUZZER,LED edgeBox;
+    class BRK,CLOUD_APP,DB cloudBox;
+    class UI_KIOSK,UI_ADMIN,SMTP_SERVICE appBox;
 ```
 
-_Hình 3.3: Sơ đồ kiến trúc phân cấp chuẩn IoT Level 3 thực nghiệm và mở rộng IoT Level 6 của đề tài_
+_Hình 3.3: Lược đồ kiến trúc hệ thống chuẩn IoT Level 3 (theo mô hình Arshdeep Bahga & Vijay Madisetti)_
 
 ---
 

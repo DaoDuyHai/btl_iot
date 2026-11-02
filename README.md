@@ -28,7 +28,9 @@ Hệ thống **Smart Library Kiosk** là giải pháp tự động hóa quy trì
 
 ---
 
-## 🏛️ 2. Kiến trúc hệ thống (System Architecture)
+## 🏛️ 2. Kiến trúc hệ thống (System Architecture - IoT Level 3)
+
+> 📌 **Phân loại Kiến trúc IoT:** Hệ thống được thiết kế và triển khai chuẩn mực theo mô hình **IoT Level 3** (theo tiêu chuẩn phân loại quốc tế của *Arshdeep Bahga & Vijay Madisetti*): Nút biên ESP32 chỉ đảm nhiệm việc thu thập dữ liệu thẻ RFID và phản hồi còi/LED; toàn bộ dữ liệu, thuật toán phân tích nghiệp vụ và ứng dụng giao diện được vận hành tập trung $100\%$ trên nền tảng Đám mây (Cloud-based Application & Analytics).
 
 Hệ thống được thiết kế theo mô hình 3 tầng (3-Tier IoT Architecture):
 
