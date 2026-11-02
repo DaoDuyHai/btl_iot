@@ -5,7 +5,7 @@ dotenv.config();
 
 export const envSchema = z.object({
   PORT: z.coerce.number().int().positive().default(5000),
-  MONGODB_URI: z.string().min(1, 'MONGODB_URI không được để trống'),
+  MONGODB_URI: z.string().min(1, 'MONGODB_URI không được để trống').default('mongodb://localhost:27017/library_kiosk'),
   MQTT_BROKER_URL: z.string().min(1, 'MQTT_BROKER_URL không được để trống').default('mqtt://localhost:1883'),
   KIOSK_DEVICE_ID: z.string().default('kiosk_01'),
   CLIENT_URL: z.string().default('http://localhost:5173'),

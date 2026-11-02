@@ -36,6 +36,9 @@ jobs:
 
       # 2. Cài đặt Backend và chạy Test Suite với Coverage (Vitest + Supertest)
       - name: Run Backend Tests & Coverage
+        env:
+          NODE_ENV: test
+          MONGODB_URI: mongodb://localhost:27017/test_kiosk
         run: |
           cd server
           npm ci
