@@ -12,7 +12,7 @@
 #else
     #define WIFI_SSID       "WIFI_TEST"
     #define WIFI_PASSWORD   "12345678"
-    #define MQTT_SERVER     "192.168.1.100"
+    #define MQTT_SERVER     "broker.hivemq.com"
     #define MQTT_PORT       1883
     #define DEVICE_ID       "kiosk_01"
 #endif

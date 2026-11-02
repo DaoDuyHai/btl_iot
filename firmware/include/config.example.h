@@ -5,7 +5,7 @@
 #define WIFI_PASSWORD   "YOUR_WIFI_PASSWORD"
 
 // Cấu hình MQTT Broker
-#define MQTT_SERVER     "192.168.1.100" // IP của máy tính chạy server/broker
+#define MQTT_SERVER     "broker.hivemq.com" // Cloud HiveMQ Broker đồng bộ với Server Fly.io và Kiosk Vercel
 #define MQTT_PORT       1883
 #define MQTT_USER       ""
 #define MQTT_PASSWORD   ""
