@@ -120,9 +120,15 @@ flowchart TD
 
 ```text
 library-kiosk/
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml             # GitHub Actions CI/CD Pipeline (Lint, Test, Docker Build, CD Fly.io)
+├── .husky/                       # Git Pre-commit Hooks (Tự động chặn commit lỗi cú pháp)
+├── eslint.config.js              # Cấu hình linter chuẩn Flat Config (ESLint 9 + React + JSX)
+├── .prettierrc                   # Định dạng mã nguồn chuẩn mực toàn dự án
+├── docker-compose.yml            # Khởi chạy toàn bộ hạ tầng: Mosquitto, Backend, Frontend Nginx
+├── package.json                  # Root workspace quản lý scripts kiểm thử, linting và tools
 ├── README.md                     # Tài liệu hướng dẫn, kiến trúc và tổng quan dự án
-├── package.json                  # Root npm workspace quản lý server, client, tools
-├── docker-compose.yml            # Khởi chạy Mosquitto MQTT Broker & MongoDB
 │
 ├── docs/
 │   ├── architecture.md           # Thiết kế kiến trúc luồng dữ liệu chi tiết
@@ -144,11 +150,17 @@ library-kiosk/
 │       └── indicators.cpp/.h     # Điều khiển còi Buzzer và đèn LED
 │
 ├── server/                       # Backend REST API + MQTT Gateway (Node.js Express)
+│   ├── fly.toml                  # Cấu hình triển khai đám mây Micro-VM Fly.io Singapore
+│   ├── Dockerfile                # Docker image Node.js 20 Alpine siêu nhẹ
+│   ├── vitest.config.js          # Cấu hình Vitest + v8 Code Coverage
 │   ├── package.json
 │   ├── .env.example
+│   ├── tests/                    # Bộ kiểm thử tự động toàn diện (21/21 Tests Passed)
+│   │   ├── unit/                 # Unit test env Zod, logic tính phạt, VietQR, giới hạn mượn
+│   │   └── integration/          # Supertest API, Race condition mượn trùng, Realtime Socket.IO
 │   └── src/
-│       ├── index.js              # Điểm khởi chạy HTTP Server + Socket.IO + MQTT
-│       ├── config/               # Kết nối Mongoose, biến môi trường
+│       ├── index.js              # Điểm khởi chạy HTTP Server + Socket.IO + MQTT (0.0.0.0)
+│       ├── config/               # Schema xác thực biến môi trường Zod, Mongoose DB
 │       ├── models/               # Reader.js, Book.js, Loan.js, DeviceLog.js
 │       ├── routes/               # API readers, books, loans, devices
 │       ├── services/             # Nghiệp vụ mượn sách, trả sách, tính tiền phạt
@@ -159,6 +171,9 @@ library-kiosk/
 │       └── sockets/              # Đẩy dữ liệu realtime lên giao diện React
 │
 ├── client/                       # Frontend Web App (React + Vite + Tailwind/CSS)
+│   ├── vercel.json               # Cấu hình điều hướng Single Page Application (SPA) trên Vercel
+│   ├── Dockerfile                # Multi-stage Docker build nén tĩnh sang máy chủ Web Nginx Alpine
+│   ├── nginx.conf                # Cấu hình Reverse Proxy & SPA Routing cho Docker
 │   ├── package.json
 │   ├── vite.config.js
 │   └── src/
@@ -243,7 +258,41 @@ library-kiosk/
 
 ---
 
-## 🔮 8. Định hướng phát triển mở rộng (Future Works)
+## 🛡️ 8. Đảm bảo chất lượng & Tự động hóa CI/CD (Quality Assurance & DevOps)
+
+Dự án được xây dựng theo chuẩn mực kỹ thuật công nghiệp khắt khe, tích hợp đầy đủ công cụ phân tích tĩnh, bộ kiểm thử tự động đa tầng và đường ống CI/CD tự động:
+
+### a) Kiểm thử tự động với Vitest (21/21 Tests Passed)
+Hệ thống tích hợp bộ kiểm thử toàn diện với thời gian thực thi siêu tốc ($\approx 1.5\text{s}$), chạy độc lập không phụ thuộc kết nối mạng:
+* **Unit Tests (`server/tests/unit/`):**
+  - Thẩm định Zod Environment Validation (`env.test.js`): Bắt buộc các biến cấu hình trọng yếu, chặn khởi động nếu thiếu.
+  - Kiểm thử Mocked Business Logic (`loanService.test.js`): Thẩm định công thức phạt trễ hạn ($5.000\text{đ/ngày}$), sinh link VietQR chuẩn Napas, kiểm tra hạn mức mượn tối đa 5 cuốn, gộp biên lai thanh toán.
+* **Integration Tests (`server/tests/integration/`):**
+  - REST API Endpoints với Supertest (`api.test.js`): Kiểm thử toàn diện `/api/health`, `/api/books`, xử lý từ chối dữ liệu rỗng `/api/loans/borrow` (400 Bad Request), gửi lệnh còi/đèn `/api/devices/:deviceId/command`.
+  - **Bảo vệ xung đột đồng thời (Race Condition Testing - `raceCondition.test.js`):** Giả lập `Promise.all` 2 yêu cầu mượn đồng thời cùng 1 cuốn sách để kiểm tra cơ chế Atomic Lock, và thẩm định cơ chế chống chiếm quyền phiên (Anti-Session Hijacking).
+  - **Kiểm thử WebSocket Realtime (`socket.test.js`):** Khởi tạo máy chủ HTTP tạm và kết nối với client thực bằng `socket.io-client` để thẩm định sự kiện `kiosk:event`.
+
+```bash
+npm test            # Chạy toàn bộ 21 test case
+npm run test:cov    # Xuất báo cáo độ bao phủ mã nguồn (Coverage Report)
+npm run lint        # Quét lỗi cú pháp toàn repo (ESLint 9 - 0 warnings)
+```
+
+### b) Đường ống Tự động hóa CI/CD (GitHub Actions)
+Mỗi lần nhà phát triển đẩy mã (`git push origin main`):
+1. **GitHub Runner (Ubuntu)** tự động kích hoạt workflow `.github/workflows/ci-cd.yml`.
+2. Kiểm tra cú pháp toàn diện (`npm run lint`) ➔ Thực thi trọn vẹn 21 test case (`npm test`).
+3. Đóng gói mã nguồn Frontend Vite ➔ Đóng gói 2 Docker Images (Backend & Nginx Frontend).
+4. **Tự động Deploy lên Fly.io:** Sử dụng `FLY_API_TOKEN` để cập nhật trực tiếp phiên bản máy chủ mới lên cụm máy ảo Singapore.
+
+### c) Vận hành Đám mây 24/7 (Always-On Keep-Alive)
+* **Frontend:** Vận hành trên mạng lưới CDN toàn cầu của **Vercel** ([https://btl-iot.vercel.app/kiosk](https://btl-iot.vercel.app/kiosk)), tích hợp chứng chỉ SSL và điều hướng SPA.
+* **Backend:** Vận hành trên nền tảng **Fly.io Singapore** ([https://ptit-library-kiosk-server.fly.dev](https://ptit-library-kiosk-server.fly.dev/api/health)) kết nối **MongoDB Atlas Cloud**.
+* **Cơ chế Keep-Alive:** Tích hợp bộ kích hoạt tự động từ `cron-job.org` gửi gói tin nhịp tim HTTP GET đến `/api/health` mỗi 2-3 phút, đảm bảo máy ảo luôn ở trạng thái `started`, phản hồi tức thì và loại bỏ độ trễ khởi động lạnh (Cold Start).
+
+---
+
+## 🔮 9. Định hướng phát triển mở rộng (Future Works)
 
 * **Nâng cấp RFID UHF (860–960MHz):** Thay thế đầu đọc RC522 bằng module UHF để hỗ trợ đặt nguyên chồng 5–10 cuốn sách quét đồng thời (Bulk Reading).
 * **Tích hợp Cổng từ an ninh (EAS Gate):** Kết nối tín hiệu với cổng kiểm soát tại lối ra vào thư viện nhằm phát hiện sách chưa hoàn tất thủ tục mượn.

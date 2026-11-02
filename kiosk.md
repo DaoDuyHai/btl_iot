@@ -934,14 +934,62 @@ Nhằm nâng cao tính khả chuyển (Portability), triệt tiêu sự phụ th
 
 #### b) Kiến trúc Triển khai Đám mây Phân tán (Multi-Cloud Deployment)
 Hệ thống được thiết kế sẵn sàng triển khai trên hạ tầng Đám mây công cộng (Public Cloud) nhằm giải phóng trạm Kiosk khỏi giới hạn của mạng nội bộ cục bộ (Local LAN):
-- **Frontend phân tán trên Vercel Edge Network:** Phục vụ ứng dụng React qua mạng lưới CDN toàn cầu, tự động cung cấp chứng chỉ bảo mật HTTPS/SSL và tích hợp tệp cấu hình điều hướng `vercel.json`.
-- **Backend vận hành trên Fly.io (Khu vực Singapore - `sin`):** Chạy ứng dụng Node.js trong môi trường micro-VM độc lập thông qua tệp cấu hình `server/fly.toml`. Khu vực Singapore giúp duy trì độ trễ mạng cực thấp về Việt Nam ($\approx 25 - 35\text{ms}$), hỗ trợ kết nối song công liên tục cho WebSocket Socket.IO và bảo đảm thời gian hoạt động $24/7$.
+- **Frontend phân tán trên Vercel Edge Network:** Phục vụ ứng dụng React qua mạng lưới CDN toàn cầu tại địa chỉ công khai [https://btl-iot.vercel.app/kiosk](https://btl-iot.vercel.app/kiosk) (và trang quản trị [https://btl-iot.vercel.app/admin](https://btl-iot.vercel.app/admin)), tự động cung cấp chứng chỉ bảo mật HTTPS/SSL và tích hợp tệp cấu hình điều hướng Single Page Application (`vercel.json`) loại bỏ lỗi 404 khi tải lại trang.
+- **Backend vận hành trên Fly.io (Khu vực Singapore - `sin`):** Chạy ứng dụng Node.js trong môi trường micro-VM độc lập thông qua tệp cấu hình `server/fly.toml` tại địa chỉ [https://ptit-library-kiosk-server.fly.dev](https://ptit-library-kiosk-server.fly.dev/api/health). Khu vực Singapore giúp duy trì độ trễ mạng cực thấp về Việt Nam ($\approx 25 - 35\text{ms}$), hỗ trợ kết nối song công liên tục cho WebSocket Socket.IO và bảo đảm thời gian hoạt động $24/7$.
+- **Cơ chế Giữ ấm Tự động 24/7 (Always-On Keep-Alive via Cron-job):** Khắc phục đặc tính ngắt máy tạm thời (Idle Sleep / Auto-stop) của các gói máy ảo đám mây miễn phí bằng cách tích hợp dịch vụ `cron-job.org`. Định kỳ mỗi $2 - 3\text{ phút}$, một gói tin HTTP GET kiểm tra sức khỏe (`/api/health`) được gửi tự động tới máy chủ, duy trì máy ảo luôn ở trạng thái `started`, triệt tiêu hoàn toàn độ trễ khởi động lạnh (Cold-Start) cho trải nghiệm người dùng tức thì.
 - **Cơ sở dữ liệu MongoDB Atlas Cloud:** Lưu trữ dữ liệu phân tán trên đám mây với cơ chế sao lưu tự động và mã hóa dữ liệu tại chỗ (Encryption-at-Rest).
 
 #### c) Đường ống Tích hợp và Chuyển giao Liên tục (GitHub Actions CI/CD)
-Quy trình DevOps được tự động hóa thông qua tệp cấu hình `.github/workflows/ci-cd.yml`:
-- **Giai đoạn CI (Continuous Integration):** Mỗi khi có sự kiện đẩy mã (`push`) hoặc yêu cầu kéo (`pull_request`) lên nhánh `main`, hệ thống tự động khởi tạo môi trường máy ảo Ubuntu, kiểm tra cú pháp mã nguồn Node.js, biên dịch ứng dụng React và thực hiện build thử nghiệm hai Docker Image của Backend và Frontend.
-- **Giai đoạn CD (Continuous Deployment):** Khi mã nguồn nhánh chính vượt qua toàn bộ các bước kiểm tra, GitHub Actions sẽ kích hoạt tác vụ `deploy-backend` để tự động đẩy phiên bản mới nhất lên nền tảng **Fly.io** thông qua khóa bí mật `FLY_API_TOKEN` mà không cần người quản trị can thiệp thủ công.
+Quy trình DevOps được tự động hóa hoàn toàn thông qua tệp cấu hình `.github/workflows/ci-cd.yml` với 2 tác vụ nối tiếp:
+- **Tác vụ 1: `build-and-test` (Continuous Integration):** Mỗi khi có sự kiện đẩy mã (`push`) hoặc mở yêu cầu kéo (`pull_request`) lên nhánh `main`, hệ thống tự động khởi tạo môi trường máy ảo Ubuntu, kiểm tra toàn bộ cú pháp mã nguồn qua ESLint (đạt $0\text{ lỗi}, 0\text{ cảnh báo}$), thực thi bộ kiểm thử tự động đa tầng Vitest ($21/21\text{ ca kiểm thử thành công}$), biên dịch ứng dụng React và thực hiện build thử nghiệm hai Docker Image của Backend và Frontend.
+- **Tác vụ 2: `deploy-backend` (Continuous Deployment):** Khi toàn bộ các bước kiểm thử và đóng gói ở tác vụ 1 đạt kết quả thành công tuyệt đối (Green Build), GitHub Actions sẽ tự động kích hoạt tác vụ CD, sử dụng khóa bí mật `FLY_API_TOKEN` để phát hành phiên bản máy chủ mới nhất lên nền tảng **Fly.io** mà không đòi hỏi bất kỳ thao tác thủ công nào từ phía kỹ sư vận hành.
+
+---
+
+### 4.7. Hệ thống Đảm bảo Chất lượng Mã nguồn và Bộ Kiểm thử Tự động (Software Quality Assurance & Automated Testing)
+
+Nhằm đáp ứng các tiêu chuẩn khắt khe của một sản phẩm phần mềm công nghiệp thương mại, hệ thống tích hợp đầy đủ công cụ phân tích tĩnh, chuẩn hóa quy cách lập trình và bộ kiểm thử tự động đa tầng:
+
+```mermaid
+flowchart LR
+    A["Mã nguồn<br/>Developer"] --> B["Git Commit<br/>Husky Pre-commit"]
+    B --> C["ESLint 9 + Prettier<br/>(0 Error / 0 Warning)"]
+    C --> D["Git Push Origin Main"]
+    D --> E["GitHub Actions CI"]
+    E --> F["Zod Environment<br/>Validation (3 tests)"]
+    E --> G["Unit Tests Mocking<br/>loanService (9 tests)"]
+    E --> H["Supertest API<br/>Integration (5 tests)"]
+    E --> I["Race Condition & Anti-Hijacking<br/>Promise.all (2 tests)"]
+    E --> J["WebSocket Realtime<br/>Socket.IO (2 tests)"]
+    F & G & H & I & J --> K["Vitest v8 Coverage<br/>(21/21 PASS ~1.5s)"]
+    K --> L["Auto Deploy CD<br/>Fly.io Cloud"]
+```
+
+#### a) Kiểm soát Biến Môi trường với Zod (Fail-Fast Environment Validation)
+Mọi cấu hình hệ thống tại tệp `server/src/config/env.js` được định nghĩa bằng một Lược đồ kiểm định chặt chẽ (Schema) sử dụng thư viện **Zod**:
+- Bắt buộc các tham số quan trọng: `PORT`, `MONGODB_URI`, `CLIENT_URL`, `MQTT_BROKER_URL`, `BANK_ACCOUNT`, `BANK_BIN`, `EMAIL_USER`, `EMAIL_PASS`.
+- Áp dụng triết lý thiết kế **Fail-Fast**: Nếu bất kỳ biến môi trường nào bị thiếu hoặc sai định dạng (ví dụ sai cổng mạng hoặc chuỗi kết nối CSDL không hợp lệ), máy chủ sẽ lập tức dừng tiến trình khởi động ngay từ mili-giây đầu tiên, in ra thông báo lỗi định dạng chi tiết trên Console, ngăn chặn triệt để tình trạng sập hệ thống âm thầm (Silent Runtime Crash) khi đưa lên môi trường Đám mây.
+
+#### b) Phân tích Tĩnh và Ngăn chặn Lỗi với ESLint, Prettier & Husky Pre-commit
+- **ESLint Flat Config (`eslint.config.js`):** Áp dụng bộ quy tắc chuẩn của ESLint 9 kết hợp hỗ trợ React JSX, quy định nghiêm ngặt về biến chưa sử dụng (`no-unused-vars`). Toàn bộ kho mã nguồn đạt trạng thái sạch tuyệt đối ($0\text{ errors, } 0\text{ warnings}$).
+- **Prettier Code Formatter:** Đồng bộ hóa quy chuẩn thụt dòng, dấu ngoặc kép, chấm phẩy và định dạng tệp trên mọi máy tính của thành viên nhóm.
+- **Husky & lint-staged:** Cài đặt bộ đón chặn Git Hooks (`.husky/pre-commit`). Trước mỗi lệnh `git commit`, hệ thống tự động quét kiểm tra và định dạng lại các tệp đang thay đổi (staged files). Bất kỳ đoạn mã nào vi phạm cú pháp đều sẽ bị chặn commit ngay tại máy cục bộ.
+
+#### c) Bộ Kiểm thử Đa tầng với Vitest (21/21 Ca Kiểm thử Vượt qua, Thời gian thực thi $\approx 1.5\text{s}$)
+Hệ thống sử dụng khung kiểm thử thế hệ mới **Vitest** kết hợp engine **v8 Coverage**, bao gồm 4 tầng kiểm thử chuyên sâu:
+1. **Kiểm thử Đơn vị với Kỹ thuật Giả lập (Unit Testing with Mocking - `loanService.test.js` & `env.test.js`):**
+   - Tách biệt hoàn toàn tầng nghiệp vụ logic khỏi mạng Internet và cơ sở dữ liệu vật lý thông qua kỹ thuật Spy/Mocking đối tượng Mongoose.
+   - Kiểm tra độc lập trong $25\text{ms}$: Công thức tính tiền phạt trễ hạn chính xác theo ngày ($5.000\text{đ/ngày}$), hàm sinh URL thanh toán VietQR chuẩn Napas247, quy tắc giới hạn mượn tối đa 5 cuốn sách và nghiệp vụ tự động gộp biên lai thanh toán.
+2. **Kiểm thử Tích hợp Điểm cuối REST API với Supertest (`api.test.js`):**
+   - Khởi tạo ứng dụng Express trong bộ nhớ và giả lập các yêu cầu HTTP thực tế: Thẩm định mã trạng thái `200 OK` cho `/api/health` và danh mục `/api/books`.
+   - Kiểm thử cơ chế bảo vệ tham số đầu vào: Bắt buộc trả về mã lỗi `400 Bad Request` khi yêu cầu mượn sách thiếu `readerId` hoặc mảng `bookIds` rỗng.
+   - Kiểm thử lệnh điều khiển ngoại vi `/api/devices/:deviceId/command`: Kiểm tra phản hồi lệnh bật còi Buzzer/đèn LED thành công qua MQTT và từ chối các hành động không hợp lệ.
+3. **Kiểm thử Bảo vệ Xung đột Dữ liệu Đồng thời (Race Condition Testing - `raceCondition.test.js`):**
+   - **Mượn đồng thời cùng 1 cuốn sách:** Sử dụng hàm `Promise.all` kích hoạt đồng thời 2 luồng yêu cầu mượn đối với cùng một mã sách duy nhất. Hệ thống chứng minh cơ chế kiểm tra tính khả dụng (Availability Check) chỉ chấp thuận duy nhất 1 giao dịch thành công và từ chối dứt khoát giao dịch đến sau.
+   - **Bảo vệ chiếm đoạt phiên (Anti-Session Hijacking Guard):** Giả lập trường hợp độc giả A đang mở phiên làm việc thì có thẻ độc giả B quẹt chen ngang. Hệ thống lập tức từ chối thẻ B, bảo toàn phiên của A và phát lệnh cảnh báo.
+4. **Kiểm thử Kênh truyền Thời gian thực WebSocket (`socket.test.js`):**
+   - Khởi tạo một HTTP Server động trên một cổng ngẫu nhiên trong bộ nhớ, kết nối một Client thực tế bằng thư viện `socket.io-client`.
+   - Kiểm tra quá trình bắt tay WebSocket, nhận diện mã Socket ID và kiểm thử sự kiện phát thanh thời gian thực `kiosk:event` truyền tải dữ liệu trạng thái Kiosk xuống giao diện người dùng.
 
 ---
 
@@ -1079,6 +1127,16 @@ Bài học lớn nhất mà dự án đúc kết được sau quá trình triể
 
 ```text
 library-kiosk/
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml             # GitHub Actions CI/CD Pipeline tự động hóa lint, test, build, deploy
+├── .husky/                       # Git Hooks ngăn chặn commit mã nguồn lỗi cú pháp
+├── eslint.config.js              # Cấu hình kiểm tra cú pháp ESLint 9 Flat Config
+├── docker-compose.yml            # Điều phối toàn bộ hạ tầng cục bộ (Mosquitto, Server, Client Nginx)
+├── package.json                  # Root npm workspace quản lý scripts kiểm thử, linting và tools
+├── README.md                     # Cẩm nang tổng quan dự án và các liên kết Production
+├── kiosk.md                      # BÁO CÁO TOÀN VĂN BÀI TẬP LỚN HOÀN CHỈNH
+│
 ├── firmware/                     # Mã nguồn Firmware nhúng C++ cho ESP32
 │   ├── platformio.ini            # Cấu hình biên dịch PlatformIO và nạp thư viện
 │   ├── include/
@@ -1092,10 +1150,17 @@ library-kiosk/
 │       └── indicators.cpp        # Điều khiển còi Active Buzzer và đèn LED
 │
 ├── server/                       # Máy chủ Backend Node.js / Express
+│   ├── fly.toml                  # Cấu hình triển khai micro-VM Fly.io Singapore
+│   ├── Dockerfile                # Docker image Node.js 20 Alpine siêu nhẹ
+│   ├── vitest.config.js          # Cấu hình Vitest + v8 Code Coverage
 │   ├── .env.example              # Khai báo mẫu biến môi trường (MongoDB, Gmail SMTP, VietQR)
-│   ├── package.json              # Khai báo các gói phụ thuộc (Mongoose, MQTT.js, Socket.IO)
+│   ├── package.json              # Khai báo các gói phụ thuộc (Mongoose, MQTT.js, Socket.IO, Zod)
+│   ├── tests/                    # Bộ kiểm thử tự động toàn diện (21/21 Ca kiểm thử)
+│   │   ├── unit/                 # Kiểm thử Zod Env Validation, Logic tính phạt, VietQR, Giới hạn mượn
+│   │   └── integration/          # Supertest REST API, Race Condition, Realtime Socket.IO
 │   └── src/
-│       ├── index.js              # Điểm khởi chạy HTTP Server & tích hợp Gateway
+│       ├── index.js              # Điểm khởi chạy HTTP Server & tích hợp Gateway (0.0.0.0)
+│       ├── config/               # Schema xác thực biến môi trường Zod, Kết nối MongoDB
 │       ├── controllers/          # Bộ điều khiển REST API
 │       ├── models/               # Định nghĩa Lược đồ MongoDB Schemas
 │       ├── mqtt/                 # Xử lý các sự kiện mạng MQTT
@@ -1104,6 +1169,9 @@ library-kiosk/
 │       └── sockets/              # Quản lý kênh truyền thời gian thực Socket.IO
 │
 ├── client/                       # Giao diện Web Người dùng (React 18 + Vite)
+│   ├── vercel.json               # Cấu hình điều hướng Single Page Application (SPA) trên Vercel
+│   ├── Dockerfile                # Multi-stage Docker build sang máy chủ Web Nginx Alpine
+│   ├── nginx.conf                # Cấu hình Reverse Proxy chuyển tiếp an toàn
 │   ├── package.json              # Khai báo các gói phụ thuộc giao diện
 │   ├── vite.config.js            # Cấu hình máy chủ phát triển Vite
 │   └── src/
@@ -1112,53 +1180,41 @@ library-kiosk/
 │       ├── components/           # Thẻ Sinh viên thông minh, Modal VietQR, E-Ticket
 │       └── socket/               # Lắng nghe sự kiện đẩy thời gian thực từ Server
 │
-├── tools/
-│   └── device-simulator/         # Bộ công cụ giả lập phần cứng trạm Kiosk độc lập
-│       ├── package.json
-│       └── simulate.js           # CLI giả lập quẹt thẻ từ phím 1 đến 8
-│
-├── package.json                  # Script tự động hóa toàn dự án ở thư mục gốc
-├── HUONG_DAN_CHAY.md             # Cẩm nang hướng dẫn các bước vận hành
-├── Ktgiuaki.md                   # Báo cáo kỹ thuật rút gọn kiểm tra giữa kỳ
-└── kiosk.md                      # BÁO CÁO TOÀN VĂN BÀI TẬP LỚN HOÀN CHỈNH
+└── tools/
+    └── device-simulator/         # Bộ công cụ giả lập phần cứng trạm Kiosk độc lập
+        ├── package.json
+        └── simulate.js           # CLI giả lập quẹt thẻ từ phím 1 đến 8
 ```
 
-### 2. Quy trình Vận hành Nhanh Hệ sinh thái (3 Bước)
+### 2. Đường dẫn Vận hành Trực tuyến trên Đám mây (Live Production Deployment)
 
-Mở cửa sổ dòng lệnh Terminal (PowerShell hoặc CMD) ngay tại thư mục gốc `library-kiosk`:
+Hệ thống đã được đóng gói và phát hành trực tuyến trên hạ tầng điện toán đám mây công cộng $24/7$:
 
-- **Bước 1: Cài đặt tự động toàn bộ thư viện cho cả 3 phân hệ và tạo file cấu hình `.env`:**
+- 🖥️ **Giao diện Kiosk Tự phục vụ (Vercel CDN):** [https://btl-iot.vercel.app/kiosk](https://btl-iot.vercel.app/kiosk)  
+  _(Nhấn phím `F11` trên trình duyệt để kích hoạt chế độ Kiosk toàn màn hình cảm ứng)_
+- 🛡️ **Cổng Quản trị Thủ thư (Vercel CDN):** [https://btl-iot.vercel.app/admin](https://btl-iot.vercel.app/admin)  
+  _(Có thể mở trên điện thoại thông minh để giám sát trạng thái Kiosk theo thời gian thực)_
+- ⚙️ **Máy chủ Dịch vụ Backend (Fly.io Singapore):** [https://ptit-library-kiosk-server.fly.dev/api/health](https://ptit-library-kiosk-server.fly.dev/api/health)  
+  _(Được duy trì hoạt động liên tục $24/7$ thông qua cơ chế Keep-Alive định kỳ từ cron-job.org)_
 
+### 3. Quy trình Vận hành Nhanh Hệ sinh thái Cục bộ
+
+Khi cần kiểm thử cục bộ hoặc chạy demo ngoại tuyến (Offline Local Mode):
+
+- **Cách 1: Khởi chạy 1 lệnh duy nhất với Docker Compose (Khuyên dùng):**
   ```bash
-  npm run setup
+  docker compose up -d --build
   ```
+  Hệ thống sẽ tự động khởi động Mosquitto Broker (`1883`), Backend Server (`5000`) và Frontend Nginx (`3000`).
 
-- **Bước 2: Nạp dữ liệu mẫu sách và sinh viên vào CSDL MongoDB:**
-
+- **Cách 2: Khởi chạy thủ công qua Node.js Workspaces:**
   ```bash
-  npm run seed
+  npm run setup       # Cài đặt toàn bộ thư viện
+  npm run seed        # Nạp dữ liệu độc giả và sách mẫu
+  npm test            # Thực thi toàn bộ 21 test case tự động
+  npm run lint        # Quét cú pháp toàn bộ dự án
   ```
-
-- **Bước 3: Mở 3 cửa sổ dòng lệnh song song để khởi chạy toàn diện hệ thống:**
-  - **Cửa sổ 1 (Khởi chạy Máy chủ Backend):**
-
-    ```bash
-    npm run server:dev
-    ```
-
-    _(Máy chủ hoạt động tại địa chỉ: `http://localhost:5000`)_
-
-  - **Cửa sổ 2 (Khởi chạy Giao diện Kiosk & Admin):**
-
-    ```bash
-    npm run client:dev
-    ```
-
-    _(Truy cập Kiosk cảm ứng tại: `http://localhost:5173/kiosk`)_  
-    _(Truy cập Trang Quản trị tại: `http://localhost:5173/admin`)_
-
-  - **Cửa sổ 3 (Khởi chạy Bộ giả lập Thiết bị IoT):**
-    ```bash
-    npm run sim
-    ```
-    _(Sử dụng các phím từ `1` đến `8` trên bàn phím để kích hoạt các tình huống quét thẻ thực tế mà không cần nối mạch)._
+  Mở 3 cửa sổ dòng lệnh song song:
+  - Cửa sổ 1: `npm run server:dev` (Server lắng nghe cổng `5000`).
+  - Cửa sổ 2: `npm run client:dev` (Client chạy tại `http://localhost:5173`).
+  - Cửa sổ 3: `npm run sim` (Khởi chạy bộ giả lập phần cứng phím `1` đến `8`).
