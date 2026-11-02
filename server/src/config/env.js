@@ -1,14 +1,41 @@
 import dotenv from 'dotenv';
+import { z } from 'zod';
+
 dotenv.config();
 
-export const ENV = {
-  PORT: process.env.PORT || 5000,
-  MONGODB_URI: process.env.MONGODB_URI || 'mongodb://localhost:27017/library_kiosk',
-  MQTT_BROKER_URL: process.env.MQTT_BROKER_URL || 'mqtt://localhost:1883',
-  KIOSK_DEVICE_ID: process.env.KIOSK_DEVICE_ID || 'kiosk_01',
-  CLIENT_URL: process.env.CLIENT_URL || 'http://localhost:5173',
-  FINE_PER_DAY_VND: parseInt(process.env.FINE_PER_DAY_VND, 10) || 5000, // 5.000 VNĐ / ngày trễ hạn
-  BANK_BIN: process.env.BANK_BIN || '970422', // MBBank
-  BANK_ACCOUNT: process.env.BANK_ACCOUNT || '000124135246'
-};
+export const envSchema = z.object({
+  PORT: z.coerce.number().int().positive().default(5000),
+  MONGODB_URI: z.string().min(1, 'MONGODB_URI không được để trống'),
+  MQTT_BROKER_URL: z.string().min(1, 'MQTT_BROKER_URL không được để trống').default('mqtt://localhost:1883'),
+  KIOSK_DEVICE_ID: z.string().default('kiosk_01'),
+  CLIENT_URL: z.string().default('http://localhost:5173'),
+  FINE_PER_DAY_VND: z.coerce.number().nonnegative().default(5000),
+  BANK_BIN: z.string().default('970422'),
+  BANK_ACCOUNT: z.string().default('000124135246'),
+  EMAIL_USER: z.string().optional().default(''),
+  EMAIL_PASS: z.string().optional().default('')
+});
 
+export function validateEnv(rawEnv = process.env) {
+  const result = envSchema.safeParse(rawEnv);
+
+  if (!result.success) {
+    console.error('═══════════════════════════════════════════════════════════════');
+    console.error('❌ [FATAL CONFIG ERROR] BIẾN MÔI TRƯỜNG (.ENV) KHÔNG HỢP LỆ:');
+    console.error('═══════════════════════════════════════════════════════════════');
+    result.error.issues.forEach((issue) => {
+      console.error(` 🔴 [${issue.path.join('.')}] - ${issue.message}`);
+    });
+    console.error('───────────────────────────────────────────────────────────────');
+    console.error('⚠️  Hệ thống dừng khởi động để bảo đảm tính an toàn dữ liệu.');
+    console.error('═══════════════════════════════════════════════════════════════');
+    if (process.env.NODE_ENV !== 'test') {
+      process.exit(1);
+    }
+    throw new Error('Invalid environment configuration');
+  }
+
+  return result.data;
+}
+
+export const ENV = validateEnv();

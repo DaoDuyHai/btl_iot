@@ -8,10 +8,10 @@ on:
 
 jobs:
   # =====================================================
-  # 1. Job Kiểm thử mã nguồn và Build ứng dụng (CI)
+  # 1. Job Linting, Unit Testing & Build (CI)
   # =====================================================
   build-and-test:
-    name: Build & Verify Artifacts
+    name: Lint, Test & Build Artifacts
     runs-on: ubuntu-latest
 
     steps:
@@ -24,25 +24,31 @@ jobs:
           node-version: 20
           cache: 'npm'
           cache-dependency-path: |
+            package-lock.json
             server/package-lock.json
             client/package-lock.json
 
-      # Kiểm tra và build Backend
-      - name: Install & Verify Backend
+      # 1. Cài đặt root và chạy Linting kiểm tra chuẩn mã nguồn
+      - name: Install Root Dependencies & Run Linter
+        run: |
+          npm ci
+          npm run lint
+
+      # 2. Cài đặt Backend và chạy Test Suite với Coverage (Vitest + Supertest)
+      - name: Run Backend Tests & Coverage
         run: |
           cd server
           npm ci
-          node -c src/index.js
-          node -c src/app.js
+          npm run test:coverage
 
-      # Kiểm tra và build Frontend React
+      # 3. Cài đặt Frontend và biên dịch ứng dụng React SPA
       - name: Install & Build Frontend
         run: |
           cd client
           npm ci
           npm run build
 
-      # Kiểm tra đóng gói Docker Images
+      # 4. Kiểm tra đóng gói Docker Images
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -83,4 +89,3 @@ jobs:
         run: |
           cd server
           flyctl deploy --remote-only
-

@@ -1,5 +1,11 @@
 # 📚 Smart Library Kiosk - Hệ Thống Mượn / Trả Sách Tự Phục Vụ Thông Minh
 
+[![CI/CD Pipeline](https://github.com/DaoDuyHai/btl_iot/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/DaoDuyHai/btl_iot/actions/workflows/ci-cd.yml)
+[![Docker](https://img.shields.io/badge/Docker-Compose_Ready-2496ED?logo=docker&logoColor=white)]()
+[![Backend](https://img.shields.io/badge/Fly.io-Live_API-purple?logo=flydotio&logoColor=white)](https://ptit-library-kiosk-server.fly.dev/api/health)
+[![Test Suite](https://img.shields.io/badge/Vitest-21_Passed-brightgreen?logo=vitest&logoColor=white)]()
+[![Code Style](https://img.shields.io/badge/Code_Style-ESLint_+_Prettier-blueviolet?logo=eslint&logoColor=white)]()
+
 > **Đề tài:** Nghiên cứu, thiết kế và triển khai hệ thống Kiosk mượn/trả sách tự phục vụ ứng dụng công nghệ IoT (Internet of Things) và RFID.
 
 ---

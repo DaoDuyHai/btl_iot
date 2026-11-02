@@ -4,6 +4,13 @@ import { emitToAll } from '../sockets/index.js';
 export async function borrow(req, res, next) {
   try {
     const { readerId, bookIds, loanDays } = req.body;
+    if (!readerId || !bookIds || !Array.isArray(bookIds) || bookIds.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: 'readerId và bookIds (danh sách sách) là bắt buộc'
+      });
+    }
+
     const result = await loanService.borrowBatch({ readerId, bookIds, loanDays });
     
     emitToAll('loans:changed', { action: 'borrow', result });
