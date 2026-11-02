@@ -22,8 +22,8 @@ async function bootstrap() {
   // 4. Khởi tạo kết nối MQTT Broker
   initMQTT();
 
-  // 5. Lắng nghe HTTP Port
-  server.listen(ENV.PORT, () => {
+  // 5. Lắng nghe HTTP Port trên tất cả các interface mạng (chuẩn Docker/Cloud)
+  server.listen(ENV.PORT, '0.0.0.0', () => {
     console.log(`🌐 [HTTP Server] Đang lắng nghe tại: http://localhost:${ENV.PORT}`);
     console.log(`📡 [Kiosk Device ID]: ${ENV.KIOSK_DEVICE_ID}`);
     console.log('-------------------------------------------------------');

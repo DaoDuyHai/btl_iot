@@ -1,0 +1,64 @@
+services:
+  # -----------------------------------------------------
+  # 1. Trạm trung chuyển thông điệp MQTT Mosquitto Broker
+  # -----------------------------------------------------
+  mosquitto:
+    image: eclipse-mosquitto:2
+    container_name: kiosk-mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    networks:
+      - kiosk-net
+
+  # -----------------------------------------------------
+  # 2. Máy chủ xử lý nghiệp vụ Backend (Node.js + Socket.IO)
+  # -----------------------------------------------------
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: kiosk-backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MQTT_BROKER_URL=mqtt://mosquitto:1883
+      - MONGODB_URI=${MONGODB_URI}
+      - KIOSK_DEVICE_ID=kiosk_01
+      - CLIENT_URL=http://localhost:3000
+      - BANK_BIN=970422
+      - BANK_ACCOUNT=000124135246
+      - FINE_PER_DAY_VND=5000
+      - EMAIL_USER=${EMAIL_USER}
+      - EMAIL_PASS=${EMAIL_PASS}
+    depends_on:
+      - mosquitto
+    networks:
+      - kiosk-net
+
+  # -----------------------------------------------------
+  # 3. Giao diện Kiosk Cảm ứng & Quản trị (React + Nginx)
+  # -----------------------------------------------------
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=/api
+        - VITE_SOCKET_URL=/
+    container_name: kiosk-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+    networks:
+      - kiosk-net
+
+networks:
+  kiosk-net:
+    driver: bridge

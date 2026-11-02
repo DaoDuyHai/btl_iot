@@ -1,0 +1,31 @@
+# fly.toml app configuration file generated for ptit-library-kiosk-server on 2026-11-02T18:06:23+07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'ptit-library-kiosk-server'
+primary_region = 'sin'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  BANK_ACCOUNT = '000124135246'
+  BANK_BIN = '970422'
+  FINE_PER_DAY_VND = '5000'
+  KIOSK_DEVICE_ID = 'kiosk_01'
+  PORT = '5000'
+
+[http_service]
+  internal_port = 5000
+  force_https = true
+  auto_stop_machines = 'off'
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  size = 'shared-cpu-1x'
+  memory = '512mb'
+  cpus = 1
+  memory_mb = 512

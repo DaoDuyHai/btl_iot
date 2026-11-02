@@ -1,0 +1,86 @@
+name: Smart Library Kiosk CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  # =====================================================
+  # 1. Job Kiểm thử mã nguồn và Build ứng dụng (CI)
+  # =====================================================
+  build-and-test:
+    name: Build & Verify Artifacts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: |
+            server/package-lock.json
+            client/package-lock.json
+
+      # Kiểm tra và build Backend
+      - name: Install & Verify Backend
+        run: |
+          cd server
+          npm ci
+          node -c src/index.js
+          node -c src/app.js
+
+      # Kiểm tra và build Frontend React
+      - name: Install & Build Frontend
+        run: |
+          cd client
+          npm ci
+          npm run build
+
+      # Kiểm tra đóng gói Docker Images
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Backend Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./server
+          push: false
+          tags: ptit-library-kiosk-server:latest
+
+      - name: Build Frontend Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./client
+          push: false
+          tags: ptit-library-kiosk-client:latest
+
+  # =====================================================
+  # 2. Job Tự động Triển khai Backend lên Fly.io (CD)
+  # =====================================================
+  deploy-backend:
+    name: Deploy Backend to Fly.io
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flyctl
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
+      - name: Deploy to Fly.io
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        if: env.FLY_API_TOKEN != ''
+        run: |
+          cd server
+          flyctl deploy --remote-only
+
