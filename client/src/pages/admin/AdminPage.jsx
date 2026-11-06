@@ -7,15 +7,8 @@ import {
   Users, 
   History, 
   Activity, 
-  ShieldAlert, 
   CheckCircle, 
-  AlertTriangle, 
-  Wrench, 
-  XCircle, 
-  FileText,
-  Lock,
-  Unlock,
-  RotateCcw
+  FileText
 } from 'lucide-react';
 
 export default function AdminPage() {

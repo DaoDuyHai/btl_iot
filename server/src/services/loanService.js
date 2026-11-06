@@ -135,8 +135,8 @@ export async function getReturnPreview(bookRfid) {
 
   if (now > loan.dueDate) {
     isOverdue = true;
-    const diffTime = Math.abs(now - loan.dueDate);
-    overdueDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffTime = now.getTime() - new Date(loan.dueDate).getTime();
+    overdueDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
     fineAmount = overdueDays * ENV.FINE_PER_DAY_VND;
   }
 
@@ -169,7 +169,7 @@ export async function returnBatch({ bookRfids, readerId = null, returnMethod = '
   const now = new Date();
   const processedItems = [];
   let totalFine = 0;
-  let primaryReader = null;
+  let primaryReader = readerId ? await Reader.findById(readerId) : null;
 
   for (const rfid of bookRfids) {
     const book = await Book.findOne({ rfidTag: rfid, isDeleted: { $ne: true } });
@@ -191,8 +191,8 @@ export async function returnBatch({ bookRfids, readerId = null, returnMethod = '
     let overdueFine = 0;
     if (now > loan.dueDate) {
       isOverdue = true;
-      const diffTime = Math.abs(now - loan.dueDate);
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      const diffTime = now.getTime() - new Date(loan.dueDate).getTime();
+      const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
       overdueFine = diffDays * ENV.FINE_PER_DAY_VND;
     }
 
@@ -395,10 +395,9 @@ export async function manualReturn({ loanId, actor = 'Thủ thư', reason = 'Nh�
   const now = new Date();
 
   let overdueFine = 0;
-  let isOverdue = false;
   if (now > loan.dueDate) {
-    isOverdue = true;
-    const diffDays = Math.ceil(Math.abs(now - loan.dueDate) / (1000 * 60 * 60 * 24));
+    const diffTime = now.getTime() - new Date(loan.dueDate).getTime();
+    const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
     overdueFine = diffDays * ENV.FINE_PER_DAY_VND;
   }
 

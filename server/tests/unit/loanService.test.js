@@ -3,7 +3,6 @@ import * as loanService from '../../src/services/loanService.js';
 import Reader from '../../src/models/Reader.js';
 import Book from '../../src/models/Book.js';
 import Loan from '../../src/models/Loan.js';
-import AuditLog from '../../src/models/AuditLog.js';
 
 vi.mock('../../src/models/Reader.js');
 vi.mock('../../src/models/Book.js');
