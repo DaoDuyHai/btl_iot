@@ -21,11 +21,25 @@ export async function handleCardScan(deviceId, payload) {
         status: { $in: ['borrowing', 'overdue'] } 
       }).populate('bookId');
 
+      // Tìm các khoản nợ phạt chưa thanh toán (bao gồm phạt quá hạn chưa trả hoặc phạt hư hỏng)
+      const unpaidLoans = await Loan.find({
+        readerId: reader._id,
+        $or: [
+          { fineStatus: 'unpaid' },
+          { isPaid: false, fineAmount: { $gt: 0 } }
+        ]
+      }).populate('bookId');
+
+      const totalUnpaidFine = unpaidLoans.reduce((sum, l) => sum + (l.fineAmount || 0), 0);
+
       emitToAll('kiosk:event', {
         type: 'READER_AUTHENTICATED',
         data: {
           reader,
-          activeLoans
+          activeLoans,
+          unpaidLoans,
+          totalUnpaidFine,
+          hasDebt: totalUnpaidFine > 0
         }
       });
 
@@ -35,7 +49,7 @@ export async function handleCardScan(deviceId, payload) {
     }
 
     // 2. Kiểm tra xem có phải Thẻ Sách không
-    const book = await Book.findOne({ rfidTag: uid });
+    const book = await Book.findOne({ rfidTag: uid, isDeleted: { $ne: true } });
     if (book) {
       // Tìm xem sách có phiếu mượn nào đang hoạt động không
       const activeLoan = await Loan.findOne({ 
@@ -48,12 +62,15 @@ export async function handleCardScan(deviceId, payload) {
         data: { 
           book,
           isAvailable: book.status === 'available' && !activeLoan,
+          isReturnable: !!activeLoan,
           activeLoan: activeLoan ? {
             _id: activeLoan._id,
             status: activeLoan.status,
+            borrowDate: activeLoan.borrowDate,
             dueDate: activeLoan.dueDate,
             readerName: activeLoan.readerId?.name,
-            readerStudentId: activeLoan.readerId?.studentId
+            readerStudentId: activeLoan.readerId?.studentId,
+            readerId: activeLoan.readerId?._id
           } : null
         }
       });
@@ -73,7 +90,7 @@ export async function handleCardScan(deviceId, payload) {
     sendFeedback(deviceId, 'error');
     await logEvent(deviceId, 'scan', { uid, role: 'unknown' });
 
-  } catch (_err) {
+  } catch (err) {
     console.error(`❌ [Card Handler] Lỗi xử lý thẻ:`, err);
     sendFeedback(deviceId, 'error');
   }
@@ -86,4 +103,3 @@ async function logEvent(deviceId, event, payload) {
     // Không chặn luồng nếu log lỗi
   }
 }
-

@@ -3,21 +3,27 @@ import * as loanService from '../../src/services/loanService.js';
 import Reader from '../../src/models/Reader.js';
 import Book from '../../src/models/Book.js';
 import Loan from '../../src/models/Loan.js';
+import AuditLog from '../../src/models/AuditLog.js';
 
 vi.mock('../../src/models/Reader.js');
 vi.mock('../../src/models/Book.js');
 vi.mock('../../src/models/Loan.js');
+vi.mock('../../src/models/AuditLog.js', () => ({
+  default: {
+    create: vi.fn().mockResolvedValue({ _id: 'audit_1' })
+  }
+}));
 vi.mock('../../src/services/emailService.js', () => ({
   sendReceiptEmail: vi.fn().mockResolvedValue({ messageId: 'mock-mail-id' })
 }));
 
-describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả (Không cần Database)', () => {
+describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả Chuẩn Thư Viện', () => {
   beforeEach(() => {
     vi.clearAllMocks();
   });
 
-  describe('borrowBatch() - Mượn sách theo lô', () => {
-    it('phải chặn mượn nếu bạn đọc bị khóa tài khoản', async () => {
+  describe('borrowBatch() - Mượn tài liệu theo lô', () => {
+    it('phải chặn mượn nếu độc giả bị khóa tài khoản', async () => {
       Reader.findById.mockResolvedValue({ _id: 'r1', name: 'Nguyễn Văn A', active: false });
 
       await expect(
@@ -33,8 +39,18 @@ describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả (Không c�
       ).rejects.toThrow('Danh sách tài liệu mượn có phần tử bị trùng lặp');
     });
 
-    it('phải chặn mượn nếu bạn đọc đang có sách quá hạn chưa thanh toán', async () => {
+    it('phải chặn mượn nếu độc giả đang có khoản phạt chưa thanh toán (Nợ công)', async () => {
       Reader.findById.mockResolvedValue({ _id: 'r1', name: 'Nguyễn Văn A', active: true });
+      Loan.countDocuments.mockResolvedValueOnce(1); // 1 khoản phạt chưa trả
+
+      await expect(
+        loanService.borrowBatch({ readerId: 'r1', bookIds: ['b1'] })
+      ).rejects.toThrow(/khoản phạt chưa thanh toán/);
+    });
+
+    it('phải chặn mượn nếu độc giả đang có sách quá hạn chưa hoàn trả', async () => {
+      Reader.findById.mockResolvedValue({ _id: 'r1', name: 'Nguyễn Văn A', active: true });
+      Loan.countDocuments.mockResolvedValueOnce(0); // Không có nợ phạt
       Loan.countDocuments.mockResolvedValueOnce(2); // Có 2 cuốn quá hạn
 
       await expect(
@@ -44,6 +60,7 @@ describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả (Không c�
 
     it('phải chặn mượn nếu vượt quá hạn mức tối đa 5 cuốn', async () => {
       Reader.findById.mockResolvedValue({ _id: 'r1', name: 'Nguyễn Văn A', active: true });
+      Loan.countDocuments.mockResolvedValueOnce(0); // Không có nợ phạt
       Loan.countDocuments.mockResolvedValueOnce(0); // Không có sách quá hạn
       Loan.countDocuments.mockResolvedValueOnce(4); // Hiện đang mượn 4 cuốn
 
@@ -52,13 +69,13 @@ describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả (Không c�
       ).rejects.toThrow(/Vượt quá hạn mức mượn tài liệu/);
     });
 
-    it('phải chặn mượn nếu cuốn sách đang ở trạng thái không khả dụng (borrowed)', async () => {
+    it('phải chặn mượn nếu cuốn sách đang ở trạng thái không khả dụng (borrowed hoặc pending_inspection)', async () => {
       Reader.findById.mockResolvedValue({ _id: 'r1', name: 'Nguyễn Văn A', active: true });
       Loan.countDocuments.mockResolvedValueOnce(0);
+      Loan.countDocuments.mockResolvedValueOnce(0);
       Loan.countDocuments.mockResolvedValueOnce(1);
-      Book.find.mockResolvedValue([
-        { _id: 'b1', title: 'Lập trình IoT', status: 'borrowed' }
-      ]);
+      Book.find.mockResolvedValue([]); // Không tìm thấy sách nào available
+      Book.findById.mockResolvedValue({ _id: 'b1', title: 'Lập trình IoT', status: 'pending_inspection' });
 
       await expect(
         loanService.borrowBatch({ readerId: 'r1', bookIds: ['b1'] })
@@ -66,19 +83,19 @@ describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả (Không c�
     });
   });
 
-  describe('returnBookByRfid() - Trả sách và tính phạt VietQR', () => {
-    it('phải trả về thông báo đã có sẵn trong kho nếu sách không có phiếu mượn active', async () => {
-      Book.findOne.mockResolvedValue({ _id: 'b1', title: 'Mạng máy tính' });
+  describe('getReturnPreview() - Quét sách tại Kiosk (KHÔNG lưu Database)', () => {
+    it('phải trả về thông báo đã có sẵn trong kho nếu sách không có lượt mượn hoạt động', async () => {
+      Book.findOne.mockResolvedValue({ _id: 'b1', title: 'Mạng máy tính', rfidTag: 'TAG_1' });
       Loan.findOne.mockReturnValue({
         populate: vi.fn().mockResolvedValue(null)
       });
 
-      const res = await loanService.returnBookByRfid('TAG_AVAILABLE');
+      const res = await loanService.getReturnPreview('TAG_1');
       expect(res.alreadyReturned).toBe(true);
       expect(res.message).toContain('đã có sẵn trong thư viện');
     });
 
-    it('phải tính đúng tiền phạt 15.000 VNĐ cho sách quá hạn 3 ngày và sinh mã VietQR', async () => {
+    it('phải tính toán đúng tiền phạt cho sách quá hạn và sinh mã VietQR mà không sửa DB', async () => {
       const mockBook = { _id: 'b1', title: 'Giáo trình IoT', status: 'borrowed', save: vi.fn() };
       const threeDaysAgo = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000);
       const mockLoan = {
@@ -93,22 +110,25 @@ describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả (Không c�
         populate: vi.fn().mockResolvedValue(mockLoan)
       });
 
-      const res = await loanService.returnBookByRfid('TAG_OVERDUE');
+      const res = await loanService.getReturnPreview('TAG_OVERDUE');
 
       expect(res.isOverdue).toBe(true);
       expect(res.fineAmount).toBe(15000); // 3 ngày * 5000đ
-      expect(res.isPaid).toBe(false);
       expect(res.vietQrUrl).toContain('amount=15000');
-      expect(res.vietQrUrl).toContain('PHAT%20B21DCCN001');
+      // Đảm bảo không gọi save vào DB
+      expect(mockBook.save).not.toHaveBeenCalled();
+      expect(mockLoan.save).not.toHaveBeenCalled();
     });
+  });
 
-    it('phải hoàn tất trả sách ngay (fineAmount = 0, isPaid = true) khi sách còn hạn mượn', async () => {
+  describe('returnBatch() - Hoàn thành trả sách theo đợt & Chuyển sang pending_inspection', () => {
+    it('phải chuyển sách sang pending_inspection và kết thúc tính quá hạn', async () => {
       const mockBook = { _id: 'b1', title: 'Hệ thống nhúng', status: 'borrowed', save: vi.fn() };
-      const fiveDaysLater = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000);
+      const now = new Date();
       const mockLoan = {
-        _id: 'l2',
-        dueDate: fiveDaysLater,
-        readerId: { studentId: 'B21DCCN002', name: 'Lê Thị C' },
+        _id: 'l1',
+        dueDate: new Date(now.getTime() + 5 * 24 * 60 * 60 * 1000), // Còn 5 ngày
+        readerId: { studentId: 'B21DCCN001', name: 'Nguyễn Văn A' },
         save: vi.fn()
       };
 
@@ -117,22 +137,122 @@ describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả (Không c�
         populate: vi.fn().mockResolvedValue(mockLoan)
       });
 
-      const res = await loanService.returnBookByRfid('TAG_ON_TIME');
+      const res = await loanService.returnBatch({ bookRfids: ['TAG_VALID'] });
 
-      expect(res.isOverdue).toBe(false);
-      expect(res.fineAmount).toBe(0);
-      expect(res.isPaid).toBe(true);
-      expect(res.vietQrUrl).toBeNull();
+      expect(res.success).toBe(true);
+      expect(res.count).toBe(1);
+      expect(mockBook.status).toBe('pending_inspection');
+      expect(mockBook.save).toHaveBeenCalled();
+      expect(mockLoan.status).toBe('returned');
+      expect(mockLoan.inspectionStatus).toBe('pending');
+      expect(mockLoan.isPaid).toBe(true);
+      expect(mockLoan.save).toHaveBeenCalled();
     });
   });
 
-  describe('payFine() - Nộp phạt trực tuyến', () => {
-    it('phải mở khóa phiếu mượn và đánh dấu đã nộp phạt thành công', async () => {
+  describe('inspectBook() - Thủ thư kiểm tra sách sau khi trả (Mục 5)', () => {
+    it('phải đưa sách trở lại available nếu kết quả kiểm tra là normal', async () => {
+      const mockBook = { _id: 'b1', title: 'Lập trình C++', status: 'pending_inspection', save: vi.fn() };
+      const mockLoan = {
+        _id: 'l1',
+        bookId: mockBook,
+        readerId: { studentId: 'B21DCCN001' },
+        save: vi.fn()
+      };
+
+      Loan.findById.mockReturnValue({
+        populate: vi.fn().mockReturnValue({
+          populate: vi.fn().mockResolvedValue(mockLoan)
+        })
+      });
+      Book.findById.mockResolvedValue(mockBook);
+
+      const res = await loanService.inspectBook({
+        loanId: 'l1',
+        result: 'normal',
+        actor: 'Thủ thư Trưởng'
+      });
+
+      expect(res.success).toBe(true);
+      expect(mockBook.status).toBe('available');
+      expect(mockBook.physicalCondition).toBe('normal');
+      expect(mockLoan.inspectionStatus).toBe('inspected');
+      expect(mockBook.save).toHaveBeenCalled();
+      expect(mockLoan.save).toHaveBeenCalled();
+    });
+
+    it('phải chuyển sách sang damaged và tạo khoản bồi thường nếu hư hỏng nặng', async () => {
+      const mockBook = { _id: 'b1', title: 'Sách quý hiếm', status: 'pending_inspection', save: vi.fn() };
+      const mockLoan = {
+        _id: 'l1',
+        bookId: mockBook,
+        overdueFine: 0,
+        readerId: { studentId: 'B21DCCN001' },
+        save: vi.fn()
+      };
+
+      Loan.findById.mockReturnValue({
+        populate: vi.fn().mockReturnValue({
+          populate: vi.fn().mockResolvedValue(mockLoan)
+        })
+      });
+      Book.findById.mockResolvedValue(mockBook);
+
+      const res = await loanService.inspectBook({
+        loanId: 'l1',
+        result: 'damaged',
+        damageType: 'water_damage',
+        damageDescription: 'Dính nước ướt toàn bộ ruột sách',
+        damageFine: 150000,
+        actor: 'Thủ thư Trưởng'
+      });
+
+      expect(res.success).toBe(true);
+      expect(mockBook.status).toBe('damaged');
+      expect(mockLoan.damageFine).toBe(150000);
+      expect(mockLoan.fineAmount).toBe(150000);
+      expect(mockLoan.fineStatus).toBe('unpaid');
+      expect(mockLoan.isPaid).toBe(false);
+    });
+  });
+
+  describe('manualReturn() - Trả sách thủ công khi RFID bị hỏng (Mục 8)', () => {
+    it('phải ghi nhận trả thủ công và đưa sách về trạng thái pending_inspection', async () => {
+      const mockBook = { _id: 'b1', title: 'Sách rách tem RFID', status: 'borrowed', save: vi.fn() };
+      const mockLoan = {
+        _id: 'l1',
+        bookId: mockBook,
+        dueDate: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
+        readerId: { studentId: 'B21DCCN001' },
+        save: vi.fn()
+      };
+
+      Loan.findById.mockReturnValue({
+        populate: vi.fn().mockReturnValue({
+          populate: vi.fn().mockResolvedValue(mockLoan)
+        })
+      });
+      Book.findById.mockResolvedValue(mockBook);
+
+      const res = await loanService.manualReturn({
+        loanId: 'l1',
+        actor: 'Thủ thư',
+        reason: 'Tem RFID bị rách không đọc được'
+      });
+
+      expect(res.success).toBe(true);
+      expect(mockBook.status).toBe('pending_inspection');
+      expect(mockLoan.returnMethod).toBe('manual_librarian');
+      expect(mockLoan.status).toBe('returned');
+    });
+  });
+
+  describe('payFine() & waiveFine() - Xử lý tiền phạt', () => {
+    it('payFine() phải mở khóa phiếu mượn và đánh dấu đã nộp phạt thành công', async () => {
       const mockLoan = {
         _id: 'l1',
         fineAmount: 15000,
         isPaid: false,
-        status: 'overdue',
         save: vi.fn()
       };
 
@@ -145,9 +265,29 @@ describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả (Không c�
       const res = await loanService.payFine('l1');
       expect(res.success).toBe(true);
       expect(mockLoan.isPaid).toBe(true);
-      expect(mockLoan.status).toBe('returned');
+      expect(mockLoan.fineStatus).toBe('paid');
+      expect(mockLoan.save).toHaveBeenCalled();
+    });
+
+    it('waiveFine() phải miễn phạt và đánh dấu fineStatus = waived', async () => {
+      const mockLoan = {
+        _id: 'l1',
+        fineAmount: 20000,
+        isPaid: false,
+        save: vi.fn()
+      };
+
+      Loan.findById.mockReturnValue({
+        populate: vi.fn().mockReturnValue({
+          populate: vi.fn().mockResolvedValue(mockLoan)
+        })
+      });
+
+      const res = await loanService.waiveFine('l1', 'Miễn phạt do bạn đọc có hoàn cảnh khó khăn');
+      expect(res.success).toBe(true);
+      expect(mockLoan.isPaid).toBe(true);
+      expect(mockLoan.fineStatus).toBe('waived');
       expect(mockLoan.save).toHaveBeenCalled();
     });
   });
 });
-

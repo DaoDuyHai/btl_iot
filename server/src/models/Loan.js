@@ -11,10 +11,40 @@ const loanSchema = new mongoose.Schema({
     enum: ['borrowing', 'returned', 'overdue'], 
     default: 'borrowing' 
   },
-  fineAmount: { type: Number, default: 0 },
+  
+  // Tiền phạt & phân loại
+  fineAmount: { type: Number, default: 0 },       // Tổng tiền phạt = overdueFine + damageFine
+  overdueFine: { type: Number, default: 0 },      // Tiền phạt quá hạn
+  damageFine: { type: Number, default: 0 },       // Tiền phạt hư hỏng / bồi thường mất sách
+  damageType: { 
+    type: String, 
+    enum: ['none', 'torn_cover', 'missing_pages', 'writing', 'water_damage', 'lost', 'other'],
+    default: 'none'
+  },
+  damageDescription: { type: String, default: '' },
+  fineStatus: {
+    type: String,
+    enum: ['none', 'pending', 'unpaid', 'paid', 'waived', 'disputed', 'cancelled'],
+    default: 'none'
+  },
   isPaid: { type: Boolean, default: false },
-  renewCount: { type: Number, default: 0 }
+
+  // Kiểm tra vật lý sau khi trả
+  inspectionStatus: {
+    type: String,
+    enum: ['none', 'pending', 'inspected'],
+    default: 'none'
+  },
+  inspectedBy: { type: String, default: '' },
+  inspectedAt: { type: Date, default: null },
+  inspectionNotes: { type: String, default: '' },
+
+  renewCount: { type: Number, default: 0 },
+  returnMethod: { 
+    type: String, 
+    enum: ['kiosk_rfid', 'manual_librarian'], 
+    default: 'kiosk_rfid' 
+  }
 }, { timestamps: true });
 
 export default mongoose.model('Loan', loanSchema);
-

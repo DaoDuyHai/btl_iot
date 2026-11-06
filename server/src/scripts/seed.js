@@ -42,6 +42,7 @@ async function seedData() {
       }
     ]);
     const readerA = readers[0];
+    const readerB = readers[1];
 
     // 3. Tạo kho sách phong phú đáp ứng đầy đủ các kịch bản thực tế
     const books = await Book.insertMany([
@@ -50,6 +51,7 @@ async function seedData() {
         title: 'Lập trình C++ Nâng Cao',
         author: 'GS. Phạm Văn B',
         category: 'Công nghệ thông tin',
+        copyCode: 'CP-CPP-01',
         rfidTag: 'A1B2C3D4', // Phím [2] trên Simulator -> Test TRẢ QUÁ HẠN & VIETQR
         status: 'borrowed'
       },
@@ -58,6 +60,7 @@ async function seedData() {
         title: 'Cấu Trúc Dữ Liệu & Giải Thuật',
         author: 'TS. Lê Thị C',
         category: 'Khoa học máy tính',
+        copyCode: 'CP-DSA-01',
         rfidTag: 'D4C3B2A1', // Phím [3] trên Simulator -> Test GIA HẠN & TRẢ ĐÚNG HẠN
         status: 'borrowed'
       },
@@ -66,6 +69,7 @@ async function seedData() {
         title: 'Internet of Things & Hệ Thống Kiosk Tự Phục Vụ',
         author: 'ThS. Trần Văn D',
         category: 'IoT & Phần cứng',
+        copyCode: 'CP-IOT-01',
         rfidTag: 'B3C4D5E6', // Phím [4] trên Simulator -> Test MƯỢN MỚI
         status: 'available'
       },
@@ -74,6 +78,7 @@ async function seedData() {
         title: 'Giáo Trình Mạng Máy Tính & Viễn Thông',
         author: 'PGS.TS Nguyễn Văn E',
         category: 'Mạng viễn thông',
+        copyCode: 'CP-NET-01',
         rfidTag: 'C5D6E7F8', // Phím [5] trên Simulator -> Test MƯỢN MỚI
         status: 'available'
       },
@@ -82,6 +87,7 @@ async function seedData() {
         title: 'Trí Tuệ Nhân Tạo & Học Máy Ứng Dụng',
         author: 'TS. Vũ Hoàng Nam',
         category: 'Trí tuệ nhân tạo',
+        copyCode: 'CP-AI-01',
         rfidTag: 'E9F0A1B2', // Phím [6] trên Simulator -> Test MƯỢN MỚI
         status: 'available'
       },
@@ -90,8 +96,19 @@ async function seedData() {
         title: 'Kỹ Thuật Vi Điều Khiển & Vi Xử Lý ESP32',
         author: 'TS. Đặng Quốc Hưng',
         category: 'Điện tử viễn thông',
+        copyCode: 'CP-ESP-01',
         rfidTag: 'F1E2D3C4',
         status: 'available'
+      },
+      {
+        isbn: '978-604-0-07',
+        title: 'An Toàn & Bảo Mật Mạng Thông Tin',
+        author: 'ThS. Hoàng Minh Đức',
+        category: 'An toàn thông tin',
+        copyCode: 'CP-SEC-01',
+        rfidTag: '778899AA',
+        status: 'pending_inspection', // Demo: Sách vừa trả tại Kiosk, đang chờ thủ thư kiểm tra
+        physicalCondition: 'normal'
       }
     ]);
 
@@ -113,7 +130,7 @@ async function seedData() {
       renewCount: 0
     });
 
-    // Kịch bản B: Phiếu mượn ĐÚNG HẠN còn 10 ngày (Để test Gia hạn & TrẢ đúng hạn phí 0đ)
+    // Kịch bản B: Phiếu mượn ĐÚNG HẠN còn 10 ngày (Để test Gia hạn & Trả đúng hạn phí 0đ)
     const validBorrowDate = new Date();
     validBorrowDate.setDate(now.getDate() - 4);
     const validDueDate = new Date();
@@ -128,7 +145,27 @@ async function seedData() {
       renewCount: 0
     });
 
-    // Kịch bản C: Phiếu mượn ĐÃ TRẢ THÀNH CÔNG trong quá khứ (Lịch sử mượn trả)
+    // Kịch bản C: Phiếu mượn ĐÃ TRẢ TẠI KIOSK, ĐANG CHỜ THỦ THƯ KIỂM TRA (pending_inspection)
+    const inspectionBorrowDate = new Date();
+    inspectionBorrowDate.setDate(now.getDate() - 7);
+    const inspectionDueDate = new Date();
+    inspectionDueDate.setDate(now.getDate() + 7);
+    const inspectionReturnDate = new Date(); // Vừa trả tại Kiosk
+
+    await Loan.create({
+      readerId: readerB._id,
+      bookId: books[6]._id, // An Toàn Thông Tin (778899AA)
+      borrowDate: inspectionBorrowDate,
+      dueDate: inspectionDueDate,
+      returnDate: inspectionReturnDate,
+      status: 'returned',
+      fineAmount: 0,
+      isPaid: true,
+      inspectionStatus: 'pending',
+      returnMethod: 'kiosk_rfid'
+    });
+
+    // Kịch bản D: Phiếu mượn ĐÃ TRẢ THÀNH CÔNG trong quá khứ (Lịch sử mượn trả)
     const pastBorrowDate = new Date();
     pastBorrowDate.setDate(now.getDate() - 30);
     const pastDueDate = new Date();
@@ -144,24 +181,21 @@ async function seedData() {
       returnDate: pastReturnDate,
       status: 'returned',
       fineAmount: 0,
-      isPaid: true
+      isPaid: true,
+      inspectionStatus: 'inspected',
+      inspectedBy: 'Thủ thư Trưởng'
     });
 
     console.log('\n=============================================================');
     console.log('🎉 CƠ SỞ DỮ LIỆU ĐÃ ĐƯỢC THIẾT LẬP THÀNH CÔNG CHO KIOSK PTIT:');
     console.log('=============================================================');
-    console.log(`👤 BẠN ĐỌC CHÍNH (Đã liên kết Gmail nhận biên lai thực tế):`);
-    console.log(`   - Tên: ${readerA.name} | MSSV: ${readerA.studentId}`);
-    console.log(`   - Email: ${readerA.email}`);
-    console.log(`   - Thẻ RFID: ${readerA.rfidCard} (Phím [1] trên Simulator)`);
-    console.log(`📚 KHO SÁCH (6 cuốn):`);
+    console.log(`👤 BẠN ĐỌC CHÍNH:`);
+    console.log(`   - Tên: ${readerA.name} | MSSV: ${readerA.studentId} | Thẻ: ${readerA.rfidCard}`);
+    console.log(`📚 KHO SÁCH (7 cuốn):`);
     console.log(`   - Sách quá hạn 3 ngày (Phím [2]): "${books[0].title}" (UID: ${books[0].rfidTag})`);
     console.log(`   - Sách đang mượn đúng hạn (Phím [3]): "${books[1].title}" (UID: ${books[1].rfidTag})`);
-    console.log(`   - Sách sẵn sàng mượn (Phím [4], [5], [6]): Sẵn có trong kho`);
-    console.log(`📋 PHIẾU MƯỢN SẴN CÓ:`);
-    console.log(`   - 1 Phiếu QUÁ HẠN (Test Quẹt trả -> VietQR 15.000đ & Email)`);
-    console.log(`   - 1 Phiếu ĐÚNG HẠN (Test Gia Hạn +14 ngày & Email)`);
-    console.log(`   - 1 Phiếu ĐÃ HOÀN TẤT (Xem lịch sử tài khoản bạn đọc)`);
+    console.log(`   - Sách chờ thủ thư kiểm tra: "${books[6].title}" (UID: ${books[6].rfidTag})`);
+    console.log(`   - Sách sẵn sàng mượn (Phím [4], [5], [6])`);
     console.log('=============================================================\n');
 
     process.exit(0);

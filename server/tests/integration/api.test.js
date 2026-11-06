@@ -7,6 +7,7 @@ vi.mock('../../src/models/Book.js');
 vi.mock('../../src/models/Reader.js');
 vi.mock('../../src/models/DeviceLog.js');
 vi.mock('../../src/models/Loan.js');
+vi.mock('../../src/models/AuditLog.js');
 vi.mock('../../src/mqtt/publisher.js', () => ({
   sendFeedback: vi.fn(),
   sendReboot: vi.fn()
@@ -57,6 +58,54 @@ describe('Integration Test: REST API Endpoints với Supertest', () => {
     });
   });
 
+  describe('POST /api/loans/return-preview validation', () => {
+    it('phải trả về mã lỗi 400 khi thiếu bookRfid', async () => {
+      const res = await request(app)
+        .post('/api/loans/return-preview')
+        .send({});
+
+      expect(res.status).toBe(400);
+      expect(res.body.success).toBe(false);
+      expect(res.body.message).toContain('Vui lòng cung cấp bookRfid');
+    });
+  });
+
+  describe('POST /api/loans/return-batch validation', () => {
+    it('phải trả về mã lỗi 400 khi thiếu mảng bookRfids', async () => {
+      const res = await request(app)
+        .post('/api/loans/return-batch')
+        .send({ bookRfids: [] });
+
+      expect(res.status).toBe(400);
+      expect(res.body.success).toBe(false);
+      expect(res.body.message).toContain('Danh sách bookRfids là bắt buộc');
+    });
+  });
+
+  describe('POST /api/loans/inspect validation', () => {
+    it('phải trả về mã lỗi 400 khi thiếu loanId hoặc result', async () => {
+      const res = await request(app)
+        .post('/api/loans/inspect')
+        .send({ loanId: '' });
+
+      expect(res.status).toBe(400);
+      expect(res.body.success).toBe(false);
+      expect(res.body.message).toContain('bắt buộc');
+    });
+  });
+
+  describe('POST /api/loans/manual-return validation', () => {
+    it('phải trả về mã lỗi 400 khi thiếu loanId', async () => {
+      const res = await request(app)
+        .post('/api/loans/manual-return')
+        .send({});
+
+      expect(res.status).toBe(400);
+      expect(res.body.success).toBe(false);
+      expect(res.body.message).toContain('Vui lòng cung cấp loanId');
+    });
+  });
+
   describe('POST /api/devices/:deviceId/command', () => {
     it('phải gửi thành công lệnh phản hồi phần cứng (Buzzer/LED) qua MQTT', async () => {
       const res = await request(app)
@@ -79,4 +128,3 @@ describe('Integration Test: REST API Endpoints với Supertest', () => {
     });
   });
 });
-

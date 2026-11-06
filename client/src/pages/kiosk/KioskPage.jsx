@@ -67,7 +67,10 @@ export default function KioskPage() {
         setTimeoutCounter(60);
 
         const hasOverdue = loans.some(l => new Date() > new Date(l.dueDate));
-        if (hasOverdue) {
+        // Kiểm tra độc giả có khoản phạt nợ chưa thanh toán không
+        if (data.hasDebt) {
+          showToast('warning', 'Tài khoản có nợ phạt', `Bạn đang có khoản nợ phạt ${data.totalUnpaidFine?.toLocaleString('vi-VN')} VNĐ chưa thanh toán. Thư viện tạm dừng cho mượn mới cho đến khi nộp phạt.`);
+        } else if (hasOverdue) {
           showToast('warning', 'Cảnh báo mượn quá hạn', `Bạn đọc ${data.reader.name} đang có tài liệu quá hạn chưa trả! Vui lòng hoàn trả trước.`);
         } else {
           showToast('success', 'Xác thực thành công', `Xin chào bạn đọc ${data.reader.name} (${data.reader.studentId})`);
@@ -172,8 +175,12 @@ export default function KioskPage() {
     return () => clearInterval(timer);
   }, [currentScreen]);
 
-  // Điều hướng khi bấm 4 nút chính ở trang chủ
+  // Điều hướng khi bấm 4 nút chính ở trang chủ (Mục 2.1 STT 3: Cho phép trả sách không cần thẻ độc giả)
   function handleSelectFeature(feature) {
+    if (feature === 'RETURN') {
+      setCurrentScreen('RETURN');
+      return;
+    }
     if (currentReader) {
       setCurrentScreen(feature);
     } else {
@@ -221,28 +228,64 @@ export default function KioskPage() {
     }
   }
 
-  // Xử lý trả sách
+  // Xử lý quét xem trước sách cần trả (Chỉ đưa vào danh sách chờ - KHÔNG cập nhật DB, Mục 2.1 STT 1)
   async function processReturnBook(rfidTag) {
     try {
-      const res = await apiService.returnBook(rfidTag);
+      const res = await apiService.getReturnPreview(rfidTag);
       if (res.alreadyReturned) {
         playKioskBeep('error');
         showToast('info', 'Tài liệu đã ở trong thư viện', res.message || `Cuốn sách "${res.book?.title}" hiện đã có sẵn trong kho, không có phiếu mượn cần hoàn trả.`);
         return;
       }
 
+      // Kiểm tra xem sách đã có trong danh sách chờ trả chưa
+      if (returnedBooks.some(b => b.book?.rfidTag === res.book?.rfidTag)) {
+        playKioskBeep('error');
+        showToast('warning', 'Sách đã có trong danh sách', `Cuốn sách "${res.book?.title}" đã được thêm vào danh sách chờ hoàn trả.`);
+        return;
+      }
+
       playKioskBeep('success');
-      setReturnedBooks(prev => {
-        if (prev.some(b => b.book?._id === res.book?._id)) return prev;
-        return [...prev, res];
-      });
+      setReturnedBooks(prev => [...prev, res]);
 
       if (res.isOverdue) {
-        showToast('warning', 'Tài liệu quá hạn hoàn trả', `Cuốn "${res.book?.title}" đã quá hạn! Tiền phạt: ${res.fineAmount?.toLocaleString('vi-VN')} VNĐ. Vui lòng quét VietQR nộp phạt.`);
-        setQrModalData(res);
+        showToast('warning', 'Tài liệu quá hạn hoàn trả', `Cuốn "${res.book?.title}" đã quá hạn ${res.overdueDays} ngày! Tiền phạt tạm tính: ${res.fineAmount?.toLocaleString('vi-VN')} VNĐ.`);
       } else {
-        showToast('success', 'Trả tài liệu thành công', `Đã ghi nhận trả cuốn "${res.book?.title}".`);
+        showToast('success', 'Đã thêm vào danh sách chờ trả', `Đã nhận diện cuốn "${res.book?.title}".`);
       }
+    } catch (err) {
+      playKioskBeep('error');
+      showToast('error', 'Lỗi nhận diện tài liệu', err.response?.data?.message || err.message);
+    }
+  }
+
+  // Xử lý xác nhận trả sách theo đợt (Ghi nhận DB bằng transaction & chuyển sang pending_inspection, Mục 2.1 STT 2)
+  const [isReturning, setIsReturning] = useState(false);
+
+  async function handleConfirmReturnBatch() {
+    if (returnedBooks.length === 0 || isReturning) return;
+    setIsReturning(true);
+
+    try {
+      const bookRfids = returnedBooks.map(item => item.book.rfidTag);
+      const res = await apiService.returnBatch(bookRfids, currentReader?._id);
+      playKioskBeep('success');
+
+      setReceiptData({
+        title: 'TIẾP NHẬN TÀI LIỆU TRẢ THÀNH CÔNG',
+        items: returnedBooks.map(item => ({
+          title: item.book?.title,
+          author: item.book?.author,
+          dueDate: item.loan?.dueDate,
+          statusText: item.isOverdue 
+            ? `Quá hạn ${item.overdueDays} ngày (Phạt: ${item.fineAmount?.toLocaleString('vi-VN')} đ)` 
+            : 'Đúng hạn (0đ)'
+        })),
+        actionType: 'RETURN'
+      });
+
+      showToast('success', 'Đã tiếp nhận tài liệu', `Đã tiếp nhận ${res.count} tài liệu vào kho trả. Sách đang chờ thủ thư kiểm tra vật lý.`);
+      setReturnedBooks([]);
 
       if (currentReader) {
         const updated = await apiService.getReaderByRfid(currentReader.rfidCard);
@@ -250,7 +293,9 @@ export default function KioskPage() {
       }
     } catch (err) {
       playKioskBeep('error');
-      showToast('error', 'Lỗi trả tài liệu', err.response?.data?.message || err.message);
+      showToast('error', 'Lỗi hoàn thành trả sách', err.response?.data?.message || err.message);
+    } finally {
+      setIsReturning(false);
     }
   }
 
@@ -352,44 +397,11 @@ export default function KioskPage() {
       {currentScreen === 'RETURN' && (
         <ReturnSection
           reader={currentReader}
-          returnedBooks={returnedBooks}
-          onConfirmFinish={async () => {
-            const unpaid = returnedBooks.filter(b => b.isOverdue && !b.isPaid);
-            if (unpaid.length > 0) {
-              playKioskBeep('error');
-              showToast('error', 'Chưa hoàn tất nộp phạt', `Còn ${unpaid.length} cuốn sách quá hạn chưa thanh toán tiền phạt. Vui lòng nộp phạt trước khi hoàn tất!`);
-              return;
-            }
-
-            // Gửi duy nhất 01 email biên lai tổng hợp cho toàn bộ các cuốn trả trong lượt này
-            const receiptItems = returnedBooks.map(item => {
-              const hasFine = item.isOverdue && item.fineAmount > 0;
-              return {
-                title: item.book?.title,
-                author: item.book?.author,
-                dueDate: item.loan?.dueDate,
-                statusText: hasFine 
-                  ? `Quá hạn (Đã nộp phạt: ${item.fineAmount?.toLocaleString('vi-VN')} đ)` 
-                  : 'Đúng hạn (0đ)'
-              };
-            });
-
-            const targetReaderId = currentReader?._id || returnedBooks[0]?.reader?._id || returnedBooks[0]?.loan?.readerId;
-            if (targetReaderId) {
-              apiService.finishReturn(targetReaderId, receiptItems).catch(err => {
-                console.error('Lỗi gửi email biên lai trả sách:', err);
-              });
-            }
-
-            setReceiptData({
-              title: 'TRẢ TÀI LIỆU THÀNH CÔNG',
-              items: returnedBooks,
-              actionType: 'RETURN'
-            });
-
-            showToast('success', 'Giao dịch hoàn tất', `Đã ghi nhận trả ${returnedBooks.length} tài liệu và gửi 01 email biên lai tổng hợp.`);
-          }}
+          pendingReturns={returnedBooks}
+          onRemoveItem={(rfid) => setReturnedBooks(prev => prev.filter(b => b.book?.rfidTag !== rfid))}
+          onConfirmFinish={handleConfirmReturnBatch}
           onOpenVietQrModal={(res) => setQrModalData(res)}
+          isSubmitting={isReturning}
         />
       )}
 

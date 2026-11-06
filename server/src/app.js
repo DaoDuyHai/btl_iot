@@ -4,6 +4,7 @@ import readerRoutes from './routes/readerRoutes.js';
 import bookRoutes from './routes/bookRoutes.js';
 import loanRoutes from './routes/loanRoutes.js';
 import deviceRoutes from './routes/deviceRoutes.js';
+import auditRoutes from './routes/auditRoutes.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 
 const app = express();
@@ -21,6 +22,7 @@ app.use('/api/readers', readerRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/loans', loanRoutes);
 app.use('/api/devices', deviceRoutes);
+app.use('/api/audits', auditRoutes);
 
 // Bắt lỗi tập trung
 app.use(errorHandler);
