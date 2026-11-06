@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Home, Settings, Radio, BookOpen } from 'lucide-react';
+import { Home, Radio, BookOpen } from 'lucide-react';
 
 export default function KioskHeader({ title, icon, onBackHome, deviceStatus }) {
   const isOnline = deviceStatus?.status === 'online';
@@ -30,9 +29,9 @@ export default function KioskHeader({ title, icon, onBackHome, deviceStatus }) {
         </div>
       )}
 
-      {/* Góc phải: Nút điều hướng, Icon sách mở và Trạng thái ESP32 */}
+      {/* Góc phải: Nút điều hướng Trang Chủ (khi ở màn hình con), Trạng thái ESP32 & Biểu tượng Thư viện */}
       <div className="kiosk-header-right">
-        {onBackHome ? (
+        {onBackHome && (
           <button
             onClick={onBackHome}
             style={{
@@ -53,26 +52,6 @@ export default function KioskHeader({ title, icon, onBackHome, deviceStatus }) {
             <Home size={16} />
             <span>Trang Chủ</span>
           </button>
-        ) : (
-          <Link
-            to="/admin"
-            style={{
-              textDecoration: 'none',
-              background: 'rgba(255, 255, 255, 0.18)',
-              color: '#ffffff',
-              padding: '6px 14px',
-              borderRadius: '8px',
-              fontSize: '12px',
-              fontWeight: '700',
-              border: '1px solid rgba(255, 255, 255, 0.25)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '5px'
-            }}
-          >
-            <Settings size={14} />
-            <span>Thủ thư</span>
-          </Link>
         )}
 
         {/* Trạng thái Kiosk */}
