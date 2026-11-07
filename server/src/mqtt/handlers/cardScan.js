@@ -5,9 +5,26 @@ import DeviceLog from '../../models/DeviceLog.js';
 import { emitToAll } from '../../sockets/index.js';
 import { sendFeedback } from '../publisher.js';
 
+// Bộ nhớ đệm chống dội sóng RFID phần cứng (Debounce / Cooldown)
+const scanCooldown = new Map();
+const COOLDOWN_MS = 1000;
+
 export async function handleCardScan(deviceId, payload) {
   const { uid } = payload;
   if (!uid) return;
+
+  const now = Date.now();
+  const lastScanTime = scanCooldown.get(uid);
+  if (lastScanTime && (now - lastScanTime) < COOLDOWN_MS) {
+    console.log(`⏱️ [Card Handler] Bỏ qua quét trùng UID: ${uid} (Cooldown ${now - lastScanTime}ms)`);
+    return;
+  }
+  scanCooldown.set(uid, now);
+  if (scanCooldown.size > 200) {
+    for (const [k, v] of scanCooldown.entries()) {
+      if (now - v > 10000) scanCooldown.delete(k);
+    }
+  }
 
   console.log(`🔍 [Card Handler] Đang phân tích thẻ UID: ${uid} từ ${deviceId}`);
 
@@ -15,6 +32,20 @@ export async function handleCardScan(deviceId, payload) {
     // 1. Kiểm tra xem có phải Thẻ Độc Giả không
     const reader = await Reader.findOne({ rfidCard: uid });
     if (reader) {
+      // Nếu thẻ độc giả bị khóa -> phát tín hiệu lỗi phần cứng và cảnh báo UI
+      if (!reader.active) {
+        console.warn(`⚠️ [Card Handler] Thẻ độc giả bị khóa: ${reader.name} (${reader.studentId})`);
+        emitToAll('kiosk:event', {
+          type: 'READER_LOCKED',
+          data: {
+            reader,
+            message: `Thẻ của bạn đọc ${reader.name} (${reader.studentId}) đã bị khóa. Vui lòng liên hệ quầy thủ thư!`
+          }
+        });
+        sendFeedback(deviceId, 'error');
+        await logEvent(deviceId, 'scan', { uid, role: 'reader', name: reader.name, status: 'locked' });
+        return;
+      }
       // Tìm các sách đang mượn của độc giả này
       const activeLoans = await Loan.find({ 
         readerId: reader._id, 

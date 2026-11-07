@@ -288,5 +288,139 @@ describe('Unit Test: Mock Tầng Service Nghiệp Vụ Mượn/Trả Chuẩn Th�
       expect(mockLoan.fineStatus).toBe('waived');
       expect(mockLoan.save).toHaveBeenCalled();
     });
+
+    it('disputeFine() phải chuyển trạng thái khoản phạt sang disputed', async () => {
+      const mockLoan = {
+        _id: 'l1',
+        fineStatus: 'unpaid',
+        save: vi.fn()
+      };
+
+      Loan.findById.mockReturnValue({
+        populate: vi.fn().mockReturnValue({
+          populate: vi.fn().mockResolvedValue(mockLoan)
+        })
+      });
+
+      const res = await loanService.disputeFine('l1', 'Sách trả đúng hạn nhưng máy quét lỗi');
+      expect(res.success).toBe(true);
+      expect(mockLoan.fineStatus).toBe('disputed');
+      expect(mockLoan.save).toHaveBeenCalled();
+    });
+  });
+
+  describe('renewLoans() - Gia hạn thời hạn mượn', () => {
+    it('phải gia hạn thành công và cộng thêm 14 ngày vào dueDate', async () => {
+      const futureDue = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000);
+      const mockLoan = {
+        _id: 'l1',
+        dueDate: futureDue,
+        renewCount: 0,
+        readerId: { _id: 'r1', name: 'Sinh viên' },
+        bookId: { title: 'Lập trình Node.js' },
+        save: vi.fn()
+      };
+
+      Loan.find.mockReturnValue({
+        populate: vi.fn().mockReturnValue({
+          populate: vi.fn().mockResolvedValue([mockLoan])
+        })
+      });
+      Loan.countDocuments.mockResolvedValue(0); // Không có nợ phạt
+
+      const res = await loanService.renewLoans({ loanIds: ['l1'], extraDays: 14 });
+      expect(res.count).toBe(1);
+      expect(mockLoan.renewCount).toBe(1);
+      expect(mockLoan.save).toHaveBeenCalled();
+    });
+
+    it('phải chặn gia hạn nếu sách đã quá hạn trả', async () => {
+      const pastDue = new Date(Date.now() - 2 * 24 * 60 * 60 * 1000);
+      const mockLoan = {
+        _id: 'l1',
+        dueDate: pastDue,
+        renewCount: 0,
+        readerId: { _id: 'r1' },
+        bookId: { title: 'Sách quá hạn' },
+        save: vi.fn()
+      };
+
+      Loan.find.mockReturnValue({
+        populate: vi.fn().mockReturnValue({
+          populate: vi.fn().mockResolvedValue([mockLoan])
+        })
+      });
+      Loan.countDocuments.mockResolvedValue(0);
+
+      await expect(
+        loanService.renewLoans({ loanIds: ['l1'] })
+      ).rejects.toThrow(/đã quá hạn trả/);
+    });
+
+    it('phải chặn gia hạn nếu sách đã đạt hạn mức 2 lần gia hạn tối đa', async () => {
+      const futureDue = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000);
+      const mockLoan = {
+        _id: 'l1',
+        dueDate: futureDue,
+        renewCount: 2, // Đã gia hạn 2 lần
+        readerId: { _id: 'r1' },
+        bookId: { title: 'Sách đã đạt giới hạn' },
+        save: vi.fn()
+      };
+
+      Loan.find.mockReturnValue({
+        populate: vi.fn().mockReturnValue({
+          populate: vi.fn().mockResolvedValue([mockLoan])
+        })
+      });
+      Loan.countDocuments.mockResolvedValue(0);
+
+      await expect(
+        loanService.renewLoans({ loanIds: ['l1'] })
+      ).rejects.toThrow(/đã đạt hạn mức gia hạn tối đa/);
+    });
+
+    it('phải chặn gia hạn nếu độc giả đang có khoản phạt chưa thanh toán', async () => {
+      const futureDue = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000);
+      const mockLoan = {
+        _id: 'l1',
+        dueDate: futureDue,
+        renewCount: 0,
+        readerId: { _id: 'r1' },
+        bookId: { title: 'Sách' },
+        save: vi.fn()
+      };
+
+      Loan.find.mockReturnValue({
+        populate: vi.fn().mockReturnValue({
+          populate: vi.fn().mockResolvedValue([mockLoan])
+        })
+      });
+      Loan.countDocuments.mockResolvedValue(1); // Có nợ phạt
+
+      await expect(
+        loanService.renewLoans({ loanIds: ['l1'] })
+      ).rejects.toThrow(/khoản nợ phạt chưa thanh toán/);
+    });
+  });
+
+  describe('getPendingInspectionBooks() - Lấy danh sách chờ kiểm tra', () => {
+    it('phải gọi đúng query lọc status = returned và inspectionStatus = pending', async () => {
+      const mockList = [{ _id: 'l1', status: 'returned', inspectionStatus: 'pending' }];
+      Loan.find.mockReturnValue({
+        sort: vi.fn().mockReturnValue({
+          populate: vi.fn().mockReturnValue({
+            populate: vi.fn().mockResolvedValue(mockList)
+          })
+        })
+      });
+
+      const res = await loanService.getPendingInspectionBooks();
+      expect(res).toEqual(mockList);
+      expect(Loan.find).toHaveBeenCalledWith({
+        status: 'returned',
+        inspectionStatus: 'pending'
+      });
+    });
   });
 });

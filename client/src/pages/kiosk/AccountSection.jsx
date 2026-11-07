@@ -33,7 +33,7 @@ export default function AccountSection({
     if (l.fineAmount) return sum + l.fineAmount;
     if (new Date() > new Date(l.dueDate)) {
       const diffTime = Math.abs(new Date() - new Date(l.dueDate));
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
       return sum + (diffDays * 5000);
     }
     return sum;

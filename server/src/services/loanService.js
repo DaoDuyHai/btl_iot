@@ -37,7 +37,10 @@ export async function borrowBatch({ readerId, bookIds, loanDays = 14 }) {
   // 3. Chặn mượn nếu bạn đọc đang có sách quá hạn chưa hoàn trả
   const overdueCount = await Loan.countDocuments({
     readerId: reader._id,
-    status: 'overdue'
+    $or: [
+      { status: 'overdue' },
+      { status: 'borrowing', dueDate: { $lt: new Date() } }
+    ]
   });
   if (overdueCount > 0) {
     throw new Error(`Độc giả đang có ${overdueCount} tài liệu quá hạn chưa hoàn trả! Vui lòng hoàn trả tài liệu cũ trước khi mượn mới.`);
@@ -46,7 +49,7 @@ export async function borrowBatch({ readerId, bookIds, loanDays = 14 }) {
   // 4. Kiểm tra giới hạn mượn tối đa 5 cuốn (Hạn mức thư viện)
   const activeCount = await Loan.countDocuments({
     readerId: reader._id,
-    status: 'borrowing'
+    status: { $in: ['borrowing', 'overdue'] }
   });
   if (activeCount + bookIds.length > 5) {
     throw new Error(`Vượt quá hạn mức mượn tài liệu (Hiện đang mượn ${activeCount} cuốn, yêu cầu thêm ${bookIds.length} cuốn, tối đa cho phép 5 cuốn).`);
@@ -585,6 +588,21 @@ export async function renewLoans({ loanIds, extraDays = 14 }) {
   }
 
   const now = new Date();
+
+  // Chặn gia hạn nếu bạn đọc đang có khoản phạt chưa nộp
+  const readerId = loans[0]?.readerId?._id;
+  if (readerId) {
+    const unpaidFineCount = await Loan.countDocuments({
+      readerId,
+      $or: [
+        { fineStatus: 'unpaid' },
+        { isPaid: false, fineAmount: { $gt: 0 } }
+      ]
+    });
+    if (unpaidFineCount > 0) {
+      throw new Error('Bạn đang có khoản nợ phạt chưa thanh toán! Vui lòng nộp phạt trước khi gia hạn tài liệu.');
+    }
+  }
 
   // Chặn tuyệt đối gia hạn sách ĐÃ QUÁ HẠN
   const overdueLoan = loans.find(l => now > new Date(l.dueDate));

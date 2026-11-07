@@ -32,7 +32,7 @@ export default function AccountDetailModal({
     if (l.fineAmount) return sum + l.fineAmount;
     if (now > new Date(l.dueDate)) {
       const diffTime = Math.abs(now - new Date(l.dueDate));
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
       return sum + (diffDays * 5000);
     }
     return sum;
@@ -148,7 +148,7 @@ export default function AccountDetailModal({
                   const dueDate = new Date(loan.dueDate);
                   const isOverdue = now > dueDate;
                   const diffTime = Math.abs(now - dueDate);
-                  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                  const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
 
                   return (
                     <div 
@@ -226,7 +226,7 @@ export default function AccountDetailModal({
                 {overdueLoans.map((loan, idx) => {
                   const dueDate = new Date(loan.dueDate);
                   const diffTime = Math.abs(now - dueDate);
-                  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                  const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
                   const bookFine = diffDays * 5000;
 
                   return (

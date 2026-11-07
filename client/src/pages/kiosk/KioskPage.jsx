@@ -143,6 +143,10 @@ export default function KioskPage() {
         playKioskBeep('error');
         showToast('error', 'Thẻ không hợp lệ', 'Thẻ RFID chưa được đăng ký trong hệ thống Thư viện PTIT!');
       }
+      else if (type === 'READER_LOCKED') {
+        playKioskBeep('error');
+        showToast('error', 'Thẻ bạn đọc bị khóa', data.message || `Thẻ của bạn đọc ${data.reader?.name} (${data.reader?.studentId}) đã bị khóa. Vui lòng liên hệ quầy thủ thư!`);
+      }
     }
 
     function handleDeviceStatus(status) {
