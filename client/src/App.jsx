@@ -11,6 +11,9 @@ function AppContent() {
           <Route path="/" element={<Navigate to="/kiosk" replace />} />
           <Route path="/kiosk" element={<KioskPage />} />
           <Route path="/admin" element={<AdminPage />} />
+          {/* Tự động chuyển hướng nếu người dùng gõ nhầm /kiosk/admin hoặc URL lạ */}
+          <Route path="/kiosk/admin" element={<Navigate to="/admin" replace />} />
+          <Route path="*" element={<Navigate to="/kiosk" replace />} />
         </Routes>
       </main>
     </div>
