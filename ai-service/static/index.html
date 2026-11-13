@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Library Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4338ca;
+            --primary-light: #6366f1;
+            --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+            --bg: #0b0f19;
+            --surface: #111827;
+            --surface-card: #1f2937;
+            --border: #374151;
+            --border-light: #4b5563;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --success: #10b981;
+            --badge-bg: #1e1b4b;
+            --badge-text: #818cf8;
+            --accent: #38bdf8;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2.5rem 1rem 4rem 1rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .badge-system {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99, 102, 241, 0.12);
+            color: #a5b4fc;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.825rem;
+            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            margin-bottom: 1rem;
+            letter-spacing: 0.025em;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--success);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.03em;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        /* Search Section */
+        .search-container {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transition: border-color 0.2s;
+        }
+
+        .search-container:focus-within {
+            border-color: var(--primary-light);
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 0.75rem;
+            position: relative;
+            align-items: center;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.25rem;
+            color: var(--text-muted);
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 1rem 3rem 1rem 3.25rem;
+            border-radius: 0.85rem;
+            border: 1px solid var(--border);
+            background: #090d16;
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--primary-light);
+            background: #0d1322;
+        }
+
+        .clear-btn {
+            position: absolute;
+            right: 8.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.4rem;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: color 0.15s, background-color 0.15s;
+        }
+
+        .clear-btn:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .search-btn {
+            padding: 1rem 1.75rem;
+            border-radius: 0.85rem;
+            border: none;
+            background: var(--primary-gradient);
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.2s, transform 0.15s;
+            white-space: nowrap;
+        }
+
+        .search-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .search-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Quick Suggestions */
+        .suggestions {
+            margin-top: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .suggestions-label {
+            font-size: 0.825rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-right: 0.25rem;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            padding: 0.35rem 0.8rem;
+            border-radius: 9999px;
+            font-size: 0.825rem;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .tag:hover {
+            background: rgba(99, 102, 241, 0.15);
+            color: #c7d2fe;
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        /* Results Meta Bar */
+        .results-meta {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(31, 41, 55, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .method-badge {
+            background: #1e1b4b;
+            color: #a5b4fc;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.4rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border: 1px solid #3730a3;
+        }
+
+        /* Result Cards */
+        .book-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .book-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1.15rem;
+            padding: 1.5rem;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .book-card:hover {
+            border-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .rank-title {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            flex: 1;
+        }
+
+        .rank-number {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--primary-light);
+            min-width: 2rem;
+        }
+
+        .book-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.4;
+        }
+
+        .book-id-badge {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.15rem 0.45rem;
+            border-radius: 0.3rem;
+            font-family: monospace;
+            vertical-align: middle;
+            margin-left: 0.5rem;
+        }
+
+        .score-pill {
+            background: rgba(16, 185, 129, 0.12);
+            color: #34d399;
+            padding: 0.3rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            white-space: nowrap;
+        }
+
+        .book-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag-pill {
+            font-size: 0.825rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 0.4rem;
+            background: #1e293b;
+            color: #e2e8f0;
+            border: 1px solid #334155;
+        }
+
+        .tag-pill strong {
+            color: #94a3b8;
+            font-weight: 500;
+            margin-right: 0.25rem;
+        }
+
+        .book-desc {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+        }
+
+        .book-keywords {
+            font-size: 0.825rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .book-keywords span {
+            color: #94a3b8;
+        }
+
+        .card-footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+
+        .shelf-location {
+            display: flex;
+            gap: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .location-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .copies-status {
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        /* Loading & Empty State */
+        .loading-state {
+            display: none;
+            text-align: center;
+            padding: 4rem 1rem;
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            width: 42px;
+            height: 42px;
+            border: 3px solid rgba(99, 102, 241, 0.2);
+            border-top-color: var(--primary-light);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 1.25rem auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            display: none;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+        }
+
+        .empty-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .empty-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 0.5rem;
+        }
+
+        .empty-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .alert-box {
+            display: none;
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            color: #fca5a5;
+            padding: 1rem 1.25rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.9rem; }
+            .input-wrapper { flex-direction: column; }
+            input[type="text"] { width: 100%; padding-right: 2.75rem; }
+            .clear-btn { right: 1rem; top: 1rem; }
+            .search-btn { width: 100%; justify-content: center; }
+            .card-header { flex-direction: column; }
+            .score-pill { align-self: flex-start; }
+            .shelf-location { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="badge-system">
+                <span class="pulse-dot"></span>
+                <span>AI Search Engine V1.0 • Kho 3.000 đầu sách thực tế</span>
+            </div>
+            <h1>AI Smart Library Search</h1>
+            <p>Hệ thống tìm kiếm sách thông minh bằng ngôn ngữ tự nhiên, hiểu ngữ cảnh và diễn giải cốt truyện.</p>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <span class="search-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </span>
+                    <input 
+                        type="text" 
+                        id="query-input" 
+                        placeholder="Nhập tên sách, tác giả, cốt truyện hoặc nhu cầu tìm kiếm..." 
+                        autocomplete="off"
+                        autofocus
+                    />
+                    <button class="clear-btn" id="clear-btn" title="Xóa tìm kiếm" onclick="clearInput()">✕</button>
+                    <button class="search-btn" id="search-btn" onclick="executeSearch()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Tìm kiếm</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Suggestions -->
+            <div class="suggestions">
+                <span class="suggestions-label">Gợi ý tìm kiếm:</span>
+                <span class="tag" onclick="fillQuery('chàng trai chăn cừu vượt sa mạc đi tìm kho báu dưới chân kim tự tháp')">Nhà Giả Kim (Cốt truyện)</span>
+                <span class="tag" onclick="fillQuery('vụ án giết người trên toa xe lửa tốc hành bị tuyết chặn lại')">Trinh thám tàu hỏa</span>
+                <span class="tag" onclick="fillQuery('Sách của Nguyễn Nhật Ánh viết về tuổi học trò')">Nguyễn Nhật Ánh (Tuổi học trò)</span>
+                <span class="tag" onclick="fillQuery('Tôi muốn học lập trình Python từ con số 0')">Lập trình Python căn bản</span>
+                <span class="tag" onclick="fillQuery('Sách kinh doanh dành cho người chưa có kinh nghiệm')">Kinh doanh khởi nghiệp</span>
+                <span class="tag" onclick="fillQuery('cay cam ngot cua toi')">Cây cam ngọt (Không dấu)</span>
+                <span class="tag" onclick="fillQuery('Day kon lam giau')">Dạy con làm giàu (Lỗi chính tả)</span>
+            </div>
+        </div>
+
+        <!-- Alert Notification -->
+        <div class="alert-box" id="alert-box"></div>
+
+        <!-- Results Meta Bar -->
+        <div class="results-meta" id="results-meta">
+            <div>
+                <span>Tìm thấy <span class="meta-highlight" id="meta-count">0</span> sách phù hợp</span>
+                <span style="margin: 0 0.5rem; color: #4b5563;">•</span>
+                <span>Thời gian xử lý: <span class="meta-highlight" id="meta-latency">0 ms</span></span>
+            </div>
+            <div>
+                <span class="method-badge">Hybrid Search (BM25 + Semantic E5 + RRF)</span>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div class="loading-state" id="loading-state">
+            <div class="spinner"></div>
+            <p style="font-size: 1rem; font-weight: 600; color: #e2e8f0;">Đang phân tích ngữ nghĩa và truy xuất sách...</p>
+            <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.25rem;">Kết hợp từ khóa BM25 và mô hình vector Multilingual E5</p>
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="empty-state">
+            <div class="empty-icon">🔍</div>
+            <div class="empty-title">Không tìm thấy sách phù hợp</div>
+            <p class="empty-desc">
+                Thư viện hiện chưa có tài liệu trùng khớp với yêu cầu này. Bạn vui lòng thử lại với cách diễn đạt khác hoặc liên hệ thủ thư để được trợ giúp.
+            </p>
+        </div>
+
+        <!-- Book Results List -->
+        <div class="book-list" id="book-list"></div>
+    </div>
+
+    <script>
+        const queryInput = document.getElementById('query-input');
+        const clearBtn = document.getElementById('clear-btn');
+        const searchBtn = document.getElementById('search-btn');
+        const alertBox = document.getElementById('alert-box');
+        const resultsMeta = document.getElementById('results-meta');
+        const metaCount = document.getElementById('meta-count');
+        const metaLatency = document.getElementById('meta-latency');
+        const loadingState = document.getElementById('loading-state');
+        const emptyState = document.getElementById('empty-state');
+        const bookList = document.getElementById('book-list');
+
+        // Toggle nút xóa khi có nội dung
+        queryInput.addEventListener('input', () => {
+            clearBtn.style.display = queryInput.value.trim() ? 'flex' : 'none';
+            hideAlert();
+        });
+
+        // Nhấn Enter để tìm kiếm
+        queryInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                executeSearch();
+            }
+        });
+
+        function clearInput() {
+            queryInput.value = '';
+            clearBtn.style.display = 'none';
+            queryInput.focus();
+            hideAlert();
+        }
+
+        function fillQuery(text) {
+            queryInput.value = text;
+            clearBtn.style.display = 'flex';
+            executeSearch();
+        }
+
+        function showAlert(msg) {
+            alertBox.innerText = msg;
+            alertBox.style.display = 'block';
+        }
+
+        function hideAlert() {
+            alertBox.style.display = 'none';
+        }
+
+        function sanitizeText(val, fallback = '') {
+            if (!val || val === 'nan' || val === 'None' || val === 'null') {
+                return fallback;
+            }
+            return String(val).trim();
+        }
+
+        async function executeSearch() {
+            const query = queryInput.value.trim();
+            if (!query) {
+                showAlert('Vui lòng nhập từ khóa, tên sách hoặc câu hỏi tìm kiếm.');
+                queryInput.focus();
+                return;
+            }
+
+            hideAlert();
+            bookList.innerHTML = '';
+            resultsMeta.style.display = 'none';
+            emptyState.style.display = 'none';
+            loadingState.style.display = 'block';
+
+            const startTime = performance.now();
+
+            try {
+                // Gọi API backend Hybrid Search (phương thức chính thức duy nhất)
+                const res = await fetch(`/api/search?q=${encodeURIComponent(query)}&top_k=5`);
+                
+                if (!res.ok) {
+                    const errData = await res.json().catch(() => ({}));
+                    throw new Error(errData.error || `Lỗi máy chủ (${res.status})`);
+                }
+
+                const data = await res.json();
+                const totalClientTime = Math.round(performance.now() - startTime);
+
+                loadingState.style.display = 'none';
+
+                if (!data.results || data.results.length === 0) {
+                    emptyState.style.display = 'block';
+                    return;
+                }
+
+                // Hiển thị thông tin tìm kiếm
+                resultsMeta.style.display = 'flex';
+                metaCount.innerText = data.results.length;
+                metaLatency.innerText = `${data.latency_ms} ms (Mạng: ${totalClientTime} ms)`;
+
+                // Render danh sách kết quả theo đúng thứ tự Hybrid trả về
+                data.results.forEach((book, idx) => {
+                    const rank = idx + 1;
+                    const title = sanitizeText(book.title, 'Không có tiêu đề');
+                    const author = sanitizeText(book.author, 'Không rõ tác giả');
+                    const category = sanitizeText(book.category, 'Chưa phân loại');
+                    const subcat = sanitizeText(book.subcategory, '');
+                    const desc = sanitizeText(book.description, 'Chưa có thông tin tóm tắt nội dung.');
+                    const keywords = sanitizeText(book.keywords, '');
+                    const bookId = sanitizeText(book.book_id || book.work_id, 'B0000');
+                    const score = typeof book.score === 'number' ? book.score.toFixed(5) : '0.00000';
+                    const position = sanitizeText(book.position, 'A1-01');
+                    const floor = book.floor || 1;
+                    const shelf = sanitizeText(book.shelf, 'A');
+                    const avail = book.available !== undefined ? book.available : 1;
+                    const total = book.total !== undefined ? book.total : 1;
+
+                    const card = document.createElement('div');
+                    card.className = 'book-card';
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <div class="rank-title">
+                                <span class="rank-number">#${rank}</span>
+                                <h3 class="book-title">
+                                    ${title}
+                                    <span class="book-id-badge">${bookId}</span>
+                                </h3>
+                            </div>
+                            <div class="score-pill" title="Điểm hòa trộn thứ hạng RRF (Reciprocal Rank Fusion)">
+                                RRF: ${score}
+                            </div>
+                        </div>
+
+                        <div class="book-tags">
+                            <span class="tag-pill"><strong>Tác giả:</strong> ${author}</span>
+                            <span class="tag-pill"><strong>Thể loại:</strong> ${category}</span>
+                            ${subcat ? `<span class="tag-pill"><strong>Chủ đề:</strong> ${subcat}</span>` : ''}
+                        </div>
+
+                        <p class="book-desc">${desc}</p>
+
+                        ${keywords ? `
+                            <div class="book-keywords">
+                                <strong>Từ khóa:</strong> <span>${keywords}</span>
+                            </div>
+                        ` : ''}
+
+                        <div class="card-footer">
+                            <div class="shelf-location">
+                                <span class="location-badge">📍 Vị trí: <b>${position}</b></span>
+                                <span class="location-badge">🏢 Tầng: <b>${floor}</b></span>
+                                <span class="location-badge">📚 Kệ: <b>${shelf}</b></span>
+                            </div>
+                            <div class="copies-status">
+                                Sẵn sàng phục vụ: <b>${avail}</b> / ${total} bản
+                            </div>
+                        </div>
+                    `;
+                    bookList.appendChild(card);
+                });
+
+            } catch (err) {
+                loadingState.style.display = 'none';
+                showAlert(`Không thể kết nối đến AI Search Backend: ${err.message}. Vui lòng kiểm tra lại dịch vụ uvicorn.`);
+            }
+        }
+    </script>
+</body>
+</html>

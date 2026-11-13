@@ -844,7 +844,14 @@ export default function AdminPage() {
                         <div><code>{b.copyCode || 'CP-CHUNG'}</code></div>
                         <div style={{ fontSize: '11px', color: '#64748b' }}>RFID: <code>{b.rfidTag}</code></div>
                       </td>
-                      <td style={{ padding: '12px 10px', color: '#64748b' }}>{b.category || 'Chung'}</td>
+                      <td style={{ padding: '12px 10px', color: '#64748b' }}>
+                        <div>{b.category || 'Chung'}</div>
+                        {b.shelf && (
+                          <div style={{ fontSize: '11px', color: '#991b1b', fontWeight: '700' }}>
+                            Tầng {b.floor || 1} • Kệ {b.shelf} ({b.position || 'A1-01'})
+                          </div>
+                        )}
+                      </td>
                       <td style={{ padding: '12px 10px' }}>
                         <span className={`admin-pill ${b.status === 'available' ? 'ok' : b.status === 'pending_inspection' ? 'er' : 'wa'}`}>
                           {b.status === 'available' ? 'Còn sách' : b.status === 'pending_inspection' ? 'Chờ kiểm tra' : 'Đang mượn'}

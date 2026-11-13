@@ -5,6 +5,10 @@ export default [
       '**/dist/**',
       '**/coverage/**',
       '**/firmware/**',
+      '**/ai-service/**',
+      '**/TrainAI/**',
+      '**/venv/**',
+      '**/.venv/**',
       '**/.git/**',
       '**/.husky/**'
     ]

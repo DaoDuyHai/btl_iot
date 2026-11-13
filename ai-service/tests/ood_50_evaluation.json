@@ -1,0 +1,100 @@
+{
+  "distribution": {
+    "in_domain": {
+      "min": 0.7844662666320801,
+      "mean": 0.8691681510210038,
+      "max": 0.936627984046936
+    },
+    "ood": {
+      "min": 0.8092978596687317,
+      "mean": 0.8288548243045807,
+      "max": 0.8474259972572327
+    }
+  },
+  "threshold_evaluation": [
+    {
+      "threshold": 0.8,
+      "tp": 0,
+      "fn": 50,
+      "fp": 2,
+      "tn": 98,
+      "far_percent": 100.0,
+      "frr_percent": 2.0,
+      "precision_percent": 0.0,
+      "recall_percent": 0.0,
+      "f1_score": 0.0
+    },
+    {
+      "threshold": 0.81,
+      "tp": 2,
+      "fn": 48,
+      "fp": 3,
+      "tn": 97,
+      "far_percent": 96.0,
+      "frr_percent": 3.0,
+      "precision_percent": 40.0,
+      "recall_percent": 4.0,
+      "f1_score": 7.27
+    },
+    {
+      "threshold": 0.82,
+      "tp": 13,
+      "fn": 37,
+      "fp": 6,
+      "tn": 94,
+      "far_percent": 74.0,
+      "frr_percent": 6.0,
+      "precision_percent": 68.42,
+      "recall_percent": 26.0,
+      "f1_score": 37.68
+    },
+    {
+      "threshold": 0.83,
+      "tp": 27,
+      "fn": 23,
+      "fp": 10,
+      "tn": 90,
+      "far_percent": 46.0,
+      "frr_percent": 10.0,
+      "precision_percent": 72.97,
+      "recall_percent": 54.0,
+      "f1_score": 62.07
+    },
+    {
+      "threshold": 0.84,
+      "tp": 41,
+      "fn": 9,
+      "fp": 14,
+      "tn": 86,
+      "far_percent": 18.0,
+      "frr_percent": 14.0,
+      "precision_percent": 74.55,
+      "recall_percent": 82.0,
+      "f1_score": 78.1
+    },
+    {
+      "threshold": 0.85,
+      "tp": 50,
+      "fn": 0,
+      "fp": 22,
+      "tn": 78,
+      "far_percent": 0.0,
+      "frr_percent": 22.0,
+      "precision_percent": 69.44,
+      "recall_percent": 100.0,
+      "f1_score": 81.97
+    },
+    {
+      "threshold": 0.86,
+      "tp": 50,
+      "fn": 0,
+      "fp": 37,
+      "tn": 63,
+      "far_percent": 0.0,
+      "frr_percent": 37.0,
+      "precision_percent": 57.47,
+      "recall_percent": 100.0,
+      "f1_score": 72.99
+    }
+  ]
+}

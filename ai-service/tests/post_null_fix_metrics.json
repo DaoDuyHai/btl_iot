@@ -1,0 +1,3542 @@
+{
+  "summary": {
+    "bm25": {
+      "Hit@1": 0.8,
+      "Hit@5": 0.94,
+      "Hit@10": 0.95,
+      "Recall@5": 0.5277,
+      "Recall@10": 0.5846,
+      "Precision@5": 0.498,
+      "MRR": 0.8573,
+      "Avg_Latency_ms": 23.01,
+      "P50_Latency_ms": 19.48,
+      "P95_Latency_ms": 59.34
+    },
+    "semantic": {
+      "Hit@1": 0.72,
+      "Hit@5": 0.88,
+      "Hit@10": 0.9,
+      "Recall@5": 0.4467,
+      "Recall@10": 0.5051,
+      "Precision@5": 0.46,
+      "MRR": 0.7901,
+      "Avg_Latency_ms": 43.6,
+      "P50_Latency_ms": 41.91,
+      "P95_Latency_ms": 52.8
+    },
+    "hybrid": {
+      "Hit@1": 0.83,
+      "Hit@5": 0.95,
+      "Hit@10": 0.96,
+      "Recall@5": 0.5399,
+      "Recall@10": 0.5923,
+      "Precision@5": 0.504,
+      "MRR": 0.8867,
+      "Avg_Latency_ms": 81.84,
+      "P50_Latency_ms": 80.66,
+      "P95_Latency_ms": 119.54
+    }
+  },
+  "detailed": [
+    {
+      "id": "TC001",
+      "group": "1. Tên sách chính xác",
+      "query": "Người Đàn Ông Mang Tên Ove",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 17.56
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 109.85
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 98.2
+        }
+      }
+    },
+    {
+      "id": "TC002",
+      "group": "1. Tên sách chính xác",
+      "query": "Trăm năm cô đơn",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 18.26
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 48.36
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 71.23
+        }
+      }
+    },
+    {
+      "id": "TC003",
+      "group": "1. Tên sách chính xác",
+      "query": "Nhà Giả Kim",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 10.4
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 39.21
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 66.34
+        }
+      }
+    },
+    {
+      "id": "TC004",
+      "group": "1. Tên sách chính xác",
+      "query": "Cây Cam Ngọt Của Tôi",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 14.53
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 41.68
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 69.71
+        }
+      }
+    },
+    {
+      "id": "TC005",
+      "group": "1. Tên sách chính xác",
+      "query": "Mắt Biếc",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 8.55
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 35.92
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 60.11
+        }
+      }
+    },
+    {
+      "id": "TC006",
+      "group": "1. Tên sách chính xác",
+      "query": "Nỗi buồn chiến tranh",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 12.03
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 46.9
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 70.31
+        }
+      }
+    },
+    {
+      "id": "TC007",
+      "group": "1. Tên sách chính xác",
+      "query": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 28.2
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 44.0
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 82.37
+        }
+      }
+    },
+    {
+      "id": "TC008",
+      "group": "1. Tên sách chính xác",
+      "query": "Không Gia Đình",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 8.62
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 38.69
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 68.42
+        }
+      }
+    },
+    {
+      "id": "TC009",
+      "group": "1. Tên sách chính xác",
+      "query": "Totto - Chan Bên Cửa Sổ",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 12.3
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 44.24
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 71.51
+        }
+      }
+    },
+    {
+      "id": "TC010",
+      "group": "1. Tên sách chính xác",
+      "query": "Thiên Tài Bên Trái, Kẻ Điên Bên Phải",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 22.15
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 39.24
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 80.56
+        }
+      }
+    },
+    {
+      "id": "TC011",
+      "group": "1. Tên sách chính xác",
+      "query": "Điều Kỳ Diệu Của Tiệm Tạp Hóa NAMIYA",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 21.37
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 44.77
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 78.57
+        }
+      }
+    },
+    {
+      "id": "TC012",
+      "group": "1. Tên sách chính xác",
+      "query": "Dạy Con Làm Giàu - Để Không Có Tiền Vẫn Tạo Ra Tiền - Cha Giàu Cha Nghèo",
+      "total_relevant": 7,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5714,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 30.22
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5714,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 48.7
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.7143,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 97.36
+        }
+      }
+    },
+    {
+      "id": "TC013",
+      "group": "2. Tên tác giả",
+      "query": "Nguyễn Nhật Ánh",
+      "total_relevant": 33,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1515,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 9.35
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1515,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 43.27
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1515,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 63.31
+        }
+      }
+    },
+    {
+      "id": "TC014",
+      "group": "2. Tên tác giả",
+      "query": "Fredrik Backman",
+      "total_relevant": 7,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.7143,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 5.78
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.7143,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 39.64
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.7143,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 42.77
+        }
+      }
+    },
+    {
+      "id": "TC015",
+      "group": "2. Tên tác giả",
+      "query": "Agatha Christie",
+      "total_relevant": 28,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1786,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 4.16
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1786,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 40.54
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1786,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 45.62
+        }
+      }
+    },
+    {
+      "id": "TC016",
+      "group": "2. Tên tác giả",
+      "query": "Paulo Coelho",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 3.93
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 36.05
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 46.59
+        }
+      }
+    },
+    {
+      "id": "TC017",
+      "group": "2. Tên tác giả",
+      "query": "Bảo Ninh",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 5.38
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 38.43
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 62.96
+        }
+      }
+    },
+    {
+      "id": "TC018",
+      "group": "2. Tên tác giả",
+      "query": "Hector Malot",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 4.07
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 41.07
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 44.27
+        }
+      }
+    },
+    {
+      "id": "TC019",
+      "group": "2. Tên tác giả",
+      "query": "Higashino Keigo",
+      "total_relevant": 8,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.375,
+          "precision@5": 0.6,
+          "mrr": 0.3333,
+          "latency_ms": 5.74
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.375,
+          "precision@5": 0.6,
+          "mrr": 0.5,
+          "latency_ms": 37.25
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.375,
+          "precision@5": 0.6,
+          "mrr": 0.3333,
+          "latency_ms": 41.15
+        }
+      }
+    },
+    {
+      "id": "TC020",
+      "group": "2. Tên tác giả",
+      "query": "Daniel Kahneman",
+      "total_relevant": 100,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.05,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 4.87
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.05,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 38.81
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.05,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 50.59
+        }
+      }
+    },
+    {
+      "id": "TC021",
+      "group": "2. Tên tác giả",
+      "query": "Nguyễn Hiến Lê",
+      "total_relevant": 150,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0333,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 10.91
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0333,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 39.02
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0333,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 101.84
+        }
+      }
+    },
+    {
+      "id": "TC022",
+      "group": "2. Tên tác giả",
+      "query": "Stephen Hawking",
+      "total_relevant": 300,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0167,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 5.14
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0167,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 35.62
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0167,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 56.76
+        }
+      }
+    },
+    {
+      "id": "TC023",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "sách về trí tuệ nhân tạo và học máy",
+      "total_relevant": 203,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0246,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 27.21
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0246,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 41.98
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0246,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 86.45
+        }
+      }
+    },
+    {
+      "id": "TC024",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "tài chính cá nhân và đầu tư chứng khoán",
+      "total_relevant": 110,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0455,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 20.99
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0273,
+          "precision@5": 0.6,
+          "mrr": 0.3333,
+          "latency_ms": 37.09
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0273,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 92.75
+        }
+      }
+    },
+    {
+      "id": "TC025",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "tâm lý học hành vi và tiềm thức con người",
+      "total_relevant": 100,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.05,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 30.54
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.03,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 38.24
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.05,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 94.21
+        }
+      }
+    },
+    {
+      "id": "TC026",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "tiểu thuyết trinh thám án mạng phá án",
+      "total_relevant": 86,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0581,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 18.84
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0581,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 41.87
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0581,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 80.76
+        }
+      }
+    },
+    {
+      "id": "TC027",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "giáo trình học tiếng trung hsk",
+      "total_relevant": 118,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0424,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 20.72
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0424,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 40.7
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0424,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 72.8
+        }
+      }
+    },
+    {
+      "id": "TC028",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "khoa học thiên văn vũ trụ và vật lý lượng tử",
+      "total_relevant": 154,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0325,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 27.42
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.026,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 45.71
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0325,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 90.69
+        }
+      }
+    },
+    {
+      "id": "TC029",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "truyện tranh thiếu nhi cho bé mẫu giáo",
+      "total_relevant": 200,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.02,
+          "precision@5": 0.8,
+          "mrr": 0.5,
+          "latency_ms": 15.01
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.02,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 37.35
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.02,
+          "precision@5": 0.8,
+          "mrr": 0.5,
+          "latency_ms": 72.35
+        }
+      }
+    },
+    {
+      "id": "TC030",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "lịch sử văn hóa việt nam qua các triều đại",
+      "total_relevant": 150,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0267,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 24.6
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0267,
+          "precision@5": 0.8,
+          "mrr": 0.5,
+          "latency_ms": 37.82
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0267,
+          "precision@5": 0.8,
+          "mrr": 0.5,
+          "latency_ms": 82.89
+        }
+      }
+    },
+    {
+      "id": "TC031",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "kỹ năng giao tiếp và thuyết phục người khác",
+      "total_relevant": 68,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0441,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 20.37
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0588,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 42.22
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0588,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 79.06
+        }
+      }
+    },
+    {
+      "id": "TC032",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "quản trị kinh doanh và nghệ thuật lãnh đạo",
+      "total_relevant": 154,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0325,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 22.32
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0195,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 38.85
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.026,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 87.53
+        }
+      }
+    },
+    {
+      "id": "TC033",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "tiểu thuyết văn học kinh điển thế giới",
+      "total_relevant": 77,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0649,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 18.74
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.039,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 41.35
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0649,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 77.01
+        }
+      }
+    },
+    {
+      "id": "TC034",
+      "group": "3. Chủ đề chuyên môn",
+      "query": "lập trình phát triển ứng dụng web internet",
+      "total_relevant": 23,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1304,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 25.08
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1739,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 43.82
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1304,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 74.55
+        }
+      }
+    },
+    {
+      "id": "TC035",
+      "group": "4. Mục đích học tập",
+      "query": "Tôi muốn học lập trình Python từ con số 0",
+      "total_relevant": 24,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.2083,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 21.5
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.125,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 42.58
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.2083,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 82.45
+        }
+      }
+    },
+    {
+      "id": "TC036",
+      "group": "4. Mục đích học tập",
+      "query": "Tôi muốn học cách xây dựng và thiết kế website",
+      "total_relevant": 14,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": true,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.1667,
+          "latency_ms": 19.37
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1429,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 41.95
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0714,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 83.16
+        }
+      }
+    },
+    {
+      "id": "TC037",
+      "group": "4. Mục đích học tập",
+      "query": "Tôi muốn tìm tài liệu giúp cải thiện kỹ năng giao tiếp",
+      "total_relevant": 77,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.039,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 29.7
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0649,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 45.89
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0519,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 97.5
+        }
+      }
+    },
+    {
+      "id": "TC038",
+      "group": "4. Mục đích học tập",
+      "query": "Tôi muốn tìm sách giúp trẻ lớp 3 cải thiện tư duy logic",
+      "total_relevant": 328,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0122,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 35.53
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0152,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 48.24
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0152,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 87.07
+        }
+      }
+    },
+    {
+      "id": "TC039",
+      "group": "4. Mục đích học tập",
+      "query": "Tôi muốn tìm cuốn sách dạy học toán tiểu học",
+      "total_relevant": 128,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0391,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 18.45
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0391,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 59.99
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0391,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 80.17
+        }
+      }
+    },
+    {
+      "id": "TC040",
+      "group": "4. Mục đích học tập",
+      "query": "học cách kể chuyện và trực quan hóa dữ liệu biểu đồ",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 35.04
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 40.06
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 87.82
+        }
+      }
+    },
+    {
+      "id": "TC041",
+      "group": "4. Mục đích học tập",
+      "query": "tìm sách hướng dẫn quản lý thời gian và tăng năng suất",
+      "total_relevant": 179,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0223,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 28.92
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0279,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 42.65
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0279,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 86.38
+        }
+      }
+    },
+    {
+      "id": "TC042",
+      "group": "4. Mục đích học tập",
+      "query": "học tiếng anh giao tiếp căn bản cho người mới bắt đầu",
+      "total_relevant": 157,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0064,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 26.1
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0127,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 43.25
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": true,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.1667,
+          "latency_ms": 85.7
+        }
+      }
+    },
+    {
+      "id": "TC043",
+      "group": "4. Mục đích học tập",
+      "query": "cách khởi nghiệp kinh doanh nhỏ và quản lý vốn",
+      "total_relevant": 450,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0111,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 21.52
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0044,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 39.37
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0111,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 87.71
+        }
+      }
+    },
+    {
+      "id": "TC044",
+      "group": "4. Mục đích học tập",
+      "query": "phương pháp rèn luyện tư duy phản biện cho sinh viên",
+      "total_relevant": 212,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0236,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 19.6
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0236,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 43.77
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0236,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 89.03
+        }
+      }
+    },
+    {
+      "id": "TC045",
+      "group": "4. Mục đích học tập",
+      "query": "hướng dẫn tự học tin học văn phòng excel word",
+      "total_relevant": 279,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0179,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 26.12
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0179,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 41.19
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0179,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 78.46
+        }
+      }
+    },
+    {
+      "id": "TC046",
+      "group": "4. Mục đích học tập",
+      "query": "cách vượt qua trầm cảm lo âu và chữa lành nội tâm",
+      "total_relevant": 40,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.125,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 30.45
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.125,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 40.67
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.125,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 87.76
+        }
+      }
+    },
+    {
+      "id": "TC047",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "sách kể về nỗi đau chiến tranh qua ký ức người lính cựu binh",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 31.18
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 41.57
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 91.35
+        }
+      }
+    },
+    {
+      "id": "TC048",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "chàng trai chăn cừu vượt sa mạc đi tìm kho báu dưới chân kim tự tháp ai cập",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 44.63
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 49.5
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 108.18
+        }
+      }
+    },
+    {
+      "id": "TC049",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "vụ án giết người trên toa xe lửa tốc hành bị tuyết chặn lại",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 34.96
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 43.58
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 100.44
+        }
+      }
+    },
+    {
+      "id": "TC050",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "cậu bé mồ côi đi lang thang khắp nước pháp biểu diễn xiếc rong cùng ông già tốt bụng",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 49.96
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 50.16
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 102.64
+        }
+      }
+    },
+    {
+      "id": "TC051",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "ngôi trường độc đáo có lớp học nằm trong toa xe điện cũ kỹ",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 33.03
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.3333,
+          "latency_ms": 42.28
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 93.02
+        }
+      }
+    },
+    {
+      "id": "TC052",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "cuộc đối thoại có thật với các bệnh nhân tâm thần khám phá góc nhìn thế giới khác lạ",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 47.78
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 40.17
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 103.7
+        }
+      }
+    },
+    {
+      "id": "TC053",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "ông già khó tính cộc cằn nhưng có trái tim ấm áp luôn muốn tự tử",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 41.13
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 44.78
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 95.89
+        }
+      }
+    },
+    {
+      "id": "TC054",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "tình yêu tuổi thơ trong sáng của ngạn dành cho hà lan ở làng đo đo",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 36.26
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 37.5
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 88.33
+        }
+      }
+    },
+    {
+      "id": "TC055",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "cậu bé nghèo coi cây ăn quả trong vườn là người bạn thân tâm sự nỗi buồn",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 37.62
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 44.05
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 98.97
+        }
+      }
+    },
+    {
+      "id": "TC056",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "tiệm tạp hóa bí ẩn nhận những lá thư nhờ tư vấn gửi về từ quá khứ",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 33.62
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 41.67
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 100.77
+        }
+      }
+    },
+    {
+      "id": "TC057",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "thị trấn nhỏ bị tuyết bao phủ và giấc mơ khúc côn cầu trên băng",
+      "total_relevant": 3,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.6667,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 32.75
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.6667,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 40.96
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.6667,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 101.2
+        }
+      }
+    },
+    {
+      "id": "TC058",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "bảy dòng dõi gia tộc sống cô độc qua một thế kỷ tại ngôi làng hoang sơ",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 34.08
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 42.38
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 99.9
+        }
+      }
+    },
+    {
+      "id": "TC059",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "cách người giàu bắt tiền bạc làm việc cật lực phục vụ cho mình",
+      "total_relevant": 7,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.2857,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 32.06
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1429,
+          "precision@5": 0.2,
+          "mrr": 0.2,
+          "latency_ms": 40.95
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.4286,
+          "precision@5": 0.6,
+          "mrr": 0.5,
+          "latency_ms": 98.16
+        }
+      }
+    },
+    {
+      "id": "TC060",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "lược sử quá trình tiến hóa và phát triển văn minh của loài người qua các thời kỳ",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 39.04
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 44.26
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 105.1
+        }
+      }
+    },
+    {
+      "id": "TC061",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "sách dạy cách nuôi dạy con ngoan và gắn kết tình cảm gia đình",
+      "total_relevant": 125,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.016,
+          "precision@5": 0.4,
+          "mrr": 0.3333,
+          "latency_ms": 30.43
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.024,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 43.4
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.016,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 89.35
+        }
+      }
+    },
+    {
+      "id": "TC062",
+      "group": "5. Ngôn ngữ tự nhiên (Ngữ nghĩa)",
+      "query": "phương pháp rèn luyện tập thể dục thể thao tăng cường sức khỏe cơ bắp",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 36.51
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 44.62
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 100.63
+        }
+      }
+    },
+    {
+      "id": "TC063",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "Ove",
+      "total_relevant": 9,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1111,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 2.7
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1111,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 41.39
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1111,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 41.93
+        }
+      }
+    },
+    {
+      "id": "TC064",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "Mắt Biếc",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 8.19
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 38.73
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 62.46
+        }
+      }
+    },
+    {
+      "id": "TC065",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "Python",
+      "total_relevant": 24,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.2083,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 2.41
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.2083,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 45.24
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.2083,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 44.18
+        }
+      }
+    },
+    {
+      "id": "TC066",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "Nhà giả kim",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 7.71
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 43.88
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 69.44
+        }
+      }
+    },
+    {
+      "id": "TC067",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "Sapiens",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 2.38
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 39.94
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 44.78
+        }
+      }
+    },
+    {
+      "id": "TC068",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "Agatha Christie",
+      "total_relevant": 28,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1786,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 4.1
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1786,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 39.16
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.1786,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 49.72
+        }
+      }
+    },
+    {
+      "id": "TC069",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "HSK 1",
+      "total_relevant": 5,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.4,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 5.18
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.6,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 40.78
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.6,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 61.41
+        }
+      }
+    },
+    {
+      "id": "TC070",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "Cây cam ngọt",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 8.96
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 39.8
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 58.25
+        }
+      }
+    },
+    {
+      "id": "TC071",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "Trí tuệ nhân tạo",
+      "total_relevant": 70,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0714,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 14.28
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0714,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 38.4
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0714,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 74.41
+        }
+      }
+    },
+    {
+      "id": "TC072",
+      "group": "6. Câu hỏi ngắn (1-3 từ)",
+      "query": "Nỗi buồn chiến tranh",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 14.22
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 44.16
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 72.65
+        }
+      }
+    },
+    {
+      "id": "TC073",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Em đang là sinh viên năm nhất muốn tìm một cuốn sách văn học kinh điển cảm động nói về tình bạn thời thơ ấu nông thôn Việt Nam",
+      "total_relevant": 33,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0303,
+          "precision@5": 0.2,
+          "mrr": 0.2,
+          "latency_ms": 66.61
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0303,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 48.94
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0606,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 126.02
+        }
+      }
+    },
+    {
+      "id": "TC074",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Tôi muốn tìm một cuốn tiểu thuyết trinh thám hồi hộp có thám tử tài ba phá án trên một phương tiện giao thông bị cô lập hoàn toàn giữa trời tuyết",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 65.48
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 45.51
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 120.76
+        }
+      }
+    },
+    {
+      "id": "TC075",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Thư viện có sách nào hướng dẫn cách thức máy tính và thuật toán tự động học hỏi từ dữ liệu để đưa ra dự đoán trong tương lai không",
+      "total_relevant": 78,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0256,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 64.22
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0641,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 45.89
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0513,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 138.18
+        }
+      }
+    },
+    {
+      "id": "TC076",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Cho tôi hỏi có tài liệu nào phân tích chi tiết về tâm lý con người khi đưa ra các quyết định chi tiêu tiền bạc và đầu tư tài chính cá nhân",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5,
+          "precision@5": 0.2,
+          "mrr": 0.2,
+          "latency_ms": 56.65
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5,
+          "precision@5": 0.2,
+          "mrr": 0.3333,
+          "latency_ms": 58.08
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 138.78
+        }
+      }
+    },
+    {
+      "id": "TC077",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Cuốn sách nào kể về cuộc đời phiêu bạt nhiều thăng trầm của một cậu bé mồ côi người Pháp theo đoàn xiếc rong của một cụ già",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.25,
+          "latency_ms": 55.37
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": true,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.1,
+          "latency_ms": 53.34
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.3333,
+          "latency_ms": 118.2
+        }
+      }
+    },
+    {
+      "id": "TC078",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Tôi muốn đọc một tác phẩm tâm lý học sâu sắc về giấc mơ và tiềm thức của tác giả Carl Jung hoặc các trường phái phân tâm học",
+      "total_relevant": 5,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.8,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 43.72
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.6,
+          "precision@5": 0.6,
+          "mrr": 0.5,
+          "latency_ms": 37.66
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.8,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 115.05
+        }
+      }
+    },
+    {
+      "id": "TC079",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Tìm giúp tôi cuốn sách dạy các em nhỏ mầm non học cách quản lý cảm xúc khi tức giận hay buồn bã",
+      "total_relevant": 105,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0476,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 48.44
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0476,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 43.23
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0476,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 119.13
+        }
+      }
+    },
+    {
+      "id": "TC080",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Có cuốn sách nào giúp một người bình thường không có nhiều vốn học được tư duy làm giàu và độc lập tài chính như tác giả Kiyosaki",
+      "total_relevant": 7,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5714,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 61.81
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.4286,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 52.77
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.5714,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 122.91
+        }
+      }
+    },
+    {
+      "id": "TC081",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Tôi muốn tìm hiểu về nguồn gốc của vũ trụ và các lỗ đen không gian do nhà vật lý học thiên tài viết ra",
+      "total_relevant": 300,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.01,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 59.21
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0133,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 45.72
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0133,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 119.47
+        }
+      }
+    },
+    {
+      "id": "TC082",
+      "group": "7. Câu hỏi dài (15-25 từ)",
+      "query": "Sách nào kể về những câu chuyện tuổi thơ trong sáng của một cô bé đi học tại một trường tiểu học rất đặc biệt bên cửa sổ",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.25,
+          "latency_ms": 70.67
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 46.44
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 117.5
+        }
+      }
+    },
+    {
+      "id": "TC083",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "nguoi dan ong mang ten ove",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 10.08
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 37.41
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 65.36
+        }
+      }
+    },
+    {
+      "id": "TC084",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "mat biec nguyen nhat anh",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 8.15
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 37.06
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 65.12
+        }
+      }
+    },
+    {
+      "id": "TC085",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "cay cam ngot cua toi",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 9.64
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 36.62
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 68.59
+        }
+      }
+    },
+    {
+      "id": "TC086",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "nha gia kim paulo coelho",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 6.63
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 41.01
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 69.49
+        }
+      }
+    },
+    {
+      "id": "TC087",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "noi buon chien tranh bao ninh",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 11.85
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 43.28
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 69.07
+        }
+      }
+    },
+    {
+      "id": "TC088",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "an mang tren chuyen tau toc hanh phuong dong",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 12.9
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 43.42
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 74.98
+        }
+      }
+    },
+    {
+      "id": "TC089",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "khong gia dinh hector malot",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 11.3
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 49.84
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 90.39
+        }
+      }
+    },
+    {
+      "id": "TC090",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "toi muon hoc lap trinh cho nguoi moi bat dau",
+      "total_relevant": 192,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0156,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 17.68
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0052,
+          "precision@5": 0.2,
+          "mrr": 0.25,
+          "latency_ms": 49.76
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0104,
+          "precision@5": 0.4,
+          "mrr": 0.5,
+          "latency_ms": 85.01
+        }
+      }
+    },
+    {
+      "id": "TC091",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "sach day con lam giau robert kiyosaki",
+      "total_relevant": 7,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.7143,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 11.01
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.4286,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 52.41
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.4286,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 90.21
+        }
+      }
+    },
+    {
+      "id": "TC092",
+      "group": "8. Tiếng Việt không dấu",
+      "query": "giao trinh chuan hsk 1",
+      "total_relevant": 3,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.6667,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 8.71
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 49.98
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.6,
+          "mrr": 1.0,
+          "latency_ms": 75.02
+        }
+      }
+    },
+    {
+      "id": "TC093",
+      "group": "9. Lỗi chính tả / Gõ sai",
+      "query": "Người đàn ông mang tên Ô-vê",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 22.18
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 72.08
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 78.73
+        }
+      }
+    },
+    {
+      "id": "TC094",
+      "group": "9. Lỗi chính tả / Gõ sai",
+      "query": "Mat Biec - Nguyen Nhat Anh",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.5,
+          "latency_ms": 10.64
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": true,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.125,
+          "latency_ms": 41.86
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 69.47
+        }
+      }
+    },
+    {
+      "id": "TC095",
+      "group": "9. Lỗi chính tả / Gõ sai",
+      "query": "Nhà giã kim",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 8.0
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 42.75
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 66.51
+        }
+      }
+    },
+    {
+      "id": "TC096",
+      "group": "9. Lỗi chính tả / Gõ sai",
+      "query": "Cây cam ngột của tôi",
+      "total_relevant": 2,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 13.38
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 38.6
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 66.28
+        }
+      }
+    },
+    {
+      "id": "TC097",
+      "group": "9. Lỗi chính tả / Gõ sai",
+      "query": "An mang tau toc hanh phuong dong",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 11.12
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 37.95
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 72.36
+        }
+      }
+    },
+    {
+      "id": "TC098",
+      "group": "9. Lỗi chính tả / Gõ sai",
+      "query": "Sách tri tue nhan tao và machile learning",
+      "total_relevant": 70,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0714,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 11.78
+        },
+        "semantic": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0286,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 39.21
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.0571,
+          "precision@5": 0.8,
+          "mrr": 1.0,
+          "latency_ms": 67.35
+        }
+      }
+    },
+    {
+      "id": "TC099",
+      "group": "9. Lỗi chính tả / Gõ sai",
+      "query": "To to chan ben cua so",
+      "total_relevant": 1,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 1.0,
+          "latency_ms": 6.02
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": false,
+          "top10_hit": false,
+          "recall@5": 0.0,
+          "precision@5": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 38.63
+        },
+        "hybrid": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "mrr": 0.3333,
+          "latency_ms": 57.54
+        }
+      }
+    },
+    {
+      "id": "TC100",
+      "group": "9. Lỗi chính tả / Gõ sai",
+      "query": "Day kon lam giau",
+      "total_relevant": 7,
+      "modes": {
+        "bm25": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.7143,
+          "precision@5": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 5.33
+        },
+        "semantic": {
+          "top1_hit": false,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.2857,
+          "precision@5": 0.4,
+          "mrr": 0.3333,
+          "latency_ms": 39.32
+        },
+        "hybrid": {
+          "top1_hit": true,
+          "top5_hit": true,
+          "top10_hit": true,
+          "recall@5": 0.2857,
+          "precision@5": 0.4,
+          "mrr": 1.0,
+          "latency_ms": 65.0
+        }
+      }
+    }
+  ]
+}

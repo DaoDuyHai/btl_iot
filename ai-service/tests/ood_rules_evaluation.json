@@ -1,0 +1,32 @@
+[
+  {
+    "rule": "1. Cosine đơn thuần (< 0.82)",
+    "true_detect": 4,
+    "false_accept_pct": 60.0,
+    "false_reject_pct": 6.0
+  },
+  {
+    "rule": "2. Cosine đơn thuần (< 0.84)",
+    "true_detect": 9,
+    "false_accept_pct": 10.0,
+    "false_reject_pct": 14.0
+  },
+  {
+    "rule": "3. Cosine < 0.835 VÀ Margin < 0.02",
+    "true_detect": 6,
+    "false_accept_pct": 40.0,
+    "false_reject_pct": 12.0
+  },
+  {
+    "rule": "4. Đa tín hiệu: BM25 < 5.0 VÀ (Cosine < 0.835 VÀ Margin < 0.02)",
+    "true_detect": 0,
+    "false_accept_pct": 100.0,
+    "false_reject_pct": 0.0
+  },
+  {
+    "rule": "5. Đa tín hiệu thích ứng: (BM25 == 0 VÀ Cosine < 0.84) HOẶC Cosine < 0.80",
+    "true_detect": 0,
+    "false_accept_pct": 100.0,
+    "false_reject_pct": 2.0
+  }
+]

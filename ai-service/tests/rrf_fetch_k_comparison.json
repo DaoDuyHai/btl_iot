@@ -1,0 +1,46 @@
+{
+  "fetch_k=40": {
+    "Hit@1": 0.82,
+    "Hit@5": 0.95,
+    "Hit@10": 0.96,
+    "Recall@5": 0.5431,
+    "Recall@10": 0.5912,
+    "Precision@5": 0.508,
+    "MRR": 0.8817,
+    "Avg_Latency_ms": 61.1,
+    "P95_Latency_ms": 94.92
+  },
+  "fetch_k=100": {
+    "Hit@1": 0.82,
+    "Hit@5": 0.95,
+    "Hit@10": 0.96,
+    "Recall@5": 0.543,
+    "Recall@10": 0.5932,
+    "Precision@5": 0.504,
+    "MRR": 0.8792,
+    "Avg_Latency_ms": 57.37,
+    "P95_Latency_ms": 94.06
+  },
+  "fetch_k=200": {
+    "Hit@1": 0.83,
+    "Hit@5": 0.95,
+    "Hit@10": 0.96,
+    "Recall@5": 0.543,
+    "Recall@10": 0.5932,
+    "Precision@5": 0.504,
+    "MRR": 0.8867,
+    "Avg_Latency_ms": 57.21,
+    "P95_Latency_ms": 97.43
+  },
+  "fetch_k=300": {
+    "Hit@1": 0.83,
+    "Hit@5": 0.95,
+    "Hit@10": 0.96,
+    "Recall@5": 0.543,
+    "Recall@10": 0.5932,
+    "Precision@5": 0.504,
+    "MRR": 0.8867,
+    "Avg_Latency_ms": 59.48,
+    "P95_Latency_ms": 96.9
+  }
+}

@@ -1,0 +1,3874 @@
+[
+  {
+    "test_id": "TC001",
+    "group": "Exact_Title",
+    "query": "Người Đàn Ông Mang Tên Ove",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 32.53,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Người Đàn Ông Mang Tên Ove",
+            "author": "Fredrik Backman",
+            "score": 45.7456,
+            "position": "A1-01"
+          },
+          {
+            "rank": 2,
+            "title": "Danh nhân đương đại - Cuộc đời phi thường của Neil Amstrong - Câu chuyện về người đàn ông có thành tựu vươn tầm vũ trụ",
+            "author": "Stephen Hawking",
+            "score": 18.2312,
+            "position": "C2-06"
+          },
+          {
+            "rank": 3,
+            "title": "Danh nhân đương đại - Cuộc đời phi thường của Stephen Hawking (Câu chuyện về người đàn ông có những khám phá thay đổi thế giới",
+            "author": "Stephen Hawking",
+            "score": 17.2938,
+            "position": "C1-28"
+          },
+          {
+            "rank": 4,
+            "title": "Người đàn bà quỷ quyệt",
+            "author": "Sidney Sheldon",
+            "score": 16.0919,
+            "position": "A1-32"
+          },
+          {
+            "rank": 5,
+            "title": "Agatha Christie - Vụ Ám Sát Ông Roger Ackroyd",
+            "author": "Agatha Christie",
+            "score": 15.1904,
+            "position": "A2-35"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 96.26,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Người Đàn Ông Mang Tên Ove",
+            "author": "Fredrik Backman",
+            "score": 0.9205,
+            "position": "A1-01"
+          },
+          {
+            "rank": 2,
+            "title": "Người Bán Hàng Vĩ Đại Nhất Thế Giới",
+            "author": "Og Mandino",
+            "score": 0.845,
+            "position": "B3-46"
+          },
+          {
+            "rank": 3,
+            "title": "Anh em nhà Karamazov (TB 490.000)",
+            "author": "Stephen Hawking",
+            "score": 0.839,
+            "position": "C3-31"
+          },
+          {
+            "rank": 4,
+            "title": "Một chuyến du hành đến xứ Nam Hà (1792-1793)",
+            "author": "Daniel Kahneman",
+            "score": 0.838,
+            "position": "E2-43"
+          },
+          {
+            "rank": 5,
+            "title": "Người dám cho đi",
+            "author": "Bob Burg, JohnDavid Mann",
+            "score": 0.8373,
+            "position": "B2-31"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 98.42,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Người Đàn Ông Mang Tên Ove",
+            "author": "Fredrik Backman",
+            "score": 0.0328,
+            "position": "A1-01"
+          },
+          {
+            "rank": 2,
+            "title": "Danh nhân đương đại - Cuộc đời phi thường của Neil Amstrong - Câu chuyện về người đàn ông có thành tựu vươn tầm vũ trụ",
+            "author": "Stephen Hawking",
+            "score": 0.0295,
+            "position": "C2-06"
+          },
+          {
+            "rank": 3,
+            "title": "Dẫn Dắt Một Bầy Sói Hay Chăn Một Đàn Cừu",
+            "author": "Tiffani Bova",
+            "score": 0.0249,
+            "position": "B1-25"
+          },
+          {
+            "rank": 4,
+            "title": "Gọi Em Bằng Tên Anh - Call Me By Your Name",
+            "author": "André Aciman",
+            "score": 0.0238,
+            "position": "A2-26"
+          },
+          {
+            "rank": 5,
+            "title": "Ông già và biển cả",
+            "author": "Ernest Hemingway",
+            "score": 0.0238,
+            "position": "A3-17"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC002",
+    "group": "Exact_Title",
+    "query": "Trăm năm cô đơn",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 30.36,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Trăm năm cô đơn",
+            "author": "Gabriel Garcia Márquez",
+            "score": 38.4165,
+            "position": "A2-05"
+          },
+          {
+            "rank": 2,
+            "title": "Nếu Biết Trăm Năm Là Hữu Hạn",
+            "author": "Phạm Lữ Ân",
+            "score": 22.079,
+            "position": "A2-12"
+          },
+          {
+            "rank": 3,
+            "title": "Nhấc bút lên trong đêm cô đơn",
+            "author": "Stephen Hawking",
+            "score": 18.859,
+            "position": "C1-47"
+          },
+          {
+            "rank": 4,
+            "title": "Ông Trăm Tuổi Trèo Qua Cửa Sổ Và Biến Mất",
+            "author": "Jonas Jonasson",
+            "score": 15.8417,
+            "position": "A2-10"
+          },
+          {
+            "rank": 5,
+            "title": "Ông trăm tuổi tái xuất và giải cứu thế giới (Jonas Jonasson)",
+            "author": "Jonas Jonasson",
+            "score": 15.7374,
+            "position": "A2-27"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 46.1,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Trăm năm cô đơn",
+            "author": "Gabriel Garcia Márquez",
+            "score": 0.8962,
+            "position": "A2-05"
+          },
+          {
+            "rank": 2,
+            "title": "Trong từng hơi thở",
+            "author": "Nicholas Sparks",
+            "score": 0.8448,
+            "position": "A2-06"
+          },
+          {
+            "rank": 3,
+            "title": "Nếu Biết Trăm Năm Là Hữu Hạn",
+            "author": "Phạm Lữ Ân",
+            "score": 0.8446,
+            "position": "A2-12"
+          },
+          {
+            "rank": 4,
+            "title": "Ai Nói Wibu Không Thể Kết Hôn! - Tập 1",
+            "author": "Ngạc Nhân Hành Sơn",
+            "score": 0.841,
+            "position": "A2-42"
+          },
+          {
+            "rank": 5,
+            "title": "Chúng tôi lên đường, tuổi hai mươi ... Hồi ức một thế hệ đi qua chiến tranh",
+            "author": "Daniel Kahneman",
+            "score": 0.8403,
+            "position": "E1-24"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 64.9,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Trăm năm cô đơn",
+            "author": "Gabriel Garcia Márquez",
+            "score": 0.0328,
+            "position": "A2-05"
+          },
+          {
+            "rank": 2,
+            "title": "Nếu Biết Trăm Năm Là Hữu Hạn",
+            "author": "Phạm Lữ Ân",
+            "score": 0.032,
+            "position": "A2-12"
+          },
+          {
+            "rank": 3,
+            "title": "Nhấc bút lên trong đêm cô đơn",
+            "author": "Stephen Hawking",
+            "score": 0.0308,
+            "position": "C1-47"
+          },
+          {
+            "rank": 4,
+            "title": "Ông Trăm Tuổi Trèo Qua Cửa Sổ Và Biến Mất",
+            "author": "Jonas Jonasson",
+            "score": 0.026,
+            "position": "A2-10"
+          },
+          {
+            "rank": 5,
+            "title": "Năm Kẻ Sống Sót",
+            "author": "Holly Jackson",
+            "score": 0.0239,
+            "position": "A1-06"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC003",
+    "group": "Exact_Title",
+    "query": "Nhà Giả Kim",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 23.48,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 13.5298,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Tôi đã trở thành nhà văn như thế nào",
+            "author": "NXB Kim Đồng",
+            "score": 12.6134,
+            "position": "A2-39"
+          },
+          {
+            "rank": 3,
+            "title": "3000 Từ Vựng Tiếng Tây Ban Nha Thông Dụng",
+            "author": "TS. Nguyễn Thị Kim Dung, Th.S Nguyễn Hà My",
+            "score": 11.286,
+            "position": "D1-48"
+          },
+          {
+            "rank": 4,
+            "title": "Chung một mái nhà - Tập 7",
+            "author": "NXB Kim Đồng",
+            "score": 11.2036,
+            "position": "A2-46"
+          },
+          {
+            "rank": 5,
+            "title": "Nhà Quản Trị Hiệu Quả",
+            "author": "Peter F. Drucker",
+            "score": 10.7403,
+            "position": "B2-41"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 39.97,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 0.8869,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Thái Bạch Kim Tinh Đang Phiền Muộn",
+            "author": "Mã Bá Dung",
+            "score": 0.8431,
+            "position": "A2-43"
+          },
+          {
+            "rank": 3,
+            "title": "Nhà Có Bé Ngoan",
+            "author": "Thính Nguyên",
+            "score": 0.8405,
+            "position": "A3-32"
+          },
+          {
+            "rank": 4,
+            "title": "Vị Hôn Thê Giản Dị Của Tôi Rất Dễ Thương Lúc Ở Nhà",
+            "author": "Yuu Hidaka, Tantan",
+            "score": 0.84,
+            "position": "A1-41"
+          },
+          {
+            "rank": 5,
+            "title": "Nhà Ảo Thuật Đen Và Những Người Phụ Nữ Thức Tỉnh",
+            "author": "Higashino Keigo",
+            "score": 0.8385,
+            "position": "A2-19"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 60.01,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 0.0328,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Chung một mái nhà - Tập 7",
+            "author": "NXB Kim Đồng",
+            "score": 0.0299,
+            "position": "A2-46"
+          },
+          {
+            "rank": 3,
+            "title": "Pháp giới Kim cương - Kinh Kim Cương Đảnh Du Già Lý Thú Bát Nhã",
+            "author": "Nguyễn Hiến Lê",
+            "score": 0.0278,
+            "position": "F1-13"
+          },
+          {
+            "rank": 4,
+            "title": "Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo",
+            "author": "nhà xuất bản thế giới",
+            "score": 0.0272,
+            "position": "E2-23"
+          },
+          {
+            "rank": 5,
+            "title": "Sự Ỷ Lại Nguy Hiểm (Phiên Bản Toàn Tập)",
+            "author": "Kim Cương Quyển",
+            "score": 0.0254,
+            "position": "A2-31"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC004",
+    "group": "Exact_Title",
+    "query": "Cây Cam Ngọt Của Tôi",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 25.95,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Cây Cam Ngọt Của Tôi",
+            "author": "José Mauro de Vasconcelos",
+            "score": 48.9406,
+            "position": "A1-43"
+          },
+          {
+            "rank": 2,
+            "title": "Sưởi Ấm Mặt Trời: Tập 2 Của Cây Cam Ngọt",
+            "author": "José Mauro de Vasconcelos",
+            "score": 43.7556,
+            "position": "A1-23"
+          },
+          {
+            "rank": 3,
+            "title": "Cây cam ngọt của tôi (TB 125.000)",
+            "author": "Stephen Hawking",
+            "score": 41.3281,
+            "position": "C2-37"
+          },
+          {
+            "rank": 4,
+            "title": "Tình Đầu Chọn Tôi, Tôi Rất Ngọt",
+            "author": "Thụy Mang",
+            "score": 28.876,
+            "position": "A3-11"
+          },
+          {
+            "rank": 5,
+            "title": "Tết cỏ ngọt",
+            "author": "Robin Wall Kimmerer",
+            "score": 18.6853,
+            "position": "A3-43"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 44.03,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Cây Cam Ngọt Của Tôi",
+            "author": "José Mauro de Vasconcelos",
+            "score": 0.926,
+            "position": "A1-43"
+          },
+          {
+            "rank": 2,
+            "title": "Sưởi Ấm Mặt Trời: Tập 2 Của Cây Cam Ngọt",
+            "author": "José Mauro de Vasconcelos",
+            "score": 0.8885,
+            "position": "A1-23"
+          },
+          {
+            "rank": 3,
+            "title": "Cây cam ngọt của tôi (TB 125.000)",
+            "author": "Stephen Hawking",
+            "score": 0.8862,
+            "position": "C2-37"
+          },
+          {
+            "rank": 4,
+            "title": "Tình Đầu Chọn Tôi, Tôi Rất Ngọt",
+            "author": "Thụy Mang",
+            "score": 0.8667,
+            "position": "A3-11"
+          },
+          {
+            "rank": 5,
+            "title": "Tết cỏ ngọt",
+            "author": "Robin Wall Kimmerer",
+            "score": 0.8555,
+            "position": "A3-43"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 81.67,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Cây Cam Ngọt Của Tôi",
+            "author": "José Mauro de Vasconcelos",
+            "score": 0.0328,
+            "position": "A1-43"
+          },
+          {
+            "rank": 2,
+            "title": "Sưởi Ấm Mặt Trời: Tập 2 Của Cây Cam Ngọt",
+            "author": "José Mauro de Vasconcelos",
+            "score": 0.0323,
+            "position": "A1-23"
+          },
+          {
+            "rank": 3,
+            "title": "Cây cam ngọt của tôi (TB 125.000)",
+            "author": "Stephen Hawking",
+            "score": 0.0317,
+            "position": "C2-37"
+          },
+          {
+            "rank": 4,
+            "title": "Tình Đầu Chọn Tôi, Tôi Rất Ngọt",
+            "author": "Thụy Mang",
+            "score": 0.0312,
+            "position": "A3-11"
+          },
+          {
+            "rank": 5,
+            "title": "Tết cỏ ngọt",
+            "author": "Robin Wall Kimmerer",
+            "score": 0.0308,
+            "position": "A3-43"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC005",
+    "group": "Exact_Title",
+    "query": "Mắt Biếc",
+    "modes": {
+      "bm25": {
+        "rank_found": 2,
+        "latency_ms": 17.9,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Cây Brooklyn Xanh Biếc",
+            "author": "Betty Smith",
+            "score": 22.4033,
+            "position": "A1-08"
+          },
+          {
+            "rank": 2,
+            "title": "Mắt Biếc",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 21.0322,
+            "position": "A1-37"
+          },
+          {
+            "rank": 3,
+            "title": "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 20.0966,
+            "position": "A2-38"
+          },
+          {
+            "rank": 4,
+            "title": "Ngày Xưa Có Một Chuyện Tình",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 10.8475,
+            "position": "A2-36"
+          },
+          {
+            "rank": 5,
+            "title": "Chế Ngự Tâm Lý \" No Bụng Đói Con Mắt\"",
+            "author": "Tác giả Michael Easter",
+            "score": 10.7764,
+            "position": "E3-27"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 37.29,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Mắt Biếc",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.8814,
+            "position": "A1-37"
+          },
+          {
+            "rank": 2,
+            "title": "Ngày Xưa Có Một Chuyện Tình",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.8458,
+            "position": "A2-36"
+          },
+          {
+            "rank": 3,
+            "title": "Một Lít Nước Mắt",
+            "author": "Kito Aya",
+            "score": 0.8405,
+            "position": "A3-45"
+          },
+          {
+            "rank": 4,
+            "title": "Bơi Cùng Cá Mập Mà Không Bị Nuốt Chửng",
+            "author": "Harvey B. Mackay",
+            "score": 0.8403,
+            "position": "E1-13"
+          },
+          {
+            "rank": 5,
+            "title": "Mạc Ngôn: ĐÀN HƯƠNG HÌNH + BÁU VẬT CỦA ĐỜI – Bìa cứng – Tác giả đoạt giải Nobel văn chương 2012 – Trần Đình Hiến dịch – Huy Hoàng Bookstore",
+            "author": "Mạc Ngôn",
+            "score": 0.834,
+            "position": "A3-21"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 57.06,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Mắt Biếc",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0325,
+            "position": "A1-37"
+          },
+          {
+            "rank": 2,
+            "title": "Ngày Xưa Có Một Chuyện Tình",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0318,
+            "position": "A2-36"
+          },
+          {
+            "rank": 3,
+            "title": "Cây Brooklyn Xanh Biếc",
+            "author": "Betty Smith",
+            "score": 0.0311,
+            "position": "A1-08"
+          },
+          {
+            "rank": 4,
+            "title": "Một Lít Nước Mắt",
+            "author": "Kito Aya",
+            "score": 0.03,
+            "position": "A3-45"
+          },
+          {
+            "rank": 5,
+            "title": "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0298,
+            "position": "A2-38"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC006",
+    "group": "Exact_Title",
+    "query": "Nỗi buồn chiến tranh",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 25.63,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nỗi buồn chiến tranh",
+            "author": "Bảo Ninh",
+            "score": 43.8347,
+            "position": "A1-13"
+          },
+          {
+            "rank": 2,
+            "title": "Cây Bách Buồn",
+            "author": "Agatha Christie",
+            "score": 15.7203,
+            "position": "A3-14"
+          },
+          {
+            "rank": 3,
+            "title": "Nhiệt đới buồn",
+            "author": "Nguyễn Hiến Lê",
+            "score": 15.273,
+            "position": "F2-18"
+          },
+          {
+            "rank": 4,
+            "title": "Văn trẻ - Cơ bản là buồn",
+            "author": "NXB Kim Đồng",
+            "score": 13.967,
+            "position": "A1-01"
+          },
+          {
+            "rank": 5,
+            "title": "Các Cuộc Chiến Tranh Tiền Tệ",
+            "author": "James Rickards",
+            "score": 13.929,
+            "position": "B3-36"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 38.44,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nỗi buồn chiến tranh",
+            "author": "Bảo Ninh",
+            "score": 0.9108,
+            "position": "A1-13"
+          },
+          {
+            "rank": 2,
+            "title": "Văn trẻ - Cơ bản là buồn",
+            "author": "NXB Kim Đồng",
+            "score": 0.8528,
+            "position": "A1-01"
+          },
+          {
+            "rank": 3,
+            "title": "Chúng tôi lên đường, tuổi hai mươi ... Hồi ức một thế hệ đi qua chiến tranh",
+            "author": "Daniel Kahneman",
+            "score": 0.8478,
+            "position": "E1-24"
+          },
+          {
+            "rank": 4,
+            "title": "Nhật ký Đặng Thùy Trâm",
+            "author": "Đặng Thùy Trâm",
+            "score": 0.8453,
+            "position": "A1-42"
+          },
+          {
+            "rank": 5,
+            "title": "Phía Tây Không Có Gì Lạ",
+            "author": "Erich Maria Remarque",
+            "score": 0.8449,
+            "position": "A2-27"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 67.08,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nỗi buồn chiến tranh",
+            "author": "Bảo Ninh",
+            "score": 0.0328,
+            "position": "A1-13"
+          },
+          {
+            "rank": 2,
+            "title": "Văn trẻ - Cơ bản là buồn",
+            "author": "NXB Kim Đồng",
+            "score": 0.0318,
+            "position": "A1-01"
+          },
+          {
+            "rank": 3,
+            "title": "Thưởng thức triết học - Chiến tranh và hòa bình",
+            "author": "Nhiều tác giả",
+            "score": 0.0271,
+            "position": "A3-09"
+          },
+          {
+            "rank": 4,
+            "title": "Hồi Ký Phóng Viên Chiến Trường",
+            "author": "Nhóm Tác Giả",
+            "score": 0.0266,
+            "position": "E2-27"
+          },
+          {
+            "rank": 5,
+            "title": "Nhiệt đới buồn",
+            "author": "Nguyễn Hiến Lê",
+            "score": 0.0264,
+            "position": "F2-18"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC007",
+    "group": "Exact_Title",
+    "query": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 37.19,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+            "author": "Agatha Christie",
+            "score": 82.7487,
+            "position": "A2-14"
+          },
+          {
+            "rank": 2,
+            "title": "Án Mạng Ở Điền Trang Kingfisher Hill (Agatha Christie) - NXB Trẻ",
+            "author": "Agatha Christie",
+            "score": 38.9121,
+            "position": "A1-49"
+          },
+          {
+            "rank": 3,
+            "title": "Án Mạng Giữa Không Trung (Agatha Christie) - NXB Trẻ",
+            "author": "Agatha Christie",
+            "score": 27.4753,
+            "position": "A2-24"
+          },
+          {
+            "rank": 4,
+            "title": "Án Mạng Trên Sân Golf",
+            "author": "Agatha Christie",
+            "score": 26.3205,
+            "position": "A3-09"
+          },
+          {
+            "rank": 5,
+            "title": "Án Mạng Trên Sông Nile (Agatha Christie)",
+            "author": "Agatha Christie",
+            "score": 22.6012,
+            "position": "A1-37"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 42.45,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+            "author": "Agatha Christie",
+            "score": 0.8878,
+            "position": "A2-14"
+          },
+          {
+            "rank": 2,
+            "title": "Án Mạng Ở Điền Trang Kingfisher Hill (Agatha Christie) - NXB Trẻ",
+            "author": "Agatha Christie",
+            "score": 0.8554,
+            "position": "A1-49"
+          },
+          {
+            "rank": 3,
+            "title": "Án Mạng Giữa Không Trung (Agatha Christie) - NXB Trẻ",
+            "author": "Agatha Christie",
+            "score": 0.8461,
+            "position": "A2-24"
+          },
+          {
+            "rank": 4,
+            "title": "Án Mạng Trong Thủy Cung – Bí Ẩn Cây Lau Nhà Màu Vàng",
+            "author": "Yugo Aosaki",
+            "score": 0.8408,
+            "position": "A3-24"
+          },
+          {
+            "rank": 5,
+            "title": "Án Mạng Trong Tháp Thủy Tinh",
+            "author": "Mikito Chinen",
+            "score": 0.8408,
+            "position": "A3-16"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 77.66,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+            "author": "Agatha Christie",
+            "score": 0.0328,
+            "position": "A2-14"
+          },
+          {
+            "rank": 2,
+            "title": "Án Mạng Ở Điền Trang Kingfisher Hill (Agatha Christie) - NXB Trẻ",
+            "author": "Agatha Christie",
+            "score": 0.0323,
+            "position": "A1-49"
+          },
+          {
+            "rank": 3,
+            "title": "Án Mạng Giữa Không Trung (Agatha Christie) - NXB Trẻ",
+            "author": "Agatha Christie",
+            "score": 0.0317,
+            "position": "A2-24"
+          },
+          {
+            "rank": 4,
+            "title": "Án Mạng Trên Sân Golf",
+            "author": "Agatha Christie",
+            "score": 0.0303,
+            "position": "A3-09"
+          },
+          {
+            "rank": 5,
+            "title": "Huyền thoại tàu không số",
+            "author": "Daniel Kahneman",
+            "score": 0.0301,
+            "position": "E3-22"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC008",
+    "group": "Exact_Title",
+    "query": "Không Gia Đình",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 24.45,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Không Gia Đình",
+            "author": "Hector Malot",
+            "score": 19.6832,
+            "position": "A3-21"
+          },
+          {
+            "rank": 2,
+            "title": "Lập Kế Hoạch Tài Chính Gia Đình",
+            "author": "Mitsuki Okazaki",
+            "score": 13.317,
+            "position": "B3-49"
+          },
+          {
+            "rank": 3,
+            "title": "Em Muốn Học Thiết Kế Nhưng Mẹ Không Cho! (FS)",
+            "author": "Leo Dinh",
+            "score": 13.0162,
+            "position": "C3-16"
+          },
+          {
+            "rank": 4,
+            "title": "Trong Gia Đình",
+            "author": "Hector Malot",
+            "score": 12.6669,
+            "position": "A3-22"
+          },
+          {
+            "rank": 5,
+            "title": "Gia đình \"Tướng Thanh - Tướng Vịnh\"",
+            "author": "Thượng tướng Nguyễn Chí Vịnh chủ biên",
+            "score": 11.6935,
+            "position": "F3-19"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 40.68,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Không Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.8982,
+            "position": "A3-21"
+          },
+          {
+            "rank": 2,
+            "title": "Designer Sống Dai Không Ai Đì Nổi",
+            "author": "Nhiều tác giả",
+            "score": 0.8538,
+            "position": "C1-42"
+          },
+          {
+            "rank": 3,
+            "title": "Trong Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.8521,
+            "position": "A3-22"
+          },
+          {
+            "rank": 4,
+            "title": "Bơi Cùng Cá Mập Mà Không Bị Nuốt Chửng",
+            "author": "Harvey B. Mackay",
+            "score": 0.8517,
+            "position": "E1-13"
+          },
+          {
+            "rank": 5,
+            "title": "Không Ai Qua Sông (Tập Truyện Ngắn Nguyễn Ngọc Tư)",
+            "author": "Nguyễn Ngọc Tư",
+            "score": 0.8513,
+            "position": "A3-22"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 67.65,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Không Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.0328,
+            "position": "A3-21"
+          },
+          {
+            "rank": 2,
+            "title": "Trong Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.0315,
+            "position": "A3-22"
+          },
+          {
+            "rank": 3,
+            "title": "Lập Kế Hoạch Tài Chính Gia Đình",
+            "author": "Mitsuki Okazaki",
+            "score": 0.0295,
+            "position": "B3-49"
+          },
+          {
+            "rank": 4,
+            "title": "Gia đình, bạn bè và đất nước",
+            "author": "Nguyễn Hiến Lê",
+            "score": 0.029,
+            "position": "F3-02"
+          },
+          {
+            "rank": 5,
+            "title": "Hồi Ký Nguyễn Thị Bình - Gia Đình, Bạn Bè và Đất Nước",
+            "author": "Nguyễn Thị Bình",
+            "score": 0.0268,
+            "position": "A1-40"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC009",
+    "group": "Exact_Title",
+    "query": "Totto - Chan Bên Cửa Sổ",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 23.92,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Totto - Chan Bên Cửa Sổ",
+            "author": "Kuroyanagi Tetsuko",
+            "score": 46.9072,
+            "position": "A1-46"
+          },
+          {
+            "rank": 2,
+            "title": "Tottochan bên cửa sổ (TB 145.000)",
+            "author": "Stephen Hawking",
+            "score": 38.3019,
+            "position": "C2-39"
+          },
+          {
+            "rank": 3,
+            "title": "Có Hai Con Mèo Ngồi Bên Cửa Sổ",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 29.2634,
+            "position": "A1-44"
+          },
+          {
+            "rank": 4,
+            "title": "Ông Trăm Tuổi Trèo Qua Cửa Sổ Và Biến Mất",
+            "author": "Jonas Jonasson",
+            "score": 22.2239,
+            "position": "A2-10"
+          },
+          {
+            "rank": 5,
+            "title": "Thiên Tài Bên Trái, Kẻ Điên Bên Phải",
+            "author": "Cao Minh",
+            "score": 12.8986,
+            "position": "A3-24"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 42.88,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Totto - Chan Bên Cửa Sổ",
+            "author": "Kuroyanagi Tetsuko",
+            "score": 0.8806,
+            "position": "A1-46"
+          },
+          {
+            "rank": 2,
+            "title": "Tottochan bên cửa sổ (TB 145.000)",
+            "author": "Stephen Hawking",
+            "score": 0.8545,
+            "position": "C2-39"
+          },
+          {
+            "rank": 3,
+            "title": "Lều chõng - Việc làng",
+            "author": "NXB Kim Đồng",
+            "score": 0.8368,
+            "position": "A3-10"
+          },
+          {
+            "rank": 4,
+            "title": "Có Hai Con Mèo Ngồi Bên Cửa Sổ",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.8347,
+            "position": "A1-44"
+          },
+          {
+            "rank": 5,
+            "title": "KHI LỜI NÓI DỐI CÒN CHƯA LỘ DIỆN - Toshikazu Kawaguchi – Khuê Tú dịch – NXB Trẻ",
+            "author": "Toshikazu Kawaguchi",
+            "score": 0.8334,
+            "position": "A2-37"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 56.76,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Totto - Chan Bên Cửa Sổ",
+            "author": "Kuroyanagi Tetsuko",
+            "score": 0.0328,
+            "position": "A1-46"
+          },
+          {
+            "rank": 2,
+            "title": "Tottochan bên cửa sổ (TB 145.000)",
+            "author": "Stephen Hawking",
+            "score": 0.0323,
+            "position": "C2-39"
+          },
+          {
+            "rank": 3,
+            "title": "Có Hai Con Mèo Ngồi Bên Cửa Sổ",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0315,
+            "position": "A1-44"
+          },
+          {
+            "rank": 4,
+            "title": "Ngôi Nhà Bên Bờ Biển Xanh Thẳm",
+            "author": "T.J.Klune",
+            "score": 0.0254,
+            "position": "A1-14"
+          },
+          {
+            "rank": 5,
+            "title": "Khi Tóc Mai Đã Bạc, Người Có Còn Bên Ta?",
+            "author": "Phù Hoa",
+            "score": 0.0246,
+            "position": "A3-48"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC010",
+    "group": "Exact_Title",
+    "query": "Thiên Tài Bên Trái, Kẻ Điên Bên Phải",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 35.33,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Thiên Tài Bên Trái, Kẻ Điên Bên Phải",
+            "author": "Cao Minh",
+            "score": 77.7221,
+            "position": "A3-24"
+          },
+          {
+            "rank": 2,
+            "title": "Thiên sứ nhà bên (Manga) - Tập 6",
+            "author": "Nhiều tác giả",
+            "score": 20.9986,
+            "position": "A3-33"
+          },
+          {
+            "rank": 3,
+            "title": "Luật của kẻ thắng",
+            "author": "Stephen Hawking",
+            "score": 18.5246,
+            "position": "C3-41"
+          },
+          {
+            "rank": 4,
+            "title": "Dốc Hết Trái Tim - Cách Starbucks Xây Dựng Công Ty Bằng Từng Tách Cà Phê",
+            "author": "Howard Schultz, Dori Jones Yang",
+            "score": 17.7203,
+            "position": "B3-35"
+          },
+          {
+            "rank": 5,
+            "title": "Tư Duy Kế Toán Phải Có Trong Kinh Doanh",
+            "author": "Takaharu Yasumoto",
+            "score": 17.6115,
+            "position": "B3-33"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 43.02,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Thiên Tài Bên Trái, Kẻ Điên Bên Phải",
+            "author": "Cao Minh",
+            "score": 0.9138,
+            "position": "A3-24"
+          },
+          {
+            "rank": 2,
+            "title": "Nassim Nicholas",
+            "author": "Alpha Books",
+            "score": 0.8659,
+            "position": "E3-19"
+          },
+          {
+            "rank": 3,
+            "title": "Thiên đường",
+            "author": "Stephen Hawking",
+            "score": 0.8645,
+            "position": "C1-22"
+          },
+          {
+            "rank": 4,
+            "title": "Xứ Cát",
+            "author": "Frank Herbert",
+            "score": 0.8626,
+            "position": "A3-50"
+          },
+          {
+            "rank": 5,
+            "title": "Hồ sơ tâm lí tội phạm - Tập 5",
+            "author": "Nhiều tác giả",
+            "score": 0.8587,
+            "position": "A1-35"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 69.25,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Thiên Tài Bên Trái, Kẻ Điên Bên Phải",
+            "author": "Cao Minh",
+            "score": 0.0328,
+            "position": "A3-24"
+          },
+          {
+            "rank": 2,
+            "title": "Thiên đường",
+            "author": "Stephen Hawking",
+            "score": 0.0279,
+            "position": "C1-22"
+          },
+          {
+            "rank": 3,
+            "title": "Lá cờ bên chiếc ba lô",
+            "author": "Đào Minh Tiến – Dế Mèn Du Ký",
+            "score": 0.0277,
+            "position": "A1-07"
+          },
+          {
+            "rank": 4,
+            "title": "Phong Ma Yến Tước tập 1 - Nuối tiếc giang hồ",
+            "author": "Stephen Hawking",
+            "score": 0.0264,
+            "position": "C1-42"
+          },
+          {
+            "rank": 5,
+            "title": "Phong Ma Yến Tước tập 2 - Địa ngục thiên đường",
+            "author": "Stephen Hawking",
+            "score": 0.0262,
+            "position": "C1-33"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC011",
+    "group": "Author",
+    "query": "Nguyễn Nhật Ánh",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 27.34,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 27.4021,
+            "position": "A2-38"
+          },
+          {
+            "rank": 2,
+            "title": "Mùa hè không tên (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 27.2782,
+            "position": "A2-29"
+          },
+          {
+            "rank": 3,
+            "title": "Cô Bé Hàng Xóm Và Bốn Viên Kẹo (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 26.8013,
+            "position": "A3-06"
+          },
+          {
+            "rank": 4,
+            "title": "Tiệm sách của nàng (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 26.4325,
+            "position": "A1-05"
+          },
+          {
+            "rank": 5,
+            "title": "Ngày Xưa Có Một Chuyện Tình",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 26.0451,
+            "position": "A2-36"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 40.89,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Chuyện xứ Lang Biang - Boxset 12 cuốn - Nguyễn Nhật Ánh khổ nhỏ",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.874,
+            "position": "A3-38"
+          },
+          {
+            "rank": 2,
+            "title": "Cô Bé Hàng Xóm Và Bốn Viên Kẹo (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.8672,
+            "position": "A3-06"
+          },
+          {
+            "rank": 3,
+            "title": "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.8632,
+            "position": "A2-38"
+          },
+          {
+            "rank": 4,
+            "title": "Ticket To Childhood",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.8612,
+            "position": "A2-39"
+          },
+          {
+            "rank": 5,
+            "title": "Mùa hè không tên (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.8601,
+            "position": "A2-29"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 68.05,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0323,
+            "position": "A2-38"
+          },
+          {
+            "rank": 2,
+            "title": "Cô Bé Hàng Xóm Và Bốn Viên Kẹo (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.032,
+            "position": "A3-06"
+          },
+          {
+            "rank": 3,
+            "title": "Mùa hè không tên (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0315,
+            "position": "A2-29"
+          },
+          {
+            "rank": 4,
+            "title": "Chuyện xứ Lang Biang - Boxset 12 cuốn - Nguyễn Nhật Ánh khổ nhỏ",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0305,
+            "position": "A3-38"
+          },
+          {
+            "rank": 5,
+            "title": "Ngày Xưa Có Một Chuyện Tình",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0303,
+            "position": "A2-36"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC012",
+    "group": "Author",
+    "query": "Fredrik Backman",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 4.81,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Britt-Marie Đã Ở Đây (Fredrid Backman)",
+            "author": "Fredrik Backman",
+            "score": 23.7741,
+            "position": "A2-33"
+          },
+          {
+            "rank": 2,
+            "title": "Người Đàn Ông Mang Tên Ove",
+            "author": "Fredrik Backman",
+            "score": 23.6076,
+            "position": "A1-01"
+          },
+          {
+            "rank": 3,
+            "title": "(Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ",
+            "author": "Fredrik Backman",
+            "score": 22.9339,
+            "position": "A1-17"
+          },
+          {
+            "rank": 4,
+            "title": "Những Kẻ Âu Lo",
+            "author": "Fredrik Backman",
+            "score": 22.6332,
+            "position": "A1-04"
+          },
+          {
+            "rank": 5,
+            "title": "Beartown - Thị trấn nhỏ, giấc mơ lớn",
+            "author": "Fredrik Backman",
+            "score": 22.562,
+            "position": "A2-02"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 41.16,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Người Đàn Ông Mang Tên Ove",
+            "author": "Fredrik Backman",
+            "score": 0.8058,
+            "position": "A1-01"
+          },
+          {
+            "rank": 2,
+            "title": "Britt-Marie Đã Ở Đây (Fredrid Backman)",
+            "author": "Fredrik Backman",
+            "score": 0.7885,
+            "position": "A2-33"
+          },
+          {
+            "rank": 3,
+            "title": "Những Kẻ Âu Lo",
+            "author": "Fredrik Backman",
+            "score": 0.7777,
+            "position": "A1-04"
+          },
+          {
+            "rank": 4,
+            "title": "(Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ",
+            "author": "Fredrik Backman",
+            "score": 0.7772,
+            "position": "A1-17"
+          },
+          {
+            "rank": 5,
+            "title": "Beartown 2: Chúng tôi đấu với các bạn",
+            "author": "Fredrik Backman",
+            "score": 0.7676,
+            "position": "A1-20"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 44.96,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Britt-Marie Đã Ở Đây (Fredrid Backman)",
+            "author": "Fredrik Backman",
+            "score": 0.0325,
+            "position": "A2-33"
+          },
+          {
+            "rank": 2,
+            "title": "Người Đàn Ông Mang Tên Ove",
+            "author": "Fredrik Backman",
+            "score": 0.0325,
+            "position": "A1-01"
+          },
+          {
+            "rank": 3,
+            "title": "(Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ",
+            "author": "Fredrik Backman",
+            "score": 0.0315,
+            "position": "A1-17"
+          },
+          {
+            "rank": 4,
+            "title": "Những Kẻ Âu Lo",
+            "author": "Fredrik Backman",
+            "score": 0.0315,
+            "position": "A1-04"
+          },
+          {
+            "rank": 5,
+            "title": "Beartown - Thị trấn nhỏ, giấc mơ lớn",
+            "author": "Fredrik Backman",
+            "score": 0.0305,
+            "position": "A2-02"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC013",
+    "group": "Author",
+    "query": "Agatha Christie",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 7.35,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Và Rồi Chẳng Còn Ai (Agatha Christie)",
+            "author": "Agatha Christie",
+            "score": 20.1768,
+            "position": "A3-16"
+          },
+          {
+            "rank": 2,
+            "title": "Agatha Christie. Kẻ thù giấu mặt",
+            "author": "Agatha Christie",
+            "score": 20.0312,
+            "position": "A3-07"
+          },
+          {
+            "rank": 3,
+            "title": "Agatha Christie. Bi kịch ba hồi",
+            "author": "Agatha Christie",
+            "score": 19.9652,
+            "position": "A1-12"
+          },
+          {
+            "rank": 4,
+            "title": "Agatha Christie. Tuyển tập kỳ án của Poirot",
+            "author": "Agatha Christie",
+            "score": 19.856,
+            "position": "A3-25"
+          },
+          {
+            "rank": 5,
+            "title": "Agatha Christie. Bí Mật Dinh Thự Chimneys",
+            "author": "Agatha Christie",
+            "score": 19.7931,
+            "position": "A2-44"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 42.64,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Agatha Christie. Bi kịch ba hồi",
+            "author": "Agatha Christie",
+            "score": 0.8575,
+            "position": "A1-12"
+          },
+          {
+            "rank": 2,
+            "title": "Và Rồi Chẳng Còn Ai (Agatha Christie)",
+            "author": "Agatha Christie",
+            "score": 0.847,
+            "position": "A3-16"
+          },
+          {
+            "rank": 3,
+            "title": "Agatha Christie. Tội Ác Dưới Ánh Mặt Trời",
+            "author": "Agatha Christie",
+            "score": 0.8423,
+            "position": "A2-37"
+          },
+          {
+            "rank": 4,
+            "title": "Agatha Christie - Vụ Ám Sát Ông Roger Ackroyd",
+            "author": "Agatha Christie",
+            "score": 0.8418,
+            "position": "A2-35"
+          },
+          {
+            "rank": 5,
+            "title": "Agatha Christie. Tuyển tập kỳ án của Poirot",
+            "author": "Agatha Christie",
+            "score": 0.8414,
+            "position": "A3-25"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 50.16,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Và Rồi Chẳng Còn Ai (Agatha Christie)",
+            "author": "Agatha Christie",
+            "score": 0.0325,
+            "position": "A3-16"
+          },
+          {
+            "rank": 2,
+            "title": "Agatha Christie. Bi kịch ba hồi",
+            "author": "Agatha Christie",
+            "score": 0.0323,
+            "position": "A1-12"
+          },
+          {
+            "rank": 3,
+            "title": "Agatha Christie. Kẻ thù giấu mặt",
+            "author": "Agatha Christie",
+            "score": 0.0311,
+            "position": "A3-07"
+          },
+          {
+            "rank": 4,
+            "title": "Agatha Christie. Tuyển tập kỳ án của Poirot",
+            "author": "Agatha Christie",
+            "score": 0.031,
+            "position": "A3-25"
+          },
+          {
+            "rank": 5,
+            "title": "Agatha Christie. Tội Ác Dưới Ánh Mặt Trời",
+            "author": "Agatha Christie",
+            "score": 0.0306,
+            "position": "A2-37"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC014",
+    "group": "Author",
+    "query": "Stephen Hawking",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 17.87,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Danh nhân đương đại - Cuộc đời phi thường của Stephen Hawking (Câu chuyện về người đàn ông có những khám phá thay đổi thế giới",
+            "author": "Stephen Hawking",
+            "score": 9.0314,
+            "position": "C1-28"
+          },
+          {
+            "rank": 2,
+            "title": "MƠ LAM KINH",
+            "author": "Stephen Hawking",
+            "score": 8.4833,
+            "position": "C3-47"
+          },
+          {
+            "rank": 3,
+            "title": "Thú hoang",
+            "author": "Stephen Hawking",
+            "score": 8.4559,
+            "position": "C1-19"
+          },
+          {
+            "rank": 4,
+            "title": "Suy tưởng",
+            "author": "Stephen Hawking",
+            "score": 8.4287,
+            "position": "C1-20"
+          },
+          {
+            "rank": 5,
+            "title": "TÂM CẢNH",
+            "author": "Stephen Hawking",
+            "score": 8.4152,
+            "position": "C3-44"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 40.56,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Một kiểu bình thường khác",
+            "author": "Stephen Hawking",
+            "score": 0.8408,
+            "position": "C1-15"
+          },
+          {
+            "rank": 2,
+            "title": "Infomania - Các kỷ lục, top 10 và những thông tin kỳ thú khác",
+            "author": "Stephen Hawking",
+            "score": 0.8402,
+            "position": "C2-49"
+          },
+          {
+            "rank": 3,
+            "title": "MƠ LAM KINH",
+            "author": "Stephen Hawking",
+            "score": 0.839,
+            "position": "C3-47"
+          },
+          {
+            "rank": 4,
+            "title": "Trò chuyện với nỗi đau và vượt qua tổn thương",
+            "author": "Stephen Hawking",
+            "score": 0.8384,
+            "position": "C3-49"
+          },
+          {
+            "rank": 5,
+            "title": "Luật của kẻ thắng",
+            "author": "Stephen Hawking",
+            "score": 0.8382,
+            "position": "C3-41"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 65.01,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "MƠ LAM KINH",
+            "author": "Stephen Hawking",
+            "score": 0.032,
+            "position": "C3-47"
+          },
+          {
+            "rank": 2,
+            "title": "Danh nhân đương đại - Cuộc đời phi thường của Stephen Hawking (Câu chuyện về người đàn ông có những khám phá thay đổi thế giới",
+            "author": "Stephen Hawking",
+            "score": 0.0305,
+            "position": "C1-28"
+          },
+          {
+            "rank": 3,
+            "title": "Luật của kẻ thắng",
+            "author": "Stephen Hawking",
+            "score": 0.0303,
+            "position": "C3-41"
+          },
+          {
+            "rank": 4,
+            "title": "Hành vi thân mật",
+            "author": "Stephen Hawking",
+            "score": 0.0301,
+            "position": "C3-08"
+          },
+          {
+            "rank": 5,
+            "title": "Những người tìm kiếm",
+            "author": "Stephen Hawking",
+            "score": 0.0294,
+            "position": "C3-46"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC015",
+    "group": "Author",
+    "query": "Paulo Coelho",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 4.9,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 29.0431,
+            "position": "A2-17"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 46.86,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 0.8429,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Tạo tên Tạo thế - Để Không Làm CEO Vô Danh: Bí Quyết Quản Lý Danh Tiếng Trong Thời Đại Số + Nghệ Thuật \"Thể Hiện\" Bản Thân Trên Mạng Xã Hội",
+            "author": "Allan Dib",
+            "score": 0.8062,
+            "position": "E1-38"
+          },
+          {
+            "rank": 3,
+            "title": "Kho tàng câu đố dân gian bằng tranh - Quê hương đất nước (Dành cho tuổi mẫu giáo và tiểu học)",
+            "author": "Stephen Hawking",
+            "score": 0.8054,
+            "position": "C2-12"
+          },
+          {
+            "rank": 4,
+            "title": "Khéo khôn với tiền - Tránh những ưu phiền - Tập 1 - Hiểu về Tiền",
+            "author": "NXB Kim Đồng",
+            "score": 0.8052,
+            "position": "A3-17"
+          },
+          {
+            "rank": 5,
+            "title": "Storytelling With You – Kể Chuyện Từ Chính Bạn",
+            "author": "Cole Nussbaumer Knaflic",
+            "score": 0.8038,
+            "position": "B3-43"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 45.19,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 0.0328,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Tạo tên Tạo thế - Để Không Làm CEO Vô Danh: Bí Quyết Quản Lý Danh Tiếng Trong Thời Đại Số + Nghệ Thuật \"Thể Hiện\" Bản Thân Trên Mạng Xã Hội",
+            "author": "Allan Dib",
+            "score": 0.0161,
+            "position": "E1-38"
+          },
+          {
+            "rank": 3,
+            "title": "Kho tàng câu đố dân gian bằng tranh - Quê hương đất nước (Dành cho tuổi mẫu giáo và tiểu học)",
+            "author": "Stephen Hawking",
+            "score": 0.0159,
+            "position": "C2-12"
+          },
+          {
+            "rank": 4,
+            "title": "Khéo khôn với tiền - Tránh những ưu phiền - Tập 1 - Hiểu về Tiền",
+            "author": "NXB Kim Đồng",
+            "score": 0.0156,
+            "position": "A3-17"
+          },
+          {
+            "rank": 5,
+            "title": "Storytelling With You – Kể Chuyện Từ Chính Bạn",
+            "author": "Cole Nussbaumer Knaflic",
+            "score": 0.0154,
+            "position": "B3-43"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC016",
+    "group": "Semantic",
+    "query": "sách kể về nỗi đau chiến tranh của người cựu binh",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 41.62,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nỗi buồn chiến tranh",
+            "author": "Bảo Ninh",
+            "score": 40.541,
+            "position": "A1-13"
+          },
+          {
+            "rank": 2,
+            "title": "Trò chuyện với nỗi đau và vượt qua tổn thương",
+            "author": "Stephen Hawking",
+            "score": 27.8663,
+            "position": "C3-49"
+          },
+          {
+            "rank": 3,
+            "title": "Câu Trả Lời Của Người Chiến Thắng",
+            "author": "Jack Welch, Suzy Welch",
+            "score": 26.0323,
+            "position": "B2-10"
+          },
+          {
+            "rank": 4,
+            "title": "Luận về chiến tranh",
+            "author": "Nguyễn Hiến Lê",
+            "score": 23.693,
+            "position": "F2-30"
+          },
+          {
+            "rank": 5,
+            "title": "Chiến Binh Cầu Vồng",
+            "author": "Andrea Hirata",
+            "score": 21.5768,
+            "position": "A3-37"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 45.02,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nỗi buồn chiến tranh",
+            "author": "Bảo Ninh",
+            "score": 0.8879,
+            "position": "A1-13"
+          },
+          {
+            "rank": 2,
+            "title": "Chân Trần Chí Thép",
+            "author": "Jammes G Zumwalt",
+            "score": 0.8695,
+            "position": "A1-19"
+          },
+          {
+            "rank": 3,
+            "title": "Chúng tôi lên đường, tuổi hai mươi ... Hồi ức một thế hệ đi qua chiến tranh",
+            "author": "Daniel Kahneman",
+            "score": 0.8673,
+            "position": "E1-24"
+          },
+          {
+            "rank": 4,
+            "title": "David & Goliath",
+            "author": "Malcolm Gladwell",
+            "score": 0.8671,
+            "position": "E2-25"
+          },
+          {
+            "rank": 5,
+            "title": "Chiến Binh Cầu Vồng",
+            "author": "Andrea Hirata",
+            "score": 0.866,
+            "position": "A3-37"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 88.82,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nỗi buồn chiến tranh",
+            "author": "Bảo Ninh",
+            "score": 0.0328,
+            "position": "A1-13"
+          },
+          {
+            "rank": 2,
+            "title": "Câu Trả Lời Của Người Chiến Thắng",
+            "author": "Jack Welch, Suzy Welch",
+            "score": 0.0308,
+            "position": "B2-10"
+          },
+          {
+            "rank": 3,
+            "title": "Chiến Binh Cầu Vồng",
+            "author": "Andrea Hirata",
+            "score": 0.0308,
+            "position": "A3-37"
+          },
+          {
+            "rank": 4,
+            "title": "Hạnh Phúc - Từ Sông Bến Hải Đến Dinh Độc Lập + Hồi Ký Phóng Viên Chiến Trường + Chuyện Của Chúng Tôi + Hồi Ký Tù Binh Thương Trường",
+            "author": "Alpha Books",
+            "score": 0.0286,
+            "position": "E3-48"
+          },
+          {
+            "rank": 5,
+            "title": "Trò chuyện với nỗi đau và vượt qua tổn thương",
+            "author": "Stephen Hawking",
+            "score": 0.0285,
+            "position": "C3-49"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC017",
+    "group": "Semantic",
+    "query": "chàng chăn cừu đi tìm kho báu dưới chân kim tự tháp",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 43.44,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 56.8732,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Dẫn Dắt Một Bầy Sói Hay Chăn Một Đàn Cừu + MBA Thực Chiến",
+            "author": "Nhiều tác giả",
+            "score": 33.0315,
+            "position": "B3-37"
+          },
+          {
+            "rank": 3,
+            "title": "Dẫn Dắt Một Bầy Sói Hay Chăn Một Đàn Cừu",
+            "author": "Tiffani Bova",
+            "score": 27.3088,
+            "position": "B1-25"
+          },
+          {
+            "rank": 4,
+            "title": "Văn trẻ - Trên đồi cao chăn bầy thiên sứ",
+            "author": "NXB Kim Đồng",
+            "score": 21.7396,
+            "position": "A3-50"
+          },
+          {
+            "rank": 5,
+            "title": "Án Mạng Trong Tháp Thủy Tinh",
+            "author": "Mikito Chinen",
+            "score": 20.5125,
+            "position": "A3-16"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 48.47,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 0.8907,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Chuyện xóm gà - Một gà vì mọi gà, mọi gà vì một gà ! (TB .58.000)",
+            "author": "Stephen Hawking",
+            "score": 0.854,
+            "position": "C3-19"
+          },
+          {
+            "rank": 3,
+            "title": "Cuộc săn cừu hoang (TB 175.000)",
+            "author": "Stephen Hawking",
+            "score": 0.8467,
+            "position": "C1-41"
+          },
+          {
+            "rank": 4,
+            "title": "Hannibal trỗi dậy (TB 155.000)",
+            "author": "Stephen Hawking",
+            "score": 0.8442,
+            "position": "C2-31"
+          },
+          {
+            "rank": 5,
+            "title": "David & Goliath",
+            "author": "Malcolm Gladwell",
+            "score": 0.8408,
+            "position": "E2-25"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 87.35,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 0.0328,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Dẫn Dắt Một Bầy Sói Hay Chăn Một Đàn Cừu",
+            "author": "Tiffani Bova",
+            "score": 0.0281,
+            "position": "B1-25"
+          },
+          {
+            "rank": 3,
+            "title": "Dẫn Dắt Một Bầy Sói Hay Chăn Một Đàn Cừu + MBA Thực Chiến",
+            "author": "Nhiều tác giả",
+            "score": 0.028,
+            "position": "B3-37"
+          },
+          {
+            "rank": 4,
+            "title": "David & Goliath",
+            "author": "Malcolm Gladwell",
+            "score": 0.0279,
+            "position": "E2-25"
+          },
+          {
+            "rank": 5,
+            "title": "Cuộc săn cừu hoang (TB 175.000)",
+            "author": "Stephen Hawking",
+            "score": 0.0269,
+            "position": "C1-41"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC018",
+    "group": "Semantic",
+    "query": "vụ ám sát bí ẩn trên toa tàu hỏa xuyên châu âu và thám tử poirot",
+    "modes": {
+      "bm25": {
+        "rank_found": 2,
+        "latency_ms": 52.91,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Thám tử lừng danh Conan - Hoạt hình màu - Tàu ngầm sắt màu đen - Tập 1",
+            "author": "Nhiều tác giả",
+            "score": 48.3285,
+            "position": "A2-12"
+          },
+          {
+            "rank": 2,
+            "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+            "author": "Agatha Christie",
+            "score": 47.805,
+            "position": "A2-14"
+          },
+          {
+            "rank": 3,
+            "title": "Án Mạng Ở Điền Trang Kingfisher Hill (Agatha Christie) - NXB Trẻ",
+            "author": "Agatha Christie",
+            "score": 36.614,
+            "position": "A1-49"
+          },
+          {
+            "rank": 4,
+            "title": "Nhạc Công Bí Ẩn",
+            "author": "Miêu Đặc",
+            "score": 33.5907,
+            "position": "A1-39"
+          },
+          {
+            "rank": 5,
+            "title": "Agatha Christie - Vụ Ám Sát Ông Roger Ackroyd",
+            "author": "Agatha Christie",
+            "score": 33.4956,
+            "position": "A2-35"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 48.23,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+            "author": "Agatha Christie",
+            "score": 0.8618,
+            "position": "A2-14"
+          },
+          {
+            "rank": 2,
+            "title": "Án Mạng Ở Điền Trang Kingfisher Hill (Agatha Christie) - NXB Trẻ",
+            "author": "Agatha Christie",
+            "score": 0.8477,
+            "position": "A1-49"
+          },
+          {
+            "rank": 3,
+            "title": "Thung Lũng Bất Hạnh",
+            "author": "Agatha Christie",
+            "score": 0.8404,
+            "position": "A3-27"
+          },
+          {
+            "rank": 4,
+            "title": "Án Mạng Trên Sân Golf",
+            "author": "Agatha Christie",
+            "score": 0.84,
+            "position": "A3-09"
+          },
+          {
+            "rank": 5,
+            "title": "Agatha Christie. Tuyển tập kỳ án của Poirot",
+            "author": "Agatha Christie",
+            "score": 0.8393,
+            "position": "A3-25"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 112.82,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+            "author": "Agatha Christie",
+            "score": 0.0325,
+            "position": "A2-14"
+          },
+          {
+            "rank": 2,
+            "title": "Án Mạng Ở Điền Trang Kingfisher Hill (Agatha Christie) - NXB Trẻ",
+            "author": "Agatha Christie",
+            "score": 0.032,
+            "position": "A1-49"
+          },
+          {
+            "rank": 3,
+            "title": "Thám tử lừng danh Conan - Hoạt hình màu - Tàu ngầm sắt màu đen - Tập 1",
+            "author": "Nhiều tác giả",
+            "score": 0.0313,
+            "position": "A2-12"
+          },
+          {
+            "rank": 4,
+            "title": "Án Mạng Trên Sân Golf",
+            "author": "Agatha Christie",
+            "score": 0.0303,
+            "position": "A3-09"
+          },
+          {
+            "rank": 5,
+            "title": "Agatha Christie. Những quân bài trên mặt bàn",
+            "author": "Agatha Christie",
+            "score": 0.0294,
+            "position": "A1-03"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC019",
+    "group": "Semantic",
+    "query": "cậu bé mồ côi đi lang thang khắp nước pháp cùng đoàn xiếc bác vitalis",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 55.21,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Không Gia Đình",
+            "author": "Hector Malot",
+            "score": 50.67,
+            "position": "A3-21"
+          },
+          {
+            "rank": 2,
+            "title": "Khu Vườn Bí Mật",
+            "author": "Frances Hodgson Burnett",
+            "score": 34.6811,
+            "position": "A2-13"
+          },
+          {
+            "rank": 3,
+            "title": "Khu vườn bí mật (TB 135.000)",
+            "author": "Stephen Hawking",
+            "score": 33.0684,
+            "position": "C3-37"
+          },
+          {
+            "rank": 4,
+            "title": "Sinh vật thần thoại khắp thế gian",
+            "author": "Nhiều tác giả",
+            "score": 31.3449,
+            "position": "A1-37"
+          },
+          {
+            "rank": 5,
+            "title": "Cậu bé đo thế giới",
+            "author": "NXB Kim Đồng",
+            "score": 29.3869,
+            "position": "A1-23"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 3,
+        "latency_ms": 59.27,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Bạn mồ côi",
+            "author": "Nhiều tác giả",
+            "score": 0.8387,
+            "position": "A1-18"
+          },
+          {
+            "rank": 2,
+            "title": "Tranh truyện lịch sử Việt Nam - Yết Kiêu - Dã Tượng",
+            "author": "Nhiều tác giả",
+            "score": 0.8344,
+            "position": "A2-41"
+          },
+          {
+            "rank": 3,
+            "title": "Không Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.8309,
+            "position": "A3-21"
+          },
+          {
+            "rank": 4,
+            "title": "Hít hà mùi đất nước - Cá con bơi đi",
+            "author": "Stephen Hawking",
+            "score": 0.8291,
+            "position": "C1-04"
+          },
+          {
+            "rank": 5,
+            "title": "Thế giới xe cộ - Xe buýt trường - School bus",
+            "author": "Nhiều tác giả",
+            "score": 0.8276,
+            "position": "A2-47"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 120.56,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Không Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.0323,
+            "position": "A3-21"
+          },
+          {
+            "rank": 2,
+            "title": "Bạn mồ côi",
+            "author": "Nhiều tác giả",
+            "score": 0.0311,
+            "position": "A1-18"
+          },
+          {
+            "rank": 3,
+            "title": "Cậu bé đo thế giới",
+            "author": "NXB Kim Đồng",
+            "score": 0.0297,
+            "position": "A1-23"
+          },
+          {
+            "rank": 4,
+            "title": "Nít tít mít - Cậu bé muốn mình lớn nhanh như thổi",
+            "author": "NXB Kim Đồng",
+            "score": 0.0263,
+            "position": "A2-49"
+          },
+          {
+            "rank": 5,
+            "title": "A Knight of the Seven Kingdoms – Hiệp Sĩ Bảy Vương Quốc",
+            "author": "George R.R. Martin",
+            "score": 0.0258,
+            "position": "A1-48"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC020",
+    "group": "Semantic",
+    "query": "ngôi trường độc đáo trên toa xe điện và cô bé hiếu động",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 47.54,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Totto - Chan Bên Cửa Sổ",
+            "author": "Kuroyanagi Tetsuko",
+            "score": 28.7628,
+            "position": "A1-46"
+          },
+          {
+            "rank": 2,
+            "title": "phương tiện xanh, xe điện( ev) và xe lai(hybrid) HA",
+            "author": "Nguyễn Anh Hoàng",
+            "score": 27.9129,
+            "position": "C1-28"
+          },
+          {
+            "rank": 3,
+            "title": "Ngồi Khóc Trên Cây",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 27.4201,
+            "position": "A2-25"
+          },
+          {
+            "rank": 4,
+            "title": "Ngồi Khóc Trên Cây (Khổ Nhỏ)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 27.1107,
+            "position": "A2-42"
+          },
+          {
+            "rank": 5,
+            "title": "Tottochan bên cửa sổ (TB 145.000)",
+            "author": "Stephen Hawking",
+            "score": 26.671,
+            "position": "C2-39"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 4,
+        "latency_ms": 44.36,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Tottochan bên cửa sổ (TB 145.000)",
+            "author": "Stephen Hawking",
+            "score": 0.8487,
+            "position": "C2-39"
+          },
+          {
+            "rank": 2,
+            "title": "Thế giới xe cộ - Xe buýt trường - School bus",
+            "author": "Nhiều tác giả",
+            "score": 0.842,
+            "position": "A2-47"
+          },
+          {
+            "rank": 3,
+            "title": "Cùng bé thư giãn và bồi đắp cảm xúc tích cực - Xin chào hạnh phúc",
+            "author": "Stephen Hawking",
+            "score": 0.8374,
+            "position": "C1-43"
+          },
+          {
+            "rank": 4,
+            "title": "Totto - Chan Bên Cửa Sổ",
+            "author": "Kuroyanagi Tetsuko",
+            "score": 0.8337,
+            "position": "A1-46"
+          },
+          {
+            "rank": 5,
+            "title": "Vui học cùng Curo Biết tuốt 2 - Tổ chức ngầm bí mật và hành tinh vàng",
+            "author": "Stephen Hawking",
+            "score": 0.8328,
+            "position": "C2-08"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 94.82,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Totto - Chan Bên Cửa Sổ",
+            "author": "Kuroyanagi Tetsuko",
+            "score": 0.032,
+            "position": "A1-46"
+          },
+          {
+            "rank": 2,
+            "title": "Tottochan bên cửa sổ (TB 145.000)",
+            "author": "Stephen Hawking",
+            "score": 0.0318,
+            "position": "C2-39"
+          },
+          {
+            "rank": 3,
+            "title": "Thế giới xe cộ - Xe buýt trường - School bus",
+            "author": "Nhiều tác giả",
+            "score": 0.0295,
+            "position": "A2-47"
+          },
+          {
+            "rank": 4,
+            "title": "Bắt trẻ đồng xanh",
+            "author": "J. D. Salinger",
+            "score": 0.0262,
+            "position": "A3-38"
+          },
+          {
+            "rank": 5,
+            "title": "Tô màu phát triển não bộ cho bé 1 - 5 tuổi - Tập 10",
+            "author": "Stephen Hawking",
+            "score": 0.0248,
+            "position": "C1-05"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC021",
+    "group": "Semantic",
+    "query": "cuộc trò chuyện với các bệnh nhân tâm thần khám phá góc nhìn khác biệt",
+    "modes": {
+      "bm25": {
+        "rank_found": 0,
+        "latency_ms": 53.32,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Bảy đại tội – góc nhìn sinh học về bản tính người",
+            "author": "Daniel Kahneman",
+            "score": 36.3086,
+            "position": "E1-26"
+          },
+          {
+            "rank": 2,
+            "title": "Danh nhân đương đại - Cuộc đời phi thường của Stephen Hawking (Câu chuyện về người đàn ông có những khám phá thay đổi thế giới",
+            "author": "Stephen Hawking",
+            "score": 34.0789,
+            "position": "C1-28"
+          },
+          {
+            "rank": 3,
+            "title": "Khác biệt tuyệt vời - Nhúc nhích cũng về đích",
+            "author": "Nhiều tác giả",
+            "score": 32.0853,
+            "position": "A3-25"
+          },
+          {
+            "rank": 4,
+            "title": "Khác biệt tuyệt vời - Dơi đen cứu nạn",
+            "author": "Nhiều tác giả",
+            "score": 30.6946,
+            "position": "A1-26"
+          },
+          {
+            "rank": 5,
+            "title": "Khác biệt tuyệt vời - Cú nhỏ tìm bạn",
+            "author": "Nhiều tác giả",
+            "score": 30.6946,
+            "position": "A2-27"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 0,
+        "latency_ms": 42.64,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Trò chuyện với nỗi đau và vượt qua tổn thương",
+            "author": "Stephen Hawking",
+            "score": 0.8576,
+            "position": "C3-49"
+          },
+          {
+            "rank": 2,
+            "title": "Được nhìn thấy lặp lại - Logic cốt lõi hình thành hiệu quả truyền thông quảng cáo",
+            "author": "Daniel Kahneman",
+            "score": 0.8542,
+            "position": "E2-21"
+          },
+          {
+            "rank": 3,
+            "title": "khám phá tiềm thức & đời sống nội tâm",
+            "author": "Daniel Kahneman",
+            "score": 0.8524,
+            "position": "E1-06"
+          },
+          {
+            "rank": 4,
+            "title": "Hồ sơ tâm lí tội phạm - Tập 5",
+            "author": "Nhiều tác giả",
+            "score": 0.8491,
+            "position": "A1-35"
+          },
+          {
+            "rank": 5,
+            "title": "Bảy đại tội – góc nhìn sinh học về bản tính người",
+            "author": "Daniel Kahneman",
+            "score": 0.8487,
+            "position": "E1-26"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 0,
+        "latency_ms": 102.4,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Bảy đại tội – góc nhìn sinh học về bản tính người",
+            "author": "Daniel Kahneman",
+            "score": 0.0318,
+            "position": "E1-26"
+          },
+          {
+            "rank": 2,
+            "title": "khám phá tiềm thức & đời sống nội tâm",
+            "author": "Daniel Kahneman",
+            "score": 0.031,
+            "position": "E1-06"
+          },
+          {
+            "rank": 3,
+            "title": "Trò chuyện với nỗi đau và vượt qua tổn thương",
+            "author": "Stephen Hawking",
+            "score": 0.0305,
+            "position": "C3-49"
+          },
+          {
+            "rank": 4,
+            "title": "Được nhìn thấy lặp lại - Logic cốt lõi hình thành hiệu quả truyền thông quảng cáo",
+            "author": "Daniel Kahneman",
+            "score": 0.028,
+            "position": "E2-21"
+          },
+          {
+            "rank": 5,
+            "title": "Phật giáo và tầm nhìn nhân loại",
+            "author": "Daniel Kahneman",
+            "score": 0.0274,
+            "position": "E1-03"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC022",
+    "group": "Semantic",
+    "query": "cách quản lý tài chính cá nhân không có tiền vẫn tạo ra tiền cha giàu cha nghèo",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 47.96,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Dạy Con Làm Giàu - Để Không Có Tiền Vẫn Tạo Ra Tiền - Cha Giàu Cha Nghèo",
+            "author": "Robert T. Kiyosaki",
+            "score": 70.8928,
+            "position": "B2-02"
+          },
+          {
+            "rank": 2,
+            "title": "Tài Chính Cá Nhân Căn Bản - Personal Finance 101",
+            "author": "Alfred Mill",
+            "score": 45.3588,
+            "position": "B3-27"
+          },
+          {
+            "rank": 3,
+            "title": "Giải Mã Tâm Lý Hành Vi Về Tiền",
+            "author": "Morgan Housel",
+            "score": 43.6596,
+            "position": "B3-06"
+          },
+          {
+            "rank": 4,
+            "title": "Cẩm Nang Đầu tư Và Quản Lý Tài Chính Cá Nhân",
+            "author": "Phương Sĩ Duy",
+            "score": 43.5423,
+            "position": "E1-16"
+          },
+          {
+            "rank": 5,
+            "title": "Tự Do Tài Chính",
+            "author": "Chris Guillebeau",
+            "score": 42.8496,
+            "position": "B2-19"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 42.49,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Dạy Con Làm Giàu - Để Không Có Tiền Vẫn Tạo Ra Tiền - Cha Giàu Cha Nghèo",
+            "author": "Robert T. Kiyosaki",
+            "score": 0.8933,
+            "position": "B2-02"
+          },
+          {
+            "rank": 2,
+            "title": "Trí Tuệ Tài Chính Dành Cho Nhà Quản Lý Không Chuyên Về Tài Chính",
+            "author": "Alpha Books",
+            "score": 0.8764,
+            "position": "E2-09"
+          },
+          {
+            "rank": 3,
+            "title": "Thay Đổi Tí Hon Giàu Có Bất Ngờ",
+            "author": "David Bach",
+            "score": 0.8731,
+            "position": "E1-13"
+          },
+          {
+            "rank": 4,
+            "title": "Vén Khéo - Bí Quyết Tự Do Tài Chính Trước 30",
+            "author": "A Nhữ Na, Chu Kiếm Thuyên",
+            "score": 0.8716,
+            "position": "B2-42"
+          },
+          {
+            "rank": 5,
+            "title": "Cẩm Nang Đầu tư Và Quản Lý Tài Chính Cá Nhân",
+            "author": "Phương Sĩ Duy",
+            "score": 0.8715,
+            "position": "E1-16"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 95.4,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Dạy Con Làm Giàu - Để Không Có Tiền Vẫn Tạo Ra Tiền - Cha Giàu Cha Nghèo",
+            "author": "Robert T. Kiyosaki",
+            "score": 0.0328,
+            "position": "B2-02"
+          },
+          {
+            "rank": 2,
+            "title": "Cẩm Nang Đầu tư Và Quản Lý Tài Chính Cá Nhân",
+            "author": "Phương Sĩ Duy",
+            "score": 0.031,
+            "position": "E1-16"
+          },
+          {
+            "rank": 3,
+            "title": "Tài Chính Cá Nhân Căn Bản - Personal Finance 101",
+            "author": "Alfred Mill",
+            "score": 0.0308,
+            "position": "B3-27"
+          },
+          {
+            "rank": 4,
+            "title": "Vén Khéo - Bí Quyết Tự Do Tài Chính Trước 30",
+            "author": "A Nhữ Na, Chu Kiếm Thuyên",
+            "score": 0.0306,
+            "position": "B2-42"
+          },
+          {
+            "rank": 5,
+            "title": "Trí Tuệ Tài Chính Dành Cho Nhà Quản Lý Không Chuyên Về Tài Chính",
+            "author": "Alpha Books",
+            "score": 0.0296,
+            "position": "E2-09"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC023",
+    "group": "Semantic",
+    "query": "sách học lập trình trí tuệ nhân tạo và học máy cơ bản",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 46.54,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Trí Tuệ Nhân Tạo Học Máy Và Ứng Dụng",
+            "author": "Nguyễn Quốc Huy",
+            "score": 58.8021,
+            "position": "C3-38"
+          },
+          {
+            "rank": 2,
+            "title": "Ứng dụng trí tuệ nhân tạo (AI) trong dạy và học môncông nghệ thông tin (dành cho giáo viên và học sinh) HA",
+            "author": "Nhiều tác giả",
+            "score": 51.7395,
+            "position": "C3-21"
+          },
+          {
+            "rank": 3,
+            "title": "Genesis - Khởi Nguyên - Trí Tuệ Nhân Tạo, Niềm Hi Vọng Và Tinh Thần Nhân Loại - Bản Quyền",
+            "author": "Nhiều tác giả",
+            "score": 51.6487,
+            "position": "C1-13"
+          },
+          {
+            "rank": 4,
+            "title": "Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN",
+            "author": "Nhiều tác giả",
+            "score": 51.0346,
+            "position": "C2-04"
+          },
+          {
+            "rank": 5,
+            "title": "Đạo Đức Trí Tuệ Nhân Tạo - Nguyên Tắc, Thách Thức Và Cơ Hội",
+            "author": "Nhiều tác giả",
+            "score": 48.2687,
+            "position": "C1-20"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 40.07,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Trí Tuệ Nhân Tạo Học Máy Và Ứng Dụng",
+            "author": "Nguyễn Quốc Huy",
+            "score": 0.917,
+            "position": "C3-38"
+          },
+          {
+            "rank": 2,
+            "title": "Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN",
+            "author": "Nhiều tác giả",
+            "score": 0.9106,
+            "position": "C2-04"
+          },
+          {
+            "rank": 3,
+            "title": "3 Sách - Ứng Dụng AI Thực Tiễn Trong Giảng Dạy Và Học Tập",
+            "author": "Nhiều tác giả",
+            "score": 0.9104,
+            "position": "C3-41"
+          },
+          {
+            "rank": 4,
+            "title": "Lập Trình AI cho người mới bắt đầu",
+            "author": "Tạ Văn Dũng",
+            "score": 0.907,
+            "position": "C2-46"
+          },
+          {
+            "rank": 5,
+            "title": "Đạo Đức Trí Tuệ Nhân Tạo - Nguyên Tắc, Thách Thức Và Cơ Hội",
+            "author": "Nhiều tác giả",
+            "score": 0.8975,
+            "position": "C1-20"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 82.78,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Trí Tuệ Nhân Tạo Học Máy Và Ứng Dụng",
+            "author": "Nguyễn Quốc Huy",
+            "score": 0.0328,
+            "position": "C3-38"
+          },
+          {
+            "rank": 2,
+            "title": "Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN",
+            "author": "Nhiều tác giả",
+            "score": 0.0318,
+            "position": "C2-04"
+          },
+          {
+            "rank": 3,
+            "title": "Ứng dụng trí tuệ nhân tạo (AI) trong dạy và học môncông nghệ thông tin (dành cho giáo viên và học sinh) HA",
+            "author": "Nhiều tác giả",
+            "score": 0.0313,
+            "position": "C3-21"
+          },
+          {
+            "rank": 4,
+            "title": "Đạo Đức Trí Tuệ Nhân Tạo - Nguyên Tắc, Thách Thức Và Cơ Hội",
+            "author": "Nhiều tác giả",
+            "score": 0.0308,
+            "position": "C1-20"
+          },
+          {
+            "rank": 5,
+            "title": "TẠI SAO MÁY HỌC - Anil Ananthaswamy - Tuệ Phong dịch - Lyceum",
+            "author": "Anil Ananthaswamy",
+            "score": 0.0292,
+            "position": "C1-42"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC024",
+    "group": "Semantic",
+    "query": "tâm lý học hành vi và phân tích tiềm thức con người",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 38.91,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Thăm dò tiềm thức",
+            "author": "Daniel Kahneman",
+            "score": 52.9595,
+            "position": "E3-47"
+          },
+          {
+            "rank": 2,
+            "title": "khám phá tiềm thức & đời sống nội tâm",
+            "author": "Daniel Kahneman",
+            "score": 42.6261,
+            "position": "E1-06"
+          },
+          {
+            "rank": 3,
+            "title": "Bước nhảy vọt kinh tế Việt Nam: Nâng cao năng suất, đổi mới sáng tạo và con đường trở thành nước có thu nhập cao",
+            "author": "Daniel Kahneman",
+            "score": 39.8893,
+            "position": "E2-36"
+          },
+          {
+            "rank": 4,
+            "title": "Tin Học - Thực Hành Phân Tích Dữ Liệu Và Lập Mô Hình Kinh Doanh Trong Excel",
+            "author": "Phạm Quang Hiển - Văn Thị Tư",
+            "score": 38.8717,
+            "position": "C1-19"
+          },
+          {
+            "rank": 5,
+            "title": "Phương pháp nghiên cứu luật học",
+            "author": "Daniel Kahneman",
+            "score": 38.4728,
+            "position": "E3-17"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 46.03,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Thăm dò tiềm thức",
+            "author": "Daniel Kahneman",
+            "score": 0.8836,
+            "position": "E3-47"
+          },
+          {
+            "rank": 2,
+            "title": "tâm thức cá nhân và quy luật xã hội",
+            "author": "Daniel Kahneman",
+            "score": 0.8764,
+            "position": "E1-50"
+          },
+          {
+            "rank": 3,
+            "title": "Tâm Lý Học Hành Vi Trong Marketing",
+            "author": "Tara-Nicholle Nelson",
+            "score": 0.8739,
+            "position": "B2-40"
+          },
+          {
+            "rank": 4,
+            "title": "Bảy đại tội – góc nhìn sinh học về bản tính người",
+            "author": "Daniel Kahneman",
+            "score": 0.8695,
+            "position": "E1-26"
+          },
+          {
+            "rank": 5,
+            "title": "khám phá tiềm thức & đời sống nội tâm",
+            "author": "Daniel Kahneman",
+            "score": 0.8686,
+            "position": "E1-06"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 84.84,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Thăm dò tiềm thức",
+            "author": "Daniel Kahneman",
+            "score": 0.0328,
+            "position": "E3-47"
+          },
+          {
+            "rank": 2,
+            "title": "khám phá tiềm thức & đời sống nội tâm",
+            "author": "Daniel Kahneman",
+            "score": 0.0315,
+            "position": "E1-06"
+          },
+          {
+            "rank": 3,
+            "title": "tâm thức cá nhân và quy luật xã hội",
+            "author": "Daniel Kahneman",
+            "score": 0.0311,
+            "position": "E1-50"
+          },
+          {
+            "rank": 4,
+            "title": "Phương pháp nghiên cứu luật học",
+            "author": "Daniel Kahneman",
+            "score": 0.0301,
+            "position": "E3-17"
+          },
+          {
+            "rank": 5,
+            "title": "Hành trình từ “Ra đi hai bàn tay trắng” đến “Trở về một dải giang san” và những trang bản thảo còn dang dở",
+            "author": "Daniel Kahneman",
+            "score": 0.0292,
+            "position": "E3-26"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC025",
+    "group": "Semantic",
+    "query": "giáo trình học tiếng trung hsk",
+    "modes": {
+      "bm25": {
+        "rank_found": 3,
+        "latency_ms": 34.67,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Giáo Trình Chuẩn YCT 1 - Sách Bài Học và Bài tập",
+            "author": "Khương Lệ Bình",
+            "score": 28.8828,
+            "position": "D2-12"
+          },
+          {
+            "rank": 2,
+            "title": "Giáo Trình Chuẩn YCT 2 - Sách Bài Học và Bài tập",
+            "author": "Khương Lệ Bình",
+            "score": 28.8828,
+            "position": "D3-15"
+          },
+          {
+            "rank": 3,
+            "title": "Giáo Trình Chuẩn HSK 1 - Bài Học (Kèm file MP3)",
+            "author": "Khương Lệ Bình",
+            "score": 28.3167,
+            "position": "D2-05"
+          },
+          {
+            "rank": 4,
+            "title": "Giáo Trình Chuẩn HSK 5 Bài Học",
+            "author": "Khương Lệ Bình",
+            "score": 27.8613,
+            "position": "D2-21"
+          },
+          {
+            "rank": 5,
+            "title": "Giáo Trình Chuẩn YCT 4 (Kèm file MP3)",
+            "author": "TS. Nguyễn Thị Minh Hồng",
+            "score": 27.8306,
+            "position": "D1-06"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 40.91,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Giáo Trình Chuẩn HSK 1 - Bài Học (Kèm file MP3)",
+            "author": "Khương Lệ Bình",
+            "score": 0.9076,
+            "position": "D2-05"
+          },
+          {
+            "rank": 2,
+            "title": "Giáo Trình Chuẩn HSK 1 - Sách Bài Học và Bài tập",
+            "author": "Khương Lệ Bình",
+            "score": 0.9075,
+            "position": "D1-01"
+          },
+          {
+            "rank": 3,
+            "title": "Giáo Trình Chuẩn HSK 3 - Sách Bài Học và Bài tập",
+            "author": "Khương Lệ Bình",
+            "score": 0.9045,
+            "position": "D3-03"
+          },
+          {
+            "rank": 4,
+            "title": "Giáo Trình Chuẩn HSK 2 - Sách Bài Học và Bài tập",
+            "author": "Khương Lệ Bình",
+            "score": 0.9035,
+            "position": "D3-27"
+          },
+          {
+            "rank": 5,
+            "title": "Giáo Trình Chuẩn HSK 1 - Bài Tập (Kèm file MP3)",
+            "author": "Khương Lệ Bình",
+            "score": 0.9025,
+            "position": "D1-40"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 78.81,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Giáo Trình Chuẩn HSK 1 - Bài Học (Kèm file MP3)",
+            "author": "Khương Lệ Bình",
+            "score": 0.0323,
+            "position": "D2-05"
+          },
+          {
+            "rank": 2,
+            "title": "Giáo Trình Chuẩn HSK 1 - Sách Bài Học và Bài tập",
+            "author": "Khương Lệ Bình",
+            "score": 0.0302,
+            "position": "D1-01"
+          },
+          {
+            "rank": 3,
+            "title": "Giáo Trình Chuẩn HSK 2 - Bài Học (Kèm file MP3)",
+            "author": "Khương Lệ Bình",
+            "score": 0.0299,
+            "position": "D3-12"
+          },
+          {
+            "rank": 4,
+            "title": "Giáo Trình Chuẩn YCT 1 - Sách Bài Học và Bài tập",
+            "author": "Khương Lệ Bình",
+            "score": 0.0297,
+            "position": "D2-12"
+          },
+          {
+            "rank": 5,
+            "title": "Giáo Trình Chuẩn HSK 3 - Sách Bài Học và Bài tập",
+            "author": "Khương Lệ Bình",
+            "score": 0.0296,
+            "position": "D3-03"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC026",
+    "group": "Unaccented",
+    "query": "mat biec nguyen nhat anh",
+    "modes": {
+      "bm25": {
+        "rank_found": 2,
+        "latency_ms": 19.65,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 21.2066,
+            "position": "A2-38"
+          },
+          {
+            "rank": 2,
+            "title": "Mắt Biếc",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 20.9899,
+            "position": "A1-37"
+          },
+          {
+            "rank": 3,
+            "title": "Mùa hè không tên (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 12.3291,
+            "position": "A2-29"
+          },
+          {
+            "rank": 4,
+            "title": "Cô Bé Hàng Xóm Và Bốn Viên Kẹo (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 12.1171,
+            "position": "A3-06"
+          },
+          {
+            "rank": 5,
+            "title": "Tiệm sách của nàng (Nguyễn Nhật Ánh)",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 11.6244,
+            "position": "A1-05"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 0,
+        "latency_ms": 40.53,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Mạc Ngôn: ĐÀN HƯƠNG HÌNH + BÁU VẬT CỦA ĐỜI – Bìa cứng – Tác giả đoạt giải Nobel văn chương 2012 – Trần Đình Hiến dịch – Huy Hoàng Bookstore",
+            "author": "Mạc Ngôn",
+            "score": 0.8508,
+            "position": "A3-21"
+          },
+          {
+            "rank": 2,
+            "title": "Nếu Như Không Thể Nói Nếu Như & Có Ai Giữ Giùm Những Lãng Quên & Thức Dậy Anh Vẫn Là Mơ",
+            "author": "Jun Phạm (365 Band)",
+            "score": 0.849,
+            "position": "A2-08"
+          },
+          {
+            "rank": 3,
+            "title": "Bơi Cùng Cá Mập Mà Không Bị Nuốt Chửng",
+            "author": "Harvey B. Mackay",
+            "score": 0.8488,
+            "position": "E1-13"
+          },
+          {
+            "rank": 4,
+            "title": "Canh Bạc Lớn",
+            "author": "Nate Silver",
+            "score": 0.8487,
+            "position": "E2-14"
+          },
+          {
+            "rank": 5,
+            "title": "Ngày Xưa Có Một Chuyện Tình",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.8485,
+            "position": "A2-36"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 2,
+        "latency_ms": 71.14,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Ngày Xưa Có Một Chuyện Tình",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0297,
+            "position": "A2-36"
+          },
+          {
+            "rank": 2,
+            "title": "Mắt Biếc",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0263,
+            "position": "A1-37"
+          },
+          {
+            "rank": 3,
+            "title": "Chuyện xứ Lang Biang - Boxset 12 cuốn - Nguyễn Nhật Ánh khổ nhỏ",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0256,
+            "position": "A3-38"
+          },
+          {
+            "rank": 4,
+            "title": "Có Hai Con Mèo Ngồi Bên Cửa Sổ",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0255,
+            "position": "A1-44"
+          },
+          {
+            "rank": 5,
+            "title": "Ngôi Trường Mọi Khi",
+            "author": "Nguyễn Nhật Ánh",
+            "score": 0.0224,
+            "position": "A3-16"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC027",
+    "group": "Unaccented",
+    "query": "cay cam ngot cua toi",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 24.91,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Cây Cam Ngọt Của Tôi",
+            "author": "José Mauro de Vasconcelos",
+            "score": 25.6829,
+            "position": "A1-43"
+          },
+          {
+            "rank": 2,
+            "title": "Cây cam ngọt của tôi (TB 125.000)",
+            "author": "Stephen Hawking",
+            "score": 24.6796,
+            "position": "C2-37"
+          },
+          {
+            "rank": 3,
+            "title": "Sưởi Ấm Mặt Trời: Tập 2 Của Cây Cam Ngọt",
+            "author": "José Mauro de Vasconcelos",
+            "score": 23.0152,
+            "position": "A1-23"
+          },
+          {
+            "rank": 4,
+            "title": "Tình Đầu Chọn Tôi, Tôi Rất Ngọt",
+            "author": "Thụy Mang",
+            "score": 13.3376,
+            "position": "A3-11"
+          },
+          {
+            "rank": 5,
+            "title": "Phát triển trí tuệ cảm xúc - Chúng mình tôn trọng cơ thể và cảm xúc của nhau",
+            "author": "Stephen Hawking",
+            "score": 7.8765,
+            "position": "C3-49"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 46.89,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Cây Cam Ngọt Của Tôi",
+            "author": "José Mauro de Vasconcelos",
+            "score": 0.8274,
+            "position": "A1-43"
+          },
+          {
+            "rank": 2,
+            "title": "Bơi Cùng Cá Mập Mà Không Bị Nuốt Chửng",
+            "author": "Harvey B. Mackay",
+            "score": 0.8232,
+            "position": "E1-13"
+          },
+          {
+            "rank": 3,
+            "title": "Cây cam ngọt của tôi (TB 125.000)",
+            "author": "Stephen Hawking",
+            "score": 0.8209,
+            "position": "C2-37"
+          },
+          {
+            "rank": 4,
+            "title": "Bí Quyết Kinh Doanh Trà Sữa, Cà Phê, Bánh Ngọt: Hướng Dẫn Từ A-Z Cho Người Mới Bắt Đầu",
+            "author": "Alpha Books",
+            "score": 0.8175,
+            "position": "E1-11"
+          },
+          {
+            "rank": 5,
+            "title": "English Communication For Your Career - Air Travel And Tourism",
+            "author": "Kim Young Mi",
+            "score": 0.8173,
+            "position": "D1-46"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 68.01,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Cây Cam Ngọt Của Tôi",
+            "author": "José Mauro de Vasconcelos",
+            "score": 0.0328,
+            "position": "A1-43"
+          },
+          {
+            "rank": 2,
+            "title": "Cây cam ngọt của tôi (TB 125.000)",
+            "author": "Stephen Hawking",
+            "score": 0.032,
+            "position": "C2-37"
+          },
+          {
+            "rank": 3,
+            "title": "Bí Quyết Kinh Doanh Trà Sữa, Cà Phê, Bánh Ngọt: Hướng Dẫn Từ A-Z Cho Người Mới Bắt Đầu",
+            "author": "Alpha Books",
+            "score": 0.0266,
+            "position": "E1-11"
+          },
+          {
+            "rank": 4,
+            "title": "Hà Nội Băm Sáu Phố Phường",
+            "author": "Thạch Lam",
+            "score": 0.0243,
+            "position": "A1-12"
+          },
+          {
+            "rank": 5,
+            "title": "Tự Do - Chuyện Của Chúng Tôi + Hồi Ký Tù Binh Thương Trường",
+            "author": "Alpha Books",
+            "score": 0.0234,
+            "position": "E1-49"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC028",
+    "group": "Unaccented",
+    "query": "nha gia kim paulo coelho",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 22.1,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 39.6776,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "3000 Từ Vựng Tiếng Tây Ban Nha Thông Dụng",
+            "author": "TS. Nguyễn Thị Kim Dung, Th.S Nguyễn Hà My",
+            "score": 11.286,
+            "position": "D1-48"
+          },
+          {
+            "rank": 3,
+            "title": "Pháp giới Kim cương - Kinh Kim Cương Đảnh Du Già Lý Thú Bát Nhã",
+            "author": "Nguyễn Hiến Lê",
+            "score": 10.4874,
+            "position": "F1-13"
+          },
+          {
+            "rank": 4,
+            "title": "Tự Học Tiếng Tây Ban Nha Cho Người Mới Bắt Đầu",
+            "author": "TS. Nguyễn Thị Kim Dung, Th.S Nguyễn Hà My",
+            "score": 10.4356,
+            "position": "D1-18"
+          },
+          {
+            "rank": 5,
+            "title": "Tôi đã trở thành nhà văn như thế nào",
+            "author": "NXB Kim Đồng",
+            "score": 9.7711,
+            "position": "A2-39"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 48.1,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 0.8614,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Khéo khôn với tiền - Tránh những ưu phiền - Tập 1 - Hiểu về Tiền",
+            "author": "NXB Kim Đồng",
+            "score": 0.8402,
+            "position": "A3-17"
+          },
+          {
+            "rank": 3,
+            "title": "Bố Già",
+            "author": "Mario Puzo",
+            "score": 0.8356,
+            "position": "A2-21"
+          },
+          {
+            "rank": 4,
+            "title": "Gia đình, bạn bè và đất nước",
+            "author": "Nguyễn Hiến Lê",
+            "score": 0.8326,
+            "position": "F3-02"
+          },
+          {
+            "rank": 5,
+            "title": "Khởi đầu nhỏ - Hành trình lớn - Quả trứng nhỏ lốm đốm",
+            "author": "NXB Kim Đồng",
+            "score": 0.8324,
+            "position": "A3-38"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 63.22,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Nhà Giả Kim",
+            "author": "Paulo Coelho",
+            "score": 0.0328,
+            "position": "A2-17"
+          },
+          {
+            "rank": 2,
+            "title": "Khéo khôn với tiền - Tránh những ưu phiền - Tập 1 - Hiểu về Tiền",
+            "author": "NXB Kim Đồng",
+            "score": 0.03,
+            "position": "A3-17"
+          },
+          {
+            "rank": 3,
+            "title": "MBTI - 16 nhóm tính cách - Tập 3 - Hiểu tính cách để gia đình hòa thuận",
+            "author": "NXB Kim Đồng",
+            "score": 0.0296,
+            "position": "A1-40"
+          },
+          {
+            "rank": 4,
+            "title": "Pháp giới Kim cương - Kinh Kim Cương Đảnh Du Già Lý Thú Bát Nhã",
+            "author": "Nguyễn Hiến Lê",
+            "score": 0.0284,
+            "position": "F1-13"
+          },
+          {
+            "rank": 5,
+            "title": "Món quà mùa xuân",
+            "author": "NXB Kim Đồng",
+            "score": 0.0263,
+            "position": "A2-22"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC029",
+    "group": "Unaccented",
+    "query": "an mang tren chuyen tau toc hanh phuong dong",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 29.16,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+            "author": "Agatha Christie",
+            "score": 38.4643,
+            "position": "A2-14"
+          },
+          {
+            "rank": 2,
+            "title": "Dựa trên một câu chuyện có thật",
+            "author": "Stephen Hawking",
+            "score": 13.2232,
+            "position": "C2-25"
+          },
+          {
+            "rank": 3,
+            "title": "Án Mạng Trên Sân Golf",
+            "author": "Agatha Christie",
+            "score": 12.666,
+            "position": "A3-09"
+          },
+          {
+            "rank": 4,
+            "title": "Án Mạng Trên Sông Nile (Agatha Christie)",
+            "author": "Agatha Christie",
+            "score": 12.0629,
+            "position": "A1-37"
+          },
+          {
+            "rank": 5,
+            "title": "Siêu Dự Báo - Superforecasting: Những phương pháp dự đoán trên tầm chuyên gia",
+            "author": "Philip E. Tetlock và Dan Gardner",
+            "score": 11.8025,
+            "position": "E2-20"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 0,
+        "latency_ms": 44.08,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo",
+            "author": "nhà xuất bản thế giới",
+            "score": 0.7995,
+            "position": "E2-23"
+          },
+          {
+            "rank": 2,
+            "title": "Chữa Lành Tổn Thương Hậu Thao Túng Tâm Lý",
+            "author": "Amelia Kelley",
+            "score": 0.7953,
+            "position": "E2-40"
+          },
+          {
+            "rank": 3,
+            "title": "Trong từng hơi thở",
+            "author": "Nicholas Sparks",
+            "score": 0.7948,
+            "position": "A2-06"
+          },
+          {
+            "rank": 4,
+            "title": "Giải mã thiết bị phòng thu - Những yếu tố cốt lõi quyết định chất lượng và hiệu suất của phòng thu chuyên nghiệp",
+            "author": "Daniel Kahneman",
+            "score": 0.7941,
+            "position": "E3-25"
+          },
+          {
+            "rank": 5,
+            "title": "(Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ",
+            "author": "Fredrik Backman",
+            "score": 0.7938,
+            "position": "A1-17"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 75.45,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+            "author": "Agatha Christie",
+            "score": 0.0164,
+            "position": "A2-14"
+          },
+          {
+            "rank": 2,
+            "title": "Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo",
+            "author": "nhà xuất bản thế giới",
+            "score": 0.0164,
+            "position": "E2-23"
+          },
+          {
+            "rank": 3,
+            "title": "Dựa trên một câu chuyện có thật",
+            "author": "Stephen Hawking",
+            "score": 0.0161,
+            "position": "C2-25"
+          },
+          {
+            "rank": 4,
+            "title": "Chữa Lành Tổn Thương Hậu Thao Túng Tâm Lý",
+            "author": "Amelia Kelley",
+            "score": 0.0161,
+            "position": "E2-40"
+          },
+          {
+            "rank": 5,
+            "title": "Án Mạng Trên Sân Golf",
+            "author": "Agatha Christie",
+            "score": 0.0159,
+            "position": "A3-09"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test_id": "TC030",
+    "group": "Unaccented",
+    "query": "khong gia dinh hector malot",
+    "modes": {
+      "bm25": {
+        "rank_found": 1,
+        "latency_ms": 21.91,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Không Gia Đình",
+            "author": "Hector Malot",
+            "score": 38.8701,
+            "position": "A3-21"
+          },
+          {
+            "rank": 2,
+            "title": "Trong Gia Đình",
+            "author": "Hector Malot",
+            "score": 34.0293,
+            "position": "A3-22"
+          },
+          {
+            "rank": 3,
+            "title": "Em Muốn Học Thiết Kế Nhưng Mẹ Không Cho! (FS)",
+            "author": "Leo Dinh",
+            "score": 11.4632,
+            "position": "C3-16"
+          },
+          {
+            "rank": 4,
+            "title": "Tiếng Anh Cho Người Định Cư Ở Nước Ngoài (Không Kèm Đĩa)",
+            "author": "Nguyễn Thành Yến",
+            "score": 8.1317,
+            "position": "D3-18"
+          },
+          {
+            "rank": 5,
+            "title": "Ăn để bình tâm - Hướng dẫn dinh dưỡng đột phá giảm lo âu hiệu quả",
+            "author": "Stephen Hawking",
+            "score": 7.7411,
+            "position": "C2-01"
+          }
+        ]
+      },
+      "semantic": {
+        "rank_found": 1,
+        "latency_ms": 36.26,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Không Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.8514,
+            "position": "A3-21"
+          },
+          {
+            "rank": 2,
+            "title": "Độc Lập - Từ Sông Bến Hải Đến Dinh Độc Lập + Hồi Ký Phóng Viên Chiến Trường",
+            "author": "Alpha Books",
+            "score": 0.8496,
+            "position": "E2-50"
+          },
+          {
+            "rank": 3,
+            "title": "Bố Già",
+            "author": "Mario Puzo",
+            "score": 0.8495,
+            "position": "A2-21"
+          },
+          {
+            "rank": 4,
+            "title": "Trong Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.8492,
+            "position": "A3-22"
+          },
+          {
+            "rank": 5,
+            "title": "Những Gã Khổng Lồ Công Nghệ Trung Quốc",
+            "author": "REBECCA A. FANNIN",
+            "score": 0.8469,
+            "position": "E1-46"
+          }
+        ]
+      },
+      "hybrid": {
+        "rank_found": 1,
+        "latency_ms": 61.8,
+        "top_results": [
+          {
+            "rank": 1,
+            "title": "Không Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.0328,
+            "position": "A3-21"
+          },
+          {
+            "rank": 2,
+            "title": "Trong Gia Đình",
+            "author": "Hector Malot",
+            "score": 0.0318,
+            "position": "A3-22"
+          },
+          {
+            "rank": 3,
+            "title": "Độc Lập - Từ Sông Bến Hải Đến Dinh Độc Lập + Hồi Ký Phóng Viên Chiến Trường",
+            "author": "Alpha Books",
+            "score": 0.0286,
+            "position": "E2-50"
+          },
+          {
+            "rank": 4,
+            "title": "Khung Hoạch Định Chiến Lược - Bộ Công Cụ Thiết Yếu Cho Hội Đồng Quản Trị Và Ban Điều Hành Cấp Cao",
+            "author": "Dr Trung Dinh",
+            "score": 0.0265,
+            "position": "E1-37"
+          },
+          {
+            "rank": 5,
+            "title": "Em Muốn Học Thiết Kế Nhưng Mẹ Không Cho! (FS)",
+            "author": "Leo Dinh",
+            "score": 0.0159,
+            "position": "C3-16"
+          }
+        ]
+      }
+    }
+  }
+]

@@ -71,3 +71,15 @@ Desktop.ini
 *.njsproj
 *.sln
 *.sw?
+
+# ==========================================================
+# 7. PYTHON & AI VENV ARTIFACTS
+# ==========================================================
+venv/
+**/venv/
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookDown, BookUp, UserCheck, RefreshCw } from 'lucide-react';
+import { BookDown, BookUp, UserCheck, RefreshCw, Sparkles } from 'lucide-react';
 
 export default function KioskHome({ onSelectFeature, reader, onLogout }) {
   return (
@@ -89,6 +89,17 @@ export default function KioskHome({ onSelectFeature, reader, onLogout }) {
             <RefreshCw size={54} strokeWidth={2.2} />
           </div>
           <div className="kiosk-big-btn-label">Gia hạn</div>
+        </button>
+
+        {/* 5. AI Gợi ý & Tìm sách thông minh */}
+        <button
+          className="kiosk-big-btn btn-ai"
+          onClick={() => onSelectFeature('AI_SEARCH')}
+        >
+          <div className="kiosk-big-btn-icon">
+            <Sparkles size={54} strokeWidth={2.2} color="#fef08a" />
+          </div>
+          <div className="kiosk-big-btn-label">AI Gợi ý & Tìm sách</div>
         </button>
       </div>
 

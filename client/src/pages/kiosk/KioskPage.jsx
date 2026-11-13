@@ -9,6 +9,7 @@ import BorrowSection from './BorrowSection.jsx';
 import ReturnSection from './ReturnSection.jsx';
 import RenewSection from './RenewSection.jsx';
 import AccountSection from './AccountSection.jsx';
+import AiSearchSection from './AiSearchSection.jsx';
 import { socket } from '../../socket/socketClient.js';
 import { apiService } from '../../api/apiService.js';
 import { playKioskBeep } from '../../utils/audio.js';
@@ -179,10 +180,14 @@ export default function KioskPage() {
     return () => clearInterval(timer);
   }, [currentScreen]);
 
-  // Điều hướng khi bấm 4 nút chính ở trang chủ (Mục 2.1 STT 3: Cho phép trả sách không cần thẻ độc giả)
+  // Điều hướng khi bấm các nút chức năng ở trang chủ
   function handleSelectFeature(feature) {
     if (feature === 'RETURN') {
       setCurrentScreen('RETURN');
+      return;
+    }
+    if (feature === 'AI_SEARCH') {
+      setCurrentScreen('AI_SEARCH');
       return;
     }
     if (currentReader) {
@@ -367,7 +372,8 @@ export default function KioskPage() {
     BORROW: { title: 'Mượn tài liệu', icon: '📥' },
     RETURN: { title: 'Trả tài liệu', icon: '📤' },
     RENEW: { title: 'Gia hạn', icon: '🔄' },
-    ACCOUNT: { title: 'Thông tin tài khoản', icon: '👤' }
+    ACCOUNT: { title: 'Thông tin tài khoản', icon: '👤' },
+    AI_SEARCH: { title: 'AI Gợi ý & Tìm kiếm sách thông minh', icon: '✨' }
   };
 
   return (
@@ -431,6 +437,13 @@ export default function KioskPage() {
           activeLoans={activeLoans}
           onNavigate={(target) => setCurrentScreen(target)}
           onFinish={handleResetSession}
+        />
+      )}
+
+      {currentScreen === 'AI_SEARCH' && (
+        <AiSearchSection
+          reader={currentReader}
+          onFinish={() => setCurrentScreen('HOME')}
         />
       )}
 

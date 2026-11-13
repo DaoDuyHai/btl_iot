@@ -1,0 +1,314 @@
+[
+  {
+    "id": "MC01",
+    "query": "Sách Python dành cho người mới bắt đầu",
+    "constraints": [
+      "Chủ đề: Lập trình Python",
+      "Đối tượng: Người mới bắt đầu / Cơ bản / Nhập môn"
+    ],
+    "total_full_matches": 13,
+    "total_topic_matches": 24,
+    "bm25": {
+      "top1_title": "Python Dành Cho Người Bắt Đầu",
+      "top1_author": "Phạm Quang Huy",
+      "top1_is_full": false,
+      "full_in_top5": 0,
+      "topic_in_top5": 1,
+      "top5_titles": [
+        "[B0709] Python Dành Cho Người Bắt Đầu (Phạm Quang Huy)",
+        "[B1825] Tự Học Tiếng Hàn Dành Cho Người Mới Bắt Đầu (Kèm CD Hoặc Tải App) (The Changmi)",
+        "[B1529] Tập Viết Tiếng Hàn Dành Cho Người Mới Bắt Đầu (The Changmi)",
+        "[B0728] AutoCAD Dành Cho Người Bắt Đầu (Nhiều tác giả)",
+        "[B0632] AutoCAD Dành Cho Người Bắt Đầu ( Tặng Sổ tay Xương Rồng ) (KS Phạm Quang Huy)"
+      ]
+    },
+    "semantic": {
+      "top1_title": "Python Dành Cho Người Bắt Đầu",
+      "top1_author": "Phạm Quang Huy",
+      "top1_is_full": false,
+      "full_in_top5": 2,
+      "topic_in_top5": 4,
+      "top5_titles": [
+        "[B0709] Python Dành Cho Người Bắt Đầu (Phạm Quang Huy)",
+        "[B0723] Python Dành Cho Người Tự Học ( Phần Cơ Bản ) (Nhiều tác giả)",
+        "[B0724] 2 sách Lập trình với Python cơ bản và nâng cao (Nguyễn Hữu Hưng (chủ biên))",
+        "[B1855] Tự Học Tiếng Thái Lan Cho Người Mới Bắt Đầu (TS. Nguyễn Thị Thùy Châu)",
+        "[B0700] Lập Trình Python (Nhiều tác giả)"
+      ]
+    },
+    "hybrid": {
+      "top1_title": "Python Dành Cho Người Bắt Đầu",
+      "top1_author": "Phạm Quang Huy",
+      "top1_is_full": false,
+      "full_in_top5": 1,
+      "topic_in_top5": 2,
+      "top5_titles": [
+        "[B0709] Python Dành Cho Người Bắt Đầu (Phạm Quang Huy)",
+        "[B0723] Python Dành Cho Người Tự Học ( Phần Cơ Bản ) (Nhiều tác giả)",
+        "[B2248] Boglehead: Hướng Dẫn Cách Đầu Tư Thông Minh - Các mẹo đầu tư cho người mới bắt đầu (Taylor Larimore, Mel Lindauer, Michael Leboeuf)",
+        "[B2229] Lập Kế Hoạch Kinh Doanh Cho Người Mới Bắt Đầu (Alpha Books)",
+        "[B1855] Tự Học Tiếng Thái Lan Cho Người Mới Bắt Đầu (TS. Nguyễn Thị Thùy Châu)"
+      ]
+    }
+  },
+  {
+    "id": "MC02",
+    "query": "Sách của Nguyễn Nhật Ánh viết về tuổi học trò",
+    "constraints": [
+      "Tác giả: Nguyễn Nhật Ánh",
+      "Chủ đề: Tuổi học trò / Tuổi thơ"
+    ],
+    "total_full_matches": 18,
+    "total_topic_matches": 18,
+    "bm25": {
+      "top1_title": "Cho Tôi Xin Một Vé Đi Tuổi Thơ",
+      "top1_author": "Nguyễn Nhật Ánh",
+      "top1_is_full": true,
+      "full_in_top5": 4,
+      "topic_in_top5": 0,
+      "top5_titles": [
+        "[B0023] Cho Tôi Xin Một Vé Đi Tuổi Thơ (Nguyễn Nhật Ánh)",
+        "[B0346] Bàn Có Năm Chỗ Ngồi (Nguyễn Nhật Ánh)",
+        "[B0038] Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh) (Nguyễn Nhật Ánh)",
+        "[B0126] Cảm Ơn Người Lớn (Nguyễn Nhật Ánh)",
+        "[B0055] Tiệm sách của nàng (Nguyễn Nhật Ánh) (Nguyễn Nhật Ánh)"
+      ]
+    },
+    "semantic": {
+      "top1_title": "Ngôi Trường Mọi Khi",
+      "top1_author": "Nguyễn Nhật Ánh",
+      "top1_is_full": false,
+      "full_in_top5": 3,
+      "topic_in_top5": 0,
+      "top5_titles": [
+        "[B0366] Ngôi Trường Mọi Khi (Nguyễn Nhật Ánh)",
+        "[B0023] Cho Tôi Xin Một Vé Đi Tuổi Thơ (Nguyễn Nhật Ánh)",
+        "[B0346] Bàn Có Năm Chỗ Ngồi (Nguyễn Nhật Ánh)",
+        "[B0006] Cô Bé Hàng Xóm Và Bốn Viên Kẹo (Nguyễn Nhật Ánh) (Nguyễn Nhật Ánh)",
+        "[B0089] Ticket To Childhood (Nguyễn Nhật Ánh)"
+      ]
+    },
+    "hybrid": {
+      "top1_title": "Cho Tôi Xin Một Vé Đi Tuổi Thơ",
+      "top1_author": "Nguyễn Nhật Ánh",
+      "top1_is_full": true,
+      "full_in_top5": 4,
+      "topic_in_top5": 0,
+      "top5_titles": [
+        "[B0023] Cho Tôi Xin Một Vé Đi Tuổi Thơ (Nguyễn Nhật Ánh)",
+        "[B0346] Bàn Có Năm Chỗ Ngồi (Nguyễn Nhật Ánh)",
+        "[B0366] Ngôi Trường Mọi Khi (Nguyễn Nhật Ánh)",
+        "[B0038] Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh) (Nguyễn Nhật Ánh)",
+        "[B0155] Tôi Là Bêtô (Nguyễn Nhật Ánh)"
+      ]
+    }
+  },
+  {
+    "id": "MC03",
+    "query": "Sách tiếng Anh về trí tuệ nhân tạo",
+    "constraints": [
+      "Chủ đề: Trí tuệ nhân tạo (AI)",
+      "Đặc điểm: Tiếng Anh / Ứng dụng tiếng Anh"
+    ],
+    "total_full_matches": 41,
+    "total_topic_matches": 1023,
+    "bm25": {
+      "top1_title": "Generative Ai Foundation - Nền Tảng Về Trí Tuệ Nhân Tạo Tạo Sinh",
+      "top1_author": "Nhiều tác giả",
+      "top1_is_full": false,
+      "full_in_top5": 1,
+      "topic_in_top5": 5,
+      "top5_titles": [
+        "[B0970] Generative Ai Foundation - Nền Tảng Về Trí Tuệ Nhân Tạo Tạo Sinh (Nhiều tác giả)",
+        "[B1005] Tủ Sách Bách Khoa Tri Thức - Hiểu Về Trí Tuệ Nhân Tạo AI (Nhiều tác giả)",
+        "[B0704] Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN (Nhiều tác giả)",
+        "[B0799] Cuốn Sách Về Khoa Học Hay: Xin Chào AI! - Học Và Chơi Cùng Trí Tuệ Nhân Tạo (Nhiều tác giả)",
+        "[B0763] Genesis - Khởi Nguyên - Trí Tuệ Nhân Tạo, Niềm Hi Vọng Và Tinh Thần Nhân Loại - Bản Quyền (Nhiều tác giả)"
+      ]
+    },
+    "semantic": {
+      "top1_title": "Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN",
+      "top1_author": "Nhiều tác giả",
+      "top1_is_full": true,
+      "full_in_top5": 1,
+      "topic_in_top5": 5,
+      "top5_titles": [
+        "[B0704] Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN (Nhiều tác giả)",
+        "[B1041] 3 Sách - Ứng Dụng AI Thực Tiễn Trong Giảng Dạy Và Học Tập (Nhiều tác giả)",
+        "[B0835] Trí tuệ nhân tạo trong hoạt động Báo chí - Truyền thông (Nguyễn Anh Hoàng)",
+        "[B0738] Trí Tuệ Nhân Tạo Học Máy Và Ứng Dụng (Nguyễn Quốc Huy)",
+        "[B0731] AI 2041 - 10 Viễn cảnh cho tương lai (Kai-Fu Lee, Chen Qiufan)"
+      ]
+    },
+    "hybrid": {
+      "top1_title": "Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN",
+      "top1_author": "Nhiều tác giả",
+      "top1_is_full": true,
+      "full_in_top5": 1,
+      "topic_in_top5": 5,
+      "top5_titles": [
+        "[B0704] Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN (Nhiều tác giả)",
+        "[B1005] Tủ Sách Bách Khoa Tri Thức - Hiểu Về Trí Tuệ Nhân Tạo AI (Nhiều tác giả)",
+        "[B0835] Trí tuệ nhân tạo trong hoạt động Báo chí - Truyền thông (Nguyễn Anh Hoàng)",
+        "[B0799] Cuốn Sách Về Khoa Học Hay: Xin Chào AI! - Học Và Chơi Cùng Trí Tuệ Nhân Tạo (Nhiều tác giả)",
+        "[B0738] Trí Tuệ Nhân Tạo Học Máy Và Ứng Dụng (Nguyễn Quốc Huy)"
+      ]
+    }
+  },
+  {
+    "id": "MC04",
+    "query": "Sách lập trình Java có ví dụ thực hành",
+    "constraints": [
+      "Chủ đề: Lập trình Java",
+      "Nội dung: Có ví dụ / Bài tập / Thực hành"
+    ],
+    "total_full_matches": 2,
+    "total_topic_matches": 3,
+    "bm25": {
+      "top1_title": "AI Agent - Thiết Kế Thực Hành Và Kiến Tạo Tác Nhân Thông Minh",
+      "top1_author": "Nhiều tác giả",
+      "top1_is_full": false,
+      "full_in_top5": 1,
+      "topic_in_top5": 2,
+      "top5_titles": [
+        "[B0960] AI Agent - Thiết Kế Thực Hành Và Kiến Tạo Tác Nhân Thông Minh (Nhiều tác giả)",
+        "[B0718] Lập Trình Với Vi Điều Khiển PIC (Lý Thuyết - Thực Hành) (Tài liệu dùng cho các trường Đại học, Cao đẳng chuyên ngành Điện - Điện tử - Cơ điện tử - Viễn thông - Tự động điều khiển - Kỹ thuật máy tính) (Nhiều tác giả)",
+        "[B0942] Deepseek Ứng Dụng - Làm Chủ AI Mã Nguồn Mở, Từ Cơ Bản Đến Thực Chiến - Bản Quyền (Nhiều tác giả)",
+        "[B0786] Sáng Tạo Trong Thuật Toán Và Lập Trình Với C++, Python Và Java, Tập 6: Các Bài Toán 26-50 Trong Dự Án Euler (Nhiều tác giả)",
+        "[B0724] 2 sách Lập trình với Python cơ bản và nâng cao (Nguyễn Hữu Hưng (chủ biên))"
+      ]
+    },
+    "semantic": {
+      "top1_title": "Lập Trình Với Vi Điều Khiển PIC (Lý Thuyết - Thực Hành) (Tài liệu dùng cho các trường Đại học, Cao đẳng chuyên ngành Điện - Điện tử - Cơ điện tử - Viễn thông - Tự động điều khiển - Kỹ thuật máy tính)",
+      "top1_author": "Nhiều tác giả",
+      "top1_is_full": false,
+      "full_in_top5": 1,
+      "topic_in_top5": 1,
+      "top5_titles": [
+        "[B0718] Lập Trình Với Vi Điều Khiển PIC (Lý Thuyết - Thực Hành) (Tài liệu dùng cho các trường Đại học, Cao đẳng chuyên ngành Điện - Điện tử - Cơ điện tử - Viễn thông - Tự động điều khiển - Kỹ thuật máy tính) (Nhiều tác giả)",
+        "[B0786] Sáng Tạo Trong Thuật Toán Và Lập Trình Với C++, Python Và Java, Tập 6: Các Bài Toán 26-50 Trong Dự Án Euler (Nhiều tác giả)",
+        "[B0758] Tự Học Nhanh Lập Trình S7 1500 (Lý Thuyết - Thực Hành) (Nhiều tác giả)",
+        "[B0994] ứng dụng iot trong lập trình nhà nông trại thông minh ( stk2) (Nguyễn Đức Tấn)",
+        "[B1028] Tin Học - Hướng Dẫn Lập Trình VBA Cho Excel (Phạm Quang Hiển, Văn Thị Tư)"
+      ]
+    },
+    "hybrid": {
+      "top1_title": "Lập Trình Với Vi Điều Khiển PIC (Lý Thuyết - Thực Hành) (Tài liệu dùng cho các trường Đại học, Cao đẳng chuyên ngành Điện - Điện tử - Cơ điện tử - Viễn thông - Tự động điều khiển - Kỹ thuật máy tính)",
+      "top1_author": "Nhiều tác giả",
+      "top1_is_full": false,
+      "full_in_top5": 1,
+      "topic_in_top5": 2,
+      "top5_titles": [
+        "[B0718] Lập Trình Với Vi Điều Khiển PIC (Lý Thuyết - Thực Hành) (Tài liệu dùng cho các trường Đại học, Cao đẳng chuyên ngành Điện - Điện tử - Cơ điện tử - Viễn thông - Tự động điều khiển - Kỹ thuật máy tính) (Nhiều tác giả)",
+        "[B0786] Sáng Tạo Trong Thuật Toán Và Lập Trình Với C++, Python Và Java, Tập 6: Các Bài Toán 26-50 Trong Dự Án Euler (Nhiều tác giả)",
+        "[B0758] Tự Học Nhanh Lập Trình S7 1500 (Lý Thuyết - Thực Hành) (Nhiều tác giả)",
+        "[B0724] 2 sách Lập trình với Python cơ bản và nâng cao (Nguyễn Hữu Hưng (chủ biên))",
+        "[B0619] Tin Học - Thực Hành Phân Tích Dữ Liệu Và Lập Mô Hình Kinh Doanh Trong Excel (Phạm Quang Hiển - Văn Thị Tư)"
+      ]
+    }
+  },
+  {
+    "id": "MC05",
+    "query": "Sách về tâm lý trẻ em dành cho phụ huynh",
+    "constraints": [
+      "Chủ đề: Tâm lý trẻ em / Nuôi dạy con",
+      "Đối tượng: Cha mẹ / Phụ huynh"
+    ],
+    "total_full_matches": 6,
+    "total_topic_matches": 83,
+    "bm25": {
+      "top1_title": "50 Hoạt Động Nâng Cao Kỹ Năng Tiếng Anh Trên Lớp Và Tại Nhà Dành Cho Học Sinh Tiểu Học",
+      "top1_author": "Nhiều tác giả",
+      "top1_is_full": false,
+      "full_in_top5": 0,
+      "topic_in_top5": 1,
+      "top5_titles": [
+        "[B1701] 50 Hoạt Động Nâng Cao Kỹ Năng Tiếng Anh Trên Lớp Và Tại Nhà Dành Cho Học Sinh Tiểu Học (Nhiều tác giả)",
+        "[B2947] tâm lý học về tự do và trưởng thành (Daniel Kahneman)",
+        "[B2977] Hiểu về sự chết (Daniel Kahneman)",
+        "[B2965] Tầm nhìn của Đức Đạt Lai Lạt Ma về thế giới (Daniel Kahneman)",
+        "[B2990] Bạn Đang Ở Đây: Cuốn Sách Ngắn Về Thế Giới (Daniel Kahneman)"
+      ]
+    },
+    "semantic": {
+      "top1_title": "Phát triển EQ cho trẻ mẫu giáo -Từ điển cảm xúc đầu đời - Đầy ắp lòng tự tin",
+      "top1_author": "Stephen Hawking",
+      "top1_is_full": false,
+      "full_in_top5": 1,
+      "topic_in_top5": 1,
+      "top5_titles": [
+        "[B2491] Phát triển EQ cho trẻ mẫu giáo -Từ điển cảm xúc đầu đời - Đầy ắp lòng tự tin (Stephen Hawking)",
+        "[B2500] Phát triển trí tuệ cảm xúc - Con kiên trì con không bỏ cuộc (Stephen Hawking)",
+        "[B1740] Nuôi Dưỡng Tâm Hồn - Truyện Tranh Song Ngữ Anh - Việt - Bé Học Lựa Chọn Theo Tình Huống (Phòng chế tác Ấu Phúc)",
+        "[B2598] Kĩ năng vàng cho học sinh trung học - Học cách trưởng thành (Nhiều tác giả)",
+        "[B2736] Hồ sơ tâm lí tội phạm - Tập 4 (Nhiều tác giả)"
+      ]
+    },
+    "hybrid": {
+      "top1_title": "tâm lý học về tự do và trưởng thành",
+      "top1_author": "Daniel Kahneman",
+      "top1_is_full": false,
+      "full_in_top5": 0,
+      "topic_in_top5": 2,
+      "top5_titles": [
+        "[B2947] tâm lý học về tự do và trưởng thành (Daniel Kahneman)",
+        "[B2492] Phát triển EQ cho trẻ mẫu giáo -Từ điển cảm xúc đầu đời - Tớ biết cách cảm thông (Stephen Hawking)",
+        "[B2255] Phát triển EQ cho trẻ mẫu giáo -Từ điển cảm xúc đầu đời - Buồn ơi chào tạm biệt (Stephen Hawking)",
+        "[B2262] Phát triển EQ cho trẻ mẫu giáo -Từ điển cảm xúc đầu đời - Vui vẻ nhìn thế giới (Stephen Hawking)",
+        "[B2956] khám phá tiềm thức & đời sống nội tâm (Daniel Kahneman)"
+      ]
+    }
+  },
+  {
+    "id": "MC06",
+    "query": "Sách kinh doanh dành cho người chưa có kinh nghiệm",
+    "constraints": [
+      "Lĩnh vực: Kinh doanh / Khởi nghiệp",
+      "Đối tượng: Người chưa có kinh nghiệm / Mới bắt đầu"
+    ],
+    "total_full_matches": 44,
+    "total_topic_matches": 172,
+    "bm25": {
+      "top1_title": "Spotify Và Những Chuyện Chưa Kể - Hành Trình Đánh Bại Apple, Google Và Amazon Trong Cuộc Đua Âm Thanh Số Của Nhà Sáng Lập Daniel Ek",
+      "top1_author": "Sven Carlsson, Jonas Leijonhufvud",
+      "top1_is_full": false,
+      "full_in_top5": 0,
+      "topic_in_top5": 1,
+      "top5_titles": [
+        "[B1339] Spotify Và Những Chuyện Chưa Kể - Hành Trình Đánh Bại Apple, Google Và Amazon Trong Cuộc Đua Âm Thanh Số Của Nhà Sáng Lập Daniel Ek (Sven Carlsson, Jonas Leijonhufvud)",
+        "[B1587] Trải nghiệm tiếng Trung dành cho học sinh tiểu học (Nhiều tác giả)",
+        "[B1141] Cái Tôi Chưa Khai Phá (Carl Jung)",
+        "[B2151] Trải Nghiệm WOW (Tony Hsieh)",
+        "[B2437] Bật mí bí mật về Cơ thể người - Những kiến thức kỳ thú có thể bạn chưa từng biết (Stephen Hawking)"
+      ]
+    },
+    "semantic": {
+      "top1_title": "Top Sách Kinh Doanh FnB",
+      "top1_author": "Alpha Books",
+      "top1_is_full": true,
+      "full_in_top5": 2,
+      "topic_in_top5": 4,
+      "top5_titles": [
+        "[B2075] Top Sách Kinh Doanh FnB (Alpha Books)",
+        "[B2229] Lập Kế Hoạch Kinh Doanh Cho Người Mới Bắt Đầu (Alpha Books)",
+        "[B1217] 50 CUỐN SÁCH KINH ĐIỂN VỀ KINH DOANH - Những bài học về chiến lược, đổi mới và marketing hiệu quả – Tom Butler-Bowdon – AlphaBooks (Tom Butler-Bowdon)",
+        "[B1400] Tự Lập Không Thừa Kế - Cẩm Nang Kinh Doanh Tâm Huyết Của Một Tỷ Phú Tự Thân (Tom Golisano)",
+        "[B1161] Đọc vị bất kỳ ai - Để không bị lợi dụng (David J. Liebermen)"
+      ]
+    },
+    "hybrid": {
+      "top1_title": "Lập Kế Hoạch Kinh Doanh Cho Người Mới Bắt Đầu",
+      "top1_author": "Alpha Books",
+      "top1_is_full": true,
+      "full_in_top5": 2,
+      "topic_in_top5": 4,
+      "top5_titles": [
+        "[B2229] Lập Kế Hoạch Kinh Doanh Cho Người Mới Bắt Đầu (Alpha Books)",
+        "[B1240] Buổi Sáng Diệu Kỳ Dành Cho Người Bán Hàng (Hal Elrod, Ryan Snow, Honorée Corder)",
+        "[B1384] Dạy Con Làm Giàu 10 - Trước Khi Bạn Thôi Việc (Robert T. Kiyosaki – Sharon L. Lechter)",
+        "[B1212] Lựa Chọn, Thiết Kế Và Nuôi Sống Trải Nghiệm Khách Hàng (Nguyễn Duy Linh)",
+        "[B2075] Top Sách Kinh Doanh FnB (Alpha Books)"
+      ]
+    }
+  }
+]

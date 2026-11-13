@@ -56,4 +56,12 @@ export const apiService = {
     api.get(`/devices/logs?limit=${limit}`).then(r => r.data.data),
   sendDeviceCommand: (deviceId, action, status) => 
     api.post(`/devices/${deviceId}/command`, { action, status }).then(r => r.data),
+
+  // AI Tìm kiếm & Gợi ý sách thông minh
+  searchAiBooks: (q, top_k = 6) => 
+    api.get('/ai/search', { params: { q, top_k } }).then(r => r.data),
+  recommendAiBooks: (params = {}) => 
+    api.get('/ai/recommend', { params }).then(r => r.data),
+  getAiStats: () => 
+    api.get('/ai/stats').then(r => r.data),
 };
