@@ -1,0 +1,172 @@
+[
+  {
+    "query": "Tôi muốn học lập trình Python từ con số 0",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Coding 10 lập trình với Python (Dành cho học sinh lớp 10)",
+    "top5_sample": [
+      "Coding 10 lập trình với Python (Dành cho học sinh lớp 10)",
+      "Lập trình Python hỗ trợ học sinh THPT giải bài tập tin học",
+      "Lập Trình Python",
+      "Tư duy Python: Cách tư duy như một nhà khoa học máy tính",
+      "Python Dành Cho Người Tự Học ( Phần Cơ Bản )"
+    ]
+  },
+  {
+    "query": "Nguyễn Nhật Ánh",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh)",
+    "top5_sample": [
+      "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh)",
+      "Cô Bé Hàng Xóm Và Bốn Viên Kẹo (Nguyễn Nhật Ánh)",
+      "Mùa hè không tên (Nguyễn Nhật Ánh)",
+      "Chuyện xứ Lang Biang - Boxset 12 cuốn - Nguyễn Nhật Ánh khổ nhỏ",
+      "Ngày Xưa Có Một Chuyện Tình"
+    ]
+  },
+  {
+    "query": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+    "top5_sample": [
+      "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+      "Án Mạng Ở Điền Trang Kingfisher Hill (Agatha Christie) - NXB Trẻ",
+      "Án Mạng Giữa Không Trung (Agatha Christie) - NXB Trẻ",
+      "Án Mạng Trên Sân Golf",
+      "Huyền thoại tàu không số"
+    ]
+  },
+  {
+    "query": "Sách dạy làm giàu",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Dạy con làm giàu - Tập 11 - Trường dạy kinh doanh cho những người thích giúp đỡ người khác",
+    "top5_sample": [
+      "Dạy con làm giàu - Tập 11 - Trường dạy kinh doanh cho những người thích giúp đỡ người khác",
+      "Dạy Con Làm Giàu - Để Không Có Tiền Vẫn Tạo Ra Tiền - Cha Giàu Cha Nghèo",
+      "Dạy Con Làm Giàu - Tập 3: Hướng Dẫn Đầu Tư",
+      "Boxset Dạy Con Làm Giàu",
+      "Dạy Con Làm Giàu 10 - Trước Khi Bạn Thôi Việc"
+    ]
+  },
+  {
+    "query": "Nhà Giả Kim",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Nhà Giả Kim",
+    "top5_sample": [
+      "Nhà Giả Kim",
+      "Chung một mái nhà - Tập 7",
+      "Pháp giới Kim cương - Kinh Kim Cương Đảnh Du Già Lý Thú Bát Nhã",
+      "Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo",
+      "Sự Ỷ Lại Nguy Hiểm (Phiên Bản Toàn Tập)"
+    ]
+  },
+  {
+    "query": "chàng trai chăn cừu vượt sa mạc đi tìm kho báu dưới chân kim tự tháp",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Nhà Giả Kim",
+    "top5_sample": [
+      "Nhà Giả Kim",
+      "Xứ Cát",
+      "Dẫn Dắt Một Bầy Sói Hay Chăn Một Đàn Cừu + MBA Thực Chiến",
+      "David & Goliath",
+      "Dẫn Dắt Một Bầy Sói Hay Chăn Một Đàn Cừu"
+    ]
+  },
+  {
+    "query": "tieng viet khong dau",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Khi hơi thở hóa thinh không - Ấn bản dấu ấn 10 năm",
+    "top5_sample": [
+      "Khi hơi thở hóa thinh không - Ấn bản dấu ấn 10 năm",
+      "Những Gã Khổng Lồ Công Nghệ Trung Quốc",
+      "MUNCLE TROGG - CẬU KHỔNG LỒ TÍ HON",
+      "Tiếng Anh Không Công Thức – Nhập Vai Nói Không Sai",
+      "Ba người khổng lồ trong kinh tế học"
+    ]
+  },
+  {
+    "query": "Sách về trí tuệ nhân tạo và máy học",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Trí Tuệ Nhân Tạo Học Máy Và Ứng Dụng",
+    "top5_sample": [
+      "Trí Tuệ Nhân Tạo Học Máy Và Ứng Dụng",
+      "Cuốn Sách Về Khoa Học Hay: Xin Chào AI! - Học Và Chơi Cùng Trí Tuệ Nhân Tạo",
+      "Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN",
+      "Ứng dụng trí tuệ nhân tạo (AI) trong dạy và học môncông nghệ thông tin (dành cho giáo viên và học sinh) HA",
+      "Xin Chào AI! - Học Và Chơi Cùng Trí Tuệ Nhân Tạo"
+    ]
+  },
+  {
+    "query": "Fredrik Backman",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Britt-Marie Đã Ở Đây (Fredrid Backman)",
+    "top5_sample": [
+      "Britt-Marie Đã Ở Đây (Fredrid Backman)",
+      "Người Đàn Ông Mang Tên Ove",
+      "(Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ",
+      "Những Kẻ Âu Lo",
+      "Beartown - Thị trấn nhỏ, giấc mơ lớn"
+    ]
+  },
+  {
+    "query": "Lập trình hướng đối tượng Java",
+    "runs": 10,
+    "top1_stable": true,
+    "top5_order_stable": true,
+    "scores_stable": true,
+    "max_score_diff": 0.0,
+    "has_duplicates": false,
+    "top1_title": "Giáo Trình C++ Và Lập Trình Hướng Đối Tượng",
+    "top5_sample": [
+      "Giáo Trình C++ Và Lập Trình Hướng Đối Tượng",
+      "Sáng Tạo Trong Thuật Toán Và Lập Trình Với C++, Python Và Java, Tập 6: Các Bài Toán 26-50 Trong Dự Án Euler",
+      "Giáo Trình Kỹ Thuật Lập Trình C Căn Bản Và Nâng Cao + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng (2 quyển)",
+      "Sách Giáo Trình Kỹ Thuật Lập Trình C Căn Bản Và Nâng Cao + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng",
+      "sách Lập Trình Hay: Clean Code + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng"
+    ]
+  }
+]

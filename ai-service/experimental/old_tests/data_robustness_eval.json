@@ -1,0 +1,187 @@
+[
+  {
+    "stage": "build_passage",
+    "test_case": "D1_Missing_Description",
+    "status": "SUCCESS",
+    "output_preview": "passage: Tên sách: Sách Thử Nghiệm Không Mô Tả. Tác giả: Nguyễn Văn A. Thể loại:..."
+  },
+  {
+    "stage": "build_passage",
+    "test_case": "D2_Missing_Author",
+    "status": "SUCCESS",
+    "output_preview": "passage: Tên sách: Sách Không Có Tác Giả Rõ Ràng. Tác giả: . Thể loại: Khoa học ..."
+  },
+  {
+    "stage": "build_passage",
+    "test_case": "D3_Empty_Title",
+    "status": "SUCCESS",
+    "output_preview": "passage: Tên sách: . Tác giả: Trần Thị B. Thể loại: Văn học – Tiểu thuyết - Tiểu..."
+  },
+  {
+    "stage": "build_passage",
+    "test_case": "D4_Null_NaN_Fields",
+    "status": "SUCCESS",
+    "output_preview": "passage: Tên sách: Sách Chứa Giá Trị Null. Tác giả: nan. Thể loại: nan - nan. Nộ..."
+  },
+  {
+    "stage": "build_passage",
+    "test_case": "D5_Very_Short_Description",
+    "status": "SUCCESS",
+    "output_preview": "passage: Tên sách: Sách Mô Tả Siêu Ngắn. Tác giả: Lê Văn C. Thể loại: Kỹ năng số..."
+  },
+  {
+    "stage": "build_passage",
+    "test_case": "D6_Near_Duplicate_Title_1",
+    "status": "SUCCESS",
+    "output_preview": "passage: Tên sách: Lập Trình Python Cơ Bản. Tác giả: Phạm Văn D. Thể loại: Công ..."
+  },
+  {
+    "stage": "build_passage",
+    "test_case": "D6_Near_Duplicate_Title_2",
+    "status": "SUCCESS",
+    "output_preview": "passage: Tên sách: Lập Trình Python Cơ Bản - Tập 2. Tác giả: Phạm Văn D. Thể loạ..."
+  },
+  {
+    "stage": "build_passage",
+    "test_case": "D7_Special_Characters_HTML_XSS",
+    "status": "SUCCESS",
+    "output_preview": "passage: Tên sách: Sách Hack Não & Ký Tự Lạ: @#$%^&*()_+ <>?!\"'. Tác giả: Author..."
+  },
+  {
+    "stage": "build_passage",
+    "test_case": "D8_Accented_Vs_Unaccented",
+    "status": "SUCCESS",
+    "output_preview": "passage: Tên sách: tieng viet khong dau hoan toan. Tác giả: nguyen nhat anh khon..."
+  },
+  {
+    "stage": "tokenize",
+    "test_case": "D1_Missing_Description",
+    "status": "SUCCESS",
+    "token_count": 29,
+    "opt_token_count": 27
+  },
+  {
+    "stage": "tokenize",
+    "test_case": "D2_Missing_Author",
+    "status": "SUCCESS",
+    "token_count": 42,
+    "opt_token_count": 36
+  },
+  {
+    "stage": "tokenize",
+    "test_case": "D3_Empty_Title",
+    "status": "SUCCESS",
+    "token_count": 36,
+    "opt_token_count": 34
+  },
+  {
+    "stage": "tokenize",
+    "test_case": "D4_Null_NaN_Fields",
+    "status": "SUCCESS",
+    "token_count": 21,
+    "opt_token_count": 19
+  },
+  {
+    "stage": "tokenize",
+    "test_case": "D5_Very_Short_Description",
+    "status": "SUCCESS",
+    "token_count": 31,
+    "opt_token_count": 29
+  },
+  {
+    "stage": "tokenize",
+    "test_case": "D6_Near_Duplicate_Title_1",
+    "status": "SUCCESS",
+    "token_count": 37,
+    "opt_token_count": 35
+  },
+  {
+    "stage": "tokenize",
+    "test_case": "D6_Near_Duplicate_Title_2",
+    "status": "SUCCESS",
+    "token_count": 41,
+    "opt_token_count": 39
+  },
+  {
+    "stage": "tokenize",
+    "test_case": "D7_Special_Characters_HTML_XSS",
+    "status": "SUCCESS",
+    "token_count": 59,
+    "opt_token_count": 56
+  },
+  {
+    "stage": "tokenize",
+    "test_case": "D8_Accented_Vs_Unaccented",
+    "status": "SUCCESS",
+    "token_count": 47,
+    "opt_token_count": 46
+  },
+  {
+    "stage": "work_catalog",
+    "test_case": "ALL_EDGE_CASES",
+    "status": "SUCCESS",
+    "unique_works_generated": 9
+  },
+  {
+    "stage": "embedding",
+    "test_case": "ALL_EDGE_CASES",
+    "status": "SUCCESS",
+    "embedding_shape": [
+      9,
+      384
+    ],
+    "norms": [
+      1.0,
+      1.0,
+      1.0,
+      1.0000001192092896,
+      1.0,
+      1.0,
+      0.9999999403953552,
+      0.9999999403953552,
+      1.0
+    ]
+  },
+  {
+    "stage": "search_execution",
+    "test_case": "QUERY_RUNS",
+    "status": "SUCCESS",
+    "queries": [
+      {
+        "query": "Sách không mô tả",
+        "top1": "Sách Thử Nghiệm Không Mô Tả",
+        "top1_score": 0.03278688524590164
+      },
+      {
+        "query": "Vũ trụ hố đen",
+        "top1": "Sách Không Có Tác Giả Rõ Ràng",
+        "top1_score": 0.03278688524590164
+      },
+      {
+        "query": "Tiểu thuyết đô thị",
+        "top1": "",
+        "top1_score": 0.03278688524590164
+      },
+      {
+        "query": "Hay",
+        "top1": "Sách Mô Tả Siêu Ngắn",
+        "top1_score": 0.032018442622950824
+      },
+      {
+        "query": "Lập trình Python",
+        "top1": "Lập Trình Python Cơ Bản",
+        "top1_score": 0.03278688524590164
+      },
+      {
+        "query": "alert xss",
+        "top1": "Sách Hack Não & Ký Tự Lạ: @#$%^&*()_+ <>?!\"'",
+        "top1_score": 0.03278688524590164
+      },
+      {
+        "query": "tieng viet khong dau",
+        "top1": "tieng viet khong dau hoan toan",
+        "top1_score": 0.03278688524590164
+      }
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "total_books": 3000,
+  "mood_counts": {
+    "thư giãn": 306,
+    "nhẹ nhàng": 431,
+    "suy ngẫm": 978,
+    "cảm động": 262,
+    "hồi hộp": 170,
+    "chữa lành": 203,
+    "vui vẻ": 193,
+    "truyền cảm hứng": 622,
+    "nghiêm túc": 1490,
+    "hài hước": 83,
+    "nặng đầu": 225
+  },
+  "reading_effort_counts": {
+    "vừa": 1746,
+    "nhẹ": 890,
+    "nặng": 364
+  },
+  "audience_counts": {
+    "mọi người": 1391,
+    "người đi làm": 646,
+    "sinh viên": 630,
+    "trẻ em": 254,
+    "học sinh": 79
+  },
+  "reader_intent_counts": {
+    "giải trí": 1268,
+    "nâng cao kỹ năng": 625,
+    "học tập": 605,
+    "ôn thi": 222,
+    "tìm cảm hứng": 157,
+    "tra cứu": 67,
+    "đọc cùng con": 56
+  },
+  "quality_checks": {
+    "empty_clean_description": 0,
+    "empty_mood_tags": 0,
+    "empty_reading_effort": 0,
+    "empty_audience": 0,
+    "unique_mood_combinations": 230,
+    "distinct_search_texts": 3000
+  }
+}

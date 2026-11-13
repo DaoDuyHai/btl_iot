@@ -1,0 +1,26 @@
+{
+  "bm25": {
+    "Hit@1": 0.8333,
+    "Hit@3": 0.9667,
+    "Hit@5": 0.9667,
+    "MRR": 0.8944,
+    "Avg_Latency_ms": 30.63,
+    "P95_Latency_ms": 53.14
+  },
+  "semantic": {
+    "Hit@1": 0.8333,
+    "Hit@3": 0.8667,
+    "Hit@5": 0.9,
+    "MRR": 0.8528,
+    "Avg_Latency_ms": 45.22,
+    "P95_Latency_ms": 54.41
+  },
+  "hybrid": {
+    "Hit@1": 0.9333,
+    "Hit@3": 0.9667,
+    "Hit@5": 0.9667,
+    "MRR": 0.95,
+    "Avg_Latency_ms": 75.4,
+    "P95_Latency_ms": 108.13
+  }
+}

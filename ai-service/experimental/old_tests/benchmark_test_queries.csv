@@ -1,0 +1,31 @@
+﻿id,group,query,expected_title,expected_author,expected_kw
+TC001,Exact_Title,Người Đàn Ông Mang Tên Ove,Người Đàn Ông Mang Tên Ove,,
+TC002,Exact_Title,Trăm năm cô đơn,Trăm năm cô đơn,,
+TC003,Exact_Title,Nhà Giả Kim,Nhà Giả Kim,,
+TC004,Exact_Title,Cây Cam Ngọt Của Tôi,Cây Cam Ngọt Của Tôi,,
+TC005,Exact_Title,Mắt Biếc,Mắt Biếc,,
+TC006,Exact_Title,Nỗi buồn chiến tranh,Nỗi buồn chiến tranh,,
+TC007,Exact_Title,Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông,Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông,,
+TC008,Exact_Title,Không Gia Đình,Không Gia Đình,,
+TC009,Exact_Title,Totto - Chan Bên Cửa Sổ,Totto - Chan Bên Cửa Sổ,,
+TC010,Exact_Title,"Thiên Tài Bên Trái, Kẻ Điên Bên Phải","Thiên Tài Bên Trái, Kẻ Điên Bên Phải",,
+TC011,Author,Nguyễn Nhật Ánh,,Nguyễn Nhật Ánh,
+TC012,Author,Fredrik Backman,,Fredrik Backman,
+TC013,Author,Agatha Christie,,Agatha Christie,
+TC014,Author,Stephen Hawking,,Stephen Hawking,
+TC015,Author,Paulo Coelho,,Paulo Coelho,
+TC016,Semantic,sách kể về nỗi đau chiến tranh của người cựu binh,Nỗi buồn chiến tranh,,
+TC017,Semantic,chàng chăn cừu đi tìm kho báu dưới chân kim tự tháp,Nhà Giả Kim,,
+TC018,Semantic,vụ ám sát bí ẩn trên toa tàu hỏa xuyên châu âu và thám tử poirot,Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông,,
+TC019,Semantic,cậu bé mồ côi đi lang thang khắp nước pháp cùng đoàn xiếc bác vitalis,Không Gia Đình,,
+TC020,Semantic,ngôi trường độc đáo trên toa xe điện và cô bé hiếu động,Totto - Chan Bên Cửa Sổ,,
+TC021,Semantic,cuộc trò chuyện với các bệnh nhân tâm thần khám phá góc nhìn khác biệt,"Thiên Tài Bên Trái, Kẻ Điên Bên Phải",,
+TC022,Semantic,cách quản lý tài chính cá nhân không có tiền vẫn tạo ra tiền cha giàu cha nghèo,,,Dạy Con Làm Giàu
+TC023,Semantic,sách học lập trình trí tuệ nhân tạo và học máy cơ bản,,,Trí Tuệ Nhân Tạo
+TC024,Semantic,tâm lý học hành vi và phân tích tiềm thức con người,,,tiềm thức
+TC025,Semantic,giáo trình học tiếng trung hsk,,,HSK
+TC026,Unaccented,mat biec nguyen nhat anh,Mắt Biếc,,
+TC027,Unaccented,cay cam ngot cua toi,Cây Cam Ngọt Của Tôi,,
+TC028,Unaccented,nha gia kim paulo coelho,Nhà Giả Kim,,
+TC029,Unaccented,an mang tren chuyen tau toc hanh phuong dong,Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông,,
+TC030,Unaccented,khong gia dinh hector malot,Không Gia Đình,,

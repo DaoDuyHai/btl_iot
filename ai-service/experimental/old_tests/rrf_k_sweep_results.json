@@ -1,0 +1,140 @@
+{
+  "rrf_situations": {
+    "high_both": {
+      "query": "Tôi muốn học lập trình Python từ con số 0",
+      "top1_title": "Coding 10 lập trình với Python (Dành cho học sinh lớp 10)",
+      "top1_book_id": "B0681",
+      "top1_work_id": "W0681",
+      "bm25_rank": 3,
+      "semantic_rank": 1,
+      "hybrid_top1_score": 0.032266458495966696,
+      "hybrid_top5": [
+        "[B0681] Coding 10 lập trình với Python (Dành cho học sinh lớp 10) (Score: 0.0323)",
+        "[B0733] Lập trình Python hỗ trợ học sinh THPT giải bài tập tin học (Score: 0.0309)",
+        "[B0700] Lập Trình Python (Score: 0.0305)",
+        "[B0890] Tư duy Python: Cách tư duy như một nhà khoa học máy tính (Score: 0.0303)",
+        "[B0723] Python Dành Cho Người Tự Học ( Phần Cơ Bản ) (Score: 0.0297)"
+      ]
+    },
+    "bm25_only": {
+      "query": "Hector Malot",
+      "top1_title": "Trong Gia Đình",
+      "top1_book_id": "B0072",
+      "top1_work_id": "W0072",
+      "bm25_rank": 1,
+      "semantic_rank": 1,
+      "hybrid_top1_score": 0.03278688524590164,
+      "hybrid_top5": [
+        "[B0072] Trong Gia Đình (Score: 0.0328)",
+        "[B0021] Không Gia Đình (Score: 0.0323)",
+        "[B0300] Xứ Cát (Score: 0.0159)",
+        "[B2009] Malcolm Gladwell (Score: 0.0156)",
+        "[B0233] Nhìn Lại Quá Khứ - Tấn Thảm Kịch Và Những Bài Học Về Việt Nam (Score: 0.0154)"
+      ]
+    },
+    "semantic_only": {
+      "query": "chàng trai chăn cừu vượt sa mạc đi tìm kho báu dưới chân kim tự tháp ai cập",
+      "top1_title": "Nhà Giả Kim",
+      "top1_book_id": "B0017",
+      "top1_work_id": "W0017",
+      "bm25_rank": 1,
+      "semantic_rank": 1,
+      "hybrid_top1_score": 0.03278688524590164,
+      "hybrid_top5": [
+        "[B0017] Nhà Giả Kim (Score: 0.0328)",
+        "[B0300] Xứ Cát (Score: 0.0283)",
+        "[B2175] David & Goliath (Score: 0.0249)",
+        "[B1075] Dẫn Dắt Một Bầy Sói Hay Chăn Một Đàn Cừu (Score: 0.0247)",
+        "[B2341] Cuộc săn cừu hoang (TB 175.000) (Score: 0.0246)"
+      ]
+    },
+    "low_both": {
+      "query": "ông già khó tính cộc cằn nhưng có trái tim ấm áp luôn muốn tự tử",
+      "top1_title": "Thương (câu chuyện tiếp tục từ trái tim) Bìa cứng",
+      "top1_book_id": "B2316",
+      "top1_work_id": "W2316",
+      "bm25_rank": 9,
+      "semantic_rank": 4,
+      "hybrid_top1_score": 0.030117753623188408,
+      "hybrid_top5": [
+        "[B2316] Thương (câu chuyện tiếp tục từ trái tim) Bìa cứng (Score: 0.0301)",
+        "[B2352] Thương (câu chuyện tiếp tục từ trái tim) (Score: 0.0301)",
+        "[B0339] Năm Điều Ước Của Ông Murray Mcbride (Score: 0.0298)",
+        "[B0011] Kính Vạn Hoa Chết Chóc (Score: 0.0287)",
+        "[B2793] Phúc ông tự truyện (Score: 0.0262)"
+      ]
+    }
+  },
+  "k_parameter_sweep": {
+    "k=20": {
+      "k": 20,
+      "hit@1": 84.0,
+      "hit@5": 96.0,
+      "hit@10": 96.0,
+      "recall@5": 0.5493,
+      "recall@10": 0.5953,
+      "precision@5": 0.516,
+      "precision@10": 0.425,
+      "mrr": 0.8917,
+      "latency_mean_ms": 79.09,
+      "latency_p50_ms": 80.29,
+      "latency_p95_ms": 105.19
+    },
+    "k=40": {
+      "k": 40,
+      "hit@1": 84.0,
+      "hit@5": 96.0,
+      "hit@10": 96.0,
+      "recall@5": 0.5464,
+      "recall@10": 0.5937,
+      "precision@5": 0.51,
+      "precision@10": 0.424,
+      "mrr": 0.8908,
+      "latency_mean_ms": 84.22,
+      "latency_p50_ms": 81.8,
+      "latency_p95_ms": 130.84
+    },
+    "k=60": {
+      "k": 60,
+      "hit@1": 83.0,
+      "hit@5": 95.0,
+      "hit@10": 96.0,
+      "recall@5": 0.5399,
+      "recall@10": 0.5923,
+      "precision@5": 0.504,
+      "precision@10": 0.421,
+      "mrr": 0.8867,
+      "latency_mean_ms": 80.99,
+      "latency_p50_ms": 76.92,
+      "latency_p95_ms": 128.45
+    },
+    "k=80": {
+      "k": 80,
+      "hit@1": 81.0,
+      "hit@5": 95.0,
+      "hit@10": 96.0,
+      "recall@5": 0.5399,
+      "recall@10": 0.5907,
+      "precision@5": 0.504,
+      "precision@10": 0.418,
+      "mrr": 0.875,
+      "latency_mean_ms": 80.12,
+      "latency_p50_ms": 80.46,
+      "latency_p95_ms": 119.2
+    },
+    "k=100": {
+      "k": 100,
+      "hit@1": 81.0,
+      "hit@5": 95.0,
+      "hit@10": 96.0,
+      "recall@5": 0.5399,
+      "recall@10": 0.5908,
+      "precision@5": 0.504,
+      "precision@10": 0.419,
+      "mrr": 0.875,
+      "latency_mean_ms": 80.01,
+      "latency_p50_ms": 74.0,
+      "latency_p95_ms": 136.59
+    }
+  }
+}

@@ -1,0 +1,278 @@
+[
+  {
+    "id": "SD01",
+    "case": "Python (Lập trình vs Loài trăn)",
+    "query": "Sách về loài trăn khổng lồ săn mồi trong rừng nhiệt đới",
+    "intended_domain": "Sinh học / Động vật hoang dã",
+    "expected_drift_trap": "Sách lập trình Python (Category: Công nghệ thông tin)",
+    "bm25": {
+      "top1": "[B2818] Nhiệt đới buồn (Nguyễn Hiến Lê) - Lịch sử – Văn hóa",
+      "score": 34.14088918188363,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B2818] Nhiệt đới buồn (Lịch sử – Văn hóa) [Score: 34.1409]",
+        "[B2441] Cuốn sách lớn rực rỡ về loài vật (TB 79.000) (Khoa học – Công nghệ) [Score: 30.2846]",
+        "[B2543] MUNCLE TROGG - CẬU KHỔNG LỒ TÍ HON (Khoa học – Công nghệ) [Score: 26.9360]",
+        "[B2826] Lược sử ngôn ngữ - Chuyện kể về phát minh vĩ đại nhất của loài người (Lịch sử – Văn hóa) [Score: 26.7113]",
+        "[B2970] Ba người khổng lồ trong kinh tế học (Tâm lý học) [Score: 26.4995]"
+      ]
+    },
+    "semantic": {
+      "top1": "[B0093] Một Người Rừng Thông Thái (Trần Văn Trản) - Văn học – Tiểu thuyết",
+      "score": 0.8669775724411011,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0093] Một Người Rừng Thông Thái (Văn học – Tiểu thuyết) [Score: 0.8670]",
+        "[B2441] Cuốn sách lớn rực rỡ về loài vật (TB 79.000) (Khoa học – Công nghệ) [Score: 0.8657]",
+        "[B0212] Thần Rừng (Văn học – Tiểu thuyết) [Score: 0.8614]",
+        "[B2257] Thiên táng (TB 128.000) (Khoa học – Công nghệ) [Score: 0.8611]",
+        "[B2379] Charlotte và Wilbur (TB 90.000) (Khoa học – Công nghệ) [Score: 0.8598]"
+      ]
+    },
+    "hybrid": {
+      "top1": "[B2441] Cuốn sách lớn rực rỡ về loài vật (TB 79.000) (Stephen Hawking) - Khoa học – Công nghệ",
+      "score": 0.03225806451612903,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B2441] Cuốn sách lớn rực rỡ về loài vật (TB 79.000) (Khoa học – Công nghệ) [Score: 0.0323]",
+        "[B0093] Một Người Rừng Thông Thái (Văn học – Tiểu thuyết) [Score: 0.0315]",
+        "[B2883] Chúng tôi ăn rừng (Lịch sử – Văn hóa) [Score: 0.0280]",
+        "[B0212] Thần Rừng (Văn học – Tiểu thuyết) [Score: 0.0265]",
+        "[B2689] Khởi đầu nhỏ - Hành trình lớn - San hô nhỏ lững lờ (Thiếu nhi) [Score: 0.0264]"
+      ]
+    }
+  },
+  {
+    "id": "SD02",
+    "case": "Java (Lập trình vs Địa danh Đảo Java)",
+    "query": "Văn hóa và lịch sử vùng đảo Java Indonesia",
+    "intended_domain": "Lịch sử – Văn hóa / Địa lý du lịch",
+    "expected_drift_trap": "Sách lập trình Java (Category: Công nghệ thông tin)",
+    "bm25": {
+      "top1": "[B2841] Sông Đà: Lịch sử một vùng biên cảnh Việt Nam (Nguyễn Hiến Lê) - Lịch sử – Văn hóa",
+      "score": 36.345270478857046,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B2841] Sông Đà: Lịch sử một vùng biên cảnh Việt Nam (Lịch sử – Văn hóa) [Score: 36.3453]",
+        "[B2896] Vùng đất Nam bộ dưới triều Minh Mạng (1820-1841) (Lịch sử – Văn hóa) [Score: 31.9395]",
+        "[B2872] Nam Kỳ và Cư Dân (Lịch sử – Văn hóa) [Score: 28.5186]",
+        "[B2844] Hồ Chí Minh qua hồi ức của những cựu tù chính trị Côn Đảo (Lịch sử – Văn hóa) [Score: 28.4929]",
+        "[B2888] Sự giàu và nghèo của các dân tộc (Lịch sử – Văn hóa) [Score: 27.9739]"
+      ]
+    },
+    "semantic": {
+      "top1": "[B0237] Chiến Binh Cầu Vồng (Andrea Hirata) - Văn học – Tiểu thuyết",
+      "score": 0.8315681219100952,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0237] Chiến Binh Cầu Vồng (Văn học – Tiểu thuyết) [Score: 0.8316]",
+        "[B2879] Mô tả vương quốc Đàng Ngoài (Lịch sử – Văn hóa) [Score: 0.8263]",
+        "[B2841] Sông Đà: Lịch sử một vùng biên cảnh Việt Nam (Lịch sử – Văn hóa) [Score: 0.8260]",
+        "[B2993] Một chuyến du hành đến xứ Nam Hà (1792-1793) (Tâm lý học) [Score: 0.8256]",
+        "[B2832] Hồi ức, giấc mơ, suy ngẫm & Bản đồ tâm hồn con người của Jung (Lịch sử – Văn hóa) [Score: 0.8248]"
+      ]
+    },
+    "hybrid": {
+      "top1": "[B2841] Sông Đà: Lịch sử một vùng biên cảnh Việt Nam (Nguyễn Hiến Lê) - Lịch sử – Văn hóa",
+      "score": 0.032266458495966696,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B2841] Sông Đà: Lịch sử một vùng biên cảnh Việt Nam (Lịch sử – Văn hóa) [Score: 0.0323]",
+        "[B2780] tín ngưỡng và lịch sử tinh thần Việt Nam (Lịch sử – Văn hóa) [Score: 0.0287]",
+        "[B2872] Nam Kỳ và Cư Dân (Lịch sử – Văn hóa) [Score: 0.0284]",
+        "[B2757] Phật giáo và Islam trên Con đường Tơ lụa (Lịch sử – Văn hóa) [Score: 0.0274]",
+        "[B2798] An tĩnh xưa (Lịch sử – Văn hóa) [Score: 0.0273]"
+      ]
+    }
+  },
+  {
+    "id": "SD03",
+    "case": "Spring Boot (Framework lập trình vs Mùa xuân / Đôi giày)",
+    "query": "Khởi đầu mùa xuân tươi đẹp và tràn đầy sức sống",
+    "intended_domain": "Văn học / Thơ ca / Kỹ năng sống",
+    "expected_drift_trap": "Sách kỹ thuật công nghệ",
+    "bm25": {
+      "top1": "[B2013] Chinh Phục Cá Mập - Tác giả Tôn Nữ Xuân Quyên (Tôn Nữ Xuân Quyên) - Kỹ năng sống – Phát triển bản thân",
+      "score": 28.551669824889906,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B2013] Chinh Phục Cá Mập - Tác giả Tôn Nữ Xuân Quyên (Kỹ năng sống – Phát triển bản thân) [Score: 28.5517]",
+        "[B0074] Chân Cứng Đá Mềm - Hồi ký Xuân Phượng (Văn học – Tiểu thuyết) [Score: 25.1429]",
+        "[B0087] Kẹo Dâu Tây Và Tiểu Tiên Nữ Của Anh – Tập 2 (Văn học – Tiểu thuyết) [Score: 23.6877]",
+        "[B2672] Món quà mùa xuân (Thiếu nhi) [Score: 23.3990]",
+        "[B2748] Cẩm nang bé gái tuổi dậy thì - Quyển 1 - 160 câu hỏi-đáp về sinh lí bạn gái tuổi dậy thì (Thiếu nhi) [Score: 22.0996]"
+      ]
+    },
+    "semantic": {
+      "top1": "[B2688] Khởi đầu nhỏ - Hành trình lớn - Quả trứng nhỏ lốm đốm (NXB Kim Đồng) - Thiếu nhi",
+      "score": 0.8441545963287354,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B2688] Khởi đầu nhỏ - Hành trình lớn - Quả trứng nhỏ lốm đốm (Thiếu nhi) [Score: 0.8442]",
+        "[B2687] Khởi đầu nhỏ - Hành trình lớn - Hạt nâu nhỏ xinh xắn (Thiếu nhi) [Score: 0.8433]",
+        "[B2685] Khởi đầu nhỏ - Hành trình lớn (6 cuốn) (Thiếu nhi) [Score: 0.8431]",
+        "[B2691] Khởi đầu nhỏ - Hành trình lớn - Bọ nhỏ xanh lấp lánh (Thiếu nhi) [Score: 0.8371]",
+        "[B2689] Khởi đầu nhỏ - Hành trình lớn - San hô nhỏ lững lờ (Thiếu nhi) [Score: 0.8368]"
+      ]
+    },
+    "hybrid": {
+      "top1": "[B2013] Chinh Phục Cá Mập - Tác giả Tôn Nữ Xuân Quyên (Tôn Nữ Xuân Quyên) - Kỹ năng sống – Phát triển bản thân",
+      "score": 0.031099324975891997,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B2013] Chinh Phục Cá Mập - Tác giả Tôn Nữ Xuân Quyên (Kỹ năng sống – Phát triển bản thân) [Score: 0.0311]",
+        "[B2691] Khởi đầu nhỏ - Hành trình lớn - Bọ nhỏ xanh lấp lánh (Thiếu nhi) [Score: 0.0301]",
+        "[B2689] Khởi đầu nhỏ - Hành trình lớn - San hô nhỏ lững lờ (Thiếu nhi) [Score: 0.0295]",
+        "[B2688] Khởi đầu nhỏ - Hành trình lớn - Quả trứng nhỏ lốm đốm (Thiếu nhi) [Score: 0.0291]",
+        "[B2672] Món quà mùa xuân (Thiếu nhi) [Score: 0.0288]"
+      ]
+    }
+  },
+  {
+    "id": "SD04",
+    "case": "Ove (Nhân vật tiểu thuyết vs Trầm cảm / Tự sát)",
+    "query": "ông già khó tính cộc cằn nhưng có trái tim ấm áp luôn muốn tự tử",
+    "intended_domain": "Tiểu thuyết Người Đàn Ông Mang Tên Ove (W0001 / B0001)",
+    "expected_drift_trap": "Sách tâm lý học trầm cảm, y khoa trị liệu",
+    "bm25": {
+      "top1": "[B0332] Khó Dỗ Dành - Combo 2 Tập (Trúc Dĩ) - Văn học – Tiểu thuyết",
+      "score": 31.162596364718162,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0332] Khó Dỗ Dành - Combo 2 Tập (Văn học – Tiểu thuyết) [Score: 31.1626]",
+        "[B2629] Thủ thỉ cùng con - Lắng nghe trái tim (Thiếu nhi) [Score: 30.8205]",
+        "[B2648] Thủ thỉ cùng con - Nơi trái tim thuộc về (Thiếu nhi) [Score: 30.1595]",
+        "[B2675] Thủ thỉ cùng con - Hãy luôn là chính con (Thiếu nhi) [Score: 27.9005]",
+        "[B0115] Ngày Xửa Ngày Xưa Có Một Trái Tim Vụn Vỡ (Văn học – Tiểu thuyết) [Score: 27.2581]"
+      ]
+    },
+    "semantic": {
+      "top1": "[B0011] Kính Vạn Hoa Chết Chóc (Tây Tử Tự) - Văn học – Tiểu thuyết",
+      "score": 0.8492876291275024,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0011] Kính Vạn Hoa Chết Chóc (Văn học – Tiểu thuyết) [Score: 0.8493]",
+        "[B0506] Trong từng hơi thở (Văn học – Tiểu thuyết) [Score: 0.8479]",
+        "[B0339] Năm Điều Ước Của Ông Murray Mcbride (Văn học – Tiểu thuyết) [Score: 0.8436]",
+        "[B2316] Thương (câu chuyện tiếp tục từ trái tim) Bìa cứng (Khoa học – Công nghệ) [Score: 0.8425]",
+        "[B2352] Thương (câu chuyện tiếp tục từ trái tim) (Khoa học – Công nghệ) [Score: 0.8394]"
+      ]
+    },
+    "hybrid": {
+      "top1": "[B2316] Thương (câu chuyện tiếp tục từ trái tim) Bìa cứng (Stephen Hawking) - Khoa học – Công nghệ",
+      "score": 0.030117753623188408,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B2316] Thương (câu chuyện tiếp tục từ trái tim) Bìa cứng (Khoa học – Công nghệ) [Score: 0.0301]",
+        "[B2352] Thương (câu chuyện tiếp tục từ trái tim) (Khoa học – Công nghệ) [Score: 0.0301]",
+        "[B0339] Năm Điều Ước Của Ông Murray Mcbride (Văn học – Tiểu thuyết) [Score: 0.0298]",
+        "[B0011] Kính Vạn Hoa Chết Chóc (Văn học – Tiểu thuyết) [Score: 0.0287]",
+        "[B2793] Phúc ông tự truyện (Lịch sử – Văn hóa) [Score: 0.0262]"
+      ]
+    }
+  },
+  {
+    "id": "SD05",
+    "case": "AI (Trí tuệ nhân tạo vs Từ cảm thán / Ai đó)",
+    "query": "Có ai cùng tôi đi qua những năm tháng thanh xuân cô đơn",
+    "intended_domain": "Văn học – Tiểu thuyết / Tản văn tình cảm",
+    "expected_drift_trap": "Sách Trí tuệ nhân tạo AI (Category: Công nghệ thông tin)",
+    "bm25": {
+      "top1": "[B0154] Thơ Xuân Quỳnh (Xuân Quỳnh) - Văn học – Tiểu thuyết",
+      "score": 26.019614566691168,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0154] Thơ Xuân Quỳnh (Văn học – Tiểu thuyết) [Score: 26.0196]",
+        "[B0005] Trăm năm cô đơn (Văn học – Tiểu thuyết) [Score: 24.3668]",
+        "[B0074] Chân Cứng Đá Mềm - Hồi ký Xuân Phượng (Văn học – Tiểu thuyết) [Score: 24.3507]",
+        "[B0087] Kẹo Dâu Tây Và Tiểu Tiên Nữ Của Anh – Tập 2 (Văn học – Tiểu thuyết) [Score: 23.4227]",
+        "[B1891] 10 Ngày Có Thể Nói 1000 Câu Tiếng Hoa Cuộc Sống Hàng Ngày (Kèm CD) (Giáo dục – Ngoại ngữ) [Score: 22.2851]"
+      ]
+    },
+    "semantic": {
+      "top1": "[B0005] Trăm năm cô đơn (Gabriel Garcia Márquez) - Văn học – Tiểu thuyết",
+      "score": 0.8525808453559875,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0005] Trăm năm cô đơn (Văn học – Tiểu thuyết) [Score: 0.8526]",
+        "[B2974] Chúng tôi lên đường, tuổi hai mươi ... Hồi ức một thế hệ đi qua chiến tranh (Tâm lý học) [Score: 0.8357]",
+        "[B0217] (Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ (Văn học – Tiểu thuyết) [Score: 0.8319]",
+        "[B2340] Người yêu tôi tựa như hoa anh đào (Khoa học – Công nghệ) [Score: 0.8309]",
+        "[B2668] Bạn mồ côi (Thiếu nhi) [Score: 0.8307]"
+      ]
+    },
+    "hybrid": {
+      "top1": "[B0005] Trăm năm cô đơn (Gabriel Garcia Márquez) - Văn học – Tiểu thuyết",
+      "score": 0.03252247488101534,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0005] Trăm năm cô đơn (Văn học – Tiểu thuyết) [Score: 0.0325]",
+        "[B2347] Nhấc bút lên trong đêm cô đơn (Khoa học – Công nghệ) [Score: 0.0272]",
+        "[B0217] (Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ (Văn học – Tiểu thuyết) [Score: 0.0269]",
+        "[B0523] Tạm Biệt Tôi Của Nhiều Năm Về Trước (Văn học – Tiểu thuyết) [Score: 0.0268]",
+        "[B0269] Đôi Bạn Cùng Tiến (Văn học – Tiểu thuyết) [Score: 0.0256]"
+      ]
+    }
+  },
+  {
+    "id": "SD06",
+    "case": "Tên riêng nước ngoài ít dữ liệu: Fredrik Backman",
+    "query": "Tác phẩm của tác giả Fredrik Backman",
+    "intended_domain": "Sách của Fredrik Backman (Người Đàn Ông Mang Tên Ove, Anxious People, Beartown)",
+    "expected_drift_trap": "Sách dịch giả / tiểu thuyết nước ngoài khác",
+    "bm25": {
+      "top1": "[B0001] Người Đàn Ông Mang Tên Ove (Fredrik Backman) - Văn học – Tiểu thuyết",
+      "score": 26.029706289399734,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0001] Người Đàn Ông Mang Tên Ove (Văn học – Tiểu thuyết) [Score: 26.0297]",
+        "[B0049] Bà Ngoại Tôi Gửi Lời Xin Lỗi (Văn học – Tiểu thuyết) [Score: 23.7848]",
+        "[B0083] Britt-Marie Đã Ở Đây (Fredrid Backman) (Văn học – Tiểu thuyết) [Score: 23.7741]",
+        "[B0217] (Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ (Văn học – Tiểu thuyết) [Score: 22.9339]",
+        "[B0004] Những Kẻ Âu Lo (Văn học – Tiểu thuyết) [Score: 22.6332]"
+      ]
+    },
+    "semantic": {
+      "top1": "[B0001] Người Đàn Ông Mang Tên Ove (Fredrik Backman) - Văn học – Tiểu thuyết",
+      "score": 0.8812301158905029,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0001] Người Đàn Ông Mang Tên Ove (Văn học – Tiểu thuyết) [Score: 0.8812]",
+        "[B0004] Những Kẻ Âu Lo (Văn học – Tiểu thuyết) [Score: 0.8807]",
+        "[B0217] (Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ (Văn học – Tiểu thuyết) [Score: 0.8787]",
+        "[B0083] Britt-Marie Đã Ở Đây (Fredrid Backman) (Văn học – Tiểu thuyết) [Score: 0.8770]",
+        "[B0002] Beartown - Thị trấn nhỏ, giấc mơ lớn (Văn học – Tiểu thuyết) [Score: 0.8709]"
+      ]
+    },
+    "hybrid": {
+      "top1": "[B0001] Người Đàn Ông Mang Tên Ove (Fredrik Backman) - Văn học – Tiểu thuyết",
+      "score": 0.03278688524590164,
+      "has_drift_top1": false,
+      "drift_count_top5": 0,
+      "titles": [
+        "[B0001] Người Đàn Ông Mang Tên Ove (Văn học – Tiểu thuyết) [Score: 0.0328]",
+        "[B0004] Những Kẻ Âu Lo (Văn học – Tiểu thuyết) [Score: 0.0315]",
+        "[B0083] Britt-Marie Đã Ở Đây (Fredrid Backman) (Văn học – Tiểu thuyết) [Score: 0.0315]",
+        "[B0217] (Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ (Văn học – Tiểu thuyết) [Score: 0.0315]",
+        "[B0049] Bà Ngoại Tôi Gửi Lời Xin Lỗi (Văn học – Tiểu thuyết) [Score: 0.0311]"
+      ]
+    }
+  }
+]

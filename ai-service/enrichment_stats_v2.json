@@ -1,0 +1,52 @@
+{
+  "total_books": 3000,
+  "anomalous_authors_count": 1116,
+  "anomalous_authors_detail": {
+    "Nhiều tác giả": 386,
+    "WeupBooks": 24,
+    "Alpha Books": 78,
+    "Nguyễn Hiến Lê": 150,
+    "Nhóm Tác Giả": 9,
+    "Stephen Hawking": 299,
+    "NXB Kim Đồng": 70,
+    "Daniel Kahneman": 100
+  },
+  "template_summaries_in_summary_vi": 0,
+  "template_summaries_in_search_text": 0,
+  "mood_counts": {
+    "suy ngẫm": 771,
+    "nhẹ nhàng": 77,
+    "hồi hộp": 209,
+    "hài hước": 52,
+    "vui vẻ": 252,
+    "chữa lành": 9,
+    "truyền cảm hứng": 345,
+    "thư giãn": 22,
+    "cảm động": 31,
+    "nghiêm túc": 1348,
+    "nặng đầu": 88
+  },
+  "reading_effort_counts": {
+    "vừa": 2166,
+    "nặng": 592,
+    "nhẹ": 242
+  },
+  "audience_counts": {
+    "mọi người": 1088,
+    "sinh viên": 820,
+    "người đi làm": 786,
+    "trẻ em": 222,
+    "học sinh": 84
+  },
+  "reader_intent_counts": {
+    "giải trí": 1144,
+    "nâng cao kỹ năng": 914,
+    "học tập": 677,
+    "ôn thi": 155,
+    "tìm cảm hứng": 51,
+    "tra cứu": 46,
+    "đọc cùng con": 13
+  },
+  "total_relax_books": 22,
+  "total_healing_books": 9
+}

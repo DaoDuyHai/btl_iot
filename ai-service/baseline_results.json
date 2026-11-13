@@ -1,0 +1,2082 @@
+[
+  {
+    "id": 1,
+    "type": "specific",
+    "query": "Người Đàn Ông Mang Tên Ove",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0001",
+        "title": "Người Đàn Ông Mang Tên Ove",
+        "author": "Fredrik Backman",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.9205
+      },
+      {
+        "rank": 2,
+        "book_id": "B1146",
+        "title": "Người Bán Hàng Vĩ Đại Nhất Thế Giới",
+        "author": "Og Mandino",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Khởi nghiệp",
+        "score": 0.845
+      },
+      {
+        "rank": 3,
+        "book_id": "B2331",
+        "title": "Anh em nhà Karamazov (TB 490.000)",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Thiên văn học",
+        "score": 0.839
+      },
+      {
+        "rank": 4,
+        "book_id": "B2993",
+        "title": "Một chuyến du hành đến xứ Nam Hà (1792-1793)",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học hành vi",
+        "score": 0.838
+      },
+      {
+        "rank": 5,
+        "book_id": "B1181",
+        "title": "Người dám cho đi",
+        "author": "Bob Burg, JohnDavid Mann",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Bài học kinh doanh",
+        "score": 0.8373
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "specific",
+    "query": "Nhà Giả Kim",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0017",
+        "title": "Nhà Giả Kim",
+        "author": "Paulo Coelho",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tác phẩm kinh điển",
+        "score": 0.8869
+      },
+      {
+        "rank": 2,
+        "book_id": "B0293",
+        "title": "Thái Bạch Kim Tinh Đang Phiền Muộn",
+        "author": "Mã Bá Dung",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngôn tình",
+        "score": 0.8431
+      },
+      {
+        "rank": 3,
+        "book_id": "B0132",
+        "title": "Nhà Có Bé Ngoan",
+        "author": "Thính Nguyên",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện đam mỹ",
+        "score": 0.8405
+      },
+      {
+        "rank": 4,
+        "book_id": "B0241",
+        "title": "Vị Hôn Thê Giản Dị Của Tôi Rất Dễ Thương Lúc Ở Nhà",
+        "author": "Yuu Hidaka, Tantan",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Light novel",
+        "score": 0.84
+      },
+      {
+        "rank": 5,
+        "book_id": "B0419",
+        "title": "Nhà Ảo Thuật Đen Và Những Người Phụ Nữ Thức Tỉnh",
+        "author": "Higashino Keigo",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện kinh dị",
+        "score": 0.8385
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "specific",
+    "query": "Cây Cam Ngọt Của Tôi",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0043",
+        "title": "Cây Cam Ngọt Của Tôi",
+        "author": "José Mauro de Vasconcelos",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu Thuyết",
+        "score": 0.926
+      },
+      {
+        "rank": 2,
+        "book_id": "B0223",
+        "title": "Sưởi Ấm Mặt Trời: Tập 2 Của Cây Cam Ngọt",
+        "author": "José Mauro de Vasconcelos",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện dài",
+        "score": 0.8885
+      },
+      {
+        "rank": 3,
+        "book_id": "B2387",
+        "title": "Cây cam ngọt của tôi (TB 125.000)",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Toán học ứng dụng",
+        "score": 0.8862
+      },
+      {
+        "rank": 4,
+        "book_id": "B0411",
+        "title": "Tình Đầu Chọn Tôi, Tôi Rất Ngọt",
+        "author": "Thụy Mang",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện đam mỹ",
+        "score": 0.8667
+      },
+      {
+        "rank": 5,
+        "book_id": "B0393",
+        "title": "Tết cỏ ngọt",
+        "author": "Robin Wall Kimmerer",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8555
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "specific",
+    "query": "Mắt Biếc",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0037",
+        "title": "Mắt Biếc",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8814
+      },
+      {
+        "rank": 2,
+        "book_id": "B0236",
+        "title": "Ngày Xưa Có Một Chuyện Tình",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện dài",
+        "score": 0.8458
+      },
+      {
+        "rank": 3,
+        "book_id": "B0195",
+        "title": "Một Lít Nước Mắt",
+        "author": "Kito Aya",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu sử - Hồi ký",
+        "score": 0.8405
+      },
+      {
+        "rank": 4,
+        "book_id": "B2213",
+        "title": "Bơi Cùng Cá Mập Mà Không Bị Nuốt Chửng",
+        "author": "Harvey B. Mackay",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8403
+      },
+      {
+        "rank": 5,
+        "book_id": "B0321",
+        "title": "Mạc Ngôn: ĐÀN HƯƠNG HÌNH + BÁU VẬT CỦA ĐỜI – Bìa cứng – Tác giả đoạt giải Nobel văn chương 2012 – Trần Đình Hiến dịch – Huy Hoàng Bookstore",
+        "author": "Mạc Ngôn",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tác phẩm kinh điển",
+        "score": 0.834
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "specific",
+    "query": "Nỗi Buồn Chiến Tranh Bảo Ninh",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0013",
+        "title": "Nỗi buồn chiến tranh",
+        "author": "Bảo Ninh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tác phẩm kinh điển",
+        "score": 0.8903
+      },
+      {
+        "rank": 2,
+        "book_id": "B0297",
+        "title": "Lũng Tây Nổi Gió",
+        "author": "Mã Bá Dung",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu Thuyết",
+        "score": 0.841
+      },
+      {
+        "rank": 3,
+        "book_id": "B0293",
+        "title": "Thái Bạch Kim Tinh Đang Phiền Muộn",
+        "author": "Mã Bá Dung",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngôn tình",
+        "score": 0.8385
+      },
+      {
+        "rank": 4,
+        "book_id": "B1969",
+        "title": "Nassim Nicholas",
+        "author": "Alpha Books",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Quản lý thời gian",
+        "score": 0.8377
+      },
+      {
+        "rank": 5,
+        "book_id": "B2304",
+        "title": "Đại Nam dị truyện (TB tăng giá 169.000)",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học thường thức",
+        "score": 0.8369
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "specific",
+    "query": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0014",
+        "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+        "author": "Agatha Christie",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện trinh thám",
+        "score": 0.8878
+      },
+      {
+        "rank": 2,
+        "book_id": "B0199",
+        "title": "Án Mạng Ở Điền Trang Kingfisher Hill (Agatha Christie) - NXB Trẻ",
+        "author": "Agatha Christie",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện trinh thám",
+        "score": 0.8554
+      },
+      {
+        "rank": 3,
+        "book_id": "B0374",
+        "title": "Án Mạng Giữa Không Trung (Agatha Christie) - NXB Trẻ",
+        "author": "Agatha Christie",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện trinh thám",
+        "score": 0.8461
+      },
+      {
+        "rank": 4,
+        "book_id": "B0474",
+        "title": "Án Mạng Trong Thủy Cung – Bí Ẩn Cây Lau Nhà Màu Vàng",
+        "author": "Yugo Aosaki",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Light novel",
+        "score": 0.8408
+      },
+      {
+        "rank": 5,
+        "book_id": "B0066",
+        "title": "Án Mạng Trong Tháp Thủy Tinh",
+        "author": "Mikito Chinen",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện trinh thám",
+        "score": 0.8408
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "specific",
+    "query": "Không Gia Đình Hector Malot",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0021",
+        "title": "Không Gia Đình",
+        "author": "Hector Malot",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tác phẩm kinh điển",
+        "score": 0.9146
+      },
+      {
+        "rank": 2,
+        "book_id": "B0072",
+        "title": "Trong Gia Đình",
+        "author": "Hector Malot",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tác phẩm kinh điển",
+        "score": 0.8778
+      },
+      {
+        "rank": 3,
+        "book_id": "B0104",
+        "title": "Là Họa Không Thể Tránh",
+        "author": "Đan Thanh Thủ",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngôn tình",
+        "score": 0.8539
+      },
+      {
+        "rank": 4,
+        "book_id": "B2213",
+        "title": "Bơi Cùng Cá Mập Mà Không Bị Nuốt Chửng",
+        "author": "Harvey B. Mackay",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8491
+      },
+      {
+        "rank": 5,
+        "book_id": "B0300",
+        "title": "Xứ Cát",
+        "author": "Frank Herbert",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Khoa học viễn tưởng",
+        "score": 0.8467
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "type": "specific",
+    "query": "Totto-chan Bên Cửa Sổ",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0046",
+        "title": "Totto - Chan Bên Cửa Sổ",
+        "author": "Kuroyanagi Tetsuko",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện dài",
+        "score": 0.9155
+      },
+      {
+        "rank": 2,
+        "book_id": "B2339",
+        "title": "Tottochan bên cửa sổ (TB 145.000)",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học thường thức",
+        "score": 0.8826
+      },
+      {
+        "rank": 3,
+        "book_id": "B0094",
+        "title": "Có Hai Con Mèo Ngồi Bên Cửa Sổ",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu Thuyết",
+        "score": 0.861
+      },
+      {
+        "rank": 4,
+        "book_id": "B2658",
+        "title": "Thám tử lừng danh Conan - Hoạt hình màu - Kẻ hành pháp Zero - Tập 1",
+        "author": "NXB Kim Đồng",
+        "category": "Thiếu nhi",
+        "subcategory": "Manga - comic",
+        "score": 0.8482
+      },
+      {
+        "rank": 5,
+        "book_id": "B0270",
+        "title": "Ánh Đèn Nơi Bến Cảng",
+        "author": "Banana Yoshimoto",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu Thuyết",
+        "score": 0.8457
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "specific",
+    "query": "Thiên Tài Bên Trái Kẻ Điên Bên Phải",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0024",
+        "title": "Thiên Tài Bên Trái, Kẻ Điên Bên Phải",
+        "author": "Cao Minh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.9116
+      },
+      {
+        "rank": 2,
+        "book_id": "B1969",
+        "title": "Nassim Nicholas",
+        "author": "Alpha Books",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Quản lý thời gian",
+        "score": 0.8694
+      },
+      {
+        "rank": 3,
+        "book_id": "B0300",
+        "title": "Xứ Cát",
+        "author": "Frank Herbert",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Khoa học viễn tưởng",
+        "score": 0.8649
+      },
+      {
+        "rank": 4,
+        "book_id": "B2422",
+        "title": "Thiên đường",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Sinh học môi trường",
+        "score": 0.8618
+      },
+      {
+        "rank": 5,
+        "book_id": "B2635",
+        "title": "Hồ sơ tâm lí tội phạm - Tập 5",
+        "author": "Nhiều tác giả",
+        "category": "Thiếu nhi",
+        "subcategory": "Wings Books",
+        "score": 0.8618
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "type": "specific",
+    "query": "Đắc Nhân Tâm Dale Carnegie",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1944",
+        "title": "storytelling - kể chuyện lay động lòng người",
+        "author": "Alpha Books",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Nghệ thuật lãnh đạo",
+        "score": 0.864
+      },
+      {
+        "rank": 2,
+        "book_id": "B2971",
+        "title": "Đọa Thiên",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học xã hội",
+        "score": 0.8616
+      },
+      {
+        "rank": 3,
+        "book_id": "B2980",
+        "title": "Điểm kỳ dị đã cận kề",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học hành vi",
+        "score": 0.8608
+      },
+      {
+        "rank": 4,
+        "book_id": "B2235",
+        "title": "Logic Của Tâm Trí",
+        "author": "Michael Lewis",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Nghệ thuật lãnh đạo",
+        "score": 0.8599
+      },
+      {
+        "rank": 5,
+        "book_id": "B2928",
+        "title": "Ấn định ước mơ",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý trị liệu",
+        "score": 0.8598
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "specific",
+    "query": "Lược Sử Thời Gian Stephen Hawking",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2486",
+        "title": "Lược sử triết học",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Vật lý đại cương",
+        "score": 0.8906
+      },
+      {
+        "rank": 2,
+        "book_id": "B2350",
+        "title": "Lược sử kinh tế (2026)",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học vũ trụ",
+        "score": 0.8874
+      },
+      {
+        "rank": 3,
+        "book_id": "B2278",
+        "title": "Danh nhân đương đại - Cuộc đời phi thường của Stephen Hawking (Câu chuyện về người đàn ông có những khám phá thay đổi thế giới",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học thường thức",
+        "score": 0.8845
+      },
+      {
+        "rank": 4,
+        "book_id": "B2418",
+        "title": "Ghi chép về một vụ hành quyết",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Vật lý đại cương",
+        "score": 0.8826
+      },
+      {
+        "rank": 5,
+        "book_id": "B2289",
+        "title": "Tại sao các đế quốc sụp đổ - La Mã, Hoa Kỳ và tương lai của phương Tây",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Vật lý đại cương",
+        "score": 0.8787
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "specific",
+    "query": "Tư Duy Nhanh Và Chậm Daniel Kahneman",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1098",
+        "title": "Alphacards Rèn Luyện Tư Duy Khác Biệt - Tư Duy Phản Biện Thông Minh",
+        "author": "Alpha Books",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Bài học kinh doanh",
+        "score": 0.8875
+      },
+      {
+        "rank": 2,
+        "book_id": "B2905",
+        "title": "thực hành phương pháp chánh niệm – Chương trình 8 tuần giúp bạn thoát khỏi trầm cảm và những đau khổ về cảm xúc",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý trị liệu",
+        "score": 0.8781
+      },
+      {
+        "rank": 3,
+        "book_id": "B2932",
+        "title": "tư duy nền tảng để học và nghiên cứu luật (3 cuốn)",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học nhận thức",
+        "score": 0.875
+      },
+      {
+        "rank": 4,
+        "book_id": "B2927",
+        "title": "tư duy nền tảng để học và nghiên cứu luật | Bản có chữ ký PGS.TS Phạm Duy Nghĩa",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học nhận thức",
+        "score": 0.8738
+      },
+      {
+        "rank": 5,
+        "book_id": "B2963",
+        "title": "tư duy nền tảng để học và nghiên cứu luật",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học xã hội",
+        "score": 0.873
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "specific",
+    "query": "Sách của nhà văn Nguyễn Nhật Ánh",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0138",
+        "title": "Chuyện xứ Lang Biang - Boxset 12 cuốn - Nguyễn Nhật Ánh khổ nhỏ",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.9037
+      },
+      {
+        "rank": 2,
+        "book_id": "B0006",
+        "title": "Cô Bé Hàng Xóm Và Bốn Viên Kẹo (Nguyễn Nhật Ánh)",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu Thuyết",
+        "score": 0.8967
+      },
+      {
+        "rank": 3,
+        "book_id": "B0055",
+        "title": "Tiệm sách của nàng (Nguyễn Nhật Ánh)",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện dài",
+        "score": 0.8942
+      },
+      {
+        "rank": 4,
+        "book_id": "B0236",
+        "title": "Ngày Xưa Có Một Chuyện Tình",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện dài",
+        "score": 0.8905
+      },
+      {
+        "rank": 5,
+        "book_id": "B0029",
+        "title": "Mùa hè không tên (Nguyễn Nhật Ánh)",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện dài",
+        "score": 0.8891
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "specific",
+    "query": "Tiểu thuyết trinh thám của Agatha Christie",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0375",
+        "title": "Agatha Christie. Tuyển tập kỳ án của Poirot",
+        "author": "Agatha Christie",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện trinh thám",
+        "score": 0.9168
+      },
+      {
+        "rank": 2,
+        "book_id": "B0189",
+        "title": "Agatha Christie. Vụ Mưu Sát Ngài Edgware",
+        "author": "Agatha Christie",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện trinh thám",
+        "score": 0.9103
+      },
+      {
+        "rank": 3,
+        "book_id": "B0112",
+        "title": "Agatha Christie. Bi kịch ba hồi",
+        "author": "Agatha Christie",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện trinh thám",
+        "score": 0.9094
+      },
+      {
+        "rank": 4,
+        "book_id": "B0469",
+        "title": "Agatha Christie. Án mạng vùng Lưỡng Hà",
+        "author": "Agatha Christie",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện trinh thám",
+        "score": 0.9071
+      },
+      {
+        "rank": 5,
+        "book_id": "B0044",
+        "title": "Agatha Christie. Bí Mật Dinh Thự Chimneys",
+        "author": "Agatha Christie",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện trinh thám",
+        "score": 0.9055
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "specific",
+    "query": "Giáo trình cấu trúc dữ liệu và giải thuật bằng C++",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0726",
+        "title": "Giáo Trình C++ Và Lập Trình Hướng Đối Tượng",
+        "author": "Phạm Văn Ất, Lê Trường Thông",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.8834
+      },
+      {
+        "rank": 2,
+        "book_id": "B0755",
+        "title": "Cấu trúc dữ liệu và thuật toán cài đặt bằng Python",
+        "author": "Trần Thông Quế",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Tin Học Văn Phòng",
+        "score": 0.8654
+      },
+      {
+        "rank": 3,
+        "book_id": "B0610",
+        "title": "Nhập Môn Lập Trình Thi Đấu – C/C++",
+        "author": "Đỗ Hạnh Ba, Phạm Đức Tân",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.8635
+      },
+      {
+        "rank": 4,
+        "book_id": "B0706",
+        "title": "Chuyên tin 12 - Các chuyên đề chọn lọc với ngôn ngữ C++, Lý thuyết, bài tập và lời giải",
+        "author": "Nguyễn Anh Hoàng",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.8604
+      },
+      {
+        "rank": 5,
+        "book_id": "B0858",
+        "title": "Nhập môn lập trình thi đấu – C/C++ - NTV",
+        "author": "Đỗ Hạnh Ba, Phạm Đức Tân",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.8589
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "specific",
+    "query": "Sách học lập trình mạng máy tính và an toàn thông tin",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0823",
+        "title": "Giáo trình An toàn mạng Thông tin",
+        "author": "Nguyễn Anh Hoàng",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.9088
+      },
+      {
+        "rank": 2,
+        "book_id": "B0769",
+        "title": "Quản trị an toàn an ninh mạng",
+        "author": "Nhiều tác giả",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.9015
+      },
+      {
+        "rank": 3,
+        "book_id": "B0984",
+        "title": "Mật mã và An toàn thông tin - Lý thuyết và Ứng dụng",
+        "author": "Nguyễn Anh Hoàng",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.8971
+      },
+      {
+        "rank": 4,
+        "book_id": "B0767",
+        "title": "Quản trị an toàn, An ninh mạng",
+        "author": "Nhiều tác giả",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.8932
+      },
+      {
+        "rank": 5,
+        "book_id": "B0701",
+        "title": "Giáo trình INTERNET và giao thức",
+        "author": "TS. Hoàng Trọng Minh",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.8871
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "specific",
+    "query": "Tài liệu luyện thi tiếng Anh IELTS Academic",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1552",
+        "title": "Basic IELTS Speaking (Quét Mã QR Hoặc Vào Trang Web Để Nghe File Mp3)",
+        "author": "Zhang Juan - Alison Wong",
+        "category": "Giáo dục – Ngoại ngữ",
+        "subcategory": "Luyện thi IELTS",
+        "score": 0.904
+      },
+      {
+        "rank": 2,
+        "book_id": "B1532",
+        "title": "IELTS Writing For Success - Academic Module",
+        "author": "Terence Mitchell",
+        "category": "Giáo dục – Ngoại ngữ",
+        "subcategory": "Luyện thi IELTS",
+        "score": 0.9014
+      },
+      {
+        "rank": 3,
+        "book_id": "B1745",
+        "title": "IELTS Reading Strategies For The IELTS Test",
+        "author": "Trần Vệ Đông, Vương Băng Hân",
+        "category": "Giáo dục – Ngoại ngữ",
+        "subcategory": "Luyện thi IELTS",
+        "score": 0.9009
+      },
+      {
+        "rank": 4,
+        "book_id": "B1591",
+        "title": "The Ultimate Guide To Academic Reading (Bộ Sách Ielts Mike)",
+        "author": "Mike wattie",
+        "category": "Giáo dục – Ngoại ngữ",
+        "subcategory": "Luyện thi IELTS",
+        "score": 0.9007
+      },
+      {
+        "rank": 5,
+        "book_id": "B1844",
+        "title": "IELTS Trung Học - Pre-Intermediate Book 1",
+        "author": "Collins",
+        "category": "Giáo dục – Ngoại ngữ",
+        "subcategory": "Luyện thi IELTS",
+        "score": 0.8993
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "specific",
+    "query": "Giáo trình kinh tế vi mô và kinh tế lượng cơ bản",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1446",
+        "title": "Kinh Tế Học Trần Trụi",
+        "author": "Thomas Armstrong",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Kinh tế vĩ mô",
+        "score": 0.8617
+      },
+      {
+        "rank": 2,
+        "book_id": "B1308",
+        "title": "Lược Sử Kinh Tế Học",
+        "author": "Niall Kishtainy",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Quản trị kinh doanh",
+        "score": 0.8436
+      },
+      {
+        "rank": 3,
+        "book_id": "B1074",
+        "title": "Dạy Con Làm Giàu - Sử Dụng Đồng Vốn",
+        "author": "Robert T. Kiyosaki",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Bài học kinh doanh",
+        "score": 0.8422
+      },
+      {
+        "rank": 4,
+        "book_id": "B1494",
+        "title": "Kinh Tế Học Dễ Xơi - Khi kinh tế gia bụng đói giải thích về thế giới",
+        "author": "Ha-Joon Chang",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Kinh tế học",
+        "score": 0.8389
+      },
+      {
+        "rank": 5,
+        "book_id": "B1445",
+        "title": "Kinh Doanh Giỏi Phải Kiếm Được Tiền",
+        "author": "Donald Miller",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Bài học kinh doanh",
+        "score": 0.8373
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "specific",
+    "query": "Sách lịch sử Việt Nam thời kỳ nhà Trần",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2816",
+        "title": "Đất nước Việt Nam qua các đời",
+        "author": "Nguyễn Hiến Lê",
+        "category": "Lịch sử – Văn hóa",
+        "subcategory": "Lịch sử thế giới",
+        "score": 0.8859
+      },
+      {
+        "rank": 2,
+        "book_id": "B2633",
+        "title": "Tranh truyện lịch sử Việt Nam - Trương Hán Siêu",
+        "author": "NXB Kim Đồng",
+        "category": "Thiếu nhi",
+        "subcategory": "Lịch sử - truyền thống",
+        "score": 0.8694
+      },
+      {
+        "rank": 3,
+        "book_id": "B0319",
+        "title": "Chân Trần Chí Thép",
+        "author": "Jammes G Zumwalt",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu sử - Hồi ký",
+        "score": 0.8678
+      },
+      {
+        "rank": 4,
+        "book_id": "B2753",
+        "title": "Đất nước Việt Nam qua các đời - Ấn bản dấu ấn 10 năm",
+        "author": "Nguyễn Hiến Lê",
+        "category": "Lịch sử – Văn hóa",
+        "subcategory": "Lịch sử thế giới",
+        "score": 0.8669
+      },
+      {
+        "rank": 5,
+        "book_id": "B0028",
+        "title": "Lĩnh Nam Chích Quái",
+        "author": "Trần Thế Pháp",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Văn học hiện đại",
+        "score": 0.8651
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "specific",
+    "query": "Sách hướng dẫn quản trị cơ sở dữ liệu SQL Server",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0792",
+        "title": "Hướng Dẫn Sử Dụng Microsoft Office - Tự Học Nhanh Word - Excel (Dùng Cho Các Phiên Bản 2022 - 2019 - 2016 -2013)",
+        "author": "KS Phạm Quang Huy",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Tin Học Văn Phòng",
+        "score": 0.8665
+      },
+      {
+        "rank": 2,
+        "book_id": "B1312",
+        "title": "Quản Trị Dự Án",
+        "author": "Chris Croft",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Đầu tư chứng khoán",
+        "score": 0.866
+      },
+      {
+        "rank": 3,
+        "book_id": "B2074",
+        "title": "4 Cuốn Kinh Doanh FnB",
+        "author": "Alpha Books",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Quản lý thời gian",
+        "score": 0.8648
+      },
+      {
+        "rank": 4,
+        "book_id": "B1269",
+        "title": "Kỹ Năng Quản Lý Nhân Sự Chuyên Nghiệp",
+        "author": "Whitney Johnson",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Khởi nghiệp",
+        "score": 0.8644
+      },
+      {
+        "rank": 5,
+        "book_id": "B0642",
+        "title": "Giáo Trình Power BI (Phần Cơ Bản) - STK",
+        "author": "Nhiều tác giả",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Lập Trình",
+        "score": 0.8637
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "type": "ambiguous",
+    "query": "Hôm nay tôi đang rất mệt, tôi muốn có cuốn sách giúp tôi thư giãn",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2590",
+        "title": "Ảo tưởng về sự bận rộn - Sự bận rộn và khối lượng công việc thực ra không liên quan nhiều đến nhau",
+        "author": "NXB Kim Đồng",
+        "category": "Thiếu nhi",
+        "subcategory": "Kiến thức - khoa học",
+        "score": 0.8644
+      },
+      {
+        "rank": 2,
+        "book_id": "B1266",
+        "title": "Để có một tương lai tài chính tươi sáng",
+        "author": "Robert T. Kiyosaki",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Marketing",
+        "score": 0.8641
+      },
+      {
+        "rank": 3,
+        "book_id": "B2106",
+        "title": "Não bộ cũng cần \"detox\"",
+        "author": "Alpha Books",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8628
+      },
+      {
+        "rank": 4,
+        "book_id": "B2349",
+        "title": "Trò chuyện với nỗi đau và vượt qua tổn thương",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Thiên văn học",
+        "score": 0.8611
+      },
+      {
+        "rank": 5,
+        "book_id": "B0458",
+        "title": "Chào Ngày Mới, Chúc Bình An",
+        "author": "Tủ Sách Chữa Lành",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8611
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "ambiguous",
+    "query": "Tôi đang bị stress nặng vì áp lực deadline công việc, cần đọc gì cho nhẹ đầu",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1319",
+        "title": "Brain On! Rèn Luyện Tâm Trí Trong Công Việc",
+        "author": "Deb Smolensky",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Tài chính - Ngân hàng",
+        "score": 0.8762
+      },
+      {
+        "rank": 2,
+        "book_id": "B2123",
+        "title": "Sức Bật Trong Sự Nghiệp - HBR On Point",
+        "author": "Harvard Business Review",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8696
+      },
+      {
+        "rank": 3,
+        "book_id": "B0837",
+        "title": "Nhẹ bẫng – Sống nhẹ nhàng, lòng nhẹ tênh, đời nhẹ bẫng",
+        "author": "Nhiều tác giả",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Tin Học Văn Phòng",
+        "score": 0.8682
+      },
+      {
+        "rank": 4,
+        "book_id": "B2076",
+        "title": "15 Bí Kíp Thích Nghi Và Thăng Tiến Nơi làm Việc Mới",
+        "author": "James Innes",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Nghệ thuật lãnh đạo",
+        "score": 0.8678
+      },
+      {
+        "rank": 5,
+        "book_id": "B2105",
+        "title": "\"Dọn dẹp\" công việc, gọn gàng tâm trí",
+        "author": "Alpha Books",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Quản lý thời gian",
+        "score": 0.8678
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "ambiguous",
+    "query": "Vừa chia tay người yêu, tâm trạng rất buồn và trống rỗng",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0149",
+        "title": "Thích Một Người Chính Là…",
+        "author": "Trái Đất Tròn",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8344
+      },
+      {
+        "rank": 2,
+        "book_id": "B2040",
+        "title": "Chữa Lành Tổn Thương Hậu Thao Túng Tâm Lý",
+        "author": "Amelia Kelley",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8309
+      },
+      {
+        "rank": 3,
+        "book_id": "B0404",
+        "title": "Vũ Khúc Đoạn Tình",
+        "author": "Stephanie Garber",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngôn tình",
+        "score": 0.827
+      },
+      {
+        "rank": 4,
+        "book_id": "B0008",
+        "title": "Nếu Như Không Thể Nói Nếu Như & Có Ai Giữ Giùm Những Lãng Quên & Thức Dậy Anh Vẫn Là Mơ",
+        "author": "Jun Phạm (365 Band)",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8269
+      },
+      {
+        "rank": 5,
+        "book_id": "B2349",
+        "title": "Trò chuyện với nỗi đau và vượt qua tổn thương",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Thiên văn học",
+        "score": 0.8259
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "ambiguous",
+    "query": "Cảm thấy mất phương hướng, không biết tương lai đi về đâu",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2846",
+        "title": "Hồi ức đến tương lai: Suy ngẫm về văn hóa, giáo dục và con đường",
+        "author": "Nguyễn Hiến Lê",
+        "category": "Lịch sử – Văn hóa",
+        "subcategory": "Triết học văn hóa",
+        "score": 0.8522
+      },
+      {
+        "rank": 2,
+        "book_id": "B2976",
+        "title": "Hành trình từ “Ra đi hai bàn tay trắng” đến “Trở về một dải giang san” và những trang bản thảo còn dang dở",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học hành vi",
+        "score": 0.8508
+      },
+      {
+        "rank": 3,
+        "book_id": "B2911",
+        "title": "Hồi ức, giấc mơ, suy ngẫm - Ấn bản dấu ấn 10 năm",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học nhận thức",
+        "score": 0.8489
+      },
+      {
+        "rank": 4,
+        "book_id": "B2289",
+        "title": "Tại sao các đế quốc sụp đổ - La Mã, Hoa Kỳ và tương lai của phương Tây",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Vật lý đại cương",
+        "score": 0.8482
+      },
+      {
+        "rank": 5,
+        "book_id": "B2921",
+        "title": "Được nhìn thấy lặp lại - Logic cốt lõi hình thành hiệu quả truyền thông quảng cáo",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học nhận thức",
+        "score": 0.8423
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "ambiguous",
+    "query": "Đêm khuya trằn trọc mất ngủ, muốn một cuốn sách nhẹ nhàng để dễ chìm vào giấc ngủ",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2292",
+        "title": "Cùng bé thư giãn và bồi đắp cảm xúc tích cực - Xin chào giấc ngủ",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học thường thức",
+        "score": 0.8827
+      },
+      {
+        "rank": 2,
+        "book_id": "B0837",
+        "title": "Nhẹ bẫng – Sống nhẹ nhàng, lòng nhẹ tênh, đời nhẹ bẫng",
+        "author": "Nhiều tác giả",
+        "category": "Công nghệ thông tin",
+        "subcategory": "Tin Học Văn Phòng",
+        "score": 0.8763
+      },
+      {
+        "rank": 3,
+        "book_id": "B0302",
+        "title": "Đêm Cho Chuột: Tuyển Tập Những Vụ Án Kì Ảo Của Mikihiko Renjo",
+        "author": "Mikihiko Renjo",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8761
+      },
+      {
+        "rank": 4,
+        "book_id": "B2668",
+        "title": "Bạn mồ côi",
+        "author": "Nhiều tác giả",
+        "category": "Thiếu nhi",
+        "subcategory": "Văn học Việt Nam",
+        "score": 0.8754
+      },
+      {
+        "rank": 5,
+        "book_id": "B0451",
+        "title": "Mất Bao Đêm Để Ước Người Ở Lại",
+        "author": "Vũ Ngọc Thuỷ",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Thơ",
+        "score": 0.8723
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "ambiguous",
+    "query": "Một buổi chiều mưa chủ nhật muốn ngồi nhâm nhi tách trà đọc sách yên bình",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2640",
+        "title": "Bên suối, bịt tai nghe gió (minh họa màu)",
+        "author": "NXB Kim Đồng",
+        "category": "Thiếu nhi",
+        "subcategory": "Văn học Việt Nam",
+        "score": 0.8606
+      },
+      {
+        "rank": 2,
+        "book_id": "B0108",
+        "title": "Làm Bạn Với Bầu Trời",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện dài",
+        "score": 0.8604
+      },
+      {
+        "rank": 3,
+        "book_id": "B0008",
+        "title": "Nếu Như Không Thể Nói Nếu Như & Có Ai Giữ Giùm Những Lãng Quên & Thức Dậy Anh Vẫn Là Mơ",
+        "author": "Jun Phạm (365 Band)",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8586
+      },
+      {
+        "rank": 4,
+        "book_id": "B0315",
+        "title": "Biết Đâu Ngày Mai Có Cầu Vồng",
+        "author": "Góc nhỏ của Han",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8577
+      },
+      {
+        "rank": 5,
+        "book_id": "B2292",
+        "title": "Cùng bé thư giãn và bồi đắp cảm xúc tích cực - Xin chào giấc ngủ",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học thường thức",
+        "score": 0.8569
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "ambiguous",
+    "query": "Dạo này đầu óc rối bời và quá tải, cần tìm lại sự bình yên trong tâm hồn",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1319",
+        "title": "Brain On! Rèn Luyện Tâm Trí Trong Công Việc",
+        "author": "Deb Smolensky",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Tài chính - Ngân hàng",
+        "score": 0.8523
+      },
+      {
+        "rank": 2,
+        "book_id": "B2026",
+        "title": "Hồi Ký Người Thầy Xây Trường Hạnh Phúc",
+        "author": "Nhà giáo TS Nguyễn Văn Hòa",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.85
+      },
+      {
+        "rank": 3,
+        "book_id": "B2349",
+        "title": "Trò chuyện với nỗi đau và vượt qua tổn thương",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Thiên văn học",
+        "score": 0.85
+      },
+      {
+        "rank": 4,
+        "book_id": "B2976",
+        "title": "Hành trình từ “Ra đi hai bàn tay trắng” đến “Trở về một dải giang san” và những trang bản thảo còn dang dở",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học hành vi",
+        "score": 0.8497
+      },
+      {
+        "rank": 5,
+        "book_id": "B2668",
+        "title": "Bạn mồ côi",
+        "author": "Nhiều tác giả",
+        "category": "Thiếu nhi",
+        "subcategory": "Văn học Việt Nam",
+        "score": 0.8495
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "ambiguous",
+    "query": "Tôi muốn tìm sách đọc cho con gái 5 tuổi trước giờ đi ngủ",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2360",
+        "title": "lật tương tác song ngữ 0-3 tuổi: Chúc ngủ ngon (TB 115.000)",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Toán học ứng dụng",
+        "score": 0.8772
+      },
+      {
+        "rank": 2,
+        "book_id": "B2292",
+        "title": "Cùng bé thư giãn và bồi đắp cảm xúc tích cực - Xin chào giấc ngủ",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học thường thức",
+        "score": 0.8704
+      },
+      {
+        "rank": 3,
+        "book_id": "B0226",
+        "title": "Cô gái đến từ hôm qua",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8655
+      },
+      {
+        "rank": 4,
+        "book_id": "B0132",
+        "title": "Nhà Có Bé Ngoan",
+        "author": "Thính Nguyên",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện đam mỹ",
+        "score": 0.8635
+      },
+      {
+        "rank": 5,
+        "book_id": "B2710",
+        "title": "Kĩ năng cho học sinh tiểu học - Rèn cách quản lí thời gian",
+        "author": "NXB Kim Đồng",
+        "category": "Thiếu nhi",
+        "subcategory": "Kiến thức - khoa học",
+        "score": 0.8609
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "type": "ambiguous",
+    "query": "Mới bắt đầu tập đọc sách, chưa quen đọc nhiều chữ thì nên chọn cuốn nào",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2142",
+        "title": "Kẻ Khôn Cũng Có Khi Khờ",
+        "author": "Jean-François Marmion",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8615
+      },
+      {
+        "rank": 2,
+        "book_id": "B2613",
+        "title": "45 chương mở đầu bộ truyện ngắn Doraemon - Tập 2",
+        "author": "Nhiều tác giả",
+        "category": "Thiếu nhi",
+        "subcategory": "Manga - comic",
+        "score": 0.8596
+      },
+      {
+        "rank": 3,
+        "book_id": "B1782",
+        "title": "Keep It Up - Học Tiếng Trung Cấp Tốc Và Tập Viết Chữ Hán Cho Người Mới Bắt Đầu",
+        "author": "Jeong Myeong Suk",
+        "category": "Giáo dục – Ngoại ngữ",
+        "subcategory": "Tiếng Anh",
+        "score": 0.8585
+      },
+      {
+        "rank": 4,
+        "book_id": "B1761",
+        "title": "Keep It Up Tập Viết Chữ Hán - Học Tiếng Trung Cho Người Mới Bắt Đầu",
+        "author": "Jeong Myeong Suk",
+        "category": "Giáo dục – Ngoại ngữ",
+        "subcategory": "Phương pháp giáo dục",
+        "score": 0.8579
+      },
+      {
+        "rank": 5,
+        "book_id": "B1629",
+        "title": "Keep It Up - Tiếng Trung Cấp Tốc Cho Người Mới Bắt Đầu",
+        "author": "Jeong Myeong Suk",
+        "category": "Giáo dục – Ngoại ngữ",
+        "subcategory": "Luyện thi chứng chỉ",
+        "score": 0.8558
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "ambiguous",
+    "query": "Cuối tuần rảnh rỗi muốn tìm gì đó vui vẻ hài hước để xả stress cười sảng khoái",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1909",
+        "title": "Ảo Tưởng Lựa Chọn",
+        "author": "Richard Shotton",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Động lực sống",
+        "score": 0.8583
+      },
+      {
+        "rank": 2,
+        "book_id": "B2293",
+        "title": "Cùng bé thư giãn và bồi đắp cảm xúc tích cực - Xin chào hạnh phúc",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học vũ trụ",
+        "score": 0.8551
+      },
+      {
+        "rank": 3,
+        "book_id": "B1915",
+        "title": "Thói Quen Hài Hước",
+        "author": "Paul Osincup",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Kỹ năng giao tiếp",
+        "score": 0.8511
+      },
+      {
+        "rank": 4,
+        "book_id": "B2616",
+        "title": "Ở đây có niềm vui - Cửa hàng túi xinh xắn",
+        "author": "Nhiều tác giả",
+        "category": "Thiếu nhi",
+        "subcategory": "Truyện tranh",
+        "score": 0.8479
+      },
+      {
+        "rank": 5,
+        "book_id": "B2512",
+        "title": "Chào cấp một - Chơi vui cùng bè bạn",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học vũ trụ",
+        "score": 0.8467
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "ambiguous",
+    "query": "Cảm thấy kiệt sức và mất hết động lực làm việc sau thời gian dài cày cuốc",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2590",
+        "title": "Ảo tưởng về sự bận rộn - Sự bận rộn và khối lượng công việc thực ra không liên quan nhiều đến nhau",
+        "author": "NXB Kim Đồng",
+        "category": "Thiếu nhi",
+        "subcategory": "Kiến thức - khoa học",
+        "score": 0.8475
+      },
+      {
+        "rank": 2,
+        "book_id": "B1214",
+        "title": "Năng suất nhanh và chậm",
+        "author": "Cal Newport",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Kinh tế học",
+        "score": 0.8458
+      },
+      {
+        "rank": 3,
+        "book_id": "B1319",
+        "title": "Brain On! Rèn Luyện Tâm Trí Trong Công Việc",
+        "author": "Deb Smolensky",
+        "category": "Kinh tế – Kinh doanh",
+        "subcategory": "Tài chính - Ngân hàng",
+        "score": 0.8451
+      },
+      {
+        "rank": 4,
+        "book_id": "B2189",
+        "title": "HBR OnPoint 2021 – Sức bật sau khủng hoảng",
+        "author": "Harvard Business Review",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Động lực sống",
+        "score": 0.8446
+      },
+      {
+        "rank": 5,
+        "book_id": "B2158",
+        "title": "Cân bằng cảm xúc mọi lúc mọi nơi",
+        "author": "Daniel Rutley",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Quản lý thời gian",
+        "score": 0.8444
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "ambiguous",
+    "query": "Tôi muốn một cuốn sách sưởi ấm tâm hồn và khiến tôi rơi nước mắt vì cảm động",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0195",
+        "title": "Một Lít Nước Mắt",
+        "author": "Kito Aya",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu sử - Hồi ký",
+        "score": 0.875
+      },
+      {
+        "rank": 2,
+        "book_id": "B2415",
+        "title": "Cuốn sách tươi tắn về cảm xúc - Khám phá 44 cảm xúc quen thuộc - Dành cho tuổi 6+",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Thiên văn học",
+        "score": 0.8678
+      },
+      {
+        "rank": 3,
+        "book_id": "B2349",
+        "title": "Trò chuyện với nỗi đau và vượt qua tổn thương",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Thiên văn học",
+        "score": 0.8618
+      },
+      {
+        "rank": 4,
+        "book_id": "B0567",
+        "title": "Ra Vườn Nhặt Nắng (Những Vần Thơ Sưởi Ấm Tâm Hồn)",
+        "author": "Nguyễn Thế Hoàng Linh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Thơ",
+        "score": 0.8614
+      },
+      {
+        "rank": 5,
+        "book_id": "B2911",
+        "title": "Hồi ức, giấc mơ, suy ngẫm - Ấn bản dấu ấn 10 năm",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý học nhận thức",
+        "score": 0.8603
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "ambiguous",
+    "query": "Muốn đọc gì đó ly kỳ hồi hộp nghẹt thở để tỉnh cả ngủ",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2292",
+        "title": "Cùng bé thư giãn và bồi đắp cảm xúc tích cực - Xin chào giấc ngủ",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học thường thức",
+        "score": 0.8663
+      },
+      {
+        "rank": 2,
+        "book_id": "B0229",
+        "title": "Hóa Thân",
+        "author": "Franz Kafka",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8628
+      },
+      {
+        "rank": 3,
+        "book_id": "B2956",
+        "title": "khám phá tiềm thức & đời sống nội tâm",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý trị liệu",
+        "score": 0.8616
+      },
+      {
+        "rank": 4,
+        "book_id": "B2293",
+        "title": "Cùng bé thư giãn và bồi đắp cảm xúc tích cực - Xin chào hạnh phúc",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Khoa học vũ trụ",
+        "score": 0.8609
+      },
+      {
+        "rank": 5,
+        "book_id": "B0195",
+        "title": "Một Lít Nước Mắt",
+        "author": "Kito Aya",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu sử - Hồi ký",
+        "score": 0.8605
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "type": "ambiguous",
+    "query": "Cuộc sống bận rộn hối hả quá, muốn chậm lại một chút để lắng nghe bản thân",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1963",
+        "title": "10 Giây Thiền Định - Giải Tỏa Lo Lắng, Tìm Lại Bình An",
+        "author": "Eric Maisel",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8625
+      },
+      {
+        "rank": 2,
+        "book_id": "B1912",
+        "title": "Bẫy Tiện Nghi",
+        "author": "Tác giả Michael Easter",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Nghệ thuật lãnh đạo",
+        "score": 0.8603
+      },
+      {
+        "rank": 3,
+        "book_id": "B1956",
+        "title": "Quản Trị Cảm Xúc",
+        "author": "Eric Maisel",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Kỹ năng giao tiếp",
+        "score": 0.8592
+      },
+      {
+        "rank": 4,
+        "book_id": "B2153",
+        "title": "Hoàn thành mọi việc không hề khó dành cho tuổi teen",
+        "author": "Mike Williams",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8581
+      },
+      {
+        "rank": 5,
+        "book_id": "B0019",
+        "title": "Còn chút gì để nhớ",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8571
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "ambiguous",
+    "query": "Muốn tìm cảm hứng sống tích cực để bắt đầu một ngày mới tràn đầy năng lượng",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1963",
+        "title": "10 Giây Thiền Định - Giải Tỏa Lo Lắng, Tìm Lại Bình An",
+        "author": "Eric Maisel",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8667
+      },
+      {
+        "rank": 2,
+        "book_id": "B2205",
+        "title": "Refresh! 20 ngày làm mới bản thân",
+        "author": "Andreas Stoffers",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Động lực sống",
+        "score": 0.8636
+      },
+      {
+        "rank": 3,
+        "book_id": "B1909",
+        "title": "Ảo Tưởng Lựa Chọn",
+        "author": "Richard Shotton",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Động lực sống",
+        "score": 0.8617
+      },
+      {
+        "rank": 4,
+        "book_id": "B0458",
+        "title": "Chào Ngày Mới, Chúc Bình An",
+        "author": "Tủ Sách Chữa Lành",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8578
+      },
+      {
+        "rank": 5,
+        "book_id": "B2186",
+        "title": "Phát triển sự nghiệp – HBR OnPoint kỳ 2/2022",
+        "author": "Harvard Business Review",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8534
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "ambiguous",
+    "query": "Cảm thấy cô đơn lạc lõng giữa thành phố đông đúc",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0562",
+        "title": "Hà Nội Băm Sáu Phố Phường",
+        "author": "Thạch Lam",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8313
+      },
+      {
+        "rank": 2,
+        "book_id": "B0217",
+        "title": "(Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ",
+        "author": "Fredrik Backman",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu Thuyết",
+        "score": 0.8303
+      },
+      {
+        "rank": 3,
+        "book_id": "B0175",
+        "title": "Chiếc Cặp",
+        "author": "Hiromi Kawakami",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu Thuyết",
+        "score": 0.8282
+      },
+      {
+        "rank": 4,
+        "book_id": "B0423",
+        "title": "Xóm Bờ Giậu",
+        "author": "Trần Đức Tiến",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8281
+      },
+      {
+        "rank": 5,
+        "book_id": "B0005",
+        "title": "Trăm năm cô đơn",
+        "author": "Gabriel Garcia Márquez",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Tiểu Thuyết",
+        "score": 0.8261
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "type": "ambiguous",
+    "query": "Đầu óc đang rất mỏi mệt, đừng gợi ý sách kỹ thuật hay tính toán gì nhé",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1964",
+        "title": "Tư Duy Có Tổ Chức",
+        "author": "Daniel J. Levitin",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Kỹ năng giao tiếp",
+        "score": 0.8794
+      },
+      {
+        "rank": 2,
+        "book_id": "B2144",
+        "title": "Thuật Toán Hành Vi Và Cảm Xúc",
+        "author": "Nguyễn Xuân Thanh",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Phát triển sự nghiệp",
+        "score": 0.8771
+      },
+      {
+        "rank": 3,
+        "book_id": "B2076",
+        "title": "15 Bí Kíp Thích Nghi Và Thăng Tiến Nơi làm Việc Mới",
+        "author": "James Innes",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Nghệ thuật lãnh đạo",
+        "score": 0.877
+      },
+      {
+        "rank": 4,
+        "book_id": "B2128",
+        "title": "Đời ngắn đừng khóc, hãy tô son",
+        "author": "Alpha Books",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Quản lý thời gian",
+        "score": 0.8768
+      },
+      {
+        "rank": 5,
+        "book_id": "B2106",
+        "title": "Não bộ cũng cần \"detox\"",
+        "author": "Alpha Books",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8744
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "type": "ambiguous",
+    "query": "Tìm sách đọc giải trí trên chuyến xe bus đi làm mỗi ngày",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B2597",
+        "title": "Thế giới xe cộ - Xe buýt trường - School bus",
+        "author": "Nhiều tác giả",
+        "category": "Thiếu nhi",
+        "subcategory": "Truyện tranh",
+        "score": 0.8797
+      },
+      {
+        "rank": 2,
+        "book_id": "B2590",
+        "title": "Ảo tưởng về sự bận rộn - Sự bận rộn và khối lượng công việc thực ra không liên quan nhiều đến nhau",
+        "author": "NXB Kim Đồng",
+        "category": "Thiếu nhi",
+        "subcategory": "Kiến thức - khoa học",
+        "score": 0.8722
+      },
+      {
+        "rank": 3,
+        "book_id": "B1909",
+        "title": "Ảo Tưởng Lựa Chọn",
+        "author": "Richard Shotton",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Động lực sống",
+        "score": 0.8692
+      },
+      {
+        "rank": 4,
+        "book_id": "B2523",
+        "title": "Tí ta tí toáy - 100 trò chơi sáng tạo cho mỗi ngày đều vui",
+        "author": "Stephen Hawking",
+        "category": "Khoa học – Công nghệ",
+        "subcategory": "Sinh học môi trường",
+        "score": 0.8685
+      },
+      {
+        "rank": 5,
+        "book_id": "B1944",
+        "title": "storytelling - kể chuyện lay động lòng người",
+        "author": "Alpha Books",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Nghệ thuật lãnh đạo",
+        "score": 0.868
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "type": "ambiguous",
+    "query": "Tôi đang giận dữ và bực bội, cần gì đó giúp tôi bình tĩnh lại",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B1963",
+        "title": "10 Giây Thiền Định - Giải Tỏa Lo Lắng, Tìm Lại Bình An",
+        "author": "Eric Maisel",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Tư duy tích cực",
+        "score": 0.8397
+      },
+      {
+        "rank": 2,
+        "book_id": "B2925",
+        "title": "Giải mã thiết bị phòng thu - Những yếu tố cốt lõi quyết định chất lượng và hiệu suất của phòng thu chuyên nghiệp",
+        "author": "Daniel Kahneman",
+        "category": "Tâm lý học",
+        "subcategory": "Tâm lý trị liệu",
+        "score": 0.8354
+      },
+      {
+        "rank": 3,
+        "book_id": "B2152",
+        "title": "Khát vọng dấn thân",
+        "author": "Neil Patel Patrick Vlaskovits, Jonas koffler",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Động lực sống",
+        "score": 0.8323
+      },
+      {
+        "rank": 4,
+        "book_id": "B2158",
+        "title": "Cân bằng cảm xúc mọi lúc mọi nơi",
+        "author": "Daniel Rutley",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Quản lý thời gian",
+        "score": 0.8323
+      },
+      {
+        "rank": 5,
+        "book_id": "B1912",
+        "title": "Bẫy Tiện Nghi",
+        "author": "Tác giả Michael Easter",
+        "category": "Kỹ năng sống – Phát triển bản thân",
+        "subcategory": "Nghệ thuật lãnh đạo",
+        "score": 0.832
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "type": "ambiguous",
+    "query": "Muốn tìm một câu chuyện nhẹ nhàng ấm áp về tình bạn và gia đình",
+    "top_5": [
+      {
+        "rank": 1,
+        "book_id": "B0366",
+        "title": "Ngôi Trường Mọi Khi",
+        "author": "Nguyễn Nhật Ánh",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8578
+      },
+      {
+        "rank": 2,
+        "book_id": "B0540",
+        "title": "Gió Lẻ Và 9 Câu Chuyện Khác",
+        "author": "Nguyễn Ngọc Tư",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8573
+      },
+      {
+        "rank": 3,
+        "book_id": "B2627",
+        "title": "Khác biệt tuyệt vời - Cú nhỏ tìm bạn",
+        "author": "Nhiều tác giả",
+        "category": "Thiếu nhi",
+        "subcategory": "Truyện tranh",
+        "score": 0.8536
+      },
+      {
+        "rank": 4,
+        "book_id": "B0318",
+        "title": "Ba Người Bạn",
+        "author": "Erich Maria Remarque",
+        "category": "Văn học – Tiểu thuyết",
+        "subcategory": "Truyện ngắn - Tản văn - Tạp Văn",
+        "score": 0.8522
+      },
+      {
+        "rank": 5,
+        "book_id": "B2668",
+        "title": "Bạn mồ côi",
+        "author": "Nhiều tác giả",
+        "category": "Thiếu nhi",
+        "subcategory": "Văn học Việt Nam",
+        "score": 0.8517
+      }
+    ]
+  }
+]

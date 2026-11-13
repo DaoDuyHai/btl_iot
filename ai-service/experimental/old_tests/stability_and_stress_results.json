@@ -1,0 +1,10 @@
+{
+  "ram_initial_mb": 1231.91,
+  "ram_final_mb": 1302.07,
+  "ram_leak_mb": 70.17,
+  "sequential_500_time_sec": 37.8,
+  "sequential_qps": 13.23,
+  "concurrent_5_threads_qps": 12.42,
+  "concurrent_latency_mean_ms": 398.31,
+  "concurrent_latency_p95_ms": 533.33
+}
