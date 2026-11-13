@@ -64,4 +64,6 @@ export const apiService = {
     api.get('/ai/recommend', { params }).then(r => r.data),
   getAiStats: () => 
     api.get('/ai/stats').then(r => r.data),
+  chatWithAiLibrarian: (payload) =>
+    api.post('/ai/chat', payload).then(r => r.data),
 };

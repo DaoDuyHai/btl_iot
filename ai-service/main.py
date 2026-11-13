@@ -1,4 +1,4 @@
-# d:\TrainAI\main.py
+# d:\Filecode\Iot\library-kiosk\ai-service\main.py
 import os
 import sys
 import io
@@ -8,19 +8,32 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.data_processing import load_and_verify_dataset
-from src.embedding import EmbeddingEngine
-from src.bm25_search import BM25SearchEngine
-from src.semantic_search import SemanticSearchEngine
-from src.hybrid_search import HybridSearchEngine
-from src.work_mapping import get_work_catalog
-
 # Fix console encoding for Windows
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
+from src.data_processing import load_and_verify_dataset
+from src.bm25_search import BM25SearchEngine
+from src.work_mapping import get_work_catalog
+
+# Safe / Resilient import of Deep Learning Semantic modules
+HAS_TORCH_SEMANTIC = False
+EmbeddingEngine = None
+SemanticSearchEngine = None
+HybridSearchEngine = None
+
+try:
+    from src.embedding import EmbeddingEngine
+    from src.semantic_search import SemanticSearchEngine
+    from src.hybrid_search import HybridSearchEngine
+    HAS_TORCH_SEMANTIC = True
+except Exception as e:
+    HAS_TORCH_SEMANTIC = False
+    print(f"[!] Chế độ Fallback: PyTorch/SentenceTransformers chưa thể tải do chính sách bảo mật ({e})")
+    print("[*] Sẽ khởi chạy ở chế độ BM25Okapi Search Engine tối ưu hóa tiếng Việt.")
+
 app = FastAPI(
     title="AI Smart Library Search",
-    description="Hệ thống AI Tìm kiếm Sách Thông minh V1.0 (Hybrid Search)",
+    description="Hệ thống AI Tìm kiếm Sách Thông minh V1.0 (Hybrid & BM25 Search)",
     version="1.0.0"
 )
 
@@ -41,7 +54,9 @@ search_engines = {}
 
 @app.on_event("startup")
 def startup_event():
-    print("[*] Đang khởi động hệ thống AI Smart Library Search V1.0...")
+    print("==================================================================")
+    print("  🤖 KHỞI ĐỘNG HỆ THỐNG AI SMART LIBRARY SEARCH V1.0 (FASTAPI)")
+    print("==================================================================")
     
     csv_path = os.path.join("dataset", "cleaned_books_dataset.csv")
     if not os.path.exists(csv_path):
@@ -49,24 +64,47 @@ def startup_event():
     if not os.path.exists(csv_path):
         raise FileNotFoundError(f"Không tìm thấy file dataset chuẩn tại {csv_path}")
         
-    print(f"[*] Nạp dataset: {csv_path}")
+    print(f"[*] Nạp dataset chuẩn: {csv_path}")
     df = load_and_verify_dataset(csv_path)
     
     work_mapping = get_work_catalog(df)
-    print(f"[+] Catalog tác phẩm đã tải: {len(work_mapping)} tựa sách.")
+    print(f"[+] Catalog tác phẩm đã tải: {len(work_mapping)} tựa sách độc bản.")
     
-    emb_engine = EmbeddingEngine(cache_dir="embeddings")
-    embeddings, book_ids = emb_engine.get_or_build_embeddings(df)
-    
-    # Cấu hình đóng băng AI Search V1.0: BM25 + Semantic E5 + RRF (k=60, fetch_k=200)
+    # Khởi tạo BM25 Search Engine (luôn sẵn sàng, độc lập với PyTorch, hiệu năng siêu cao)
     bm25_engine = BM25SearchEngine(df, work_mapping)
-    semantic_engine = SemanticSearchEngine(df, emb_engine, embeddings, book_ids, work_mapping)
-    hybrid_engine = HybridSearchEngine(bm25_engine, semantic_engine, k=60)
-    
     search_engines['df'] = df
     search_engines['work_mapping'] = work_mapping
-    search_engines['hybrid'] = hybrid_engine
-    print("[+] AI Search Engine V1.0 (Hybrid Search) đã sẵn sàng phục vụ người dùng!")
+    search_engines['bm25'] = bm25_engine
+
+    active_engine = bm25_engine
+    active_mode = "BM25Okapi Search Engine (Vietnamese Normalized)"
+
+    if HAS_TORCH_SEMANTIC:
+        try:
+            print("[*] Đang nạp mô hình Dense Semantic Embedding E5-Small...")
+            emb_engine = EmbeddingEngine(cache_dir="embeddings")
+            embeddings, book_ids = emb_engine.get_or_build_embeddings(df)
+            semantic_engine = SemanticSearchEngine(df, emb_engine, embeddings, book_ids, work_mapping)
+            hybrid_engine = HybridSearchEngine(bm25_engine, semantic_engine, k=60)
+            
+            search_engines['semantic'] = semantic_engine
+            search_engines['hybrid'] = hybrid_engine
+            active_engine = hybrid_engine
+            active_mode = "Hybrid Search (BM25 + Semantic Multilingual-E5 + RRF)"
+            print("[+] Đã nạp thành công mô hình Hybrid Search (BM25 + Dense E5)!")
+        except Exception as err:
+            print(f"[⚠️ CẢNH BÁO] Không thể nạp mô hình Semantic: {err}")
+            print("[🚀 AUTO-FALLBACK] Kích hoạt chế độ BM25Okapi Search Engine (Zero-Downtime)!")
+            active_engine = bm25_engine
+            active_mode = "BM25Okapi Search Engine"
+    else:
+        print("[ℹ️ THÔNG BÁO] Hệ thống đang phục vụ bằng thuật toán BM25Okapi tiếng Việt.")
+        print("    (Để kích hoạt thêm mô hình Dense E5, bạn có thể tắt Smart App Control trong Windows Security)")
+
+    search_engines['active'] = active_engine
+    search_engines['mode'] = active_mode
+    print(f"[✅ SẴN SÀNG] AI Service đang hoạt động ở chế độ: {active_mode}")
+    print("==================================================================")
 
 @app.get("/", response_class=HTMLResponse)
 def get_home():
@@ -74,7 +112,7 @@ def get_home():
     if os.path.exists(html_path):
         with open(html_path, "r", encoding="utf-8") as f:
             return f.read()
-    return "<h1>AI Smart Library Search - Frontend chưa sẵn sàng</h1>"
+    return "<h1>AI Smart Library Search - Frontend đã sẵn sàng tại API</h1>"
 
 @app.get("/api/stats")
 def get_stats():
@@ -85,7 +123,7 @@ def get_stats():
     return {
         "status": "ready",
         "system": "AI Smart Library Search V1.0",
-        "method": "Hybrid Search (BM25 + Multilingual E5 + RRF k=60, fetch_k=200)",
+        "method": search_engines.get('mode', 'BM25Okapi'),
         "total_records": int(len(df)),
         "unique_works": int(len(search_engines.get('work_mapping', {}))),
         "categories": {str(k): int(v) for k, v in cat_counts.items()}
@@ -103,20 +141,23 @@ def search_api(
             content={"error": "Nội dung tìm kiếm không được để trống."}
         )
         
-    if 'hybrid' not in search_engines:
+    engine = search_engines.get('active')
+    if engine is None:
         return JSONResponse(
             status_code=503,
-            content={"error": "Hệ thống đang khởi động mô hình AI, vui lòng thử lại sau giây lát."}
+            content={"error": "Hệ thống AI đang khởi động, vui lòng thử lại sau giây lát."}
         )
         
     t0 = time.perf_counter()
-    # Phương pháp tìm kiếm chính thức duy nhất là Hybrid Search
-    results = search_engines['hybrid'].search(q_clean, top_k=top_k, fetch_k=200)
+    if hasattr(engine, 'search') and 'hybrid' in str(type(engine)).lower():
+        results = engine.search(q_clean, top_k=top_k, fetch_k=200)
+    else:
+        results = engine.search(q_clean, top_k=top_k)
     latency_ms = round((time.perf_counter() - t0) * 1000.0, 2)
     
     return {
         "query": q_clean,
-        "method": "Hybrid Search (BM25 + Semantic E5 + RRF)",
+        "method": search_engines.get('mode', 'BM25Okapi'),
         "latency_ms": latency_ms,
         "total_results": len(results),
         "results": results
@@ -128,7 +169,8 @@ def recommend_api(
     category: str = Query("", description="Chủ đề/thể loại quan tâm"),
     top_k: int = Query(5, ge=1, le=20)
 ):
-    if 'hybrid' not in search_engines:
+    engine = search_engines.get('active')
+    if engine is None:
         return JSONResponse(
             status_code=503,
             content={"error": "Hệ thống AI đang khởi động, vui lòng thử lại sau."}
@@ -151,13 +193,16 @@ def recommend_api(
         query_str = "Sách kỹ năng sống, phát triển bản thân, tư duy thành công và tác phẩm kinh điển"
 
     t0 = time.perf_counter()
-    results = search_engines['hybrid'].search(query_str, top_k=top_k, fetch_k=200)
+    if hasattr(engine, 'search') and 'hybrid' in str(type(engine)).lower():
+        results = engine.search(query_str, top_k=top_k, fetch_k=200)
+    else:
+        results = engine.search(query_str, top_k=top_k)
     latency_ms = round((time.perf_counter() - t0) * 1000.0, 2)
 
     return {
         "department": department,
         "derived_query": query_str,
-        "method": "Personalized Hybrid Recommendation",
+        "method": search_engines.get('mode', 'BM25Okapi'),
         "latency_ms": latency_ms,
         "total_results": len(results),
         "results": results
