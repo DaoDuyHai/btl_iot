@@ -102,19 +102,19 @@ export default function AdminPage() {
     setTimeout(() => setMsg(null), 3000);
   }
 
-  // Thêm sách mới
+  // Thêm / Sửa sách
   async function handleSaveBook(e) {
     e.preventDefault();
     try {
       if (editingBook) {
         await apiService.updateBook(editingBook._id, bookForm);
         showToast('✅ Đã cập nhật tài liệu thành công!');
-        setEditingBook(null);
       } else {
         await apiService.createBook(bookForm);
         showToast('✅ Đã thêm tài liệu mới vào kho!');
-        setIsAddBookOpen(false);
       }
+      setEditingBook(null);
+      setIsAddBookOpen(false);
       setBookForm({ isbn: '', title: '', author: '', category: 'CNTT', rfidTag: '', copyCode: '' });
       loadAllData();
     } catch (err) {
@@ -141,12 +141,12 @@ export default function AdminPage() {
       if (editingReader) {
         await apiService.updateReader(editingReader._id, readerForm);
         showToast('✅ Đã cập nhật độc giả thành công!');
-        setEditingReader(null);
       } else {
         await apiService.createReader(readerForm);
         showToast('✅ Đã đăng ký độc giả mới thành công!');
-        setIsAddReaderOpen(false);
       }
+      setEditingReader(null);
+      setIsAddReaderOpen(false);
       setReaderForm({ studentId: '', name: '', email: '', phone: '', rfidCard: '' });
       loadAllData();
     } catch (err) {
@@ -853,9 +853,52 @@ export default function AdminPage() {
                         )}
                       </td>
                       <td style={{ padding: '12px 10px' }}>
-                        <span className={`admin-pill ${b.status === 'available' ? 'ok' : b.status === 'pending_inspection' ? 'er' : 'wa'}`}>
-                          {b.status === 'available' ? 'Còn sách' : b.status === 'pending_inspection' ? 'Chờ kiểm tra' : 'Đang mượn'}
-                        </span>
+                        {(() => {
+                          let pillClass = 'wa';
+                          let label = 'Đang mượn';
+                          let customStyle = null;
+
+                          switch (b.status) {
+                            case 'available':
+                              pillClass = 'ok';
+                              label = 'Còn sách';
+                              break;
+                            case 'borrowed':
+                              pillClass = 'wa';
+                              label = 'Đang mượn';
+                              break;
+                            case 'pending_inspection':
+                              pillClass = 'er';
+                              label = 'Chờ kiểm tra';
+                              break;
+                            case 'maintenance':
+                              pillClass = 'wa';
+                              label = 'Đang bảo trì';
+                              customStyle = { background: '#ffedd5', color: '#c2410c', border: '1px solid #fed7aa' };
+                              break;
+                            case 'damaged':
+                              pillClass = 'er';
+                              label = 'Hư hỏng';
+                              break;
+                            case 'lost':
+                              pillClass = 'er';
+                              label = 'Đã mất';
+                              customStyle = { background: '#f1f5f9', color: '#64748b', border: '1px solid #cbd5e1' };
+                              break;
+                            case 'reserved':
+                              label = 'Đặt trước';
+                              customStyle = { background: '#e0e7ff', color: '#4338ca', border: '1px solid #c7d2fe' };
+                              break;
+                            default:
+                              label = b.status || 'Không rõ';
+                          }
+
+                          return (
+                            <span className={`admin-pill ${pillClass}`} style={customStyle || {}}>
+                              {label}
+                            </span>
+                          );
+                        })()}
                       </td>
                       <td style={{ padding: '12px 10px', textAlign: 'right' }}>
                         <button
@@ -1190,11 +1233,48 @@ export default function AdminPage() {
                 </div>
               </div>
 
+              {editingBook && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                  <div>
+                    <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', display: 'block', marginBottom: '4px' }}>Trạng thái lưu thông</label>
+                    <select
+                      style={{ width: '100%', padding: '8px 12px', borderRadius: '8px', border: '1px solid #cbd5e1', fontWeight: '600' }}
+                      value={bookForm.status || 'available'}
+                      onChange={e => setBookForm({ ...bookForm, status: e.target.value })}
+                    >
+                      <option value="available">Còn sách</option>
+                      <option value="borrowed">Đang mượn</option>
+                      <option value="pending_inspection">Chờ kiểm tra</option>
+                      <option value="maintenance">Đang bảo trì</option>
+                      <option value="damaged">Hư hỏng</option>
+                      <option value="lost">Đã mất</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', display: 'block', marginBottom: '4px' }}>Tình trạng vật lý</label>
+                    <select
+                      style={{ width: '100%', padding: '8px 12px', borderRadius: '8px', border: '1px solid #cbd5e1', fontWeight: '600' }}
+                      value={bookForm.physicalCondition || 'normal'}
+                      onChange={e => setBookForm({ ...bookForm, physicalCondition: e.target.value })}
+                    >
+                      <option value="normal">Bình thường</option>
+                      <option value="minor_damage">Hỏng nhẹ</option>
+                      <option value="needs_repair">Cần sửa chữa</option>
+                      <option value="severely_damaged">Hư hỏng nặng</option>
+                      <option value="lost">Đã mất</option>
+                    </select>
+                  </div>
+                </div>
+              )}
+
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '16px' }}>
                 <button
                   type="button"
                   style={{ background: '#f1f5f9', border: '1px solid #cbd5e1', color: '#334155', padding: '8px 16px', borderRadius: '8px', fontWeight: '700', cursor: 'pointer' }}
-                  onClick={() => setIsAddBookOpen(false)}
+                  onClick={() => {
+                    setIsAddBookOpen(false);
+                    setEditingBook(null);
+                  }}
                 >
                   Hủy
                 </button>
@@ -1279,7 +1359,10 @@ export default function AdminPage() {
                 <button
                   type="button"
                   style={{ background: '#f1f5f9', border: '1px solid #cbd5e1', color: '#334155', padding: '8px 16px', borderRadius: '8px', fontWeight: '700', cursor: 'pointer' }}
-                  onClick={() => setIsAddReaderOpen(false)}
+                  onClick={() => {
+                    setIsAddReaderOpen(false);
+                    setEditingReader(null);
+                  }}
                 >
                   Hủy
                 </button>
