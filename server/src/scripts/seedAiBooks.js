@@ -66,9 +66,13 @@ const DEMO_RFID_MAP = {
 export async function seedAiBooks() {
   console.log('🔄 [Seed AI Books] Bắt đầu đồng bộ 3.000 cuốn sách từ AI sang MongoDB...');
 
-  const csvPath = path.resolve(__dirname, '../../../ai-service/dataset/cleaned_books_dataset.csv');
-  if (!fs.existsSync(csvPath)) {
-    throw new Error(`Không tìm thấy file dataset chuẩn tại: ${csvPath}`);
+  const candidateCsvPaths = [
+    path.resolve(__dirname, '../../../ai-service/dataset/books_enriched.csv'),
+    path.resolve(__dirname, '../../../ai-service/dataset/cleaned_books_dataset.csv')
+  ];
+  const csvPath = candidateCsvPaths.find(p => fs.existsSync(p));
+  if (!csvPath) {
+    throw new Error(`Không tìm thấy file dataset chuẩn tại: ${candidateCsvPaths.join(' hoặc ')}`);
   }
 
   const rawCSV = fs.readFileSync(csvPath, 'utf8');

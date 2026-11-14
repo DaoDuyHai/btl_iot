@@ -25,7 +25,7 @@ export default function AiSearchSection({ reader, onFinish }) {
     {
       id: 'welcome',
       role: 'agent',
-      text: 'Xin chào! Mình là Thủ thư Ảo AI của Học viện PTIT 🤖. Bạn đang có tâm sự, băn khoăn về môn học, chuyên ngành hay muốn tìm một cuốn sách đặc biệt nào không? Hãy chia sẻ với mình nhé, mình sẽ lắng nghe và chỉ đường đến tận kệ sách cho bạn!',
+      text: 'Xin chào! Mình là Thủ thư Ảo AI của Học viện PTIT 🤖. Bạn đang có tâm sự, băn khoăn về môn học, chuyên ngành hay muốn tìm một cuốn sách đặc biệt nào không? Hãy chia sẻ với mình nhé, mình sẽ lắng nghe và gợi ý khu vực kệ sách phù hợp nhất cho bạn!',
       books: [],
       model: 'PTIT AI Librarian Agent'
     }
@@ -235,7 +235,7 @@ export default function AiSearchSection({ reader, onFinish }) {
               </span>
             </h2>
             <p style={{ fontSize: '13px', color: '#64748b', margin: '3px 0 0' }}>
-              Thấu hiểu ngữ cảnh tự nhiên • Tư vấn thông minh từ kho 3.000 cuốn • Tự động định vị Kệ sách thực tế
+              Thấu hiểu ngữ cảnh tự nhiên • Tư vấn thông minh từ kho 3.000 cuốn • Định hướng phân khu kệ sách thực tế
             </p>
           </div>
         </div>
@@ -459,7 +459,6 @@ export default function AiSearchSection({ reader, onFinish }) {
                           {msg.books.map((b, bIdx) => {
                             const floor = b.floor || 1;
                             const shelf = (b.shelf || 'A').toUpperCase();
-                            const position = b.position || `${shelf}1-01`;
                             const available = b.available !== undefined ? b.available : 1;
 
                             return (
@@ -521,7 +520,7 @@ export default function AiSearchSection({ reader, onFinish }) {
                                     gap: '6px'
                                   }}>
                                     <MapPin size={13} color="#991b1b" />
-                                    <span>Tầng {floor} • Kệ {shelf} • Vị trí {position}</span>
+                                    <span>Khu vực Kệ {shelf} • Tầng {floor}</span>
                                   </div>
                                 </div>
 
@@ -544,7 +543,7 @@ export default function AiSearchSection({ reader, onFinish }) {
                                   }}
                                 >
                                   <Compass size={14} />
-                                  <span>Chỉ đường đến kệ</span>
+                                  <span>Sơ đồ khu vực kệ</span>
                                 </button>
                               </div>
                             );
@@ -740,7 +739,6 @@ export default function AiSearchSection({ reader, onFinish }) {
             {searchResults.map((book, idx) => {
               const floor = book.floor || 1;
               const shelf = (book.shelf || 'A').toUpperCase();
-              const position = book.position || `${shelf}1-01`;
               const available = book.available !== undefined ? book.available : 1;
               const total = book.total !== undefined ? book.total : 1;
 
@@ -808,7 +806,7 @@ export default function AiSearchSection({ reader, onFinish }) {
                       gap: '8px'
                     }}>
                       <MapPin size={15} color="#991b1b" />
-                      <span>Tầng {floor} • Kệ {shelf} • Ô {position}</span>
+                      <span>Khu vực Kệ {shelf} • Tầng {floor}</span>
                     </div>
                   </div>
 
@@ -830,7 +828,7 @@ export default function AiSearchSection({ reader, onFinish }) {
                     }}
                   >
                     <Compass size={16} />
-                    <span>Chỉ đường đến kệ</span>
+                    <span>Sơ đồ khu vực kệ</span>
                   </button>
                 </div>
               );

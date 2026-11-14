@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { apiService } from '../../api/apiService.js';
 import { socket } from '../../socket/socketClient.js';
@@ -33,6 +33,16 @@ export default function AdminPage() {
   // Tìm kiếm
   const [bookSearch, setBookSearch] = useState('');
   const [readerSearch, setReaderSearch] = useState('');
+
+  // Phân trang danh mục sách theo Cursor-based Pagination Pattern
+  const [bookCursor, setBookCursor] = useState(null);
+  const [cursorHistory, setCursorHistory] = useState([]);
+  const [hasMoreBooks, setHasMoreBooks] = useState(false);
+  const [bookNextCursor, setBookNextCursor] = useState(null);
+  const [bookCategoryFilter, setBookCategoryFilter] = useState('');
+  const [isBooksLoading, setIsBooksLoading] = useState(false);
+  const currentCursorRef = useRef(null);
+  const isSearchFirstRun = useRef(true);
 
   // Modals
   const [isAddBookOpen, setIsAddBookOpen] = useState(false);
@@ -76,17 +86,64 @@ export default function AdminPage() {
     };
   }, []);
 
+  const fetchBooksPage = useCallback(async (targetCursor = null, q = '', cat = '', isNext = false) => {
+    try {
+      setIsBooksLoading(true);
+      const res = await apiService.getBooks({
+        limit: 15,
+        cursor: targetCursor || undefined,
+        q: q || undefined,
+        category: cat || undefined
+      });
+      if (res && res.success) {
+        setBooks(res.data || []);
+        setHasMoreBooks(Boolean(res.pagination?.hasMore));
+        setBookNextCursor(res.pagination?.nextCursor || null);
+        if (isNext) {
+          // Lưu cursor hiện tại của trang vừa rời đi vào lịch sử để nút "Trang trước" quay lại chuẩn xác
+          setCursorHistory(prev => [...prev, currentCursorRef.current]);
+        }
+        currentCursorRef.current = targetCursor;
+        setBookCursor(targetCursor);
+      }
+    } catch (err) {
+      console.error('Lỗi nạp danh mục sách (Cursor):', err);
+    } finally {
+      setIsBooksLoading(false);
+    }
+  }, []);
+
+  function handleNextBookPage() {
+    if (!bookNextCursor || isBooksLoading) return;
+    fetchBooksPage(bookNextCursor, bookSearch, bookCategoryFilter, true);
+  }
+
+  function handlePrevBookPage() {
+    if (cursorHistory.length === 0 || isBooksLoading) return;
+    const prevHistory = [...cursorHistory];
+    const prevCursor = prevHistory.pop() ?? null;
+    setCursorHistory(prevHistory);
+    currentCursorRef.current = prevCursor;
+    setBookCursor(prevCursor);
+    fetchBooksPage(prevCursor, bookSearch, bookCategoryFilter, false);
+  }
+
   async function loadAllData() {
     try {
-      const [b, r, l, d, p, a] = await Promise.all([
-        apiService.getBooks(),
+      const [bRes, r, l, d, p, a] = await Promise.all([
+        apiService.getBooks({ limit: 15 }),
         apiService.getReaders(),
         apiService.getLoanHistory(50),
         apiService.getDeviceLogs(25),
         apiService.getPendingInspection(),
         apiService.getAudits(30)
       ]);
-      setBooks(b || []);
+      setBooks(bRes.data || (Array.isArray(bRes) ? bRes : []));
+      setHasMoreBooks(Boolean(bRes.pagination?.hasMore));
+      setBookNextCursor(bRes.pagination?.nextCursor || null);
+      currentCursorRef.current = null;
+      setBookCursor(null);
+      setCursorHistory([]);
       setReaders(r || []);
       setLoans(l || []);
       setDeviceLogs(d || []);
@@ -96,6 +153,26 @@ export default function AdminPage() {
       console.error('Lỗi tải dữ liệu admin:', err);
     }
   }
+
+  // Lắng nghe tìm kiếm và bộ lọc danh mục với độ trễ 300ms (Debounce Server-side Index Search)
+  useEffect(() => {
+    if (activeTab !== 'books') return;
+
+    // Bỏ qua lần nạp ban đầu khi component mount vì loadAllData đã nạp trang 1
+    if (isSearchFirstRun.current) {
+      isSearchFirstRun.current = false;
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setCursorHistory([]);
+      currentCursorRef.current = null;
+      setBookCursor(null);
+      fetchBooksPage(null, bookSearch, bookCategoryFilter, false);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [bookSearch, bookCategoryFilter, activeTab, fetchBooksPage]);
 
   function showToast(text) {
     setMsg(text);
@@ -293,17 +370,8 @@ export default function AdminPage() {
     return sorted;
   }, [loans]);
 
-  // Lọc danh sách sách
-  const filteredBooks = useMemo(() => {
-    const q = bookSearch.toLowerCase().trim();
-    if (!q) return books;
-    return books.filter(b => 
-      b.title?.toLowerCase().includes(q) || 
-      b.author?.toLowerCase().includes(q) || 
-      b.rfidTag?.toLowerCase().includes(q) ||
-      b.copyCode?.toLowerCase().includes(q)
-    );
-  }, [books, bookSearch]);
+  // Danh mục sách: Server đã lọc và phân trang qua B-Tree Index & Cursor Pattern
+  const filteredBooks = books;
 
   // Lọc danh sách độc giả
   const filteredReaders = useMemo(() => {
@@ -799,15 +867,34 @@ export default function AdminPage() {
         {activeTab === 'books' && (
           <div className="admin-card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', gap: '12px', flexWrap: 'wrap' }}>
-              <div style={{ position: 'relative', flex: 1, maxWidth: '360px' }}>
-                <Search size={16} color="#94a3b8" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
-                <input
-                  type="text"
-                  placeholder="Tìm tên sách, tác giả, mã RFID…"
-                  style={{ width: '100%', padding: '8px 12px 8px 36px', borderRadius: '10px', border: '1px solid #cbd5e1' }}
-                  value={bookSearch}
-                  onChange={e => setBookSearch(e.target.value)}
-                />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1, maxWidth: '640px', flexWrap: 'wrap' }}>
+                <div style={{ position: 'relative', flex: 1, minWidth: '240px' }}>
+                  <Search size={16} color="#94a3b8" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
+                  <input
+                    type="text"
+                    placeholder="Tìm tên sách, tác giả, mã RFID, mã sách…"
+                    style={{ width: '100%', padding: '8px 12px 8px 36px', borderRadius: '10px', border: '1px solid #cbd5e1', fontSize: '13px' }}
+                    value={bookSearch}
+                    onChange={e => setBookSearch(e.target.value)}
+                  />
+                </div>
+
+                <select
+                  value={bookCategoryFilter}
+                  onChange={e => setBookCategoryFilter(e.target.value)}
+                  style={{ padding: '8px 12px', borderRadius: '10px', border: '1px solid #cbd5e1', fontSize: '13px', background: '#ffffff', color: '#334155', fontWeight: '600' }}
+                >
+                  <option value="">Tất cả thể loại (9 chuyên mục)</option>
+                  <option value="Công nghệ thông tin">Công nghệ thông tin (Kệ C)</option>
+                  <option value="Kinh tế – Kinh doanh">Kinh tế – Kinh doanh (Kệ B)</option>
+                  <option value="Văn học – Tiểu thuyết">Văn học – Tiểu thuyết (Kệ A)</option>
+                  <option value="Giáo dục – Ngoại ngữ">Giáo dục – Ngoại ngữ (Kệ D)</option>
+                  <option value="Kỹ năng sống – Phát triển bản thân">Kỹ năng sống (Kệ E)</option>
+                  <option value="Khoa học – Công nghệ">Khoa học – Công nghệ (Kệ C)</option>
+                  <option value="Tâm lý học">Tâm lý học (Kệ E)</option>
+                  <option value="Lịch sử – Văn hóa">Lịch sử – Văn hóa (Kệ F)</option>
+                  <option value="Thiếu nhi">Thiếu nhi (Kệ A)</option>
+                </select>
               </div>
 
               <button
@@ -815,7 +902,7 @@ export default function AdminPage() {
                 style={{ background: '#991b1b', color: '#ffffff', border: 'none', padding: '8px 16px', borderRadius: '10px', fontWeight: '700', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px' }}
                 onClick={() => {
                   setEditingBook(null);
-                  setBookForm({ isbn: '', title: '', author: '', category: 'CNTT', rfidTag: '', copyCode: '' });
+                  setBookForm({ isbn: '', title: '', author: '', category: 'Công nghệ thông tin', rfidTag: '', copyCode: '' });
                   setIsAddBookOpen(true);
                 }}
               >
@@ -848,7 +935,7 @@ export default function AdminPage() {
                         <div>{b.category || 'Chung'}</div>
                         {b.shelf && (
                           <div style={{ fontSize: '11px', color: '#991b1b', fontWeight: '700' }}>
-                            Tầng {b.floor || 1} • Kệ {b.shelf} ({b.position || 'A1-01'})
+                            Khu vực Kệ {b.shelf} (Tầng {b.floor || 1})
                           </div>
                         )}
                       </td>
@@ -924,6 +1011,89 @@ export default function AdminPage() {
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            {books.length === 0 && (
+              <div style={{ textAlign: 'center', padding: '40px 16px', color: '#64748b' }}>
+                {isBooksLoading ? '⏳ Đang truy vấn danh mục sách (Index Scan)...' : 'Không tìm thấy tài liệu nào phù hợp với bộ lọc.'}
+              </div>
+            )}
+
+            {/* Thanh điều khiển phân trang Cursor (Keyset Pagination) */}
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              marginTop: '16px',
+              paddingTop: '16px',
+              borderTop: '1px solid #e2e8f0',
+              flexWrap: 'wrap',
+              gap: '12px'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  background: '#f1f5f9',
+                  color: '#475569',
+                  fontSize: '12px',
+                  fontWeight: '600',
+                  padding: '4px 10px',
+                  borderRadius: '6px',
+                  border: '1px solid #e2e8f0'
+                }}>
+                  ⚡ Phân trang Cursor B-Tree Index (Limit: 15)
+                </span>
+                <span style={{ fontSize: '13px', color: '#64748b', fontWeight: '500' }}>
+                  Trang {cursorHistory.length + 1} • Hiển thị {books.length} cuốn
+                </span>
+                {isBooksLoading && (
+                  <span style={{ fontSize: '12px', color: '#0284c7', fontWeight: '600' }}>
+                    ⏳ Đang nạp...
+                  </span>
+                )}
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <button
+                  type="button"
+                  disabled={cursorHistory.length === 0 || isBooksLoading}
+                  onClick={handlePrevBookPage}
+                  style={{
+                    padding: '6px 14px',
+                    borderRadius: '8px',
+                    border: '1px solid #cbd5e1',
+                    background: cursorHistory.length === 0 || isBooksLoading ? '#f8fafc' : '#ffffff',
+                    color: cursorHistory.length === 0 || isBooksLoading ? '#94a3b8' : '#1e293b',
+                    fontSize: '13px',
+                    fontWeight: '600',
+                    cursor: cursorHistory.length === 0 || isBooksLoading ? 'not-allowed' : 'pointer',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  ◀ Trang trước
+                </button>
+
+                <button
+                  type="button"
+                  disabled={!hasMoreBooks || isBooksLoading}
+                  onClick={handleNextBookPage}
+                  style={{
+                    padding: '6px 14px',
+                    borderRadius: '8px',
+                    border: '1px solid #cbd5e1',
+                    background: !hasMoreBooks || isBooksLoading ? '#f8fafc' : '#ffffff',
+                    color: !hasMoreBooks || isBooksLoading ? '#94a3b8' : '#1e293b',
+                    fontSize: '13px',
+                    fontWeight: '600',
+                    cursor: !hasMoreBooks || isBooksLoading ? 'not-allowed' : 'pointer',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  Trang sau ▶
+                </button>
+              </div>
             </div>
           </div>
         )}

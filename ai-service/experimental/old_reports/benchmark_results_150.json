@@ -1,0 +1,247 @@
+{
+  "summary": [
+    {
+      "Config": "Pretrained E5 Pure",
+      "Specific_Recall@5": 86.0,
+      "Specific_Recall@10": 86.0,
+      "Specific_MRR": 0.793,
+      "Topic_Recall@5": 96.0,
+      "Topic_Precision@5": 73.6,
+      "Topic_MRR": 0.84,
+      "Acceptable_Hit@5": 70.0,
+      "Bad_Hit@5": 17.5,
+      "Avg_Acceptable_Top5": 3.28,
+      "OOD_Rejection_Rate": 0.0,
+      "Latency_Mean_ms": 21.4,
+      "Latency_p50_ms": 19.7,
+      "Latency_p95_ms": 28.0
+    },
+    {
+      "Config": "BM25 Pure",
+      "Specific_Recall@5": 82.0,
+      "Specific_Recall@10": 84.0,
+      "Specific_MRR": 0.733,
+      "Topic_Recall@5": 86.0,
+      "Topic_Precision@5": 57.6,
+      "Topic_MRR": 0.712,
+      "Acceptable_Hit@5": 45.0,
+      "Bad_Hit@5": 20.0,
+      "Avg_Acceptable_Top5": 2.42,
+      "OOD_Rejection_Rate": 0.0,
+      "Latency_Mean_ms": 7.8,
+      "Latency_p50_ms": 7.2,
+      "Latency_p95_ms": 12.7
+    },
+    {
+      "Config": "Old Hybrid Search",
+      "Specific_Recall@5": 84.0,
+      "Specific_Recall@10": 88.0,
+      "Specific_MRR": 0.786,
+      "Topic_Recall@5": 90.0,
+      "Topic_Precision@5": 64.0,
+      "Topic_MRR": 0.776,
+      "Acceptable_Hit@5": 72.5,
+      "Bad_Hit@5": 17.5,
+      "Avg_Acceptable_Top5": 3.0,
+      "OOD_Rejection_Rate": 0.0,
+      "Latency_Mean_ms": 34.0,
+      "Latency_p50_ms": 32.6,
+      "Latency_p95_ms": 48.7
+    },
+    {
+      "Config": "Hybrid Engine V2 (Proposed)",
+      "Specific_Recall@5": 86.0,
+      "Specific_Recall@10": 86.0,
+      "Specific_MRR": 0.803,
+      "Topic_Recall@5": 96.0,
+      "Topic_Precision@5": 86.8,
+      "Topic_MRR": 0.899,
+      "Acceptable_Hit@5": 97.5,
+      "Bad_Hit@5": 0.0,
+      "Avg_Acceptable_Top5": 4.6,
+      "OOD_Rejection_Rate": 100.0,
+      "Latency_Mean_ms": 120.4,
+      "Latency_p50_ms": 87.6,
+      "Latency_p95_ms": 313.5
+    }
+  ],
+  "failure_samples": [
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "SPECIFIC",
+      "query": "Kỳ Án Trong Thư Viện Kín",
+      "target": "B0078",
+      "top1_returned": "Kỳ Án Trong Thư Viện Kín",
+      "reason": "Target book not in Top 5"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "SPECIFIC",
+      "query": "Kỹ thuật phân tích biểu đồ chứng khoán",
+      "target": "B1072",
+      "top1_returned": "Kỹ thuật phân tích biểu đồ chứng khoán",
+      "reason": "Target book not in Top 5"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "SPECIFIC",
+      "query": "THE LITTLE BOOK - Quản Trị Rủi Ro Trong Đầu Tư Chứng Khoán",
+      "target": "B1066",
+      "top1_returned": "THE LITTLE BOOK - Quản Trị Rủi Ro Trong Đầu Tư Chứng Khoán",
+      "reason": "Target book not in Top 5"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "SPECIFIC",
+      "query": "Cái Bẫy Toàn Cầu - Khủng hoảng tài chính",
+      "target": "B1067",
+      "top1_returned": "Bảy cuộc khủng hoảng định hình toàn cầu hóa",
+      "reason": "Target book not in Top 5"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "SPECIFIC",
+      "query": "Bộ sách Chiến lược đại dương xanh",
+      "target": "B1051",
+      "top1_returned": "Blue Ocean Strategy - Chiến Lược Đại Dương Xanh",
+      "reason": "Target book not in Top 5"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "SPECIFIC",
+      "query": "nhap mon lap trinh thi dau python",
+      "target": "B0607",
+      "top1_returned": "Tan Học Đợi Tôi - Tập 2",
+      "reason": "Target book not in Top 5"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "SPECIFIC",
+      "query": "song binh thuong ma khong tam thuong",
+      "target": "B2126",
+      "top1_returned": "Nuôi Dưỡng Tâm Hồn - Truyện Tranh Song Ngữ Anh - Việt - Bé Học Lựa Chọn Theo Tình Huống",
+      "reason": "Target book not in Top 5"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "TOPIC",
+      "query": "quản trị kinh doanh và nghệ thuật bán hàng",
+      "target": "Kinh tế – Kinh doanh",
+      "precision5": 0.2,
+      "top1_returned": "Nghệ Thuật Bán Hàng Bậc Cao - Bí Quyết Chốt Deal Mọi Thời Đại (Khổ Lớn)",
+      "top1_cat": "Kinh tế – Kinh doanh",
+      "reason": "Category drift: returned Kinh tế – Kinh doanh instead of Kinh tế – Kinh doanh"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "TOPIC",
+      "query": "sách khởi nghiệp đổi mới sáng tạo",
+      "target": "Kinh tế – Kinh doanh",
+      "precision5": 0.2,
+      "top1_returned": "Khởi Động Đổi Mới Doanh Nghiệp: Business Growth, Playbook, Toolbox",
+      "top1_cat": "Kỹ năng sống – Phát triển bản thân",
+      "reason": "Category drift: returned Kỹ năng sống – Phát triển bản thân instead of Kinh tế – Kinh doanh"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "TOPIC",
+      "query": "tổng quan tâm lý học hành vi của Watson và Skinner",
+      "target": "Tâm lý học",
+      "precision5": 0.2,
+      "top1_returned": "Tâm Lý Học Hành Vi Trong Marketing",
+      "top1_cat": "Kinh tế – Kinh doanh",
+      "reason": "Category drift: returned Kinh tế – Kinh doanh instead of Tâm lý học"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "TOPIC",
+      "query": "tài liệu chữa lành đứa trẻ bên trong và tổn thương thời thơ ấu",
+      "target": "Tâm lý học",
+      "precision5": 0.0,
+      "top1_returned": "Những Ngày Thơ Ấu (Quốc Ngữ Thi Thư)",
+      "top1_cat": "Văn học – Tiểu thuyết",
+      "reason": "Category drift: returned Văn học – Tiểu thuyết instead of Tâm lý học"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "TOPIC",
+      "query": "bộ sách rèn luyện nền nếp và ứng xử cho trẻ cấp 1",
+      "target": "Thiếu nhi",
+      "precision5": 0.0,
+      "top1_returned": "Chào cấp một - Chơi vui cùng bè bạn",
+      "top1_cat": "Khoa học – Công nghệ",
+      "reason": "Category drift: returned Khoa học – Công nghệ instead of Thiếu nhi"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "EMOTIONAL",
+      "query": "Mình vừa chia tay người yêu, lòng trống rỗng và hụt hẫng vô cùng",
+      "bad_count": 1,
+      "top1_returned": "Thích Một Người Chính Là…",
+      "top1_cat": "Văn học – Tiểu thuyết",
+      "reason": "Bad book recommended for emotional/negation query"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "EMOTIONAL",
+      "query": "Hôm nay tôi đang rất mệt, tôi muốn có cuốn sách giúp tôi thư giãn",
+      "bad_count": 2,
+      "top1_returned": "Ảo tưởng về sự bận rộn - Sự bận rộn và khối lượng công việc thực ra không liên quan nhiều đến nhau",
+      "top1_cat": "Thiếu nhi",
+      "reason": "Bad book recommended for emotional/negation query"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "EMOTIONAL",
+      "query": "Đầu óc căng như dây đàn vì chạy deadline cả tuần nay, muốn xả hơi chút",
+      "bad_count": 4,
+      "top1_returned": "Brain On! Rèn Luyện Tâm Trí Trong Công Việc",
+      "top1_cat": "Kinh tế – Kinh doanh",
+      "reason": "Bad book recommended for emotional/negation query"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "EMOTIONAL",
+      "query": "Tôi lười đọc sách dày lắm, có cuốn nào mỏng ngắn đọc nhanh mà cuốn hút không",
+      "bad_count": 3,
+      "top1_returned": "Cuốn sách tươi tắn về cảm xúc - Khám phá 44 cảm xúc quen thuộc - Dành cho tuổi 6+",
+      "top1_cat": "Khoa học – Công nghệ",
+      "reason": "Bad book recommended for emotional/negation query"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "EMOTIONAL",
+      "query": "Tôi muốn đọc gì đó thư giãn nhưng đừng gợi ý sách kinh tế hay kỹ thuật",
+      "bad_count": 4,
+      "top1_returned": "Không Đọc Sách Này, Chụp Xấu Đừng Buồn !",
+      "top1_cat": "Kinh tế – Kinh doanh",
+      "reason": "Bad book recommended for emotional/negation query"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "EMOTIONAL",
+      "query": "Tìm một cuốn tiểu thuyết kỳ ảo phiêu lưu mở mang trí tưởng tượng",
+      "bad_count": 1,
+      "top1_returned": "Illustrated Classics - Sử Thi Odyssey",
+      "top1_cat": "Văn học – Tiểu thuyết",
+      "reason": "Bad book recommended for emotional/negation query"
+    },
+    {
+      "config": "Pretrained E5 Pure",
+      "category": "EMOTIONAL",
+      "query": "Tôi muốn một cuốn tiểu thuyết kết thúc có hậu tươi sáng vui vẻ",
+      "bad_count": 1,
+      "top1_returned": "Lời Nguyền Chân Ái",
+      "top1_cat": "Văn học – Tiểu thuyết",
+      "reason": "Bad book recommended for emotional/negation query"
+    },
+    {
+      "config": "BM25 Pure",
+      "category": "SPECIFIC",
+      "query": "tìm tiểu thuyết Beartown của Fredrik Backman",
+      "target": "B0002",
+      "top1_returned": "(Combo 3 cuốn) BEARTOWN: THỊ TRẤN NHỎ, GIẤC MƠ LỚN; CHÚNG TÔI ĐẤU VỚI CÁC BẠN; NHỮNG NGƯỜI CHIẾN THẮNG - Fredrik Backman - Hoàng Anh dịch - NXB Trẻ",
+      "reason": "Target book not in Top 5"
+    }
+  ]
+}

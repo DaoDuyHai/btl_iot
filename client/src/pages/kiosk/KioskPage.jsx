@@ -164,8 +164,11 @@ export default function KioskPage() {
   }, [currentScreen, targetFeature, currentReader, activeLoans, borrowCart]);
 
   // 2. Bộ đếm thời gian tự động trở về Trang Chủ khi người dùng bỏ đi (Auto-timeout)
+  // Không áp dụng cho Trang Chủ (HOME) và Trợ lý gợi ý / AI Search (AI_SEARCH) để bạn đọc thoải mái trò chuyện, tra cứu
   useEffect(() => {
-    if (currentScreen === 'HOME') return;
+    if (currentScreen === 'HOME' || currentScreen === 'AI_SEARCH') return;
+
+    setTimeoutCounter(60);
 
     const timer = setInterval(() => {
       setTimeoutCounter(prev => {
@@ -177,7 +180,21 @@ export default function KioskPage() {
       });
     }, 1000);
 
-    return () => clearInterval(timer);
+    // Reset bộ đếm khi người dùng có tương tác (click, gõ phím, chạm cảm ứng)
+    const handleUserActivity = () => {
+      setTimeoutCounter(60);
+    };
+
+    window.addEventListener('mousedown', handleUserActivity);
+    window.addEventListener('keydown', handleUserActivity);
+    window.addEventListener('touchstart', handleUserActivity);
+
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener('mousedown', handleUserActivity);
+      window.removeEventListener('keydown', handleUserActivity);
+      window.removeEventListener('touchstart', handleUserActivity);
+    };
   }, [currentScreen]);
 
   // Điều hướng khi bấm các nút chức năng ở trang chủ

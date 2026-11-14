@@ -19,7 +19,9 @@
     "format": "prettier --write .",
     "prepare": "husky",
     "test": "npm --prefix server test",
-    "test:coverage": "npm --prefix server run test:coverage"
+    "test:coverage": "npm --prefix server run test:coverage",
+    "test:prompts": "node scripts/auto_test_prompts.js",
+    "test:prompts:py": "python ai-service/scripts/auto_test_prompts.py"
   },
   "lint-staged": {
     "*.{js,jsx}": [

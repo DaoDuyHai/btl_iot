@@ -1,12 +1,68 @@
+import mongoose from 'mongoose';
 import Book from '../models/Book.js';
 import AuditLog from '../models/AuditLog.js';
 
 export async function getAllBooks(req, res, next) {
   try {
     const includeDeleted = req.query.includeDeleted === 'true';
+    const limit = Math.min(Math.max(parseInt(req.query.limit, 10) || 15, 1), 100);
+    const cursor = req.query.cursor; // _id của bản ghi cuối trang trước (Cursor Pagination Pattern)
+    const q = (req.query.q || '').trim();
+    const category = (req.query.category || '').trim();
+    const status = (req.query.status || '').trim();
+
     const filter = includeDeleted ? {} : { isDeleted: { $ne: true } };
-    const books = await Book.find(filter).sort({ createdAt: -1 });
-    res.json({ success: true, data: books });
+    if (category) {
+      const sanitizedCat = category.replace(/[-–—]/g, '[-–—]');
+      filter.category = { $regex: new RegExp(`^${sanitizedCat}$`, 'i') };
+    }
+    if (status) filter.status = status;
+
+    if (q) {
+      filter.$or = [
+        { title: { $regex: q, $options: 'i' } },
+        { author: { $regex: q, $options: 'i' } },
+        { bookId: { $regex: q, $options: 'i' } },
+        { rfidTag: { $regex: q, $options: 'i' } }
+      ];
+    }
+
+    // Áp dụng Keyset Cursor Pagination Pattern: Quét theo B-Tree Index (_id < cursor)
+    if (cursor && mongoose.Types.ObjectId.isValid(cursor)) {
+      filter._id = { $lt: new mongoose.Types.ObjectId(cursor) };
+    }
+
+    const isCursorPaginated = req.query.limit !== undefined || req.query.cursor !== undefined || req.query.q !== undefined || req.query.category !== undefined;
+
+    let query = Book.find(filter).sort({ _id: -1 });
+
+    if (isCursorPaginated && req.query.all !== 'true') {
+      // Lấy limit + 1 để xác định hasMore mà không cần countDocuments tốn kém
+      query = query.limit(limit + 1);
+    }
+
+    const books = await query;
+
+    let resultBooks = books;
+    let nextCursor = null;
+    let hasMore = false;
+
+    if (isCursorPaginated && req.query.all !== 'true') {
+      hasMore = books.length > limit;
+      resultBooks = hasMore ? books.slice(0, limit) : books;
+      nextCursor = hasMore && resultBooks.length > 0 ? String(resultBooks[resultBooks.length - 1]._id) : null;
+    }
+
+    res.json({
+      success: true,
+      data: resultBooks,
+      pagination: {
+        limit: resultBooks.length,
+        nextCursor,
+        hasMore,
+        totalInPage: resultBooks.length
+      }
+    });
   } catch (err) {
     next(err);
   }

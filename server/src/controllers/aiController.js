@@ -288,6 +288,33 @@ function generateLocalAgentResponse(cleanMsg, candidateBooks) {
   };
 }
 
+function checkOutOfDomainQuery(query) {
+  if (!query) return false;
+  const q = query.toLowerCase();
+
+  const isBookQuery = /(sách|đọc|tài liệu|giáo trình|truyện|cuốn|quyển|tác phẩm|tác giả|kệ|thư viện)/.test(q);
+
+  const strictNonBookPatterns = [
+    /thời tiết/, /hôm nay ăn gì/, /quán (cà phê|cafe|ăn|cơm|trà sữa)\s+(nào|gần đây|ở đâu|ngon|rẻ)/, /mua (trà sữa|áo|quần)/,
+    /viết (code|bài|thơ) giúp/, /viết\s*(giúp|hộ|cho).*thơ/, /bài thơ tỏ tình/,
+    /tính \d+/, /tính giúp.*căn bậc/, /căn bậc/, /\d+\s*[\+\-\*\/]\s*\d+/,
+    /1\s*\+\s*1/, /1\s*cộng\s*1/, /mấy giờ rồi/, /bạn là ai/,
+    /ai (đang là|là) tổng thống/, /tổng thống/, /giá vàng/, /tỉ giá/, /chứng khoán hôm nay tăng hay giảm/,
+    /màn hình xanh/, /sửa lỗi.*windows/, /cài win/, /sửa máy tính/, /cổng trường/
+  ];
+
+  if (isBookQuery) {
+    const strictlyDisallowed = [
+      /thời tiết/, /viết\s*(giúp|hộ|cho).*thơ/, /bài thơ tỏ tình/,
+      /tính \d+/, /\d+\s*[\+\-\*\/]\s*\d+/, /1\s*\+\s*1/,
+      /ai (đang là|là) tổng thống/, /giá vàng/, /màn hình xanh/, /sửa máy tính/
+    ];
+    return strictlyDisallowed.some(p => p.test(q));
+  }
+
+  return strictNonBookPatterns.some(p => p.test(q));
+}
+
 /**
  * Trò chuyện trực tiếp cùng Thủ Thư AI (Conversational Agentic RAG)
  * Tích hợp Google Gemini API + Local Semantic Context Reasoner
@@ -304,8 +331,70 @@ export async function chatWithAgent(req, res, next) {
     const geminiKey = apiKey || process.env.GEMINI_API_KEY || '';
     const studentContext = studentInfo?.name ? `[Hồ sơ bạn đọc: ${studentInfo.name} - Khoa ${studentInfo.department || 'PTIT'}] ` : '';
 
-    // 1. Truy vấn ứng viên chính xác từ In-Memory Catalog Service (3.000 sách)
-    const candidateBooks = catalogService.searchPrecision(cleanMsg, 12);
+    // 1. Truy vấn ứng viên từ AI Hybrid Engine V2 (Multilingual-E5 + BM25 + Query Understanding)
+    // Tự động dự phòng an toàn sang In-Memory Catalog Service nếu AI service đang offline
+    let candidateBooks = [];
+    let aiLibrarianData = null;
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3500); // 3.5s timeout
+      const aiResponse = await fetch(`${AI_SERVICE_URL}/api/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: cleanMsg,
+          studentInfo,
+          top_k: 8
+        }),
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+      if (aiResponse.ok) {
+        const aiJson = await aiResponse.json();
+        aiLibrarianData = aiJson;
+        if (aiJson && Array.isArray(aiJson.books) && aiJson.books.length > 0) {
+          candidateBooks = aiJson.books.map(r => ({
+            bookId: r.book_id || r.work_id,
+            title: r.title,
+            author: r.author,
+            category: r.category,
+            subcategory: r.subcategory,
+            description: r.description,
+            shelf: r.shelf || 'A',
+            floor: r.floor || 1,
+            position: r.position || 'A1-01',
+            availableCopies: r.available_copies !== undefined ? r.available_copies : 1,
+            totalCopies: r.total_copies !== undefined ? r.total_copies : 1,
+            match_reason: r.match_reason
+          }));
+        }
+      }
+    } catch (_err) {
+      // AI Service offline -> Tự động fallback sang In-Memory Catalog Service
+    }
+
+    // Kiểm tra câu hỏi ngoài phạm vi (OUT_OF_DOMAIN): Tuyệt đối KHÔNG đính kèm sách
+    const isOutOfDomain = aiLibrarianData?.intent === 'OUT_OF_DOMAIN' || 
+                          aiLibrarianData?.analysis?.intent === 'OUT_OF_DOMAIN' ||
+                          checkOutOfDomainQuery(cleanMsg);
+
+    if (isOutOfDomain) {
+      const oodReply = aiLibrarianData?.reply || aiLibrarianData?.intro || 
+        'Chào bạn! Mình là Thủ thư ảo AI của Thư viện Kiosk PTIT. Hiện tại mình chuyên hỗ trợ bạn tìm kiếm sách, tra cứu vị trí kệ và gợi ý tác phẩm theo tâm trạng/chuyên ngành. Với câu hỏi này, bạn có thể hỏi về các đầu sách, tác giả hoặc nhờ mình gợi ý sách đọc nhé! 💬 *Bạn đang cần tìm sách thuộc lĩnh vực nào trong 9 thể loại của thư viện?*';
+      
+      return res.json({
+        success: true,
+        source: 'ai_librarian_v2',
+        model: 'PTIT Local Semantic Reasoner V2 (Hybrid E5 + BM25 RAG)',
+        reply: oodReply,
+        books: [] // TUYỆT ĐỐI KHÔNG GỢI Ý SÁCH KHI OUT_OF_DOMAIN
+      });
+    }
+
+    // Chỉ fallback sang In-Memory Catalog khi AI Service offline VÀ không có sách nào được trả về
+    if (!aiLibrarianData && (!candidateBooks || candidateBooks.length === 0)) {
+      candidateBooks = catalogService.searchPrecision(cleanMsg, 8);
+    }
 
     // 2. Nếu có GEMINI_API_KEY -> Sử dụng mô hình Google Gemini 1.5 Flash (Agentic RAG)
     if (geminiKey) {
@@ -399,7 +488,38 @@ ${booksContext}`;
       }
     }
 
-    // 3. Fallback: Động cơ suy luận ngữ cảnh cục bộ (Local Context Reasoner)
+    // 3. Động cơ suy luận ngữ cảnh cục bộ (Local Context Reasoner V2)
+    if (aiLibrarianData && (aiLibrarianData.reply || aiLibrarianData.intro)) {
+      const selectedBooks = candidateBooks.slice(0, 4).map((b, idx) => ({
+        book_id: b.bookId,
+        title: b.title,
+        author: b.author,
+        category: b.category,
+        subcategory: b.subcategory,
+        description: b.description,
+        shelf: b.shelf || 'A',
+        floor: b.floor || 1,
+        position: b.position || 'A1-01',
+        available: b.availableCopies !== undefined ? b.availableCopies : 1,
+        total: b.totalCopies !== undefined ? b.totalCopies : 1,
+        status: b.availableCopies > 0 ? 'available' : 'borrowed',
+        rfidTag: b.rfidTag || `RFID_${b.bookId}`,
+        rank: idx + 1
+      }));
+
+      const finalReply = aiLibrarianData.reply || (aiLibrarianData.clarifying_question
+        ? `${aiLibrarianData.intro}\n\n💬 *${aiLibrarianData.clarifying_question}*`
+        : aiLibrarianData.intro);
+
+      return res.json({
+        success: true,
+        source: 'ai_librarian_v2',
+        model: 'PTIT Local Semantic Reasoner V2 (Hybrid E5 + BM25 RAG)',
+        reply: finalReply,
+        books: selectedBooks
+      });
+    }
+
     const localResult = generateLocalAgentResponse(cleanMsg, candidateBooks);
     return res.json({
       success: true,

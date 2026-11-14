@@ -8,8 +8,21 @@ const api = axios.create({
 });
 
 export const apiService = {
-  // Sách
-  getBooks: (includeDeleted = false) => api.get(`/books?includeDeleted=${includeDeleted}`).then(r => r.data.data),
+  // Sách: Hỗ trợ Cursor-based Pagination & Keyset Index Search
+  getBooks: (params = {}) => {
+    if (typeof params === 'boolean') {
+      return api.get(`/books?includeDeleted=${params}`).then(r => r.data.data);
+    }
+    const cleanParams = {};
+    Object.keys(params).forEach(k => {
+      if (params[k] !== undefined && params[k] !== null && params[k] !== '') {
+        cleanParams[k] = params[k];
+      }
+    });
+    const queryString = new URLSearchParams(cleanParams).toString();
+    const endpoint = queryString ? `/books?${queryString}` : '/books';
+    return api.get(endpoint).then(r => r.data);
+  },
   getBookByRfid: (rfid) => api.get(`/books/${rfid}`).then(r => r.data.data),
   createBook: (data) => api.post('/books', data).then(r => r.data.data),
   updateBook: (id, data) => api.put(`/books/${id}`, data).then(r => r.data.data),

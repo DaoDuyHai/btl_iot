@@ -9,6 +9,7 @@ vi.mock('../../src/models/Reader.js');
 describe('Unit Test: AI Gateway Controller (Search & Recommendation)', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    global.fetch = vi.fn().mockRejectedValue(new Error('AI Service offline'));
   });
 
   describe('searchBooks()', () => {
@@ -132,6 +133,25 @@ describe('Unit Test: AI Gateway Controller (Search & Recommendation)', () => {
             category: expect.stringContaining('Phát triển bản thân')
           })
         ])
+      }));
+    });
+
+    it('phải từ chối lịch sự và KHÔNG gợi ý sách khi nhận câu hỏi OUT_OF_DOMAIN', async () => {
+      const req = {
+        body: {
+          message: 'hôm nay thời tiết Hà Nội thế nào bạn ơi'
+        }
+      };
+      const res = {
+        status: vi.fn().mockReturnThis(),
+        json: vi.fn()
+      };
+
+      await chatWithAgent(req, res, vi.fn());
+
+      expect(res.json).toHaveBeenCalledWith(expect.objectContaining({
+        success: true,
+        books: []
       }));
     });
   });

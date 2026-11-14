@@ -1,0 +1,40 @@
+{
+  "accuracy_percent": 100,
+  "total_passed": 100,
+  "total_questions": 100,
+  "group_stats": {
+    "1": {
+      "total": 20,
+      "passed": 20
+    },
+    "2": {
+      "total": 20,
+      "passed": 20
+    },
+    "3": {
+      "total": 15,
+      "passed": 15
+    },
+    "4": {
+      "total": 15,
+      "passed": 15
+    },
+    "5": {
+      "total": 10,
+      "passed": 10
+    },
+    "6": {
+      "total": 10,
+      "passed": 10
+    },
+    "7": {
+      "total": 5,
+      "passed": 5
+    },
+    "8": {
+      "total": 5,
+      "passed": 5
+    }
+  },
+  "failures": []
+}

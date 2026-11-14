@@ -41,4 +41,10 @@ const bookSchema = new mongoose.Schema({
   isDeleted: { type: Boolean, default: false }
 }, { timestamps: true });
 
+// Compound Indexes tối ưu hóa truy vấn phân trang con trỏ (Cursor-based Pagination Pattern)
+bookSchema.index({ isDeleted: 1, _id: -1 });
+bookSchema.index({ isDeleted: 1, category: 1, _id: -1 });
+bookSchema.index({ isDeleted: 1, status: 1, _id: -1 });
+bookSchema.index({ title: 1, author: 1 });
+
 export default mongoose.model('Book', bookSchema);

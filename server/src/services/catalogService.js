@@ -129,6 +129,9 @@ class CatalogService {
   loadCatalog() {
     try {
       const candidates = [
+        path.resolve('ai-service/dataset/books_enriched.csv'),
+        path.resolve('../ai-service/dataset/books_enriched.csv'),
+        path.resolve('dataset/books_enriched.csv'),
         path.resolve('ai-service/dataset/cleaned_books_dataset.csv'),
         path.resolve('../ai-service/dataset/cleaned_books_dataset.csv'),
         path.resolve('dataset/cleaned_books_dataset.csv')
@@ -268,6 +271,18 @@ class CatalogService {
       if (matchedIntents.some(i => i.intent === 'JAPANESE_LANG' || i.intent === 'ENGLISH_LANG' || i.intent === 'CHINESE_LANG' || i.intent === 'KOREAN_LANG')) {
         if (b.category.includes('Văn học') && !b.category.includes('Ngoại ngữ') && !b.subcategory.includes('Ngoại ngữ')) {
           score -= 150;
+        }
+      }
+
+      // E. Phân lập ngôn ngữ ngoại ngữ rõ ràng (Không bao giờ hỏi tiếng Anh ra tiếng Trung)
+      if (qClean.includes('tiếng anh') || qClean.includes('english') || qClean.includes('toeic') || qClean.includes('ielts')) {
+        if (b._normTitle.includes('tiếng trung') || b._normTitle.includes('hsk') || b._normTitle.includes('hán ngữ') || b._normSubcat.includes('tiếng hoa') || b._normSubcat.includes('tiếng hàn')) {
+          score -= 500;
+        }
+      }
+      if (qClean.includes('tiếng trung') || qClean.includes('hsk') || qClean.includes('tiếng hoa') || qClean.includes('hán ngữ')) {
+        if (b._normTitle.includes('tiếng anh') || b._normTitle.includes('english') || b._normSubcat.includes('tiếng anh') || b._normSubcat.includes('toeic')) {
+          score -= 500;
         }
       }
 

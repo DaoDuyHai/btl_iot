@@ -1,0 +1,230 @@
+{
+  "accuracy": 100.0,
+  "details": [
+    {
+      "id": 1,
+      "query": "Cuối tuần này mình có 2 ngày rảnh rỗi ở nhà, muốn tìm một cuốn tiểu thuyết tình cảm sâu sắc, cảm động rơi nước mắt",
+      "intent": "EMOTIONAL_CONTEXT",
+      "expected_cat": "Văn học – Tiểu thuyết",
+      "passed": true,
+      "top1": "Chờ Ngày Bình Yên",
+      "top1_cat": "Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn",
+      "top_books": [
+        "Chờ Ngày Bình Yên",
+        "Ăn Để Nhớ - Tản Văn",
+        "Đi Ra Thế Giới Ngắm Nhìn Bản Thân",
+        "Một Người Rừng Thông Thái"
+      ]
+    },
+    {
+      "id": 2,
+      "query": "Tôi đang muốn học cách quản lý tài chính cá nhân và đầu tư chứng khoán cơ bản cho người mới",
+      "intent": "CATEGORY_TOPIC",
+      "expected_cat": "Kinh tế – Kinh doanh",
+      "passed": true,
+      "top1": "Kỹ thuật phân tích biểu đồ chứng khoán",
+      "top1_cat": "Kinh tế – Kinh doanh - Kỹ thuật tài chính",
+      "top_books": [
+        "Kỹ thuật phân tích biểu đồ chứng khoán",
+        "THE LITTLE BOOK - Quản Trị Rủi Ro Trong Đầu Tư Chứng Khoán",
+        "Tài Chính Cá Nhân Căn Bản - Personal Finance 101",
+        "Kỹ Thuật Phân Tích Đầu Tư Chứng Khoán"
+      ]
+    },
+    {
+      "id": 3,
+      "query": "Em đang chuẩn bị phỏng vấn xin việc, muốn đọc sách về kỹ năng giao tiếp và thuyết phục",
+      "intent": "EXACT_BOOK",
+      "expected_cat": "Kỹ năng sống – Phát triển bản thân",
+      "passed": true,
+      "top1": "Hạnh Phúc Trong Công Việc",
+      "top1_cat": "Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp",
+      "top_books": [
+        "Hạnh Phúc Trong Công Việc",
+        "Khởi Nghiệp & Vận Hành Đúng Hướng",
+        "Dọn đường tâm lý, thuyết phục chắc thắng",
+        "Khoa Học Về Lòng Tin - John M. Gottman"
+      ]
+    },
+    {
+      "id": 4,
+      "query": "Mình dạo này hay bị suy nghĩ nhiều, lo âu overthinking về tương lai",
+      "intent": "EXACT_BOOK",
+      "expected_cat": "Kỹ năng sống – Phát triển bản thân",
+      "passed": true,
+      "top1": "Hạnh Phúc Đủ Đầy - Tác giả Đặng Minh Tâm",
+      "top1_cat": "Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo",
+      "top_books": [
+        "Hạnh Phúc Đủ Đầy - Tác giả Đặng Minh Tâm",
+        "Thiên Tài Bên Trái, Kẻ Điên Bên Phải",
+        "Lá cờ bên chiếc ba lô",
+        "Hồi ức đến tương lai: Suy ngẫm về văn hóa, giáo dục và con đường"
+      ]
+    },
+    {
+      "id": 5,
+      "query": "Tìm sách triết học phương đông hoặc Phật giáo để tìm sự an tịnh",
+      "intent": "EXACT_BOOK",
+      "expected_cat": "Lịch sử – Văn hóa",
+      "passed": true,
+      "top1": "Triết học Phật giáo Ấn Độ",
+      "top1_cat": "Tâm lý học - Tâm lý học nhận thức",
+      "top_books": [
+        "Triết học Phật giáo Ấn Độ",
+        "Phật giáo và Tâm lý học Jung",
+        "Phật giáo",
+        "Tính không của vạn vật: Quán chiếu khoa học hiện đại bằng các nguyên lí của Phật giáo"
+      ]
+    },
+    {
+      "id": 6,
+      "query": "Có cuốn sách nào về lịch sử Việt Nam thời phong kiến hoặc chiến tranh hấp dẫn không",
+      "intent": "EXACT_BOOK",
+      "expected_cat": "Lịch sử – Văn hóa",
+      "passed": true,
+      "top1": "Cuộc chiến kim loại hiếm",
+      "top1_cat": "Lịch sử – Văn hóa - Lịch sử Việt Nam",
+      "top_books": [
+        "Cuộc chiến kim loại hiếm",
+        "Vua Gia Long",
+        "Việt Nam: Những tiếng vọng từ quá khứ",
+        "Luận về chiến tranh"
+      ]
+    },
+    {
+      "id": 7,
+      "query": "Mình muốn tìm hiểu về AI, trí tuệ nhân tạo nhưng không phải sách code nặng",
+      "intent": "EXACT_BOOK",
+      "expected_cat": "Công nghệ thông tin",
+      "passed": true,
+      "top1": "Tủ Sách Bách Khoa Tri Thức - Hiểu Về Trí Tuệ Nhân Tạo AI",
+      "top1_cat": "Công nghệ thông tin - Lập Trình",
+      "top_books": [
+        "Tủ Sách Bách Khoa Tri Thức - Hiểu Về Trí Tuệ Nhân Tạo AI",
+        "AI - Sức Mạnh Của Trí Tuệ Nhân Tạo",
+        "Ứng dụng trí tuệ nhân tạo AI trong dạy và học môn Toán , Tiếng Anh , Vật Lí , Hoá Học, KHTN",
+        "Xin Chào AI! - Học Và Chơi Cùng Trí Tuệ Nhân Tạo"
+      ]
+    },
+    {
+      "id": 8,
+      "query": "Có sách nào kể chuyện trước giờ đi ngủ cho bé 5 tuổi không",
+      "intent": "EMOTIONAL_CONTEXT",
+      "expected_cat": "Thiếu nhi",
+      "passed": true,
+      "top1": "Sống trọn nghĩ tròn - Cuốn sách của bé Cánh Cụt",
+      "top1_cat": "Thiếu nhi - Truyện tranh",
+      "top_books": [
+        "Sống trọn nghĩ tròn - Cuốn sách của bé Cánh Cụt",
+        "Cổ tích thế giới hay nhất - Cô bé Lọ Lem",
+        "Thủ thỉ cùng con - Nơi trái tim thuộc về",
+        "Những điều trường học không dạy ta - Shin - cậu bé bút chì - Bí quyết bày tỏ cảm xúc"
+      ]
+    },
+    {
+      "id": 9,
+      "query": "Tìm tiểu thuyết trinh thám phá án ly kỳ gay cấn của Conan Doyle hoặc tương tự",
+      "intent": "EMOTIONAL_CONTEXT",
+      "expected_cat": "Văn học – Tiểu thuyết",
+      "passed": true,
+      "top1": "Kỳ Án Trong Thư Viện Kín",
+      "top1_cat": "Văn học – Tiểu thuyết - Truyện trinh thám",
+      "top_books": [
+        "Kỳ Án Trong Thư Viện Kín",
+        "Agatha Christie. Tuyển tập kỳ án của Poirot",
+        "Nhập Vai Thám Tử",
+        "Vụ Án"
+      ]
+    },
+    {
+      "id": 10,
+      "query": "Muốn học lập trình Python từ con số 0",
+      "intent": "EXACT_BOOK",
+      "expected_cat": "Công nghệ thông tin",
+      "passed": true,
+      "top1": "Lập trình Python hỗ trợ học sinh THPT giải bài tập tin học",
+      "top1_cat": "Công nghệ thông tin - Lập Trình",
+      "top_books": [
+        "Lập trình Python hỗ trợ học sinh THPT giải bài tập tin học",
+        "Lập Trình Python",
+        "Kỹ Thuật Lập Trình Python Nâng Cao",
+        "Đường Vào Lập Trình Python Nâng Cao"
+      ]
+    },
+    {
+      "id": 11,
+      "query": "Mình bị mất ngủ kinh niên, cần sách êm đềm ru ngủ",
+      "intent": "EMOTIONAL_CONTEXT",
+      "expected_cat": "Văn học – Tiểu thuyết",
+      "passed": true,
+      "top1": "Ăn Để Nhớ - Tản Văn",
+      "top1_cat": "Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn",
+      "top_books": [
+        "Ăn Để Nhớ - Tản Văn",
+        "Chờ Ngày Bình Yên",
+        "Mất Bao Đêm Để Ước Người Ở Lại",
+        "Một Người Rừng Thông Thái"
+      ]
+    },
+    {
+      "id": 12,
+      "query": "Sách luyện thi IELTS 6.5+",
+      "intent": "CATEGORY_TOPIC",
+      "expected_cat": "Giáo dục – Ngoại ngữ",
+      "passed": true,
+      "top1": "Timesaver For Exams - IELTS Writing 5.5 - 7.5",
+      "top1_cat": "Giáo dục – Ngoại ngữ - Luyện thi IELTS",
+      "top_books": [
+        "Timesaver For Exams - IELTS Writing 5.5 - 7.5",
+        "Takenote IELTS Từ vựng theo chủ đề (Band 5.5 - 7.5)",
+        "Pagoda IELTS Reading (Bao gồm sách bài học và sách đáp án)",
+        "IELTS Writing Journey - From Basics To Band 6.0"
+      ]
+    },
+    {
+      "id": 13,
+      "query": "Cuốn sách nào kinh điển thế giới mà ai cũng nên đọc một lần trong đời",
+      "intent": "EXACT_BOOK",
+      "expected_cat": "Văn học – Tiểu thuyết",
+      "passed": true,
+      "top1": "80 ngày vòng quanh thế giới",
+      "top1_cat": "Văn học – Tiểu thuyết - Tác phẩm kinh điển",
+      "top_books": [
+        "80 ngày vòng quanh thế giới",
+        "Kiếm Lời Từ Một Trật Tự Thế Giới Mới",
+        "50 CUỐN SÁCH KINH ĐIỂN VỀ KINH DOANH - Những bài học về chiến lược, đổi mới và marketing hiệu quả – Tom Butler-Bowdon – AlphaBooks",
+        "Các Triết Gia Thế Tục - Cuộc Đời, Thời Đại Và Tư Tưởng Của Các Nhà Kinh Tế Vĩ Đại"
+      ]
+    },
+    {
+      "id": 14,
+      "query": "Tôi là sinh viên năm nhất bị choáng ngợp và mất phương hướng",
+      "intent": "EMOTIONAL_CONTEXT",
+      "expected_cat": "Kỹ năng sống – Phát triển bản thân",
+      "passed": true,
+      "top1": "Chuyện Của Chúng Tôi",
+      "top1_cat": "Kỹ năng sống – Phát triển bản thân - Động lực sống",
+      "top_books": [
+        "Chuyện Của Chúng Tôi",
+        "Sống Bình Thường Mà Không Tầm Thường",
+        "Hạnh Phúc - Từ Sông Bến Hải Đến Dinh Độc Lập + Hồi Ký Phóng Viên Chiến Trường + Chuyện Của Chúng Tôi + Hồi Ký Tù Binh Thương Trường",
+        "Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo"
+      ]
+    },
+    {
+      "id": 15,
+      "query": "Hôm nay trời mưa mát mẻ, muốn đọc một cuốn tản văn nhẹ nhàng nhâm nhi cà phê",
+      "intent": "EMOTIONAL_CONTEXT",
+      "expected_cat": "Văn học – Tiểu thuyết",
+      "passed": true,
+      "top1": "Chờ Ngày Bình Yên",
+      "top1_cat": "Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn",
+      "top_books": [
+        "Chờ Ngày Bình Yên",
+        "Ăn Để Nhớ - Tản Văn",
+        "Đi Ra Thế Giới Ngắm Nhìn Bản Thân",
+        "Một Người Rừng Thông Thái"
+      ]
+    }
+  ]
+}

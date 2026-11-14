@@ -6,7 +6,18 @@ export default function ShelfLocatorModal({ book, onClose }) {
 
   const targetShelf = (book.shelf || 'A').toUpperCase();
   const targetFloor = book.floor || 1;
-  const targetPosition = book.position || `${targetShelf}1-01`;
+
+  // Ánh xạ phân khu kệ vật lý chuẩn theo 9 lĩnh vực sách Thư viện PTIT
+  const SHELF_ZONE_NAMES = {
+    'A': 'Khu Văn học & Thiếu nhi',
+    'B': 'Khu Kinh tế & Kinh doanh',
+    'C': 'Khu CNTT & Khoa học Công nghệ',
+    'D': 'Khu Giáo dục & Ngoại ngữ',
+    'E': 'Khu Kỹ năng sống & Tâm lý học',
+    'F': 'Khu Lịch sử – Xã hội – Văn hóa'
+  };
+
+  const currentZoneName = SHELF_ZONE_NAMES[targetShelf] || 'Khu vực sách tổng hợp';
 
   // Danh sách các dãy kệ mô phỏng trong Thư viện PTIT
   const shelvesRow1 = ['A', 'B', 'C'];
@@ -56,10 +67,10 @@ export default function ShelfLocatorModal({ book, onClose }) {
             </div>
             <div>
               <h3 style={{ margin: 0, fontSize: '18px', fontWeight: '800', letterSpacing: '-0.3px' }}>
-                ĐỊNH VỊ KỆ SÁCH VẬT LÝ THƯ VIỆN PTIT
+                SƠ ĐỒ PHÂN KHU KỆ SÁCH THƯ VIỆN PTIT
               </h3>
               <p style={{ margin: '4px 0 0', fontSize: '13px', color: '#fecaca' }}>
-                Chỉ dẫn đường đi thực tế từ trạm Kiosk tới vị trí sách
+                Chỉ dẫn khu vực kệ sách thực tế từ trạm Kiosk tra cứu
               </p>
             </div>
           </div>
@@ -108,7 +119,7 @@ export default function ShelfLocatorModal({ book, onClose }) {
               </div>
             </div>
 
-            {/* Badge tọa độ to rõ */}
+            {/* Badge tọa độ phân khu */}
             <div style={{
               background: '#fee2e2',
               border: '1.5px solid #fca5a5',
@@ -117,13 +128,13 @@ export default function ShelfLocatorModal({ book, onClose }) {
               textAlign: 'center'
             }}>
               <div style={{ fontSize: '11px', fontWeight: '800', color: '#991b1b', textTransform: 'uppercase' }}>
-                Tọa độ chính xác
+                Khu vực lưu trữ
               </div>
               <div style={{ fontSize: '20px', fontWeight: '900', color: '#991b1b' }}>
-                Tầng {targetFloor} • Kệ {targetShelf}
+                Kệ {targetShelf} • Tầng {targetFloor}
               </div>
               <div style={{ fontSize: '12px', fontWeight: '700', color: '#b91c1c' }}>
-                Ô vị trí: {targetPosition}
+                {currentZoneName}
               </div>
             </div>
           </div>
@@ -198,7 +209,7 @@ export default function ShelfLocatorModal({ book, onClose }) {
                       📚 DÃY KỆ {shelf}
                     </div>
                     <div style={{ fontSize: '11px', color: isTarget ? '#7f1d1d' : '#64748b', marginTop: '4px' }}>
-                      {isTarget ? `Chứa sách ở ô: ${targetPosition}` : `Khu vực sách tổng hợp`}
+                      {SHELF_ZONE_NAMES[shelf] || 'Khu vực sách tổng hợp'}
                     </div>
                   </div>
                 );
@@ -242,7 +253,7 @@ export default function ShelfLocatorModal({ book, onClose }) {
                       📚 DÃY KỆ {shelf}
                     </div>
                     <div style={{ fontSize: '11px', color: isTarget ? '#7f1d1d' : '#64748b', marginTop: '4px' }}>
-                      {isTarget ? `Chứa sách ở ô: ${targetPosition}` : `Khu vực sách tổng hợp`}
+                      {SHELF_ZONE_NAMES[shelf] || 'Khu vực sách tổng hợp'}
                     </div>
                   </div>
                 );
@@ -283,8 +294,8 @@ export default function ShelfLocatorModal({ book, onClose }) {
               <Footprints size={17} /> HƯỚNG DẪN 3 BƯỚC ĐẾN LẤY SÁCH VÀ MƯỢN TÀI LIỆU:
             </div>
             <ol style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', color: '#78350f', lineHeight: 1.6 }}>
-              <li>Di chuyển lên <strong>Tầng {targetFloor}</strong>, tìm đến <strong>Dãy Kệ {targetShelf}</strong> theo sơ đồ bên trên.</li>
-              <li>Tìm cuốn sách mang mã <strong>{book.book_id || book._id}</strong> ở ô <strong>{targetPosition}</strong>.</li>
+              <li>Di chuyển lên <strong>Tầng {targetFloor}</strong>, tìm đến <strong>Dãy Kệ {targetShelf} ({currentZoneName})</strong> theo sơ đồ bên trên.</li>
+              <li>Tìm cuốn sách mang tựa đề <strong>"{book.title}"</strong> của tác giả <strong>{book.author}</strong> trên các tầng kệ thuộc khu vực này.</li>
               <li>Lấy sách mang về trạm Kiosk này, chọn chức năng <strong>"Mượn tài liệu"</strong> và đặt sách lên bàn đọc RFID RC522 để hoàn tất!</li>
             </ol>
           </div>
