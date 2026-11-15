@@ -56,4 +56,8 @@ export const apiService = {
     api.get(`/devices/logs?limit=${limit}`).then(r => r.data.data),
   sendDeviceCommand: (deviceId, action, status) => 
     api.post(`/devices/${deviceId}/command`, { action, status }).then(r => r.data),
+
+  // Xác thực thủ thư
+  loginAdmin: (username, password) =>
+    api.post('/auth/login', { username, password }).then(r => r.data),
 };

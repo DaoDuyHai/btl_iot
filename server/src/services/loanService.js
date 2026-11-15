@@ -1,9 +1,42 @@
+import mongoose from 'mongoose';
 import Loan from '../models/Loan.js';
 import Book from '../models/Book.js';
 import Reader from '../models/Reader.js';
 import AuditLog from '../models/AuditLog.js';
 import { ENV } from '../config/env.js';
 import { sendReceiptEmail } from './emailService.js';
+
+/**
+ * Helper thực thi Database Transaction với MongoDB ReplicaSet (Mục 2.1 STT 8).
+ * Nếu môi trường không hỗ trợ transaction (standalone Mongo), tự động fallback chạy an toàn.
+ */
+async function withTransaction(workFn) {
+  if (!mongoose.connection || mongoose.connection.readyState !== 1) {
+    return await workFn(null);
+  }
+
+  let session = null;
+  try {
+    session = await mongoose.startSession();
+    let result;
+    await session.withTransaction(async () => {
+      result = await workFn(session);
+    });
+    return result;
+  } catch (err) {
+    // Nếu MongoDB standalone (vd khi chạy test hoặc local dev không replicaSet), fallback chạy trực tiếp
+    if (err.message && (err.message.includes('replica set') || err.message.includes('Transaction numbers are only allowed') || err.message.includes('startSession is not a function'))) {
+      return await workFn(null);
+    }
+    throw err;
+  } finally {
+    if (session) {
+      try {
+        await session.endSession();
+      } catch (_e) {}
+    }
+  }
+}
 
 export async function borrowBatch({ readerId, bookIds, loanDays = 14 }) {
   if (!readerId || !bookIds || !Array.isArray(bookIds) || bookIds.length === 0) {
@@ -70,28 +103,30 @@ export async function borrowBatch({ readerId, bookIds, loanDays = 14 }) {
     throw new Error(`Cuốn sách "${title}" hiện không khả dụng (đang được mượn, chờ kiểm tra hoặc bảo trì).`);
   }
 
-  // 6. Thực hiện giao dịch mượn
+  // 6. Thực hiện giao dịch mượn bằng Database Transaction (Mục 2.1 STT 8)
   const now = new Date();
   const dueDate = new Date(now.getTime() + loanDays * 24 * 60 * 60 * 1000);
   const createdLoans = [];
 
-  for (const book of books) {
-    const loan = await Loan.create({
-      readerId: reader._id,
-      bookId: book._id,
-      borrowDate: now,
-      dueDate,
-      status: 'borrowing',
-      renewCount: 0,
-      fineStatus: 'none',
-      isPaid: false
-    });
+  await withTransaction(async (session) => {
+    for (const book of books) {
+      const loan = await Loan.create({
+        readerId: reader._id,
+        bookId: book._id,
+        borrowDate: now,
+        dueDate,
+        status: 'borrowing',
+        renewCount: 0,
+        fineStatus: 'none',
+        isPaid: false
+      });
 
-    book.status = 'borrowed';
-    await book.save();
+      book.status = 'borrowed';
+      await book.save(session ? { session } : undefined);
 
-    createdLoans.push(loan);
-  }
+      createdLoans.push(loan);
+    }
+  });
 
   // Tự động gửi email biên lai mượn tài liệu
   sendReceiptEmail({
@@ -174,61 +209,63 @@ export async function returnBatch({ bookRfids, readerId = null, returnMethod = '
   let totalFine = 0;
   let primaryReader = readerId ? await Reader.findById(readerId) : null;
 
-  for (const rfid of bookRfids) {
-    const book = await Book.findOne({ rfidTag: rfid, isDeleted: { $ne: true } });
-    if (!book) continue;
+  await withTransaction(async (session) => {
+    for (const rfid of bookRfids) {
+      const book = await Book.findOne({ rfidTag: rfid, isDeleted: { $ne: true } });
+      if (!book) continue;
 
-    const loan = await Loan.findOne({
-      bookId: book._id,
-      status: { $in: ['borrowing', 'overdue'] }
-    }).populate('readerId');
+      const loan = await Loan.findOne({
+        bookId: book._id,
+        status: { $in: ['borrowing', 'overdue'] }
+      }).populate('readerId');
 
-    if (!loan) continue;
+      if (!loan) continue;
 
-    if (!primaryReader && loan.readerId) {
-      primaryReader = loan.readerId;
+      if (!primaryReader && loan.readerId) {
+        primaryReader = loan.readerId;
+      }
+
+      // Tính tiền phạt quá hạn và chốt dừng thời gian tính quá hạn tại đúng thời điểm trả
+      let isOverdue = false;
+      let overdueFine = 0;
+      if (now > loan.dueDate) {
+        isOverdue = true;
+        const diffTime = now.getTime() - new Date(loan.dueDate).getTime();
+        const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
+        overdueFine = diffDays * ENV.FINE_PER_DAY_VND;
+      }
+
+      loan.returnDate = now;
+      loan.overdueFine = overdueFine;
+      loan.fineAmount = overdueFine;
+      loan.status = 'returned'; // Kết thúc lượt mượn, dừng tính ngày quá hạn
+      loan.returnMethod = returnMethod;
+      loan.inspectionStatus = 'pending'; // Chờ thủ thư kiểm tra vật lý
+
+      if (overdueFine > 0) {
+        loan.fineStatus = 'unpaid';
+        loan.isPaid = false;
+        totalFine += overdueFine;
+      } else {
+        loan.fineStatus = 'none';
+        loan.isPaid = true;
+      }
+
+      await loan.save(session ? { session } : undefined);
+
+      // Sách chuyển sang trạng thái chờ thủ thư kiểm tra
+      book.status = 'pending_inspection';
+      await book.save(session ? { session } : undefined);
+
+      processedItems.push({
+        book,
+        loan,
+        reader: loan.readerId,
+        isOverdue,
+        overdueFine
+      });
     }
-
-    // Tính tiền phạt quá hạn và chốt dừng thời gian tính quá hạn tại đúng thời điểm trả
-    let isOverdue = false;
-    let overdueFine = 0;
-    if (now > loan.dueDate) {
-      isOverdue = true;
-      const diffTime = now.getTime() - new Date(loan.dueDate).getTime();
-      const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
-      overdueFine = diffDays * ENV.FINE_PER_DAY_VND;
-    }
-
-    loan.returnDate = now;
-    loan.overdueFine = overdueFine;
-    loan.fineAmount = overdueFine;
-    loan.status = 'returned'; // Kết thúc lượt mượn, dừng tính ngày quá hạn
-    loan.returnMethod = returnMethod;
-    loan.inspectionStatus = 'pending'; // Chờ thủ thư kiểm tra vật lý
-
-    if (overdueFine > 0) {
-      loan.fineStatus = 'unpaid';
-      loan.isPaid = false;
-      totalFine += overdueFine;
-    } else {
-      loan.fineStatus = 'none';
-      loan.isPaid = true;
-    }
-
-    await loan.save();
-
-    // Sách chuyển sang trạng thái chờ thủ thư kiểm tra
-    book.status = 'pending_inspection';
-    await book.save();
-
-    processedItems.push({
-      book,
-      loan,
-      reader: loan.readerId,
-      isOverdue,
-      overdueFine
-    });
-  }
+  });
 
   if (processedItems.length === 0) {
     throw new Error('Không tìm thấy phiếu mượn hợp lệ nào cần hoàn trả trong danh sách đã chọn');

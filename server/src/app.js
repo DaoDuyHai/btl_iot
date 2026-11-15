@@ -5,6 +5,7 @@ import bookRoutes from './routes/bookRoutes.js';
 import loanRoutes from './routes/loanRoutes.js';
 import deviceRoutes from './routes/deviceRoutes.js';
 import auditRoutes from './routes/auditRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 
 const app = express();
@@ -18,6 +19,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Gắn các module routes
+app.use('/api/auth', authRoutes);
 app.use('/api/readers', readerRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/loans', loanRoutes);

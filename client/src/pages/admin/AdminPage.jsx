@@ -17,10 +17,22 @@ import {
   ExternalLink,
   CheckCircle2,
   ArrowUpRight,
-  Radio
+  Radio,
+  User,
+  Lock,
+  LogOut,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
 export default function AdminPage() {
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return !!localStorage.getItem('admin_token');
+  });
+  const [loginForm, setLoginForm] = useState({ username: 'admin', password: '' });
+  const [loginError, setLoginError] = useState('');
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
+
   const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' | 'devices' | 'inspection' | 'books' | 'readers' | 'overdue' | 'audit'
   const [books, setBooks] = useState([]);
   const [readers, setReaders] = useState([]);
@@ -30,8 +42,11 @@ export default function AdminPage() {
   const [auditLogs, setAuditLogs] = useState([]);
   const [deviceStatus, setDeviceStatus] = useState({ status: 'online', rssi: -58, uptime: 3600 });
 
-  // Tìm kiếm
+  // Tìm kiếm, Lọc & Phân trang sách (20 sách / trang)
   const [bookSearch, setBookSearch] = useState('');
+  const [bookStatusFilter, setBookStatusFilter] = useState('all');
+  const [bookPage, setBookPage] = useState(1);
+  const BOOKS_PER_PAGE = 20;
   const [readerSearch, setReaderSearch] = useState('');
 
   // Modals
@@ -60,6 +75,7 @@ export default function AdminPage() {
   const [msg, setMsg] = useState(null);
 
   useEffect(() => {
+    if (!isAuthenticated) return;
     loadAllData();
 
     socket.on('loans:changed', () => {
@@ -74,7 +90,33 @@ export default function AdminPage() {
       socket.off('loans:changed');
       socket.off('device:status');
     };
-  }, []);
+  }, [isAuthenticated]);
+
+  async function handleLogin(e) {
+    e.preventDefault();
+    setLoginError('');
+    setIsLoggingIn(true);
+    try {
+      const res = await apiService.loginAdmin(loginForm.username, loginForm.password);
+      if (res.success) {
+        localStorage.setItem('admin_token', res.data.token);
+        setIsAuthenticated(true);
+        showToast('✅ Đăng nhập quản trị thành công!');
+      } else {
+        setLoginError(res.message || 'Đăng nhập thất bại');
+      }
+    } catch (err) {
+      setLoginError(err.response?.data?.message || 'Tên đăng nhập hoặc mật khẩu không chính xác');
+    } finally {
+      setIsLoggingIn(false);
+    }
+  }
+
+  function handleLogout() {
+    localStorage.removeItem('admin_token');
+    setIsAuthenticated(false);
+    showToast('👋 Đã đăng xuất khỏi cổng quản trị');
+  }
 
   async function loadAllData() {
     try {
@@ -293,17 +335,54 @@ export default function AdminPage() {
     return sorted;
   }, [loans]);
 
-  // Lọc danh sách sách
+  // Thống kê số lượng sách theo từng trạng thái
+  const bookStatusCounts = useMemo(() => {
+    const counts = {
+      all: books.length,
+      available: 0,
+      borrowed: 0,
+      pending_inspection: 0,
+      maintenance: 0,
+      damaged: 0,
+      lost: 0
+    };
+    books.forEach(b => {
+      if (counts[b.status] !== undefined) {
+        counts[b.status]++;
+      }
+    });
+    return counts;
+  }, [books]);
+
+  // Lọc danh sách sách theo từ khóa tìm kiếm và phân loại trạng thái
   const filteredBooks = useMemo(() => {
+    let result = books;
+    if (bookStatusFilter !== 'all') {
+      result = result.filter(b => b.status === bookStatusFilter);
+    }
     const q = bookSearch.toLowerCase().trim();
-    if (!q) return books;
-    return books.filter(b => 
-      b.title?.toLowerCase().includes(q) || 
-      b.author?.toLowerCase().includes(q) || 
-      b.rfidTag?.toLowerCase().includes(q) ||
-      b.copyCode?.toLowerCase().includes(q)
-    );
-  }, [books, bookSearch]);
+    if (q) {
+      result = result.filter(b => 
+        b.title?.toLowerCase().includes(q) || 
+        b.author?.toLowerCase().includes(q) || 
+        b.rfidTag?.toLowerCase().includes(q) ||
+        b.copyCode?.toLowerCase().includes(q)
+      );
+    }
+    return result;
+  }, [books, bookSearch, bookStatusFilter]);
+
+  // Tự động chuyển về trang 1 khi tìm kiếm hoặc đổi bộ lọc trạng thái
+  useEffect(() => {
+    setBookPage(1);
+  }, [bookSearch, bookStatusFilter]);
+
+  // Phân trang danh mục sách (20 sách / trang)
+  const totalBookPages = Math.max(1, Math.ceil(filteredBooks.length / BOOKS_PER_PAGE));
+  const paginatedBooks = useMemo(() => {
+    const start = (bookPage - 1) * BOOKS_PER_PAGE;
+    return filteredBooks.slice(start, start + BOOKS_PER_PAGE);
+  }, [filteredBooks, bookPage]);
 
   // Lọc danh sách độc giả
   const filteredReaders = useMemo(() => {
@@ -335,6 +414,170 @@ export default function AdminPage() {
   });
 
   const isKioskOnline = deviceStatus?.status === 'online';
+
+  // Nếu chưa đăng nhập, hiển thị form Đăng nhập Thủ thư (Mục 2.2 STT 1)
+  if (!isAuthenticated) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #7f1d1d 0%, #991b1b 50%, #b91c1c 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '20px',
+        fontFamily: 'inherit'
+      }}>
+        {msg && (
+          <div style={{
+            position: 'fixed',
+            top: '20px',
+            right: '24px',
+            background: '#0f172a',
+            color: '#ffffff',
+            padding: '12px 20px',
+            borderRadius: '12px',
+            zIndex: 9999,
+            fontWeight: '700',
+            boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+            fontSize: '13.5px'
+          }}>
+            {msg}
+          </div>
+        )}
+
+        <div style={{
+          background: '#ffffff',
+          borderRadius: '24px',
+          padding: '40px 36px',
+          width: '100%',
+          maxWidth: '430px',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+          border: '1px solid rgba(255, 255, 255, 0.2)'
+        }}>
+          <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+            <div style={{
+              width: '72px',
+              height: '72px',
+              background: '#fef2f2',
+              borderRadius: '20px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginBottom: '14px',
+              border: '2px solid #fee2e2'
+            }}>
+              <img 
+                src="/PTIT.png" 
+                alt="PTIT Logo"
+                style={{ height: '48px', objectFit: 'contain' }}
+              />
+            </div>
+            <h2 style={{ fontSize: '20px', fontWeight: '800', color: '#991b1b', margin: '0 0 6px', letterSpacing: '0.3px' }}>
+              CỔNG QUẢN TRỊ THỦ THƯ
+            </h2>
+            <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>
+              Smart Library Kiosk • Học viện Công nghệ Bưu chính Viễn thông
+            </p>
+          </div>
+
+          {loginError && (
+            <div style={{
+              background: '#fef2f2',
+              border: '1px solid #fecaca',
+              color: '#b91c1c',
+              borderRadius: '10px',
+              padding: '10px 14px',
+              fontSize: '13px',
+              fontWeight: '600',
+              marginBottom: '18px'
+            }}>
+              ⚠️ {loginError}
+            </div>
+          )}
+
+          <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div>
+              <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', display: 'block', marginBottom: '6px' }}>
+                Tài khoản thủ thư
+              </label>
+              <div style={{ position: 'relative' }}>
+                <User size={18} color="#94a3b8" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
+                <input
+                  type="text"
+                  required
+                  placeholder="admin"
+                  value={loginForm.username}
+                  onChange={e => setLoginForm({ ...loginForm, username: e.target.value })}
+                  style={{
+                    width: '100%',
+                    padding: '10px 12px 10px 40px',
+                    borderRadius: '10px',
+                    border: '1px solid #cbd5e1',
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    outline: 'none'
+                  }}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', display: 'block', marginBottom: '6px' }}>
+                Mật khẩu
+              </label>
+              <div style={{ position: 'relative' }}>
+                <Lock size={18} color="#94a3b8" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
+                <input
+                  type="password"
+                  required
+                  placeholder="••••••••"
+                  value={loginForm.password}
+                  onChange={e => setLoginForm({ ...loginForm, password: e.target.value })}
+                  style={{
+                    width: '100%',
+                    padding: '10px 12px 10px 40px',
+                    borderRadius: '10px',
+                    border: '1px solid #cbd5e1',
+                    fontSize: '14px',
+                    outline: 'none'
+                  }}
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              disabled={isLoggingIn}
+              style={{
+                background: 'linear-gradient(135deg, #b91c1c, #991b1b)',
+                color: '#ffffff',
+                border: 'none',
+                padding: '12px',
+                borderRadius: '10px',
+                fontWeight: '700',
+                fontSize: '14px',
+                cursor: 'pointer',
+                marginTop: '8px',
+                boxShadow: '0 4px 12px rgba(185, 28, 28, 0.3)',
+                transition: 'opacity 0.2s'
+              }}
+            >
+              {isLoggingIn ? 'Đang xác thực...' : 'Đăng nhập quản trị'}
+            </button>
+          </form>
+
+          <div style={{ marginTop: '24px', textAlign: 'center', borderTop: '1px solid #f1f5f9', paddingTop: '16px' }}>
+            <Link 
+              to="/kiosk" 
+              style={{ color: '#991b1b', textDecoration: 'none', fontSize: '13px', fontWeight: '700', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+            >
+              ← Quay về Màn hình Kiosk Tự phục vụ
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="admin-app">
@@ -451,6 +694,26 @@ export default function AdminPage() {
               Mở Kiosk cảm ứng <ExternalLink size={11} />
             </Link>
           </div>
+          <button
+            type="button"
+            title="Đăng xuất khỏi Cổng Quản trị"
+            onClick={handleLogout}
+            style={{
+              background: 'rgba(255, 255, 255, 0.15)',
+              border: 'none',
+              color: '#ffffff',
+              borderRadius: '8px',
+              padding: '6px 8px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'background 0.2s',
+              marginLeft: '4px'
+            }}
+          >
+            <LogOut size={16} />
+          </button>
         </div>
       </aside>
 
@@ -823,7 +1086,64 @@ export default function AdminPage() {
               </button>
             </div>
 
-            <div style={{ overflowX: 'auto' }}>
+            {/* Thanh phân loại trạng thái sách (Filter Tabs) */}
+            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px', paddingBottom: '14px', borderBottom: '1px solid #f1f5f9' }}>
+              {[
+                { key: 'all', label: 'Tất cả', count: bookStatusCounts.all },
+                { key: 'available', label: 'Còn sách', count: bookStatusCounts.available, activeColor: '#15803d', activeBg: '#dcfce7' },
+                { key: 'borrowed', label: 'Đang mượn', count: bookStatusCounts.borrowed, activeColor: '#b45309', activeBg: '#fef3c7' },
+                { key: 'pending_inspection', label: 'Chờ kiểm tra', count: bookStatusCounts.pending_inspection, activeColor: '#b91c1c', activeBg: '#fee2e2' },
+                { key: 'maintenance', label: 'Đang bảo trì', count: bookStatusCounts.maintenance, activeColor: '#c2410c', activeBg: '#ffedd5' },
+                { key: 'damaged', label: 'Hư hỏng', count: bookStatusCounts.damaged, activeColor: '#991b1b', activeBg: '#fee2e2' },
+                { key: 'lost', label: 'Đã mất', count: bookStatusCounts.lost, activeColor: '#475569', activeBg: '#f1f5f9' },
+              ].map(tab => {
+                const isActive = bookStatusFilter === tab.key;
+                return (
+                  <button
+                    key={tab.key}
+                    type="button"
+                    onClick={() => setBookStatusFilter(tab.key)}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      padding: '6px 14px',
+                      borderRadius: '99px',
+                      fontSize: '12.5px',
+                      fontWeight: '700',
+                      cursor: 'pointer',
+                      border: isActive ? `1.5px solid ${tab.activeColor || '#991b1b'}` : '1px solid #e2e8f0',
+                      background: isActive ? (tab.activeBg || '#fee2e2') : '#ffffff',
+                      color: isActive ? (tab.activeColor || '#991b1b') : '#64748b',
+                      transition: 'all 0.15s ease'
+                    }}
+                  >
+                    <span>{tab.label}</span>
+                    <span style={{
+                      fontSize: '11px',
+                      padding: '1px 6px',
+                      borderRadius: '99px',
+                      background: isActive ? 'rgba(0, 0, 0, 0.08)' : '#f1f5f9',
+                      fontWeight: '800'
+                    }}>
+                      {tab.count || 0}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {filteredBooks.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: '48px 20px', color: '#94a3b8' }}>
+                <BookOpen size={42} style={{ opacity: 0.35, marginBottom: '10px' }} />
+                <p style={{ margin: 0, fontWeight: '700', fontSize: '14px', color: '#64748b' }}>
+                  Không tìm thấy cuốn sách nào phù hợp với bộ lọc hiện tại
+                </p>
+                <small style={{ color: '#94a3b8' }}>Thử chọn trạng thái khác hoặc xóa từ khóa tìm kiếm</small>
+              </div>
+            ) : (
+              <>
+                <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                 <thead>
                   <tr style={{ borderBottom: '2px solid #e2e8f0', textAlign: 'left', color: '#64748b' }}>
@@ -836,7 +1156,7 @@ export default function AdminPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredBooks.map(b => (
+                  {paginatedBooks.map(b => (
                     <tr key={b._id} style={{ borderBottom: '1px solid #f1f5f9' }}>
                       <td style={{ padding: '12px 10px', fontWeight: '700', color: '#0f172a' }}>{b.title}</td>
                       <td style={{ padding: '12px 10px', color: '#475569' }}>{b.author}</td>
@@ -918,8 +1238,114 @@ export default function AdminPage() {
                 </tbody>
               </table>
             </div>
-          </div>
+
+            {/* Thanh điều hướng phân trang (20 sách / trang) */}
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              marginTop: '16px',
+              paddingTop: '14px',
+              borderTop: '1px solid #f1f5f9',
+              flexWrap: 'wrap',
+              gap: '12px'
+            }}>
+              <div style={{ fontSize: '13px', color: '#64748b' }}>
+                Hiển thị <strong>{filteredBooks.length === 0 ? 0 : (bookPage - 1) * BOOKS_PER_PAGE + 1}</strong> – <strong>{Math.min(bookPage * BOOKS_PER_PAGE, filteredBooks.length)}</strong> trên tổng số <strong>{filteredBooks.length}</strong> cuốn
+              </div>
+
+              {totalBookPages > 1 && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <button
+                    type="button"
+                    disabled={bookPage <= 1}
+                    onClick={() => setBookPage(p => Math.max(1, p - 1))}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                      padding: '6px 12px',
+                      borderRadius: '8px',
+                      border: '1px solid #cbd5e1',
+                      background: bookPage <= 1 ? '#f8fafc' : '#ffffff',
+                      color: bookPage <= 1 ? '#94a3b8' : '#334155',
+                      fontSize: '12.5px',
+                      fontWeight: '700',
+                      cursor: bookPage <= 1 ? 'not-allowed' : 'pointer',
+                      transition: 'all 0.15s ease'
+                    }}
+                  >
+                    <ChevronLeft size={16} /> Trước
+                  </button>
+
+                  {Array.from({ length: totalBookPages }, (_, i) => i + 1).map(page => {
+                    if (
+                      totalBookPages > 7 &&
+                      page !== 1 &&
+                      page !== totalBookPages &&
+                      Math.abs(page - bookPage) > 1
+                    ) {
+                      if (page === 2 || page === totalBookPages - 1) {
+                        return <span key={page} style={{ color: '#94a3b8', padding: '0 4px' }}>…</span>;
+                      }
+                      return null;
+                    }
+
+                    const isCurrent = page === bookPage;
+                    return (
+                      <button
+                        key={page}
+                        type="button"
+                        onClick={() => setBookPage(page)}
+                        style={{
+                          minWidth: '32px',
+                          height: '32px',
+                          borderRadius: '8px',
+                          border: isCurrent ? '1px solid #991b1b' : '1px solid #cbd5e1',
+                          background: isCurrent ? '#991b1b' : '#ffffff',
+                          color: isCurrent ? '#ffffff' : '#334155',
+                          fontSize: '12.5px',
+                          fontWeight: '800',
+                          cursor: 'pointer',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          transition: 'all 0.15s ease'
+                        }}
+                      >
+                        {page}
+                      </button>
+                    );
+                  })}
+
+                  <button
+                    type="button"
+                    disabled={bookPage >= totalBookPages}
+                    onClick={() => setBookPage(p => Math.min(totalBookPages, p + 1))}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                      padding: '6px 12px',
+                      borderRadius: '8px',
+                      border: '1px solid #cbd5e1',
+                      background: bookPage >= totalBookPages ? '#f8fafc' : '#ffffff',
+                      color: bookPage >= totalBookPages ? '#94a3b8' : '#334155',
+                      fontSize: '12.5px',
+                      fontWeight: '700',
+                      cursor: bookPage >= totalBookPages ? 'not-allowed' : 'pointer',
+                      transition: 'all 0.15s ease'
+                    }}
+                  >
+                    Sau <ChevronRight size={16} />
+                  </button>
+                </div>
+              )}
+            </div>
+          </>
         )}
+      </div>
+    )}
 
         {/* ---------------------------------------------------------- */}
         {/* VIEW 5: ĐỘC GIẢ (READERS)                                  */}

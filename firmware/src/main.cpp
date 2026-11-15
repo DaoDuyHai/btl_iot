@@ -77,8 +77,9 @@ void loop() {
         
         // Gửi ngay lên Broker qua topic kiosk/{deviceId}/scan
         if (publishCardScan(DEVICE_ID, scannedUID)) {
-            Serial.println("📤 [MQTT] Đã gửi thẻ thành công lên Server.");
-            feedbackSuccess(); // Beep xác nhận đã gửi
+            Serial.println("📤 [MQTT] Đã gửi thẻ lên Server. Đang chờ kết quả từ Backend...");
+            // Không bật LED xanh ở đây (Mục 2.1 STT 7).
+            // Đèn LED xanh/đỏ và còi sẽ chỉ kích hoạt khi Server xác nhận và gửi lệnh 'feedback' xuống.
         } else {
             Serial.println("❌ [MQTT] Gửi thẻ thất bại (Mất kết nối MQTT).");
             feedbackError();

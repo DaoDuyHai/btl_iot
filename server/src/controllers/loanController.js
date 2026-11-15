@@ -1,9 +1,10 @@
 import * as loanService from '../services/loanService.js';
 import { emitToAll } from '../sockets/index.js';
+import { sendFeedback } from '../mqtt/publisher.js';
 
 export async function borrow(req, res, next) {
   try {
-    const { readerId, bookIds, loanDays } = req.body;
+    const { readerId, bookIds, loanDays, deviceId } = req.body;
     if (!readerId || !bookIds || !Array.isArray(bookIds) || bookIds.length === 0) {
       return res.status(400).json({
         success: false,
@@ -12,10 +13,12 @@ export async function borrow(req, res, next) {
     }
 
     const result = await loanService.borrowBatch({ readerId, bookIds, loanDays });
-    
+
     emitToAll('loans:changed', { action: 'borrow', result });
+    sendFeedback(deviceId || 'kiosk_01', 'success');
     res.status(201).json({ success: true, data: result });
   } catch (err) {
+    sendFeedback(req.body?.deviceId || 'kiosk_01', 'error');
     next(err);
   }
 }
@@ -36,7 +39,7 @@ export async function getReturnPreview(req, res, next) {
 
 export async function returnBatch(req, res, next) {
   try {
-    const { bookRfids, readerId } = req.body;
+    const { bookRfids, readerId, deviceId } = req.body;
     if (!bookRfids || !Array.isArray(bookRfids) || bookRfids.length === 0) {
       return res.status(400).json({
         success: false,
@@ -46,8 +49,10 @@ export async function returnBatch(req, res, next) {
 
     const result = await loanService.returnBatch({ bookRfids, readerId });
     emitToAll('loans:changed', { action: 'returnBatch', result });
+    sendFeedback(deviceId || 'kiosk_01', 'success');
     res.json({ success: true, data: result });
   } catch (err) {
+    sendFeedback(req.body?.deviceId || 'kiosk_01', 'error');
     next(err);
   }
 }

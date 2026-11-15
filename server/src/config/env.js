@@ -13,7 +13,9 @@ export const envSchema = z.object({
   BANK_BIN: z.string().default('970422'),
   BANK_ACCOUNT: z.string().default('000124135246'),
   EMAIL_USER: z.string().optional().default(''),
-  EMAIL_PASS: z.string().optional().default('')
+  EMAIL_PASS: z.string().optional().default(''),
+  ADMIN_USERNAME: z.string().default('admin'),
+  ADMIN_PASSWORD: z.string().default('admin123')
 });
 
 export function validateEnv(rawEnv = process.env) {
