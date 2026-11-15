@@ -1,0 +1,767 @@
+{
+  "timestamp": "2026-11-15 19:54:02",
+  "total_queries": 75,
+  "intent_accuracy": 98.67,
+  "recall_at_4": 100.0,
+  "mrr": 0.9722,
+  "missing_book_rejection_rate": 100.0,
+  "negation_accuracy": 100.0,
+  "emotion_detection_rate": 100.0,
+  "location_direct_rate": 100.0,
+  "ood_accuracy": 100.0,
+  "latency_avg_ms": 236.97,
+  "latency_p50_ms": 219.05,
+  "latency_p95_ms": 460.57,
+  "details": [
+    {
+      "id": 1,
+      "query": "Thư viện có sách \"Clean Code\" không bạn ơi?",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Clean Code - Mã Sạch Và Con Đường Trở Thành Lập Trình Viên Giỏi (TTT)",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Clean Code - Mã Sạch Và Con Đường Trở Thành Lậ"
+    },
+    {
+      "id": 2,
+      "query": "Tìm giúp mình cuốn \"Nhà Giả Kim\" của Paulo Coelho.",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Nhà Giả Kim",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Nhà Giả Kim' cùng các ấn phẩm nổi bật liên qua"
+    },
+    {
+      "id": 3,
+      "query": "Mình muốn mượn cuốn \"Mắt Biếc\" của Nguyễn Nhật Ánh.",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Mắt Biếc",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Mắt Biếc' cùng các ấn phẩm nổi bật liên quan đ"
+    },
+    {
+      "id": 4,
+      "query": "Cho mình tìm cuốn \"Sapiens: Lược sử loài người\".",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Sapiens: Lược sử loài người - Ấn bản dấu ấn 10 năm",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Sapiens: Lược sử loài người - Ấn bản dấu ấn 10"
+    },
+    {
+      "id": 5,
+      "query": "Ở đây có tác phẩm \"Phía Sau Nghi Can X\" không?",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Phía Sau Nghi Can X",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Phía Sau Nghi Can X' cùng các ấn phẩm nổi bật "
+    },
+    {
+      "id": 6,
+      "query": "Tìm cuốn tiểu thuyết \"Bố già\" của Mario Puzo.",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Bố Già",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Bố Già' cùng các ấn phẩm nổi bật liên quan đan"
+    },
+    {
+      "id": 7,
+      "query": "Có sách \"Tôi thấy hoa vàng trên cỏ xanh\" không?",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Tôi Thấy Hoa Vàng Trên Cỏ Xanh",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Tôi Thấy Hoa Vàng Trên Cỏ Xanh' cùng các ấn ph"
+    },
+    {
+      "id": 8,
+      "query": "Tìm cho mình tác phẩm \"Kafka bên bờ biển\" của Murakami.",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Kafka bên bờ biển",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Kafka bên bờ biển' cùng các ấn phẩm nổi bật li"
+    },
+    {
+      "id": 9,
+      "query": "Mình cần mượn cuốn \"Chiến binh cầu vồng\".",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Chiến Binh Cầu Vồng",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Chiến Binh Cầu Vồng' cùng các ấn phẩm nổi bật "
+    },
+    {
+      "id": 10,
+      "query": "Thư viện có cuốn \"Hai số phận\" của Jeffrey Archer không?",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Hai số phận",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Hai số phận' cùng các ấn phẩm nổi bật liên qua"
+    },
+    {
+      "id": 11,
+      "query": "Tìm cuốn \"Cho tôi xin một vé đi tuổi thơ\".",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Cho Tôi Xin Một Vé Đi Tuổi Thơ",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Cho Tôi Xin Một Vé Đi Tuổi Thơ' cùng các ấn ph"
+    },
+    {
+      "id": 12,
+      "query": "Cho mình hỏi cuốn \"Xa Ngoài Kia Nơi Loài Tôm Hát\".",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Xa Ngoài Kia Nơi Loài Tôm Hát - Where The Crawdads Sing",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Xa Ngoài Kia Nơi Loài Tôm Hát - Where The Craw"
+    },
+    {
+      "id": 13,
+      "query": "Thư viện có bộ sách \"Harry Potter\" bản tiếng Việt không?",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Boxset Harry Potter - Tiếng Việt",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Boxset Harry Potter - Tiếng Việt' cùng các ấn "
+    },
+    {
+      "id": 14,
+      "query": "Tìm cuốn \"Cấu trúc dữ liệu và thuật toán cài đặt bằng Python\" của Trần Thông Quế.",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Cấu trúc dữ liệu và thuật toán cài đặt bằng Python",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Cấu trúc dữ liệu và thuật toán cài đặt bằng Py"
+    },
+    {
+      "id": 15,
+      "query": "Có sách \"Hành Trình Vào Tâm Trái Đất\" của Jules Verne không?",
+      "type": "EXACT_BOOK_PRESENT",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Hành Trình Vào Tâm Trái Đất",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Hành Trình Vào Tâm Trái Đất' cùng các ấn phẩm "
+    },
+    {
+      "id": 16,
+      "query": "Thư viện có giáo trình \"Hệ quản trị CSDL SQL Server 2019\" không?",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Quản Trị Công Ty Hiện Đại - Bộ Công Cụ Cho Hội Đồng Quản Trị Thành Công Vượt Trội",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Hệ quản trị CSDL SQL Server 2019'"
+    },
+    {
+      "id": 17,
+      "query": "Tìm giúp mình cuốn \"Đắc nhân tâm\" của Dale Carnegie.",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Hạnh Phúc Đủ Đầy - Tác giả Đặng Minh Tâm",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Đắc nhân tâm' của tác giả 'Dale C"
+    },
+    {
+      "id": 18,
+      "query": "Cho mình mượn cuốn \"Lập trình Rust thực chiến từ cơ bản đến nâng cao\".",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Bài Tập Lập Trình Với Ngôn Ngữ C++, Từ Cơ Bản Đến Nâng Cao",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Lập trình Rust thực chiến từ cơ b"
+    },
+    {
+      "id": 19,
+      "query": "Ở đây có giáo trình \"Toán rời rạc ứng dụng trong tin học\" không?",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Tin Học Ứng Dụng - Lập Trình VBA Trong Excel (Phần Nâng Cao) - Dùng Cho Phiên Bản 2021 - 2019 - 2016",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Toán rời rạc ứng dụng trong tin h"
+    },
+    {
+      "id": 20,
+      "query": "Tìm tiểu thuyết \"Vang bóng một thời\" của nhà văn Nguyễn Tuân.",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Bong Bóng Lên Trời",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Vang bóng một thời' của tác giả '"
+    },
+    {
+      "id": 21,
+      "query": "Có sách \"Kafka Streams in Action\" bản dịch tiếng Việt không?",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Luyện Dịch Song Ngữ Hàn - Việt Qua 3.000 Tiêu Đề Báo Chí",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Kafka Streams in Action'.  Tuy nh"
+    },
+    {
+      "id": 22,
+      "query": "Thư viện có cuốn \"Vũ trụ trong một vỏ hạt dẻ\" của Stephen Hawking không?",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Danh nhân đương đại - Cuộc đời phi thường của Stephen Hawking (Câu chuyện về người đàn ông có những khám phá thay đổi thế giới",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Vũ trụ trong một vỏ hạt dẻ' của t"
+    },
+    {
+      "id": 23,
+      "query": "Cho mình mượn cuốn \"Dế Mèn Phiêu Lưu Ký\" của Tô Hoài.",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Khởi Nghiệp Phiêu Lưu Ký",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Dế Mèn Phiêu Lưu Ký' của tác giả "
+    },
+    {
+      "id": 24,
+      "query": "Tìm cuốn \"Kinh tế học vĩ mô thực tiễn\" của tác giả Mankiw.",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Kinh Tế Học Trần Trụi",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Kinh tế học vĩ mô thực tiễn'.  Tu"
+    },
+    {
+      "id": 25,
+      "query": "Có sách \"Deep Work - Làm ra làm, chơi ra chơi\" của Cal Newport không?",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Năng suất nhanh và chậm",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Deep Work - Làm ra làm, chơi ra c"
+    },
+    {
+      "id": 26,
+      "query": "Tìm bộ truyện \"Đại Việt sử ký toàn thư\" bản đầy đủ.",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Thép đã tôi thế đấy (Bản dịch đầy đủ nhất)",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Đại Việt sử ký toàn thư'.  Tuy nh"
+    },
+    {
+      "id": 27,
+      "query": "Cho mình hỏi cuốn \"Giông tố\" của Vũ Trọng Phụng.",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Số Đỏ",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Giông tố' của tác giả 'Vũ Trọng"
+    },
+    {
+      "id": 28,
+      "query": "Thư viện có sách \"Designing Data-Intensive Applications\" bản tiếng Việt không?",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Giáo trình tiếng Hoa đương đại - sách bài tập + sách tập viết (1-3)",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Designing Data-Intensive Applicat"
+    },
+    {
+      "id": 29,
+      "query": "Tìm tài liệu \"Lập trình mạng nâng cao với Golang\".",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Bài Tập Lập Trình Với Ngôn Ngữ C++, Từ Cơ Bản Đến Nâng Cao",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Lập trình mạng nâng cao với Golan"
+    },
+    {
+      "id": 30,
+      "query": "Ở đây có cuốn \"Không bao giờ chia đôi lợi ích\" của Chris Voss không?",
+      "type": "EXACT_BOOK_MISSING",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Kinh tế học vì lợi ích chung: Làm thế nào để các quyết định kinh tế phụng sự số đông?",
+      "reply_preview": "Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn 'Không bao giờ chia đôi lợi ích' c"
+    },
+    {
+      "id": 31,
+      "query": "Gợi ý cho mình các sách về kiến trúc Microservices và điện toán đám mây.",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Cấu trúc dữ liệu và thuật toán cài đặt bằng Python",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 32,
+      "query": "Mình muốn tìm giáo trình học lập trình hướng đối tượng OOP.",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Giáo Trình Kỹ Thuật Lập Trình C Căn Bản Và Nâng Cao + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng (2 quyển)",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 33,
+      "query": "Có sách nào luyện thi IELTS cấp tốc từ 5.0 lên 6.5 không?",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "IELTS Speaking Journey - Speak Your Way To Band 6.0",
+      "reply_preview": "Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đ"
+    },
+    {
+      "id": 34,
+      "query": "Tìm sách về quy trình kiểm thử phần mềm tự động Software Testing.",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Tự Học Nhanh Lập Trình S7 1500 (Lý Thuyết - Thực Hành)",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 35,
+      "query": "Gợi ý tài liệu nhập môn Machine Learning và Deep Learning cho người mới.",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Nhập Môn Lập Trình Thi Đấu - Python",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 36,
+      "query": "Thư viện có những cuốn sách nào hướng dẫn quản trị kinh doanh và khởi nghiệp?",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Kế Toán Quản Trị",
+      "reply_preview": "Chào bạn! Dưới đây là các tác phẩm chọn lọc về tư duy kinh doanh, quản trị và tài chính uy tín đang "
+    },
+    {
+      "id": 37,
+      "query": "Tìm sách học ngữ pháp và từ vựng tiếng Trung luyện thi HSK 4.",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Takenote Ngữ Pháp Tiếng Trung HSK 1-6",
+      "reply_preview": "Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đ"
+    },
+    {
+      "id": 38,
+      "query": "Có tài liệu nào dạy lập trình Docker, Kubernetes và triển khai CI/CD không?",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Giáo Trình Kỹ Thuật Lập Trình C Căn Bản Và Nâng Cao + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng (2 quyển)",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 39,
+      "query": "Tìm sách hướng dẫn kỹ năng quản lý thời gian và lập kế hoạch công việc.",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Lập Kế Hoạch Kinh Doanh Cho Người Mới Bắt Đầu",
+      "reply_preview": "Chào bạn! Với chủ đề bạn đang quan tâm, thủ thư đã rà soát kho 3.000 đầu sách và chọn ra các ấn phẩm"
+    },
+    {
+      "id": 40,
+      "query": "Gợi ý các cuốn sách phân tích tâm lý hành vi con người trong giao tiếp.",
+      "type": "CATEGORY_TOPIC",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Sự thịnh vượng của các quốc gia (Bản chữ ký dịch giả)",
+      "reply_preview": "Chào bạn! Với chủ đề bạn đang quan tâm, thủ thư đã rà soát kho 3.000 đầu sách và chọn ra các ấn phẩm"
+    },
+    {
+      "id": 41,
+      "query": "Đang làm đồ án tốt nghiệp kiệt sức quá, muốn tìm cuốn sách gì nhẹ đầu để xả stress.",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Chờ Ngày Bình Yên",
+      "reply_preview": "Chào bạn! Áp lực học tập, thi cử và đồ án đôi khi khiến chúng ta cảm thấy kiệt sức và quá tải. Đừng "
+    },
+    {
+      "id": 42,
+      "query": "Hôm nay mình vừa chia tay người yêu, tâm trạng rất tệ, cần cuốn gì vỗ về cảm xúc.",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Chờ Ngày Bình Yên",
+      "reply_preview": "Chào bạn! Chuyện tình cảm tan vỡ hay vừa chia tay luôn để lại những khoảng trống và nỗi buồn không d"
+    },
+    {
+      "id": 43,
+      "query": "Sống một mình giữa thành phố thấy cô đơn lạc lõng quá, có sách nào đọc ấm lòng không?",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Ăn Để Nhớ - Tản Văn",
+      "reply_preview": "Chào bạn! Cảm giác cô đơn giữa dòng người đông đúc đôi khi khiến chúng ta thấy mình thật nhỏ bé và t"
+    },
+    {
+      "id": 44,
+      "query": "Cần một cuốn truyện hài hước dí dỏm để cười xả láng xua tan một tuần u ám.",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Cảm Ơn Người Lớn",
+      "reply_preview": "Chào bạn! Một cuốn sách dí dỏm cùng những tiếng cười sảng khoái luôn là liều thuốc tinh thần tuyệt v"
+    },
+    {
+      "id": 45,
+      "query": "Tối nay trằn trọc mất ngủ quá, gợi ý cho mình cuốn tản văn êm đềm dễ ngủ đi thủ thư.",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Một Người Rừng Thông Thái",
+      "reply_preview": "Chào bạn! Một cuốn sách dịu êm với câu chữ chậm rãi, bình yên sẽ giúp tâm trí bạn thả lỏng và dễ dàn"
+    },
+    {
+      "id": 46,
+      "query": "Đang bị mất phương hướng và bế tắc tương lai, cần cuốn sách truyền cảm hứng vực dậy.",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Chuyện Của Chúng Tôi",
+      "reply_preview": "Chào bạn! Ai trong chúng ta cũng có những giai đoạn chênh vênh và mất phương hướng. Dưới đây là nhữn"
+    },
+    {
+      "id": 47,
+      "query": "Tìm giúp mình một liều thuốc tinh thần để tĩnh tâm và bớt suy nghĩ tiêu cực.",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Chờ Ngày Bình Yên",
+      "reply_preview": "Chào bạn! Những lúc lòng chùng xuống, những trang sách ấm áp và chân thành sẽ là liều thuốc tinh thầ"
+    },
+    {
+      "id": 48,
+      "query": "Muốn đọc cuốn tiểu thuyết kỳ ảo phép thuật để tạm thời thoát ly thực tại ngột ngạt.",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Đêm Cho Chuột: Tuyển Tập Những Vụ Án Kì Ảo Của Mikihiko Renjo",
+      "reply_preview": "Chào bạn! Đôi khi thả mình vào những thế giới kỳ ảo và các cuộc phiêu lưu phép thuật là cách tuyệt v"
+    },
+    {
+      "id": 49,
+      "query": "Cảm thấy tự ti và luôn sợ thất bại trước mọi kỳ thi, có sách tâm lý nào đồng cảm không?",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "tâm lý học về tự do và trưởng thành",
+      "reply_preview": "Chào bạn! Thấu hiểu tâm trạng của bạn lúc này (Lo âu / Bất an), thủ thư đã rà soát kho sách và chọn "
+    },
+    {
+      "id": 50,
+      "query": "Tìm cho mình một câu chuyện tình yêu ấm áp kết thúc có hậu để thấy đời đáng sống.",
+      "type": "EMOTIONAL_CONTEXT",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Cảm Ơn Bạn Vì Đã Sống Tiếp - Thế Giới Ấm Áp Vì Vẫn Còn Bạn Ở Đây",
+      "reply_preview": "Chào bạn! Chuyện tình cảm tan vỡ hay vừa chia tay luôn để lại những khoảng trống và nỗi buồn không d"
+    },
+    {
+      "id": 51,
+      "query": "Cuốn \"Mắt Biếc\" hiện đang ở kệ nào và còn bao nhiêu cuốn vậy bạn?",
+      "type": "LOCATION_STATUS",
+      "expected_intent": "LOCATION_STATUS",
+      "actual_intent": "LOCATION_STATUS",
+      "books_count": 1,
+      "top_book": "Mắt Biếc",
+      "reply_preview": "Chào bạn! Cuốn sách **'Mắt Biếc'** của tác giả **Nguyễn Nhật Ánh** hiện đang được xếp tại **Khu vực "
+    },
+    {
+      "id": 52,
+      "query": "Cho mình hỏi sách \"Clean Code\" nằm ở Kệ nào, Tầng mấy?",
+      "type": "LOCATION_STATUS",
+      "expected_intent": "LOCATION_STATUS",
+      "actual_intent": "LOCATION_STATUS",
+      "books_count": 1,
+      "top_book": "Clean Code - Mã Sạch Và Con Đường Trở Thành Lập Trình Viên Giỏi (TTT)",
+      "reply_preview": "Chào bạn! Cuốn sách **'Clean Code - Mã Sạch Và Con Đường Trở Thành Lập Trình Viên Giỏi (TTT)'** của "
+    },
+    {
+      "id": 53,
+      "query": "Vị trí của cuốn \"Nhà Giả Kim\" trên kệ sách là ở đâu?",
+      "type": "LOCATION_STATUS",
+      "expected_intent": "LOCATION_STATUS",
+      "actual_intent": "LOCATION_STATUS",
+      "books_count": 1,
+      "top_book": "Nhà Giả Kim",
+      "reply_preview": "Chào bạn! Cuốn sách **'Nhà Giả Kim'** của tác giả **Paulo Coelho** hiện đang được xếp tại **Khu vực "
+    },
+    {
+      "id": 54,
+      "query": "Khu vực Kệ B nằm ở tầng mấy của thư viện?",
+      "type": "LOCATION_STATUS",
+      "expected_intent": "LOCATION_STATUS",
+      "actual_intent": "LOCATION_STATUS",
+      "books_count": 1,
+      "top_book": "Thứ Bạn Tìm Đều Nằm Trong Thư Viện",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin tra cứu vị trí kệ và số bản sách sẵn có để bạn tiện đến lấy mượn:  💬"
+    },
+    {
+      "id": 55,
+      "query": "Cuốn \"Bố già\" còn bản nào trên kệ để mượn ngay không?",
+      "type": "LOCATION_STATUS",
+      "expected_intent": "LOCATION_STATUS",
+      "actual_intent": "LOCATION_STATUS",
+      "books_count": 1,
+      "top_book": "Bố Già",
+      "reply_preview": "Chào bạn! Cuốn sách **'Bố Già'** của tác giả **Mario Puzo** hiện đang được xếp tại **Khu vực Kệ A - "
+    },
+    {
+      "id": 56,
+      "query": "Tìm vị trí cuốn sách \"Chiến binh cầu vồng\" trong thư viện.",
+      "type": "LOCATION_STATUS",
+      "expected_intent": "LOCATION_STATUS",
+      "actual_intent": "LOCATION_STATUS",
+      "books_count": 1,
+      "top_book": "Chiến Binh Cầu Vồng",
+      "reply_preview": "Chào bạn! Cuốn sách **'Chiến Binh Cầu Vồng'** của tác giả **Andrea Hirata** hiện đang được xếp tại *"
+    },
+    {
+      "id": 57,
+      "query": "Thời tiết Hà Nội hôm nay mưa hay nắng vậy bạn?",
+      "type": "OUT_OF_DOMAIN",
+      "expected_intent": "OUT_OF_DOMAIN",
+      "actual_intent": "OUT_OF_DOMAIN",
+      "books_count": 0,
+      "top_book": "NONE",
+      "reply_preview": "Chào bạn! Mình là Thủ thư ảo AI của Thư viện Kiosk PTIT. Hiện tại mình chuyên hỗ trợ tra cứu sách, t"
+    },
+    {
+      "id": 58,
+      "query": "Quán cơm tấm nào gần cổng trường PTIT ngon và rẻ?",
+      "type": "OUT_OF_DOMAIN",
+      "expected_intent": "OUT_OF_DOMAIN",
+      "actual_intent": "OUT_OF_DOMAIN",
+      "books_count": 0,
+      "top_book": "NONE",
+      "reply_preview": "Chào bạn! Mình là Thủ thư ảo AI của Thư viện Kiosk PTIT. Hiện tại mình chuyên hỗ trợ tra cứu sách, t"
+    },
+    {
+      "id": 59,
+      "query": "Tính giúp mình 125 cộng với 380 bằng bao nhiêu?",
+      "type": "OUT_OF_DOMAIN",
+      "expected_intent": "OUT_OF_DOMAIN",
+      "actual_intent": "OUT_OF_DOMAIN",
+      "books_count": 0,
+      "top_book": "NONE",
+      "reply_preview": "Chào bạn! Mình là Thủ thư ảo AI của Thư viện Kiosk PTIT. Hiện tại mình chuyên hỗ trợ tra cứu sách, t"
+    },
+    {
+      "id": 60,
+      "query": "Viết giúp mình một bài thơ tỏ tình bạn gái cùng lớp.",
+      "type": "OUT_OF_DOMAIN",
+      "expected_intent": "OUT_OF_DOMAIN",
+      "actual_intent": "OUT_OF_DOMAIN",
+      "books_count": 0,
+      "top_book": "NONE",
+      "reply_preview": "Chào bạn! Mình là Thủ thư ảo AI của Thư viện Kiosk PTIT. Hiện tại mình chuyên hỗ trợ tra cứu sách, t"
+    },
+    {
+      "id": 61,
+      "query": "Giá vàng SJC hôm nay đang tăng hay giảm thế?",
+      "type": "OUT_OF_DOMAIN",
+      "expected_intent": "OUT_OF_DOMAIN",
+      "actual_intent": "OUT_OF_DOMAIN",
+      "books_count": 0,
+      "top_book": "NONE",
+      "reply_preview": "Chào bạn! Mình là Thủ thư ảo AI của Thư viện Kiosk PTIT. Hiện tại mình chuyên hỗ trợ tra cứu sách, t"
+    },
+    {
+      "id": 62,
+      "query": "Máy tính của mình bị lỗi màn hình xanh, sửa như thế nào?",
+      "type": "OUT_OF_DOMAIN",
+      "expected_intent": "OUT_OF_DOMAIN",
+      "actual_intent": "OUT_OF_DOMAIN",
+      "books_count": 0,
+      "top_book": "NONE",
+      "reply_preview": "Chào bạn! Mình là Thủ thư ảo AI của Thư viện Kiosk PTIT. Hiện tại mình chuyên hỗ trợ tra cứu sách, t"
+    },
+    {
+      "id": 63,
+      "query": "Mình muốn tìm sách học tiếng Anh giao tiếp nhưng không phải sách ngữ pháp khô khan.",
+      "type": "NEGATION_CONSTRAINT",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Tiếng Anh Giao Tiếp - Communicative English (Kèm file MP3)",
+      "reply_preview": "Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đ"
+    },
+    {
+      "id": 64,
+      "query": "Tìm sách học lập trình Python, không muốn đọc giáo trình nặng lý thuyết hàn lâm.",
+      "type": "NEGATION_CONSTRAINT",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "2 sách Lập trình với Python cơ bản và nâng cao",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 65,
+      "query": "Gợi ý sách về đầu tư tài chính cho sinh viên nhưng không phải các chiêu trò làm giàu nhanh.",
+      "type": "NEGATION_CONSTRAINT",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "THE LITTLE BOOK - Quản Trị Rủi Ro Trong Đầu Tư Chứng Khoán",
+      "reply_preview": "Chào bạn! Dưới đây là các tác phẩm chọn lọc về tư duy kinh doanh, quản trị và tài chính uy tín đang "
+    },
+    {
+      "id": 66,
+      "query": "Tìm tài liệu về thuật toán Binary Search, không phải sách trinh thám tìm đồ.",
+      "type": "NEGATION_CONSTRAINT",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Cấu trúc dữ liệu và thuật toán cài đặt bằng Python",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 67,
+      "query": "Có tài liệu về kiến trúc hệ thống mạng máy tính không, đừng gợi ý sách kiến trúc xây dựng.",
+      "type": "NEGATION_CONSTRAINT",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Chuẩn Đoán, Sửa Chữa, Bảo Trì, Hệ Thống Điều Khiển Bằng Máy Tính Trên Ô Tô ( Lý Thuyết, Thực Hành) - STK",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 68,
+      "query": "Gợi ý truyện trinh thám hồi hộp nhưng tuyệt đối đừng có yếu tố kinh dị máu me rùng rợn.",
+      "type": "NEGATION_CONSTRAINT",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 0,
+      "top_book": "NONE",
+      "reply_preview": "Chào bạn! Rất tiếc hiện tại thư viện chưa tìm thấy đầu sách nào thực sự phù hợp với yêu cầu: 'Gợi ý "
+    },
+    {
+      "id": 69,
+      "query": "Tìm sách lập trình ứng dụng Android trên điện thoại, không phải vi điều khiển Arduino.",
+      "type": "NEGATION_CONSTRAINT",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "ứng dụng iot trong lập trình nhà nông trại thông minh ( stk)",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 70,
+      "query": "Recommend a good book about algorithm and data structure for beginners.",
+      "type": "ROBUSTNESS_EDGE",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Data Và AI Thực Chiến Với Excel Và Power BI - Nguyễn Hữu Đạt",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 71,
+      "query": "Lập chình Python",
+      "type": "ROBUSTNESS_EDGE",
+      "expected_intent": "CATEGORY_TOPIC",
+      "actual_intent": "CATEGORY_TOPIC",
+      "books_count": 4,
+      "top_book": "Lập Trình Python",
+      "reply_preview": "Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực t"
+    },
+    {
+      "id": 72,
+      "query": "Nha gia kim",
+      "type": "ROBUSTNESS_EDGE",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Pháp giới Kim cương - Kinh Kim Cương Đảnh Du Già Lý Thú Bát Nhã",
+      "reply_preview": "Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Nhà Giả Kim' cùng các ấn phẩm nổi bật liên qua"
+    },
+    {
+      "id": 73,
+      "query": "Sapiens luoc su loai nguoi",
+      "type": "ROBUSTNESS_EDGE",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "Sapiens: Lược sử loài người - Ấn bản dấu ấn 10 năm",
+      "reply_preview": "Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nh"
+    },
+    {
+      "id": 74,
+      "query": "Clean Code",
+      "type": "ROBUSTNESS_EDGE",
+      "expected_intent": "EXACT_BOOK",
+      "actual_intent": "EXACT_BOOK",
+      "books_count": 4,
+      "top_book": "sách Lập Trình Hay: Clean Code + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng",
+      "reply_preview": "Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nh"
+    },
+    {
+      "id": 75,
+      "query": "stress",
+      "type": "ROBUSTNESS_EDGE",
+      "expected_intent": "EMOTIONAL_CONTEXT",
+      "actual_intent": "EMOTIONAL_CONTEXT",
+      "books_count": 4,
+      "top_book": "Chờ Ngày Bình Yên",
+      "reply_preview": "Chào bạn! Áp lực học tập, thi cử và đồ án đôi khi khiến chúng ta cảm thấy kiệt sức và quá tải. Đừng "
+    }
+  ]
+}

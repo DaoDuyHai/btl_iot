@@ -85,6 +85,13 @@ const SEMANTIC_INTENTS = [
     keywords: ['tiểu thuyết', 'văn học', 'tác phẩm kinh điển', 'truyện ngắn'],
     targetSubcats: ['Tác phẩm kinh điển', 'Tiểu Thuyết', 'Truyện dài'],
     targetCategories: ['Văn học – Tiểu thuyết']
+  },
+  {
+    intent: 'HUMOR_COMICS',
+    triggers: ['hai huoc', 'hài hước', 'hinh minh hoa', 'hình minh họa', 'tranh minh hoa', 'tranh minh họa', 'truyen tranh', 'truyện tranh', 'truyen cuoi', 'truyện cười', 'di dom', 'dí dỏm', 'vui nhon', 'vui nhộn', 'de doc', 'dễ đọc', 'giai tri', 'giải trí'],
+    keywords: ['truyện tranh', 'hài hước', 'hình minh họa', 'dí dỏm', 'vui vẻ', 'giải trí', 'doraemon', 'truyện ngắn'],
+    targetSubcats: ['Truyện tranh', 'Truyện dài', 'Truyện ngắn - Tản văn - Tạp Văn'],
+    targetCategories: ['Thiếu nhi', 'Văn học – Tiểu thuyết']
   }
 ];
 
@@ -282,6 +289,13 @@ class CatalogService {
       }
       if (qClean.includes('tiếng trung') || qClean.includes('hsk') || qClean.includes('tiếng hoa') || qClean.includes('hán ngữ')) {
         if (b._normTitle.includes('tiếng anh') || b._normTitle.includes('english') || b._normSubcat.includes('tiếng anh') || b._normSubcat.includes('toeic')) {
+          score -= 500;
+        }
+      }
+
+      // F. Khử nhiễu: Tìm truyện hài hước, tranh ảnh minh họa, giải trí tuyệt đối không gợi ý lập trình, thuật toán
+      if (qClean.includes('hài hước') || qClean.includes('hình minh họa') || qClean.includes('truyện tranh') || qClean.includes('truyện cười') || qClean.includes('dí dỏm') || qClean.includes('dễ đọc')) {
+        if (b.category.includes('Công nghệ thông tin') || b.subcategory.includes('Lập Trình') || b._normTitle.includes('thuật toán') || b._normTitle.includes('lập trình') || b._normTitle.includes('thi đấu')) {
           score -= 500;
         }
       }

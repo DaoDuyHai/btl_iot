@@ -9,6 +9,7 @@ export default [
       '**/TrainAI/**',
       '**/venv/**',
       '**/.venv/**',
+      '**/_archive_tests_docs/**',
       '**/.git/**',
       '**/.husky/**'
     ]

@@ -1,4 +1,4 @@
-name: Smart Library Kiosk CI/CD Pipeline
+name: Smart Library Kiosk CI Pipeline (Lint & Test)
 
 on:
   push:
@@ -68,27 +68,3 @@ jobs:
           context: ./client
           push: false
           tags: ptit-library-kiosk-client:latest
-
-  # =====================================================
-  # 2. Job Tự động Triển khai Backend lên Fly.io (CD)
-  # =====================================================
-  deploy-backend:
-    name: Deploy Backend to Fly.io
-    needs: build-and-test
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Setup Flyctl
-        uses: superfly/flyctl-actions/setup-flyctl@master
-
-      - name: Deploy to Fly.io
-        env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-        if: env.FLY_API_TOKEN != ''
-        run: |
-          cd server
-          flyctl deploy --remote-only

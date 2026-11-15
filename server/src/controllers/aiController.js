@@ -258,6 +258,8 @@ function generateLocalAgentResponse(cleanMsg, candidateBooks) {
       intro = 'Chào bạn! Tư duy quản trị tài chính và tinh thần khởi nghiệp sẽ mang lại cho bạn sự tự chủ vững vàng sau này. Dưới đây là những tác phẩm kinh điển về kinh tế, đầu tư cá nhân và xây dựng mô hình khởi nghiệp đổi mới sáng tạo:';
     } else if (matchedIntent.intent === 'LITERATURE_CLASSIC') {
       intro = 'Chào bạn! Đọc văn học kinh điển là cách tuyệt vời nhất để nuôi dưỡng sự đồng cảm, thế giới quan sâu sắc và thưởng thức nghệ thuật ngôn từ. Dưới đây là những áng văn chương bất hủ có mặt tại thư viện PTIT:';
+    } else if (matchedIntent.intent === 'HUMOR_COMICS') {
+      intro = 'Chào bạn! Những cuốn sách nhiều hình ảnh minh họa sinh động cùng câu chuyện hài hước, dí dỏm luôn là liều thuốc tinh thần tuyệt vời để thư giãn và nạp lại năng lượng tích cực. Dưới đây là những ấn phẩm vui tươi, dễ đọc nhất hiện có tại thư viện PTIT:';
     }
   }
 

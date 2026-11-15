@@ -1,5 +1,19 @@
 services:
   # -----------------------------------------------------
+  # 0. Co so du lieu MongoDB (Dung khi khong cai Mongo local)
+  # -----------------------------------------------------
+  mongo:
+    image: mongo:6
+    container_name: kiosk-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - kiosk-net
+
+  # -----------------------------------------------------
   # 1. Trạm trung chuyển thông điệp MQTT Mosquitto Broker
   # -----------------------------------------------------
   mosquitto:
@@ -57,3 +71,6 @@ services:
 networks:
   kiosk-net:
     driver: bridge
+
+volumes:
+  mongo-data:

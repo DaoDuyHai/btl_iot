@@ -1,18 +1,18 @@
 # 📚 Smart Library Kiosk - Hệ Thống Mượn / Trả Sách Tự Phục Vụ Thông Minh
 
-[![CI/CD Pipeline](https://github.com/DaoDuyHai/btl_iot/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/DaoDuyHai/btl_iot/actions/workflows/ci-cd.yml)
-[![Frontend](https://img.shields.io/badge/Vercel-Live_Kiosk-000000?logo=vercel&logoColor=white)](https://btl-iot.vercel.app/kiosk)
-[![Backend](https://img.shields.io/badge/Fly.io-Live_API-purple?logo=flydotio&logoColor=white)](https://ptit-library-kiosk-server.fly.dev/api/health)
+[![CI Pipeline](https://github.com/DaoDuyHai/btl_iot/actions/workflows/ci.yml/badge.svg)](https://github.com/DaoDuyHai/btl_iot/actions/workflows/ci.yml)
 [![Docker](https://img.shields.io/badge/Docker-Compose_Ready-2496ED?logo=docker&logoColor=white)]()
-[![Test Suite](https://img.shields.io/badge/Vitest-21_Passed-brightgreen?logo=vitest&logoColor=white)]()
+[![Test Suite](https://img.shields.io/badge/Vitest-68_Passed-brightgreen?logo=vitest&logoColor=white)]()
 [![Code Style](https://img.shields.io/badge/Code_Style-ESLint_+_Prettier-blueviolet?logo=eslint&logoColor=white)]()
 
-> **Đề tài:** Nghiên cứu, thiết kế và triển khai hệ thống Kiosk mượn/trả sách tự phục vụ ứng dụng công nghệ IoT (Internet of Things) và RFID.
+> **Đề tài:** Nghiên cứu, thiết kế và triển khai hệ thống Kiosk mượn/trả sách tự phục vụ ứng dụng công nghệ IoT (Internet of Things), RFID và Trợ lý Thủ thư AI (Multilingual-E5 + BM25 + Intent/Emotion Routing).
 
-### 🌐 Môi trường Production Trực Tuyến:
-* 🖥️ **Màn hình Kiosk Tự phục vụ:** [https://btl-iot.vercel.app/kiosk](https://btl-iot.vercel.app/kiosk)
-* 🛡️ **Cổng Quản trị Thủ thư (Admin):** [https://btl-iot.vercel.app/admin](https://btl-iot.vercel.app/admin)
-* ⚙️ **Hạ tầng Backend API (Fly.io):** [https://ptit-library-kiosk-server.fly.dev](https://ptit-library-kiosk-server.fly.dev/api/health)
+### 🖥️ Môi trường Truy cập Cục bộ (Localhost):
+* 🖥️ **Màn hình Kiosk Tự phục vụ:** [http://localhost:5173/kiosk](http://localhost:5173/kiosk)
+* 🛡️ **Cổng Quản trị Thủ thư (Admin):** [http://localhost:5173/admin](http://localhost:5173/admin)
+* ⚙️ **Hạ tầng Backend API (Express):** [http://localhost:5000/api/health](http://localhost:5000/api/health)
+* 🤖 **Trợ lý AI Tìm kiếm Sách (FastAPI):** [http://localhost:8000/docs](http://localhost:8000/docs)
+* 💳 **Bảng Điều Khiển Quẹt Thẻ Giả lập:** [http://localhost:8888](http://localhost:8888)
 
 ---
 
@@ -210,32 +210,55 @@ library-kiosk/
 ## 🚀 7. Hướng dẫn cài đặt & Chạy thử nhanh (Quick Start)
 
 ### Yêu cầu môi trường:
-* **Node.js:** v18 trở lên
-* **Docker & Docker Compose** (hoặc cài trực tiếp MongoDB và Mosquitto trên máy tính)
-* **PlatformIO IDE** (Cài extension trên VS Code để nạp code ESP32)
+* **Node.js:** v18 hoặc v20+ trở lên.
+* **Python:** 3.10+ (nếu chạy AI Search Service cục bộ).
+* **Docker & Docker Compose** (khuyên dùng để tự động chạy Mosquitto & MongoDB trong 1 lệnh) HOẶC cài trực tiếp MongoDB và Mosquitto trên máy tính.
 
-### Các bước chạy hệ thống:
+---
 
-1. **Khởi chạy Hạ tầng (Mosquitto MQTT & MongoDB):**
+### Cách 1: Khởi chạy Tự động 1-Click (Khuyên dùng trên Windows)
+
+Chỉ cần double-click file **`start.bat`** tại thư mục gốc của dự án:
+- File script sẽ **tự động kiểm tra và sao chép cấu hình `.env`** từ `.env.example` (nếu chưa có).
+- **Tự động cài đặt dependencies (`node_modules`)** cho Server, Client và IoT Simulator (nếu chưa cài).
+- **Tự động khởi động MQTT Mosquitto Broker và MongoDB** qua Docker (nếu máy có Docker).
+- **Tự động mở 4 cửa sổ riêng biệt** cho AI Service, Backend Express, Frontend React Vite và IoT Simulator.
+
+> 💡 **Lưu ý lần đầu chạy:** Mở một cửa sổ Terminal tại thư mục gốc và chạy lệnh nạp dữ liệu sách & thẻ bạn đọc mẫu vào database:
+> ```bash
+> npm run seed
+> ```
+
+---
+
+### Cách 2: Khởi chạy Thủ công từng bước bằng Terminal
+
+1. **Cài đặt thư viện toàn dự án & tạo file môi trường (.env):**
+   ```bash
+   npm run setup
+   ```
+
+2. **Khởi chạy Hạ tầng (Mosquitto MQTT & MongoDB qua Docker):**
    ```bash
    docker-compose up -d
    ```
+   *(Nếu không dùng Docker, bạn hãy đảm bảo dịch vụ MongoDB và Mosquitto MQTT đã được bật trên máy).*
 
-2. **Cài đặt & Chạy Backend Server:**
+3. **Nạp dữ liệu mẫu vào cơ sở dữ liệu:**
    ```bash
-   cd server
-   npm install
-   cp .env.example .env
-   npm run seed      # Nạp dữ liệu độc giả và sách mẫu
-   npm run dev       # Chạy server tại http://localhost:5000
+   npm run seed
    ```
 
-3. **Cài đặt & Chạy Giao diện Kiosk / Admin:**
+4. **Khởi chạy đồng thời toàn bộ hệ thống:**
    ```bash
-   cd ../client
-   npm install
-   npm run dev       # Truy cập Kiosk tại http://localhost:5173/kiosk
-                     # Truy cập Admin tại http://localhost:5173/admin
+   npm start        # Khởi chạy toàn bộ qua start.bat
+   ```
+   *Hoặc mở các Terminal riêng lẻ:*
+   ```bash
+   npm run server:dev    # Backend Server (Port 5000)
+   npm run client:dev    # Frontend Web App (Port 5173)
+   npm run ai:dev        # AI Search Service (Port 8000)
+   npm run sim:local     # Giả lập phần cứng IoT (Web GUI: http://localhost:8888)
    ```
 
 4. **Chạy Giả lập Thiết bị IoT Phần cứng (Chạy song song với Kiosk UI):**
@@ -264,33 +287,33 @@ library-kiosk/
 
 Dự án được xây dựng theo chuẩn mực kỹ thuật công nghiệp khắt khe, tích hợp đầy đủ công cụ phân tích tĩnh, bộ kiểm thử tự động đa tầng và đường ống CI/CD tự động:
 
-### a) Kiểm thử tự động với Vitest (21/21 Tests Passed)
-Hệ thống tích hợp bộ kiểm thử toàn diện với thời gian thực thi siêu tốc ($\approx 1.5\text{s}$), chạy độc lập không phụ thuộc kết nối mạng:
+### a) Kiểm thử tự động với Vitest (12 Test Suites - 68/68 Tests Passed)
+Hệ thống tích hợp bộ kiểm thử toàn diện với thời gian thực thi siêu tốc ($\approx 2.4\text{s}$), chạy độc lập không phụ thuộc kết nối mạng:
 * **Unit Tests (`server/tests/unit/`):**
-  - Thẩm định Zod Environment Validation (`env.test.js`): Bắt buộc các biến cấu hình trọng yếu, chặn khởi động nếu thiếu.
-  - Kiểm thử Mocked Business Logic (`loanService.test.js`): Thẩm định công thức phạt trễ hạn ($5.000\text{đ/ngày}$), sinh link VietQR chuẩn Napas, kiểm tra hạn mức mượn tối đa 5 cuốn, gộp biên lai thanh toán.
+  - **Zod Environment Validation (`env.test.js`):** Thẩm định các biến cấu hình trọng yếu, chặn khởi động nếu thiếu.
+  - **Nghiệp vụ Mượn/Trả (`loanService.test.js` - 20 tests):** Thẩm định công thức phạt trễ hạn ($5.000\text{đ/ngày}$), sinh link VietQR chuẩn Napas, kiểm tra hạn mức mượn tối đa 5 cuốn, gộp biên lai thanh toán, kiểm tra sách hỏng.
+  - **Tầng IoT MQTT (`mqttHandler.test.js` - 6 tests):** Xử lý quẹt thẻ RFID từ phần cứng, thuật toán chống rung (`debounce cooldown`), chặn thẻ khóa, nhận diện thẻ sách, nhịp tim thiết bị.
+  - **AI Gateway (`aiController.test.js` - 7 tests):** Điều phối tìm kiếm, gợi ý theo khoa, cơ chế tự động Fallback sang Catalog Precision in-memory khi AI Service offline.
+  - **Precision Catalog Service (`catalogService.test.js` - 4 tests):** Nạp 3,000 sách vào RAM, nhận diện Intent ngôn ngữ (Anh/Nhật/Trung), chuẩn hóa tiếng Việt không dấu.
+  - **Gửi Email Biên lai (`emailService.test.js` - 3 tests):** Gửi email biên lai mượn/trả điện tử tự động tới bạn đọc PTIT.
+  - **Quản lý Bạn đọc & Thiết bị (`readerController.test.js`, `deviceController.test.js`, `bookController.test.js`):** CRUD bạn đọc, lệnh điều khiển buzzer/LED phần cứng, reboot kiosk.
 * **Integration Tests (`server/tests/integration/`):**
-  - REST API Endpoints với Supertest (`api.test.js`): Kiểm thử toàn diện `/api/health`, `/api/books`, xử lý từ chối dữ liệu rỗng `/api/loans/borrow` (400 Bad Request), gửi lệnh còi/đèn `/api/devices/:deviceId/command`.
-  - **Bảo vệ xung đột đồng thời (Race Condition Testing - `raceCondition.test.js`):** Giả lập `Promise.all` 2 yêu cầu mượn đồng thời cùng 1 cuốn sách để kiểm tra cơ chế Atomic Lock, và thẩm định cơ chế chống chiếm quyền phiên (Anti-Session Hijacking).
+  - **REST API Endpoints với Supertest (`api.test.js` - 9 tests):** Kiểm thử toàn diện `/api/health`, `/api/books`, xử lý từ chối dữ liệu rỗng `/api/loans/borrow` (400 Bad Request), gửi lệnh còi/đèn `/api/devices/:deviceId/command`.
+  - **Bảo vệ xung đột đồng thời (Race Condition Testing - `raceCondition.test.js`):** Giả lập `Promise.all` 2 yêu cầu mượn đồng thời cùng 1 cuốn sách để kiểm tra cơ chế Atomic Lock, chống chiếm quyền phiên.
   - **Kiểm thử WebSocket Realtime (`socket.test.js`):** Khởi tạo máy chủ HTTP tạm và kết nối với client thực bằng `socket.io-client` để thẩm định sự kiện `kiosk:event`.
 
 ```bash
-npm test            # Chạy toàn bộ 21 test case
-npm run test:cov    # Xuất báo cáo độ bao phủ mã nguồn (Coverage Report)
+npm test            # Chạy toàn bộ 68 test case
+npm run test:coverage # Xuất báo cáo độ bao phủ mã nguồn (Coverage Report)
 npm run lint        # Quét lỗi cú pháp toàn repo (ESLint 9 - 0 warnings)
 ```
 
-### b) Đường ống Tự động hóa CI/CD (GitHub Actions)
+### b) Đường ống Tự động hóa CI (GitHub Actions)
 Mỗi lần nhà phát triển đẩy mã (`git push origin main`):
-1. **GitHub Runner (Ubuntu)** tự động kích hoạt workflow `.github/workflows/ci-cd.yml`.
-2. Kiểm tra cú pháp toàn diện (`npm run lint`) ➔ Thực thi trọn vẹn 21 test case (`npm test`).
-3. Đóng gói mã nguồn Frontend Vite ➔ Đóng gói 2 Docker Images (Backend & Nginx Frontend).
-4. **Tự động Deploy lên Fly.io:** Sử dụng `FLY_API_TOKEN` để cập nhật trực tiếp phiên bản máy chủ mới lên cụm máy ảo Singapore.
-
-### c) Vận hành Đám mây 24/7 (Always-On Keep-Alive)
-* **Frontend:** Vận hành trên mạng lưới CDN toàn cầu của **Vercel** ([https://btl-iot.vercel.app/kiosk](https://btl-iot.vercel.app/kiosk)), tích hợp chứng chỉ SSL và điều hướng SPA.
-* **Backend:** Vận hành trên nền tảng **Fly.io Singapore** ([https://ptit-library-kiosk-server.fly.dev](https://ptit-library-kiosk-server.fly.dev/api/health)) kết nối **MongoDB Atlas Cloud**.
-* **Cơ chế Keep-Alive:** Tích hợp bộ kích hoạt tự động từ `cron-job.org` gửi gói tin nhịp tim HTTP GET đến `/api/health` mỗi 2-3 phút, đảm bảo máy ảo luôn ở trạng thái `started`, phản hồi tức thì và loại bỏ độ trễ khởi động lạnh (Cold Start).
+1. **GitHub Runner (Ubuntu)** tự động kích hoạt workflow `.github/workflows/ci.yml`.
+2. Kiểm tra cú pháp toàn diện (`npm run lint`).
+3. Thực thi trọn vẹn 68 test case (`npm test`) kèm báo cáo coverage.
+4. Đóng gói mã nguồn Frontend Vite & Kiểm tra build Docker Images.
 
 ---
 

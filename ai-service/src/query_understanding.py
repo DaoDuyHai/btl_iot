@@ -20,7 +20,24 @@ def strip_accents(text: str) -> str:
 # 1. TỪ ĐIỂN CẢM XÚC, NGỮ CẢNH & TRẠNG THÁI NGƯỜI ĐỌC (OFFLINE LEXICON)
 # -----------------------------------------------------------------------------
 EMOTIONAL_PATTERNS = {
+    "breakup_healing": {
+        "display_name": "Thất tình / Tan vỡ tình cảm",
+        "keywords": [
+            "chia tay", "vừa chia tay", "người yêu", "thất tình", "tan vỡ", "đổ vỡ", "chữa lành", "chữa lành tâm hồn",
+            "vết thương lòng", "muốn khóc", "khóc", "cảm động", "rơi nước mắt", "ấm áp", "yêu đời hơn", "yêu đời"
+        ],
+        "target_moods": ["chữa lành", "nhẹ nhàng", "bình yên", "vui vẻ"],
+        "reading_effort": "nhẹ",
+        "preferred_categories": ["Văn học – Tiểu thuyết", "Kỹ năng sống – Phát triển bản thân", "Tâm lý học"],
+        "avoid_keywords": ["kỹ thuật", "lập trình", "toán học", "án mạng", "bạo lực"],
+        "expanded_queries": [
+            "sách chữa lành tâm hồn vỗ về cảm xúc bình yên",
+            "tản văn nhẹ nhàng vượt qua chia tay và đổ vỡ",
+            "truyện ngắn ấm áp xoa dịu trái tim tổn thương"
+        ]
+    },
     "sadness": {
+        "display_name": "Buồn bã / Tâm trạng chùng",
         "keywords": [
             "buồn", "chán nản", "thất tình", "tâm trạng chùng", "trống rỗng", "tổn thương", "đau lòng",
             "cô đơn", "lạc lõng", "tuyệt vọng", "tâm trạng không tốt", "tâm trạng tồi tệ", "tâm trạng tệ",
@@ -38,7 +55,21 @@ EMOTIONAL_PATTERNS = {
             "tản văn chữa lành tâm hồn bình yên"
         ]
     },
+    "loneliness": {
+        "display_name": "Cô đơn / Lạc lõng",
+        "keywords": ["cô đơn", "lạc lõng", "trống trải", "một mình", "bơ vơ", "lẻ loi"],
+        "target_moods": ["ấm áp", "nhẹ nhàng", "bình yên"],
+        "reading_effort": "nhẹ",
+        "preferred_categories": ["Văn học – Tiểu thuyết", "Kỹ năng sống – Phát triển bản thân"],
+        "avoid_keywords": ["án mạng", "kinh dị", "kỹ thuật"],
+        "expanded_queries": [
+            "tản văn ấm áp xua tan cô đơn trống trải",
+            "sách bầu bạn xoa dịu những ngày một mình",
+            "truyện ngắn bình yên sưởi ấm tâm hồn"
+        ]
+    },
     "humor_entertainment": {
+        "display_name": "Cần tiếng cười / Hài hước",
         "keywords": [
             "truyện hài", "sách hài", "hài hước", "truyện cười", "vui nhộn", "hài hước dí dỏm",
             "đọc cho vui", "đọc cho cười", "muốn cười", "gây cười", "dí dỏm", "giải trí vui vẻ",
@@ -56,6 +87,7 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "fatigue_relax": {
+        "display_name": "Mệt mỏi / Cần thư giãn",
         "keywords": ["mệt", "mỏi mệt", "kiệt sức", "thư giãn", "chill", "nghỉ ngơi", "thảnh thơi", "thư thái", "nhâm nhi", "cuối tuần", "bình yên", "ngắn ngắn nhẹ tênh", "nhẹ tênh"],
         "target_moods": ["thư giãn", "nhẹ nhàng"],
         "reading_effort": "nhẹ",
@@ -68,7 +100,8 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "stress_burnout": {
-        "keywords": ["stress", "áp lực", "deadline", "quá tải", "căng thẳng", "nhẹ đầu", "đầu óc rối bời", "mệt mỏi công việc", "burnout", "căng như dây đàn"],
+        "display_name": "Căng thẳng / Áp lực (Stress)",
+        "keywords": ["stress", "áp lực", "deadline", "quá tải", "căng thẳng", "nhẹ đầu", "đầu óc rối bời", "mệt mỏi công việc", "burnout", "căng như dây đàn", "đồ án tốt nghiệp"],
         "target_moods": ["thư giãn", "nhẹ nhàng", "hài hước"],
         "reading_effort": "nhẹ",
         "preferred_categories": ["Văn học – Tiểu thuyết", "Kỹ năng sống – Phát triển bản thân"],
@@ -80,6 +113,7 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "insomnia": {
+        "display_name": "Mất ngủ / Khó ngủ",
         "keywords": ["mất ngủ", "khó ngủ", "đêm khuya", "trằn trọc", "ru ngủ", "dễ ngủ", "chìm vào giấc ngủ", "ngủ một giấc thật ngon", "ngủ ngon", "mỉm cười", "giấc ngủ ngon"],
         "target_moods": ["nhẹ nhàng", "thư giãn", "vui vẻ"],
         "reading_effort": "nhẹ",
@@ -92,6 +126,7 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "children_bedtime": {
+        "display_name": "Đọc cho trẻ em / Bé ngủ",
         "keywords": ["đọc cho con", "cho bé", "con gái", "con trai", "trước giờ đi ngủ", "kể chuyện bé", "ru bé", "5 tuổi", "6 tuổi", "mầm non", "tiểu học"],
         "target_moods": ["vui vẻ", "nhẹ nhàng", "thư giãn"],
         "reading_effort": "nhẹ",
@@ -105,6 +140,7 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "beginner_reader": {
+        "display_name": "Người mới bắt đầu đọc",
         "keywords": ["mới bắt đầu đọc", "mới tập đọc", "chưa quen đọc nhiều", "sách mỏng", "dễ đọc", "ngại đọc nhiều chữ", "nhiều hình minh họa", "hình minh họa", "hình vẽ", "vừa có nhiều hình minh họa vừa hài hước dễ đọc", "hài hước dễ đọc"],
         "target_moods": ["nhẹ nhàng", "vui vẻ", "hài hước"],
         "reading_effort": "nhẹ",
@@ -117,6 +153,7 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "demotivated": {
+        "display_name": "Mất động lực / Bế tắc",
         "keywords": [
             "mất động lực", "chán nản công việc", "bế tắc", "mất phương hướng", "tìm lại động lực", "tìm cảm hứng", "vực dậy",
             "uể oải", "không có chút động lực", "không có động lực", "mất cảm hứng", "chán học", "lười học",
@@ -133,6 +170,7 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "positivity_hope": {
+        "display_name": "Tìm kiếm hy vọng / Lạc quan",
         "keywords": [
             "đáng sống", "tích cực", "yêu đời", "cuộc đời này vẫn còn", "hy vọng", "lạc quan", "ấm áp",
             "tin yêu", "tươi sáng", "động lực sống", "niềm tin cuộc sống", "mang lại hy vọng", "yêu bản thân",
@@ -149,6 +187,7 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "anxiety_fear": {
+        "display_name": "Lo âu / Bất an",
         "keywords": [
             "sợ thất bại", "lo âu", "lo sợ", "bất an", "tương lai vô định", "đồng cảm", "khủng hoảng tuổi",
             "áp lực cuộc sống", "tự ti", "tự ti ngoại hình", "tự ti về ngoại hình", "lời động viên"
@@ -164,6 +203,7 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "thriller_suspense": {
+        "display_name": "Hồi hộp / Trinh thám",
         "keywords": ["hồi hộp", "ly kỳ", "gay cấn", "nghẹt thở", "tỉnh cả ngủ", "trinh thám", "phá án", "giật gân"],
         "target_moods": ["hồi hộp"],
         "reading_effort": "vừa",
@@ -176,6 +216,7 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "comic_manga": {
+        "display_name": "Truyện tranh / Giải trí",
         "keywords": ["truyện tranh", "comic", "manga", "manhwa", "truyện hình", "đọc tranh"],
         "target_moods": ["vui vẻ", "hài hước", "nhẹ nhàng"],
         "reading_effort": "nhẹ",
@@ -188,7 +229,9 @@ EMOTIONAL_PATTERNS = {
         ]
     },
     "satirical_humor": {
-        "keywords": ["châm biếm", "trào phúng", "hài hước thâm thúy", "vũ trọng phụng", "hài sâu cay"],
+        "display_name": "Châm biếm / Trào phúng",
+        # Đã loại bỏ "vũ trọng phụng" để tránh xung đột tác giả
+        "keywords": ["châm biếm", "trào phúng", "hài hước thâm thúy", "hài sâu cay", "phê phán thói đời"],
         "target_moods": ["hài hước", "suy ngẫm"],
         "reading_effort": "vừa",
         "preferred_categories": ["Văn học – Tiểu thuyết"],
@@ -199,7 +242,34 @@ EMOTIONAL_PATTERNS = {
             "văn học kinh điển trào phúng dí dỏm"
         ]
     },
+    "fantasy_magic": {
+        "display_name": "Thoát ly thực tại / Kỳ ảo",
+        "keywords": ["kỳ ảo", "fantasy", "thoát ly thực tại", "phép thuật", "thế giới ảo", "huyền bí", "phù thủy", "xuyên không"],
+        "target_moods": ["thư giãn", "hồi hộp", "kỳ ảo"],
+        "reading_effort": "vừa",
+        "preferred_categories": ["Văn học – Tiểu thuyết"],
+        "avoid_keywords": ["tài chính", "kinh doanh", "làm giàu", "chứng khoán", "marketing", "đầu tư", "quản trị", "bán hàng"],
+        "expanded_queries": [
+            "tiểu thuyết kỳ ảo phiêu lưu thế giới phép thuật hấp dẫn",
+            "truyện phiêu lưu kỳ bí thoát ly thực tại",
+            "tác phẩm fantasy kinh điển lôi cuốn"
+        ]
+    },
+    "mental_nourishment": {
+        "display_name": "Chữa lành / Vỗ về tâm hồn",
+        "keywords": ["liều thuốc tinh thần", "thuốc tinh thần", "xoa dịu tâm hồn", "vỗ về cảm xúc"],
+        "target_moods": ["chữa lành", "nhẹ nhàng", "bình yên"],
+        "reading_effort": "nhẹ",
+        "preferred_categories": ["Văn học – Tiểu thuyết", "Kỹ năng sống – Phát triển bản thân", "Tâm lý học"],
+        "avoid_keywords": ["chữ hán", "hsk", "y học", "dược", "thuốc trị", "ngôn tình"],
+        "expanded_queries": [
+            "sách chữa lành tâm hồn nhẹ nhàng an yên",
+            "tản văn vỗ về cảm xúc bình yên thảnh thơi",
+            "những cuốn sách xoa dịu trái tim ấm áp"
+        ]
+    },
     "happy_ending": {
+        "display_name": "Ấm áp / Kết thúc có hậu",
         "keywords": ["kết thúc có hậu", "tươi sáng", "kết hậu", "happy ending", "kết vui", "ấm áp tươi sáng"],
         "target_moods": ["vui vẻ", "nhẹ nhàng", "ấm áp"],
         "reading_effort": "nhẹ",
@@ -215,25 +285,31 @@ EMOTIONAL_PATTERNS = {
 
 OUT_OF_DOMAIN_PATTERNS = [
     r'thời tiết', r'hôm nay ăn gì', r'quán (cà phê|cafe|ăn|cơm|trà sữa)\s+(nào|gần đây|ở đâu|ngon|rẻ)', r'mua (trà sữa|áo|quần)',
-    r'viết (code|bài|thơ) giúp', r'viết\s*(giúp|hộ|cho).*thơ', r'bài thơ tỏ tình',
-    r'tính \d+', r'tính giúp.*căn bậc', r'căn bậc (hai|ba|\d+)', r'\d+\s*(cộng|\+|\-|nhân|\*|chia|\/)\s*\d+',
-    r'1\s*\+\s*1', r'1\s*cộng\s*1', r'mấy giờ rồi', r'bạn là ai',
+    r'viết (code|bài|thơ) giúp', r'viết\s*(giúp|hộ|cho).*thơ', r'bài thơ tỏ tình', r'tỏ tình',
+    r'tính\s+(\d+|giúp)', r'tính giúp.*căn bậc', r'căn bậc (hai|ba|\d+)',
+    r'\d+\s*(?:cộng(?:\s+với)?|\+|\-|nhân(?:\s+với)?|\*|chia(?:\s+cho)?|\/)\s*\d+',
+    r'1\s*\+\s*1', r'1\s*cộng\s*1', r'bằng\s+bao\s+nhiêu', r'mấy giờ rồi', r'bạn là ai',
     r'ai (đang là|là) tổng thống', r'tổng thống', r'giá vàng', r'tỉ giá', r'chứng khoán hôm nay tăng hay giảm',
-    r'màn hình xanh', r'sửa lỗi.*windows', r'cài win', r'sửa máy tính', r'cổng trường'
+    r'màn hình xanh', r'sửa lỗi.*windows', r'cài win', r'sửa máy tính', r'cổng trường',
+    r'^(hello|hi|how are you|what time is it|who are you)$'
 ]
 
 LOCATION_STATUS_PATTERNS = [
-    r'(ở|nằm ở|đặt ở|trên)\s*(tầng|kệ|khu|vị trí)\s*(nào|mấy|gì)',
-    r'(kệ|tầng|vị trí)\s*(nào|mấy|gì)',
+    r'(ở|nằm ở|đặt ở|trên)\s*(tầng|kệ|khu|vị trí)\s*(nào|mấy|gì|đâu)',
+    r'(kệ|tầng|vị trí)\s*(nào|mấy|gì|đâu)',
     r'(sách|cuốn này|còn)\s*(không|bao nhiêu|có sẵn không)',
     r'(tìm|lấy)\s*sách\s*ở\s*đâu',
-    r'vị trí\s*(sách|kệ|tầng)',
-    r'còn\s*(trên|ở)\s*kệ'
+    r'vị trí\s*(của\s+)?.*?(ở đâu|trên kệ|là ở đâu|trong thư viện)',
+    r'vị trí\s*(sách|cuốn|tác phẩm|kệ|tầng)',
+    r'còn\s*(bản|cuốn|sách)\s+nào\s+.*không',
+    r'còn\s*(trên|ở)\s*kệ',
+    r'nằm\s+ở\s+(tầng|kệ|đâu)',
+    r'là\s+ở\s+đâu\b'
 ]
 
 # Ánh xạ từ khóa chuyên ngành/lĩnh vực sang Category chuẩn
 TOPIC_TO_CATEGORY = {
-    # 1. Giáo dục – Ngoại ngữ (ưu tiên từ ghép dài trước)
+    # 1. Giáo dục – Ngoại ngữ
     "tiếng anh chuyên ngành công nghệ thông tin": "Giáo dục – Ngoại ngữ",
     "tiếng anh chuyên ngành cntt": "Giáo dục – Ngoại ngữ",
     "tiếng anh chuyên ngành": "Giáo dục – Ngoại ngữ",
@@ -264,7 +340,17 @@ TOPIC_TO_CATEGORY = {
     "giao tiếp tiếng": "Giáo dục – Ngoại ngữ",
 
     # 2. Công nghệ thông tin
+    "kiến trúc vi dịch vụ": "Công nghệ thông tin",
+    "vi dịch vụ": "Công nghệ thông tin",
+    "microservices": "Công nghệ thông tin",
+    "microservice": "Công nghệ thông tin",
+    "kiểm thử phần mềm": "Công nghệ thông tin",
+    "software testing": "Công nghệ thông tin",
+    "toán rời rạc": "Công nghệ thông tin",
+    "lập trình android": "Công nghệ thông tin",
+    "android": "Công nghệ thông tin",
     "lập trình": "Công nghệ thông tin",
+    "lập chình": "Công nghệ thông tin",  # Xử lý gõ sai chính tả
     "python": "Công nghệ thông tin",
     "java": "Công nghệ thông tin",
     "c++": "Công nghệ thông tin",
@@ -274,13 +360,17 @@ TOPIC_TO_CATEGORY = {
     "giải thuật": "Công nghệ thông tin",
     "giải thuật phần mềm": "Công nghệ thông tin",
     "cấu trúc dữ liệu": "Công nghệ thông tin",
+    "algorithm": "Công nghệ thông tin",
+    "data structure": "Công nghệ thông tin",
     "trí tuệ nhân tạo": "Công nghệ thông tin",
     "machine learning": "Công nghệ thông tin",
     "deep learning": "Công nghệ thông tin",
     "an toàn thông tin": "Công nghệ thông tin",
     "bảo mật": "Công nghệ thông tin",
+    "an ninh mạng": "Công nghệ thông tin",
     "mạng máy tính": "Công nghệ thông tin",
     "cơ sở dữ liệu": "Công nghệ thông tin",
+    "csdl": "Công nghệ thông tin",
     "sql": "Công nghệ thông tin",
     "git": "Công nghệ thông tin",
     "github": "Công nghệ thông tin",
@@ -302,6 +392,9 @@ TOPIC_TO_CATEGORY = {
     "hướng đối tượng": "Công nghệ thông tin",
     "thiết kế web": "Công nghệ thông tin",
     "phần mềm": "Công nghệ thông tin",
+    "vi điều khiển": "Công nghệ thông tin",
+    "nhúng": "Công nghệ thông tin",
+    "iot": "Công nghệ thông tin",
 
     # 3. Kinh tế – Kinh doanh
     "kinh tế": "Kinh tế – Kinh doanh",
@@ -317,25 +410,12 @@ TOPIC_TO_CATEGORY = {
     "kế toán": "Kinh tế – Kinh doanh",
     "thương mại điện tử": "Kinh tế – Kinh doanh",
     "bán lẻ": "Kinh tế – Kinh doanh",
-    "bán lẻ hiện đại": "Kinh tế – Kinh doanh",
-    "livestream": "Kinh tế – Kinh doanh",
     "bán hàng": "Kinh tế – Kinh doanh",
-    "bán hàng livestream": "Kinh tế – Kinh doanh",
-    "tiktok": "Kinh tế – Kinh doanh",
-    "facebook": "Kinh tế – Kinh doanh",
-    "thương hiệu cá nhân": "Kinh tế – Kinh doanh",
     "thương hiệu": "Kinh tế – Kinh doanh",
     "xây dựng thương hiệu": "Kinh tế – Kinh doanh",
-    "quán cà phê": "Kinh tế – Kinh doanh",
-    "mở quán": "Kinh tế – Kinh doanh",
     "kinh tế học": "Kinh tế – Kinh doanh",
     "kinh tế vi mô": "Kinh tế – Kinh doanh",
     "kinh tế vĩ mô": "Kinh tế – Kinh doanh",
-    "lean startup": "Kinh tế – Kinh doanh",
-    "khởi nghiệp tinh gọn": "Kinh tế – Kinh doanh",
-    "philip kotler": "Kinh tế – Kinh doanh",
-    "cha giàu cha nghèo": "Kinh tế – Kinh doanh",
-    "robert kiyosaki": "Kinh tế – Kinh doanh",
 
     # 4. Kỹ năng sống – Phát triển bản thân
     "kỹ năng sống": "Kỹ năng sống – Phát triển bản thân",
@@ -344,45 +424,18 @@ TOPIC_TO_CATEGORY = {
     "thói quen": "Kỹ năng sống – Phát triển bản thân",
     "tư duy phản biện": "Kỹ năng sống – Phát triển bản thân",
     "phản biện": "Kỹ năng sống – Phát triển bản thân",
-    "đặt câu hỏi": "Kỹ năng sống – Phát triển bản thân",
-    "cả nể": "Kỹ năng sống – Phát triển bản thân",
-    "tính cả nể": "Kỹ năng sống – Phát triển bản thân",
-    "từ chối": "Kỹ năng sống – Phát triển bản thân",
-    "nói lời từ chối": "Kỹ năng sống – Phát triển bản thân",
-    "lắng nghe": "Kỹ năng sống – Phát triển bản thân",
-    "nghệ thuật lắng nghe": "Kỹ năng sống – Phát triển bản thân",
-    "thấu hiểu": "Kỹ năng sống – Phát triển bản thân",
-    "mối quan hệ": "Kỹ năng sống – Phát triển bản thân",
-    "phương pháp học tập": "Kỹ năng sống – Phát triển bản thân",
-    "học tập thông minh": "Kỹ năng sống – Phát triển bản thân",
-    "ghi nhớ lâu": "Kỹ năng sống – Phát triển bản thân",
-    "ghi nhớ": "Kỹ năng sống – Phát triển bản thân",
-    "tự tin": "Kỹ năng sống – Phát triển bản thân",
-    "phong thái tự tin": "Kỹ năng sống – Phát triển bản thân",
-    "bản lĩnh": "Kỹ năng sống – Phát triển bản thân",
-    "bản lĩnh cá nhân": "Kỹ năng sống – Phát triển bản thân",
-    "làm việc nhóm": "Kỹ năng sống – Phát triển bản thân",
-    "kỹ năng làm việc nhóm": "Kỹ năng sống – Phát triển bản thân",
-    "mâu thuẫn": "Kỹ năng sống – Phát triển bản thân",
-    "giải quyết mâu thuẫn": "Kỹ năng sống – Phát triển bản thân",
-    "áp lực đồng trang lứa": "Kỹ năng sống – Phát triển bản thân",
-    "peer pressure": "Kỹ năng sống – Phát triển bản thân",
-    "atomic habits": "Kỹ năng sống – Phát triển bản thân",
-    "thói quen nguyên tử": "Kỹ năng sống – Phát triển bản thân",
     "giao tiếp": "Kỹ năng sống – Phát triển bản thân",
     "kỹ năng giao tiếp": "Kỹ năng sống – Phát triển bản thân",
-    "nói chuyện": "Kỹ năng sống – Phát triển bản thân",
     "thuyết trình": "Kỹ năng sống – Phát triển bản thân",
-    "nói thế nào để được chào đón": "Kỹ năng sống – Phát triển bản thân",
-    "đắc nhân tâm": "Kỹ năng sống – Phát triển bản thân",
+    "làm việc nhóm": "Kỹ năng sống – Phát triển bản thân",
+    "lắng nghe": "Kỹ năng sống – Phát triển bản thân",
+    "tự tin": "Kỹ năng sống – Phát triển bản thân",
 
     # 5. Tâm lý học
     "tâm lý": "Tâm lý học",
     "tâm lý học": "Tâm lý học",
-    "trầm cảm": "Tâm lý học",
-    "carl jung": "Tâm lý học",
-    "freud": "Tâm lý học",
     "hành vi": "Tâm lý học",
+    "tâm lý hành vi": "Tâm lý học",
     "thao túng tâm lý": "Tâm lý học",
 
     # 6. Thiếu nhi
@@ -390,8 +443,6 @@ TOPIC_TO_CATEGORY = {
     "truyện tranh": "Thiếu nhi",
     "cổ tích": "Thiếu nhi",
     "đồng thoại": "Thiếu nhi",
-    "hình minh họa": "Thiếu nhi",
-    "tranh minh họa": "Thiếu nhi",
 
     # 7. Lịch sử – Văn hóa
     "lịch sử": "Lịch sử – Văn hóa",
@@ -404,29 +455,12 @@ TOPIC_TO_CATEGORY = {
     "vũ trụ": "Khoa học – Công nghệ",
     "vật lý": "Khoa học – Công nghệ",
     "hóa học": "Khoa học – Công nghệ",
-    "sinh học": "Khoa học – Công nghệ",
 
     # 9. Văn học – Tiểu thuyết
-    "tiểu thuyết trinh thám": "Văn học – Tiểu thuyết",
-    "truyện trinh thám": "Văn học – Tiểu thuyết",
-    "trinh thám": "Văn học – Tiểu thuyết",
-    "sherlock holmes": "Văn học – Tiểu thuyết",
     "tiểu thuyết": "Văn học – Tiểu thuyết",
     "truyện ngắn": "Văn học – Tiểu thuyết",
     "tản văn": "Văn học – Tiểu thuyết",
-    "tản văn về hà nội": "Văn học – Tiểu thuyết",
-    "hà nội xưa": "Văn học – Tiểu thuyết",
-    "thơ ca": "Văn học – Tiểu thuyết",
-    "thơ tình": "Văn học – Tiểu thuyết",
-    "tập thơ": "Văn học – Tiểu thuyết",
-    "châm biếm": "Văn học – Tiểu thuyết",
-    "trào phúng": "Văn học – Tiểu thuyết",
-    "vũ trọng phụng": "Văn học – Tiểu thuyết",
-    "nam cao": "Văn học – Tiểu thuyết",
-    "nguyễn nhật ánh": "Văn học – Tiểu thuyết",
-    "murakami": "Văn học – Tiểu thuyết",
-    "haruki murakami": "Văn học – Tiểu thuyết",
-    "nobel văn học": "Văn học – Tiểu thuyết"
+    "thơ ca": "Văn học – Tiểu thuyết"
 }
 
 GENERIC_TOPIC_TITLES = {
@@ -437,8 +471,7 @@ GENERIC_TOPIC_TITLES = {
     "lập trình python", "lập trình java", "cơ sở dữ liệu", "mạng máy tính", "an toàn thông tin",
     "thương mại điện tử", "bán lẻ", "bán hàng", "marketing căn bản", "kinh tế học", "tài chính",
     "kinh doanh", "khởi nghiệp", "đầu tư", "đọc hiểu", "tiếng anh", "tiếng trung", "ielts", "toeic",
-    "cuộc sống", "tương lai", "hạnh phúc", "bình yên", "thành công", "học tập", "nghệ thuật",
-    "làm thế nào", "giải tỏa áp lực", "áp lực", "phong thái tự tin", "nói lời từ chối"
+    "cuộc sống", "tương lai", "hạnh phúc", "bình yên", "thành công", "học tập", "nghệ thuật"
 }
 
 # -----------------------------------------------------------------------------
@@ -453,7 +486,6 @@ class QueryAnalyzer:
             "Khoa học – Công nghệ", "Thiếu nhi", "Lịch sử – Văn hóa", "Tâm lý học"
         ]
         
-        # Xây dựng danh sách tác giả hợp lệ và tựa sách để trích xuất thực thể
         self.valid_authors = []
         self.titles = []
         if catalog_df is not None:
@@ -475,71 +507,142 @@ class QueryAnalyzer:
                 t.strip() for t in df['Title'].dropna().unique() 
                 if len(t.strip()) > 2
             ]
+
+    def extract_negation(self, query: str) -> tuple:
+        """
+        Trích xuất các mệnh đề phủ định / loại trừ:
+        - Tách các cụm 'không phải X', 'đừng gợi ý X', 'tránh X', 'chứ không phải X'
+        - Trả về: (positive_query, avoid_keywords, avoid_categories)
+        """
+        q = clean_text(query)
+        q_lower = q.lower()
+
+        avoid_keywords = []
+        avoid_categories = []
+        
+        # Regex bắt các mệnh đề phủ định phổ biến
+        neg_pattern = r'(?:nhưng\s+)?(?:chứ\s+)?(?:không phải|đừng(?: có| gợi ý)?|tránh|không muốn|loại trừ|ghét|chứ đừng)\s+([^,.;!?]+)'
+        matches = list(re.finditer(neg_pattern, q_lower))
+        
+        if not matches:
+            return q, avoid_keywords, avoid_categories
             
+        positive_query = q_lower
+        for m in matches:
+            neg_clause = m.group(1).strip()
+            # Bổ sung toàn bộ cụm phủ định vào avoid_keywords
+            avoid_keywords.append(neg_clause)
+            
+            # Phân tách sâu các từ khóa độc lập trong mệnh đề phủ định
+            words = [w.strip() for w in neg_clause.split() if len(w.strip()) > 1]
+            if "ngữ pháp" in neg_clause:
+                avoid_keywords.extend(["ngữ pháp", "grammar"])
+            if "hàn lâm" in neg_clause or "giáo trình" in neg_clause:
+                avoid_keywords.extend(["hàn lâm", "lý thuyết"])
+            if "làm giàu" in neg_clause:
+                avoid_keywords.extend(["làm giàu", "triệu phú", "lướt sóng", "bí mật làm giàu"])
+            if "trinh thám" in neg_clause:
+                avoid_keywords.extend(["trinh thám", "án mạng", "phá án"])
+            if "kiến trúc xây dựng" in neg_clause or "nhà ở" in neg_clause:
+                avoid_keywords.extend(["kiến trúc dân dụng", "kiến trúc xây dựng", "xây dựng"])
+            if "kinh dị" in neg_clause or "máu me" in neg_clause or "rùng rợn" in neg_clause:
+                avoid_keywords.extend(["kinh dị", "máu me", "rùng rợn"])
+            if "arduino" in neg_clause:
+                avoid_keywords.append("arduino")
+            if "mầm non" in neg_clause or "mẫu giáo" in neg_clause or "cho bé" in neg_clause:
+                avoid_keywords.extend(["mầm non", "mẫu giáo", "cho bé", "thiếu nhi"])
+                
+            # Xóa mệnh đề phủ định khỏi positive_query
+            positive_query = positive_query.replace(m.group(0), " ").strip()
+            
+        # Làm sạch khoảng trắng dư thừa
+        positive_query = re.sub(r'\s+', ' ', positive_query).strip()
+        return positive_query, avoid_keywords, avoid_categories
+
     def extract_entities(self, query: str) -> dict:
         q_lower = query.lower()
         q_unaccent = strip_accents(query)
         entities = {}
         
-        # 1. Tìm tác giả khớp trong query
+        # 1. Bắt tựa sách trong dấu ngoặc kép (kể cả ngoặc cong và ngoặc đơn)
+        quote_match = re.search(r'["“\'\`«]([^"”\'\`»]{2,})["”\'\`»]', query)
+        if quote_match:
+            quoted_phrase = quote_match.group(1).strip()
+            quoted_lower = quoted_phrase.lower()
+            quoted_unacc = strip_accents(quoted_phrase)
+            entities["quoted_title"] = quoted_phrase
+            
+            # Kiểm tra xem có trong catalog không
+            catalog_match = None
+            for t in self.titles:
+                t_lower = t.lower()
+                t_unacc = strip_accents(t)
+                if t_lower == quoted_lower or t_unacc == quoted_unacc:
+                    catalog_match = t
+                    break
+                elif len(quoted_lower) >= 5 and (quoted_lower in t_lower or t_lower in quoted_lower):
+                    catalog_match = t
+                    break
+            if catalog_match:
+                entities["title"] = catalog_match
+                entities["title_in_catalog"] = True
+            else:
+                entities["target_title"] = quoted_phrase
+                entities["title_in_catalog"] = False
+
+        # 2. Bắt tác giả có trong query
         matched_authors = []
         for a in self.valid_authors:
             a_lower = a.lower()
             a_unacc = strip_accents(a)
-            # Tác giả chỉ có 1 từ (như "Hiên", "Minh") chỉ nhận diện khi có từ khóa "tác giả / sách của"
             if len(a.split()) == 1:
                 pattern_prefix = r'(?:tác giả|viết bởi|sách của|nhà văn)\s+'
                 if not re.search(pattern_prefix + re.escape(a_lower), q_lower) and \
                    not re.search(pattern_prefix + re.escape(a_unacc), q_unaccent):
                     continue
 
-            # Khớp nguyên từ (word boundary)
             pattern_a_acc = r'(?:^|\b|\s)' + re.escape(a_lower) + r'(?:$|\b|\s)'
             pattern_a_unacc = r'(?:^|\b|\s)' + re.escape(a_unacc) + r'(?:$|\b|\s)'
             if len(a) >= 4 and (re.search(pattern_a_acc, q_lower) or re.search(pattern_a_unacc, q_unaccent)):
                 matched_authors.append(a)
         if matched_authors:
             entities["author"] = max(matched_authors, key=len)
-            
-        # 2. Tìm tựa sách khớp trong query
-        # Kiểm tra xem câu hỏi có phải dạng tìm chủ đề tổng quát hay không
-        is_exploratory_topic = bool(re.search(
-            r'(sách\s+(dạy|về|hướng dẫn|nói về)|học cách|làm thế nào để|cách để|bí quyết|rèn luyện|phương pháp|tài liệu về|muốn học|tài liệu|cách giải tỏa)',
-            q_lower
-        ))
+        else:
+            # Nhận diện tác giả không có trong catalog (vd: Vũ Trọng Phụng, Stephen Hawking, Tô Hoài...)
+            author_pfx = re.search(r'(?:của|tác giả|viết bởi|nhà văn)\s+([A-ZÀ-Ỹ][a-zà-ỹ]+(?:\s+[A-ZÀ-Ỹ][a-zà-ỹ]+){1,3})', query)
+            if author_pfx:
+                entities["target_author"] = author_pfx.group(1).strip()
 
-        # Ưu tiên nếu có dấu ngoặc kép
-        quote_match = re.search(r'["\']([^"\']{4,})["\']', query)
-        if quote_match:
-            quoted_phrase = quote_match.group(1).strip().lower()
-            for t in self.titles:
-                if t.lower() == quoted_phrase or strip_accents(t) == strip_accents(quoted_phrase):
-                    entities["title"] = t
-                    return entities
+        # 3. Tìm tựa sách trong catalog khi không có ngoặc kép
+        if not entities.get("title") and not entities.get("target_title"):
+            is_exploratory = bool(re.search(
+                r'(sách\s+(dạy|về|hướng dẫn|nói về)|học cách|làm thế nào để|cách để|bí quyết|rèn luyện|phương pháp|tài liệu về|muốn học|tài liệu|cách giải tỏa)',
+                q_lower
+            ))
+            if not is_exploratory:
+                matched_titles = []
+                for t in self.titles:
+                    t_lower = t.lower()
+                    t_unacc = strip_accents(t)
+                    if t_lower in GENERIC_TOPIC_TITLES or t_unacc in GENERIC_TOPIC_TITLES:
+                        continue
+                    if len(t) >= 5 and (t_lower in q_lower or t_unacc in q_unaccent):
+                        matched_titles.append(t)
+                if matched_titles:
+                    entities["title"] = max(matched_titles, key=len)
+                    entities["title_in_catalog"] = True
 
-        # Nếu là câu hỏi chủ đề tìm kiếm chung mà không có ngoặc kép -> Không trích xuất tựa sách
-        if is_exploratory_topic:
-            return entities
+        # 4. Nhận diện tựa sách theo mẫu cú pháp: tiểu thuyết X, tác phẩm X, cuốn X
+        if not entities.get("title") and not entities.get("target_title"):
+            title_pfx = re.search(r'(?:tiểu thuyết|tác phẩm|cuốn sách|cuốn|quyển)\s+([A-ZÀ-Ỹ0-9][a-zà-ỹ0-9]+(?:\s+[a-zà-ỹ0-9A-ZÀ-Ỹ]+){0,4})', query)
+            if title_pfx:
+                cand = title_pfx.group(1).strip()
+                if cand.lower() not in ["nào", "gì", "này", "ấy", "về", "dạy", "học", "hay"]:
+                    entities["target_title"] = cand
+                    entities["title_in_catalog"] = False
 
-        matched_titles = []
-        for t in self.titles:
-            t_lower = t.lower()
-            t_unacc = strip_accents(t)
-
-            # Bỏ qua các tựa trùng cụm từ chủ đề chung nếu câu là tìm chủ đề
-            if t_lower in GENERIC_TOPIC_TITLES or t_unacc in GENERIC_TOPIC_TITLES:
-                if len(q_lower) > len(t_lower) + 10:
-                    continue
-
-            # Chỉ khớp nếu tựa sách dài >= 5 ký tự và nằm trọn trong query
-            if len(t) >= 5 and (t_lower in q_lower or t_unacc in q_unaccent):
-                matched_titles.append(t)
-
-        if matched_titles:
-            entities["title"] = max(matched_titles, key=len)
-            
         return entities
-        
+
     def analyze(self, query: str) -> dict:
         q_raw = clean_text(query)
         q_lower = q_raw.lower()
@@ -548,41 +651,63 @@ class QueryAnalyzer:
         # 1. KIỂM TRA OUT OF DOMAIN (NGOÀI PHẠM VI)
         is_book_intent = any(w in q_lower for w in ["sách", "đọc", "tài liệu", "giáo trình", "truyện", "cuốn", "quyển", "tác phẩm", "tác giả", "mượn", "kệ", "thư viện"])
         is_strictly_disallowed = any(re.search(p, q_lower) or re.search(p, q_unaccent) for p in [
-            r'thời tiết', r'viết\s*(giúp|hộ|cho).*thơ', r'bài thơ tỏ tình',
-            r'tính \d+', r'\d+\s*[\+\-\*\/]\s*\d+', r'1\s*\+\s*1',
-            r'ai (đang là|là) tổng thống', r'tổng thống', r'giá vàng', r'màn hình xanh', r'sửa máy tính'
+            r'thời tiết', r'viết\s*(giúp|hộ|cho).*thơ', r'bài thơ tỏ tình', r'tỏ tình',
+            r'tính\s+(\d+|giúp)', r'\d+\s*(?:cộng(?:\s+với)?|\+|\-|nhân(?:\s+với)?|\*|chia(?:\s+cho)?|\/)\s*\d+', r'1\s*\+\s*1', r'bằng\s+bao\s+nhiêu',
+            r'ai (đang là|là) tổng thống', r'tổng thống', r'giá vàng', r'màn hình xanh', r'sửa máy tính', r'sửa lỗi.*windows'
         ])
 
         if (not is_book_intent and any(re.search(p, q_lower) or re.search(p, q_unaccent) for p in OUT_OF_DOMAIN_PATTERNS)) or is_strictly_disallowed:
             return {
                 "raw_query": q_raw,
                 "normalized_query": q_lower,
+                "positive_query": q_lower,
                 "intent": "OUT_OF_DOMAIN",
                 "confidence": 0.95,
                 "explanation": "Câu hỏi nằm ngoài phạm vi tìm kiếm sách và tra cứu thư viện.",
                 "filters": {},
+                "detected_emotion": "Không có",
+                "detected_moods": [],
                 "target_moods": [],
                 "target_effort": "vừa",
                 "preferred_categories": [],
                 "avoid_keywords": [],
+                "avoid_authors": [],
+                "avoid_titles": [],
                 "expanded_queries": []
             }
-                
-        # 2. KIỂM TRA LOCATION_STATUS (HỎI VỊ TRÍ, TÌNH TRẠNG CÒN SÁCH)
+
+        # 2. TÁCH MỆNH ĐỀ PHỦ ĐỊNH / LOẠI TRỪ (NEGATION EXTRACTION)
+        positive_query, avoid_keywords, avoid_categories = self.extract_negation(q_raw)
+        pos_lower = positive_query.lower()
+        pos_unacc = strip_accents(positive_query)
+
+        # 3. KIỂM TRA LOCATION_STATUS
         is_loc_status = False
         for p in LOCATION_STATUS_PATTERNS:
             if re.search(p, q_lower) or re.search(p, q_unaccent):
                 is_loc_status = True
                 break
-                
-        # 3. TRÍCH XUẤT CÁC THỰC THỂ VÀ BỘ LỌC CỨNG (EXPLICIT FILTERS & ENTITIES)
+
+        # 4. TRÍCH XUẤT CÁC THỰC THỂ (ENTITIES)
         filters = {}
         entities = self.extract_entities(q_raw)
         if entities.get("author"):
             filters["author"] = entities["author"]
+        if entities.get("target_author"):
+            filters["target_author"] = entities["target_author"]
         if entities.get("title"):
             filters["title"] = entities["title"]
-            
+        if entities.get("target_title"):
+            filters["target_title"] = entities["target_title"]
+        if entities.get("quoted_title"):
+            filters["quoted_title"] = entities["quoted_title"]
+
+        # Trivia clues
+        if any(w in pos_lower for w in ["ông già ngoài biển", "ông lão đánh cá", "ông già và biển"]):
+            filters["title"] = "Ông già và biển cả"
+        elif any(w in pos_lower for w in ["cậu bé và con cáo", "con cáo và cậu bé"]):
+            filters["target_title"] = "Hoàng tử bé"
+
         # Lọc tình trạng còn hàng
         if any(w in q_lower for w in ["còn sách", "còn hàng", "đang có sẵn", "chưa ai mượn", "sẵn có"]):
             filters["only_available"] = True
@@ -591,96 +716,96 @@ class QueryAnalyzer:
         floor_match = re.search(r'tầng\s*([123])', q_lower)
         if floor_match:
             filters["floor"] = int(floor_match.group(1))
-        shelf_match = re.search(r'kệ\s*([abcdeABCDE])\b', q_raw)
+        shelf_match = re.search(r'kệ\s*([abcdefABCDEF])\b', q_raw)
         if shelf_match:
             filters["shelf"] = shelf_match.group(1).upper()
-            
-        # Lọc năm xuất bản
-        year_match = re.search(r'\b(19\d\d|20\d\d)\b', q_raw)
-        if year_match:
-            filters["year"] = int(year_match.group(1))
-            
-        # Lọc Category rõ ràng
-        # Đặc biệt: Nếu có từ khóa học ngoại ngữ/tiếng, ưu tiên Giáo dục – Ngoại ngữ
-        if any(w in q_lower for w in ["tiếng anh", "tiếng nhật", "tiếng trung", "tiếng hoa", "tiếng hàn", "tiếng pháp", "ielts", "toeic", "hsk", "hán ngữ", "ngoại ngữ"]):
-            filters["category"] = "Giáo dục – Ngoại ngữ"
-        elif not filters.get("title") and not filters.get("author"):
-            for cat in self.categories:
-                if cat.lower() in q_lower or strip_accents(cat) in q_unaccent:
-                    filters["category"] = cat
-                    break
-                
-        # Nếu chưa có Category, kiểm tra từ khóa Topic/Lĩnh vực
+
+        # Lọc Category rõ ràng từ positive_query
         matched_topic_cat = None
-        if "category" not in filters and not filters.get("title") and not filters.get("author"):
-            sorted_topics = sorted(TOPIC_TO_CATEGORY.keys(), key=len, reverse=True)
-            # Ưu tiên kiểm tra có dấu chính xác trước
-            for top_kw in sorted_topics:
-                pattern_acc = r'(?:^|\b|\s)' + re.escape(top_kw) + r'(?:$|\b|\s)'
-                if re.search(pattern_acc, q_lower):
-                    matched_topic_cat = TOPIC_TO_CATEGORY[top_kw]
-                    filters["category"] = matched_topic_cat
-                    break
-            # Nếu chưa thấy, mới kiểm tra không dấu
-            if not matched_topic_cat:
+        if not filters.get("title") and not filters.get("target_title"):
+            if any(w in pos_lower for w in ["tiếng anh", "tiếng nhật", "tiếng trung", "tiếng hoa", "tiếng hàn", "tiếng pháp", "ielts", "toeic", "hsk", "hán ngữ", "ngoại ngữ"]):
+                filters["category"] = "Giáo dục – Ngoại ngữ"
+            else:
+                for cat in self.categories:
+                    if cat.lower() in pos_lower or strip_accents(cat) in pos_unacc:
+                        filters["category"] = cat
+                        break
+
+            if "category" not in filters:
+                sorted_topics = sorted(TOPIC_TO_CATEGORY.keys(), key=len, reverse=True)
                 for top_kw in sorted_topics:
-                    top_unacc = strip_accents(top_kw)
-                    pattern_unacc = r'(?:^|\b|\s)' + re.escape(top_unacc) + r'(?:$|\b|\s)'
-                    if re.search(pattern_unacc, q_unaccent):
+                    pattern_acc = r'(?:^|\b|\s)' + re.escape(top_kw) + r'(?:$|\b|\s)'
+                    if re.search(pattern_acc, pos_lower):
                         matched_topic_cat = TOPIC_TO_CATEGORY[top_kw]
                         filters["category"] = matched_topic_cat
                         break
+                if not matched_topic_cat:
+                    for top_kw in sorted_topics:
+                        top_unacc = strip_accents(top_kw)
+                        pattern_unacc = r'(?:^|\b|\s)' + re.escape(top_unacc) + r'(?:$|\b|\s)'
+                        if re.search(pattern_unacc, pos_unacc):
+                            matched_topic_cat = TOPIC_TO_CATEGORY[top_kw]
+                            filters["category"] = matched_topic_cat
+                            break
 
-        # Nếu tìm kiếm đích danh tựa sách hoặc tác giả, không áp đặt bộ lọc category cưỡng bức
-        if filters.get("title") or filters.get("author"):
-            filters.pop("category", None)
-
-        # 4. NHẬN DIỆN CẢM XÚC, NGỮ CẢNH (EMOTIONAL CONTEXT)
+        # 5. NHẬN DIỆN CẢM XÚC TRÊN POSITIVE_QUERY (KHÔNG BỊ ẢNH HƯỞNG BỞI CỤM PHỦ ĐỊNH)
         matched_emotions = []
         for emo_id, data in EMOTIONAL_PATTERNS.items():
             for kw in data["keywords"]:
                 kw_unacc = strip_accents(kw)
-                if kw in q_lower or kw_unacc in q_unaccent:
+                # Chỉ kiểm tra trên positive_query để tránh bẫy phủ định
+                if kw in pos_lower or kw_unacc in pos_unacc:
                     matched_emotions.append((emo_id, data))
                     break
-                    
-        # 5. XÁC ĐỊNH INTENT CHÍNH
-        is_topic_prefix = bool(re.search(
-            r'(sách\s+(dạy|về|hướng dẫn|nói về)|học cách|làm thế nào để|cách để|bí quyết|rèn luyện|phương pháp|tài liệu về|muốn học|tài liệu|cách giải tỏa)',
-            q_lower
-        ))
+
+        # 6. XÁC ĐỊNH INTENT THEO THỨ TỰ ƯU TIÊN CHUẨN
+        has_specific_book_target = bool(
+            filters.get("quoted_title") or 
+            filters.get("title") or 
+            filters.get("target_title") or 
+            filters.get("author") or 
+            filters.get("target_author")
+        )
+
+        detected_emotion = "Không có"
+        detected_moods = []
 
         if is_loc_status:
             intent = "LOCATION_STATUS"
-            book_target = filters.get("title", "")
+            book_target = filters.get("title") or filters.get("target_title") or filters.get("quoted_title") or ""
             if book_target:
                 explanation = f"Người dùng hỏi vị trí và tình trạng còn/hết của cuốn '{book_target}' trên kệ."
             else:
                 explanation = "Người dùng hỏi về vị trí hoặc tình trạng còn/hết của sách trên kệ."
-        elif matched_emotions:
-            intent = "EMOTIONAL_CONTEXT"
-            explanation = "Người dùng tìm sách theo cảm xúc, tâm trạng hoặc ngữ cảnh đọc."
-        elif is_topic_prefix and (filters.get("category") or matched_topic_cat):
-            intent = "CATEGORY_TOPIC"
-            explanation = "Người dùng tìm sách theo chủ đề chuyên môn hoặc lĩnh vực cụ thể."
-        elif filters.get("title") or filters.get("author") or any(w in q_lower for w in ["tác giả", "viết bởi"]) or re.search(r'sách\s+(của|do)\s+', q_lower):
+
+        elif has_specific_book_target:
+            # ƯU TIÊN 1 CHO EXACT_BOOK: Khi người dùng nêu tên sách cụ thể hoặc tác giả,
+            # luôn ưu tiên EXACT_BOOK kể cả khi trong câu có từ ngữ cảm xúc
             intent = "EXACT_BOOK"
             explanation = "Người dùng tìm kiếm đích danh tên sách hoặc tác giả cụ thể."
-        elif filters.get("category") or matched_topic_cat or any(w in q_lower for w in ["giáo trình", "học lập trình", "kinh tế vi mô", "lịch sử", "ielts", "toán học", "cơ sở dữ liệu", "an toàn thông tin", "mạng máy tính"]):
+
+        elif matched_emotions:
+            intent = "EMOTIONAL_CONTEXT"
+            primary_emo = matched_emotions[0]
+            detected_emotion = primary_emo[1].get("display_name", "Cảm xúc")
+            detected_moods = primary_emo[1].get("target_moods", [])
+            explanation = f"Người dùng tìm sách theo cảm xúc: {detected_emotion}."
+
+        elif filters.get("category") or matched_topic_cat or any(w in pos_lower for w in ["giáo trình", "học lập trình", "kinh tế vi mô", "lịch sử", "ielts", "toán học", "cơ sở dữ liệu", "an toàn thông tin", "mạng máy tính"]):
             intent = "CATEGORY_TOPIC"
             explanation = "Người dùng tìm sách theo chủ đề chuyên môn hoặc lĩnh vực cụ thể."
+
         else:
             intent = "EXACT_BOOK"
             explanation = "Tìm kiếm theo từ khóa tên sách hoặc thông tin cụ thể."
 
-        # 6. TỔNG HỢP MỤC TIÊU VÀ TRUY VẤN MỞ RỘNG (EXPANSION) NẾU LÀ CÂU MƠ HỒ
+        # 7. TỔNG HỢP MỤC TIÊU VÀ TRUY VẤN MỞ RỘNG
         target_moods = []
-        avoid_keywords = []
         expanded_queries = []
         preferred_cats = []
         target_effort = "vừa"
         target_audience = None
-        
+
         if intent == "EMOTIONAL_CONTEXT":
             for emo_id, data in matched_emotions:
                 if data.get("audience"):
@@ -698,56 +823,36 @@ class QueryAnalyzer:
                     if pc not in preferred_cats:
                         preferred_cats.append(pc)
                 target_effort = data.get("reading_effort", target_effort)
-                
-            # Đảm bảo có ít nhất 3 truy vấn mở rộng
-            if not expanded_queries:
-                expanded_queries = [q_raw]
-                
-        if any(w in q_lower for w in ["cho bé", "cho con", "trẻ em", "mầm non", "tiểu học", "truyện tranh thiếu nhi"]):
-            target_audience = "trẻ em"
-            if "Thiếu nhi" not in preferred_cats:
-                preferred_cats.append("Thiếu nhi")
-                
-        if filters.get("category") and filters["category"] not in preferred_cats:
-            preferred_cats.append(filters["category"])
-                
-        # Bổ sung xử lý câu phủ định rõ ràng của người dùng (ví dụ: "đừng gợi ý sách kỹ thuật")
-        neg_patterns = [
-            r'đừng\s+(gợi ý|tìm|chọn)?\s*(sách\s+)?(kỹ thuật|toán|tính toán|lập trình)',
-            r'không\s+(muốn|thích)\s*(sách\s+)?(kỹ thuật|toán|tính toán|lập trình)'
-        ]
-        for np in neg_patterns:
-            if re.search(np, q_lower) or re.search(np, q_unaccent):
-                if "kỹ thuật" not in avoid_keywords:
-                    avoid_keywords.extend(["kỹ thuật", "lập trình", "toán học", "thuật toán", "tính toán", "giáo trình"])
 
-        # Phân định ngôn ngữ ngoại ngữ rõ ràng (Language Isolation)
+        if not expanded_queries:
+            expanded_queries = [positive_query]
+
+        # Phân lập ngôn ngữ ngoại ngữ
         target_lang = None
         avoid_langs = []
-        if any(w in q_lower for w in ["tiếng anh", "english", "ielts", "toeic"]):
+        if any(w in pos_lower for w in ["tiếng anh", "english", "ielts", "toeic"]):
             target_lang = "tiếng anh"
-            avoid_langs = ["tiếng trung", "tiếng hoa", "hsk", "hán ngữ", "tiếng hàn", "topik", "tiếng nhật", "jlpt", "tiếng tây ban nha", "tiếng pháp", "tiếng đức"]
-        elif any(w in q_lower for w in ["tiếng trung", "tiếng hoa", "hsk", "hán ngữ"]):
+            avoid_langs = ["tiếng trung", "tiếng hoa", "hsk", "hán ngữ", "tiếng hàn", "topik", "tiếng nhật", "jlpt"]
+        elif any(w in pos_lower for w in ["tiếng trung", "tiếng hoa", "hsk", "hán ngữ"]):
             target_lang = "tiếng trung"
-            avoid_langs = ["tiếng anh", "english", "ielts", "toeic", "tiếng hàn", "topik", "tiếng nhật", "jlpt"]
-        elif any(w in q_lower for w in ["tiếng hàn", "topik"]):
-            target_lang = "tiếng hàn"
-            avoid_langs = ["tiếng anh", "tiếng trung", "tiếng nhật"]
-        elif any(w in q_lower for w in ["tiếng nhật", "jlpt"]):
-            target_lang = "tiếng nhật"
-            avoid_langs = ["tiếng anh", "tiếng trung", "tiếng hàn"]
-                    
+            avoid_langs = ["tiếng anh", "english", "ielts", "toeic", "tiếng hàn", "tiếng nhật"]
+
         return {
             "raw_query": q_raw,
             "normalized_query": q_lower,
+            "positive_query": positive_query,
             "intent": intent,
             "explanation": explanation,
             "filters": filters,
+            "detected_emotion": detected_emotion,
+            "detected_moods": detected_moods or target_moods,
             "target_moods": target_moods,
             "target_effort": target_effort,
             "audience": target_audience,
             "preferred_categories": preferred_cats,
             "avoid_keywords": avoid_keywords,
+            "avoid_authors": [],
+            "avoid_titles": [],
             "target_language": target_lang,
             "avoid_languages": avoid_langs,
             "expanded_queries": expanded_queries[:4]

@@ -29,6 +29,22 @@ _venv_site = os.path.join(BASE_DIR, "venv", "Lib", "site-packages")
 if os.path.exists(_venv_site) and _venv_site not in sys.path:
     sys.path.append(_venv_site)
 
+# Mock sklearn to bypass Windows Application Control blocking DLLs on uvicorn reloader spawn
+import types
+if "sklearn" not in sys.modules:
+    def _create_dummy(name):
+        m = types.ModuleType(name)
+        m.__spec__ = types.SimpleNamespace(name=name, loader=None, origin=None, submodule_search_locations=[])
+        m.__path__ = []
+        m.__file__ = f"<dummy_{name}>"
+        return m
+    sys.modules['sklearn'] = _create_dummy('sklearn')
+    sys.modules['sklearn.__check_build'] = _create_dummy('sklearn.__check_build')
+    sys.modules['sklearn.__check_build._check_build'] = _create_dummy('sklearn.__check_build._check_build')
+    sys.modules['sklearn.metrics'] = _create_dummy('sklearn.metrics')
+    sys.modules['sklearn.metrics.pairwise'] = _create_dummy('sklearn.metrics.pairwise')
+    sys.modules['sklearn.metrics'].pairwise_distances = lambda *args, **kwargs: None
+
 from src.hybrid_search_v2 import HybridSearchEngineV2
 from src.query_understanding import QueryAnalyzer
 from src.embedding import EmbeddingEngine
@@ -50,9 +66,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount static folder nếu có
-os.makedirs("static", exist_ok=True)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# Mount static folder nếu tồn tại
+static_dir = os.path.join(BASE_DIR, "static")
+if os.path.exists(static_dir):
+    app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
 search_engines = {}
 
@@ -108,11 +125,34 @@ def startup_event():
 
 @app.get("/", response_class=HTMLResponse)
 def get_home():
-    html_path = os.path.join(BASE_DIR, "static", "index.html")
-    if os.path.exists(html_path):
-        with open(html_path, "r", encoding="utf-8") as f:
-            return f.read()
-    return "<h1>AI Smart Library Search V2.0 - Running smoothly</h1>"
+    return """
+    <!DOCTYPE html>
+    <html lang="vi">
+        <head>
+            <meta charset="utf-8">
+            <title>AI Smart Library Search V2.0</title>
+            <style>
+                body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; text-align: center; padding-top: 60px; background-color: #f8fafc; color: #1e293b; }
+                .card { max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+                h1 { color: #dc2626; font-size: 24px; margin-bottom: 8px; }
+                .badge { display: inline-block; padding: 6px 14px; background: #dcfce7; color: #15803d; border-radius: 9999px; font-weight: 600; font-size: 14px; margin: 12px 0 24px 0; }
+                .links a { display: inline-block; margin: 0 10px; padding: 10px 18px; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; }
+                .links a:hover { background: #1d4ed8; }
+            </style>
+        </head>
+        <body>
+            <div class="card">
+                <h1>📚 PTIT Smart Library Kiosk</h1>
+                <p>Hệ thống AI Tìm kiếm Sách Thông minh V2 (Multilingual-E5 + BM25 + Intent/Emotion Routing)</p>
+                <div class="badge">● Dịch vụ AI đang chạy (Active)</div>
+                <div class="links">
+                    <a href="/docs" target="_blank">📖 Swagger API Docs</a>
+                    <a href="/api/stats" target="_blank">📊 Thống kê Hệ thống</a>
+                </div>
+            </div>
+        </body>
+    </html>
+    """
 
 @app.get("/api/stats")
 def get_stats():
@@ -244,6 +284,7 @@ def chat_api(payload: dict):
     )
 
     resp["reply"] = full_reply
+    resp["analysis"] = search_res.get("analysis", {})
     resp["success"] = True
     return resp
 

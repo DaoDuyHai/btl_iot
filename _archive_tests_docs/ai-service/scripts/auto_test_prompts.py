@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 auto_test_prompts.py
-Trình kiểm thử tự động 100 câu hỏi trong TEST_PROMPTS_100.md bằng Python AI Service.
+Trình kiểm thử tự động 100 câu hỏi từ TEST_PROMPTS bằng Python AI Service.
 Tự động gọi Thủ thư AI (E5 + BM25 + Query Understanding + Response Generator)
-và tự động ghi nhận toàn bộ lịch sử Q&A vào CONVERSATION_HISTORY.md.
+và tự động ghi nhận toàn bộ lịch sử Q&A vào CONVERSATION_HISTORY.md / CONVERSATION_HISTORY_v3.md.
 """
 
 import os
@@ -12,6 +12,7 @@ import io
 import time
 import json
 import re
+import types
 import urllib.request
 import urllib.error
 
@@ -26,16 +27,30 @@ _venv_site = os.path.join(BASE_DIR, "venv", "Lib", "site-packages")
 if os.path.exists(_venv_site) and _venv_site not in sys.path:
     sys.path.append(_venv_site)
 
-PROMPTS_FILE = os.path.join(WORKSPACE_ROOT, "TEST_PROMPTS_100.md")
+# Mock sklearn to bypass Windows Application Control blocking DLLs on Windows
+if "sklearn" not in sys.modules:
+    def _create_dummy(name):
+        m = types.ModuleType(name)
+        m.__spec__ = types.SimpleNamespace(name=name, loader=None, origin=None, submodule_search_locations=[])
+        m.__path__ = []
+        m.__file__ = f"<dummy_{name}>"
+        return m
+    sys.modules['sklearn'] = _create_dummy('sklearn')
+    sys.modules['sklearn.__check_build'] = _create_dummy('sklearn.__check_build')
+    sys.modules['sklearn.__check_build._check_build'] = _create_dummy('sklearn.__check_build._check_build')
+    sys.modules['sklearn.metrics'] = _create_dummy('sklearn.metrics')
+    sys.modules['sklearn.metrics.pairwise'] = _create_dummy('sklearn.metrics.pairwise')
+    sys.modules['sklearn.metrics'].pairwise_distances = lambda *args, **kwargs: None
+
 FASTAPI_URL = "http://127.0.0.1:8000"
 
-def parse_prompts():
+def parse_prompts(prompts_path):
     """Phân tách 100 câu hỏi từ file Markdown."""
-    if not os.path.exists(PROMPTS_FILE):
-        print(f"[!] Không tìm thấy file {PROMPTS_FILE}")
+    if not os.path.exists(prompts_path):
+        print(f"[!] Không tìm thấy file {prompts_path}")
         sys.exit(1)
 
-    with open(PROMPTS_FILE, "r", encoding="utf-8") as f:
+    with open(prompts_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     prompts = []
@@ -76,7 +91,7 @@ def query_fastapi(query_str: str, top_k: int = 4):
     payload = json.dumps({
         "message": query_str,
         "top_k": top_k,
-        "studentInfo": {"name": "Bạn đọc Kiểm thử Tự động", "department": "PTIT"}
+        "studentInfo": {"name": "Bạn đọc Kiosk (Kiểm thử)", "department": "PTIT"}
     }).encode("utf-8")
 
     req = urllib.request.Request(
@@ -95,17 +110,45 @@ def main():
     print("  🚀 TRÌNH KIỂM THỬ TỰ ĐỘNG BỘ 100 CÂU HỎI SMART LIBRARY KIOSK AI (PYTHON)")
     print("=" * 80)
 
-    prompts = parse_prompts()
-    print(f"📋 Đã nạp thành công: {len(prompts)} câu hỏi từ TEST_PROMPTS_100.md\n")
-
-    # Kiểm tra tham số dòng lệnh
-    limit = 100
+    prompts_file = None
+    output_file = None
+    limit = 1000
     group_filter = None
     for arg in sys.argv[1:]:
-        if arg.startswith("--limit=") or arg.startswith("-n="):
+        if arg.startswith("--file="):
+            prompts_file = os.path.abspath(arg.split("=")[1])
+        elif arg.startswith("--out="):
+            output_file = arg.split("=")[1]
+        elif arg.startswith("--limit=") or arg.startswith("-n="):
             limit = int(arg.split("=")[1])
         elif arg.startswith("--group=") or arg.startswith("-g="):
             group_filter = int(arg.split("=")[1])
+
+    if not prompts_file:
+        prompts_file = os.path.join(WORKSPACE_ROOT, "TEST_PROMPTS_v4.md")
+        if not os.path.exists(prompts_file):
+            prompts_file = os.path.join(WORKSPACE_ROOT, "TEST_PROMPTS_v3.md")
+        if not os.path.exists(prompts_file):
+            prompts_file = os.path.join(WORKSPACE_ROOT, "TEST_PROMPTS_100_v2.md")
+        if not os.path.exists(prompts_file):
+            prompts_file = os.path.join(WORKSPACE_ROOT, "TEST_PROMPTS_100.md")
+
+    if not output_file:
+        base_pname = os.path.basename(prompts_file).lower()
+        if "v4" in base_pname:
+            output_file = "CONVERSATION_HISTORY_v4.md"
+        elif "v3" in base_pname:
+            output_file = "CONVERSATION_HISTORY_v3.md"
+        elif "v2" in base_pname:
+            output_file = "CONVERSATION_HISTORY_v2.md"
+        elif "100" in base_pname or "v1" in base_pname:
+            output_file = "CONVERSATION_HISTORY_v1.md"
+        else:
+            output_file = "CONVERSATION_HISTORY.md"
+
+    prompts = parse_prompts(prompts_file)
+    print(f"📋 Đã nạp thành công: {len(prompts)} câu hỏi từ {os.path.basename(prompts_file)}")
+    print(f"📁 File xuất hội thoại: {output_file}\n")
 
     if group_filter:
         prompts = [p for p in prompts if p["group_num"] == group_filter]
@@ -115,19 +158,33 @@ def main():
 
     print(f"⚡ Đợt này sẽ thực thi: {len(prompts)} câu hỏi.")
 
+    # Khởi tạo logger riêng cho file output đích
+    from src.conversation_logger import ConversationLogger
+    logger = ConversationLogger(
+        workspace_root=WORKSPACE_ROOT,
+        target_md_name=output_file,
+        source_name=os.path.basename(prompts_file)
+    )
+
+    # Làm sạch file cũ nếu có để ghi đợt test mới hoàn chỉnh
+    if os.path.exists(logger.md_path_root):
+        os.remove(logger.md_path_root)
+    if os.path.exists(logger.md_path_local):
+        os.remove(logger.md_path_local)
+    logger._ensure_header()
+
     is_server_up = check_fastapi_server()
     if is_server_up:
         print(f"🔌 Kênh kết nối: [FastAPI Service online tại {FASTAPI_URL}]")
         mode = "online_http"
     else:
-        print("⚙️ Server FastAPI chưa bật. Đang khởi tạo trực tiếp mô hình Hybrid E5 + BM25 trong bộ nhớ...")
+        print("⚙️ Đang khởi tạo mô hình Hybrid E5 + BM25 trực tiếp trong bộ nhớ...")
         import pandas as pd
         import numpy as np
         from src.hybrid_search_v2 import HybridSearchEngineV2
         from src.query_understanding import QueryAnalyzer
         from src.embedding import EmbeddingEngine
         from src.response_generator import LibrarianResponseGenerator
-        from src.conversation_logger import conversation_logger
 
         csv_path = os.path.join(BASE_DIR, "dataset", "books_enriched.csv")
         emb_path = os.path.join(BASE_DIR, "embeddings", "embeddings_enriched.npy")
@@ -142,15 +199,16 @@ def main():
         print("[+] Mô hình AI đã sẵn sàng phục vụ!\n")
 
     print("-" * 80)
-    print("Bắt đầu xử lý từng câu hỏi và tự động ghi nhật ký vào CONVERSATION_HISTORY.md...")
+    print(f"Bắt đầu xử lý từng câu hỏi và tự động ghi nhật ký vào {output_file}...")
     print("-" * 80 + "\n")
 
     shelf_counts = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0}
     latencies = []
 
+    total_count = len(prompts)
     for i, item in enumerate(prompts, 1):
         q_text = item["text"]
-        prefix = f"[{item['num']:3d}/100]"
+        prefix = f"[{item['num']:4d}/{total_count}]"
 
         if mode == "online_http":
             try:
@@ -161,6 +219,20 @@ def main():
                     s = (b.get("shelf") or "A").upper()
                     if s in shelf_counts:
                         shelf_counts[s] += 1
+
+                intro = data.get("intro") or data.get("reply", "")
+                clarify = data.get("clarifying_question", "")
+                full_reply = f"{intro}\n\n💬 *{clarify}*" if clarify and clarify not in intro else intro
+
+                logger.log_chat(
+                    user_msg=q_text,
+                    agent_reply=full_reply,
+                    books=books,
+                    analysis=data.get("analysis", {}),
+                    student_info={"name": "Bạn đọc Kiosk (Kiểm thử)", "department": "PTIT"},
+                    latency_ms=lat
+                )
+
                 shelves = "/".join(sorted(list(set([b.get("shelf") or "A" for b in books]))))
                 q_disp = q_text[:46] + ("…" if len(q_text) > 46 else "")
                 print(f"{prefix} \"{q_disp}\" ➔ {len(books)} sách (Kệ {shelves}) [{lat:.1f}ms]")
@@ -179,13 +251,16 @@ def main():
                 if s in shelf_counts:
                     shelf_counts[s] += 1
 
-            full_reply = resp.get("rendered_markdown") or resp.get("intro", "")
-            conversation_logger.log_chat(
+            intro = resp.get("intro", "")
+            clarify = resp.get("clarifying_question", "")
+            full_reply = f"{intro}\n\n💬 *{clarify}*" if clarify else intro
+
+            logger.log_chat(
                 user_msg=q_text,
                 agent_reply=full_reply,
                 books=books,
                 analysis=search_res.get("analysis", {}),
-                student_info={"name": f"Bạn đọc Tự động (Câu #{item['num']})", "department": "PTIT"},
+                student_info={"name": "Bạn đọc Kiosk (Kiểm thử)", "department": "PTIT"},
                 latency_ms=lat
             )
 
@@ -209,8 +284,8 @@ def main():
     print(f"   - Kệ D (Giáo dục - Ngoại ngữ):       {shelf_counts['D']} lượt")
     print(f"   - Kệ E (Kỹ năng sống - Tâm lý học):  {shelf_counts['E']} lượt")
     print(f"   - Kệ F (Lịch sử - Văn hóa):          {shelf_counts['F']} lượt")
-    print("\n📁 Toàn bộ kết quả đối thoại đã được lưu vào:")
-    print(f"   👉 {os.path.join(WORKSPACE_ROOT, 'CONVERSATION_HISTORY.md')}")
+    print(f"\n📁 Toàn bộ kết quả đối thoại đã được lưu vào:")
+    print(f"   👉 {os.path.join(WORKSPACE_ROOT, output_file)}")
     print("=" * 80 + "\n")
 
 if __name__ == "__main__":

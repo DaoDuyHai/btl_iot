@@ -14,7 +14,7 @@ import threading
 from datetime import datetime
 
 class ConversationLogger:
-    def __init__(self, workspace_root=None, log_dir=None):
+    def __init__(self, workspace_root=None, log_dir=None, target_md_name="CONVERSATION_HISTORY.md", source_name=None):
         if log_dir is None:
             self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             self.log_dir = os.path.join(self.base_dir, "logs")
@@ -28,11 +28,10 @@ class ConversationLogger:
         else:
             self.workspace_root = workspace_root
 
-        # 2 file đích chính:
-        # 1. Tại root workspace để mở xem ngay: CONVERSATION_HISTORY.md
-        # 2. Tại ai-service/logs/CONVERSATION_HISTORY.md
-        self.md_path_root = os.path.join(self.workspace_root, "CONVERSATION_HISTORY.md")
-        self.md_path_local = os.path.join(self.log_dir, "CONVERSATION_HISTORY.md")
+        self.target_md_name = target_md_name
+        self.source_name = source_name or "TEST_PROMPTS_v3.md"
+        self.md_path_root = os.path.join(self.workspace_root, target_md_name)
+        self.md_path_local = os.path.join(self.log_dir, target_md_name)
         self.jsonl_path = os.path.join(self.log_dir, "conversations.jsonl")
 
         self.lock = threading.Lock()
@@ -41,13 +40,13 @@ class ConversationLogger:
     def _ensure_header(self):
         """Khởi tạo tiêu đề file Markdown nếu chưa tồn tại."""
         for md_file in [self.md_path_root, self.md_path_local]:
+            os.makedirs(os.path.dirname(os.path.abspath(md_file)), exist_ok=True)
             if not os.path.exists(md_file) or os.path.getsize(md_file) == 0:
                 header = (
                     "# 📖 NHẬT KÝ LỊCH SỬ HỘI THOẠI & TƯƠNG TÁC GIỮA BẠN ĐỌC VÀ THỦ THƯ AI\n"
-                    f"*Khởi tạo: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | Tự động cập nhật thời gian thực*\n\n"
-                    "> 💡 **Mục đích:** File này tự động lưu lại 100% mọi cuộc trò chuyện trong Chat Box và các lượt tìm kiếm theo Key.\n"
-                    "> Hàng ngày, chúng ta sẽ mở file này ra để **bóc tách (dissect)**: câu nào AI trả lời thông minh, câu nào gợi ý chưa chuẩn,\n"
-                    "> lý do vì sao (do ý định, từ khóa hay danh mục) để liên tục tối ưu và huấn luyện lại Agent.\n\n"
+                    f"*Khởi tạo: {datetime.now().strftime('%Y-%m-%d')} | Tự động ghi nhận thực tế từ bộ kiểm thử {self.source_name}*\n\n"
+                    f"> 💡 **Mục đích:** File này lưu lại toàn bộ các lượt trò chuyện thực tế giữa Bạn đọc và Thủ thư ảo AI Kiosk PTIT qua bộ 100 câu hỏi {self.source_name}.\n"
+                    "> Dữ liệu được sinh tự động 100% từ AI Engine thật (FastAPI Port 8000 / Hybrid E5 + BM25).\n\n"
                     "---\n\n"
                 )
                 try:
@@ -94,8 +93,18 @@ class ConversationLogger:
 
             # 2. Tạo nội dung Markdown trực quan
             intent = (analysis or {}).get("intent", "Chưa phân loại")
-            moods = (analysis or {}).get("detected_moods", [])
-            mood_str = ", ".join(moods) if moods else "Không có"
+            detected_emo = (analysis or {}).get("detected_emotion")
+            moods = (analysis or {}).get("detected_moods", []) or (analysis or {}).get("target_moods", [])
+            
+            if detected_emo and detected_emo != "Không có":
+                if moods:
+                    mood_str = f"{detected_emo} ({', '.join(moods)})"
+                else:
+                    mood_str = detected_emo
+            elif moods:
+                mood_str = ", ".join(moods)
+            else:
+                mood_str = "Không có"
             avoid_kw = (analysis or {}).get("avoid_keywords", [])
             avoid_str = ", ".join(avoid_kw) if avoid_kw else "Không có"
             effort = (analysis or {}).get("reading_effort", "vừa")
@@ -133,6 +142,7 @@ class ConversationLogger:
             full_block = "\n".join(md_block)
             for md_file in [self.md_path_root, self.md_path_local]:
                 try:
+                    os.makedirs(os.path.dirname(os.path.abspath(md_file)), exist_ok=True)
                     with open(md_file, "a", encoding="utf-8") as f:
                         f.write(full_block)
                 except Exception as e:
@@ -191,6 +201,7 @@ class ConversationLogger:
             full_block = "\n".join(md_block)
             for md_file in [self.md_path_root, self.md_path_local]:
                 try:
+                    os.makedirs(os.path.dirname(os.path.abspath(md_file)), exist_ok=True)
                     with open(md_file, "a", encoding="utf-8") as f:
                         f.write(full_block)
                 except Exception as e:

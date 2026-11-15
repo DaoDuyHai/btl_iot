@@ -1,0 +1,558 @@
+[
+  {
+    "id": 1,
+    "query": "Thư viện có sách \"Clean Code\" không bạn ơi?",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "clean code"
+  },
+  {
+    "id": 2,
+    "query": "Tìm giúp mình cuốn \"Nhà Giả Kim\" của Paulo Coelho.",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "nhà giả kim"
+  },
+  {
+    "id": 3,
+    "query": "Mình muốn mượn cuốn \"Mắt Biếc\" của Nguyễn Nhật Ánh.",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "mắt biếc"
+  },
+  {
+    "id": 4,
+    "query": "Cho mình tìm cuốn \"Sapiens: Lược sử loài người\".",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "sapiens"
+  },
+  {
+    "id": 5,
+    "query": "Ở đây có tác phẩm \"Phía Sau Nghi Can X\" không?",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "nghi can x"
+  },
+  {
+    "id": 6,
+    "query": "Tìm cuốn tiểu thuyết \"Bố già\" của Mario Puzo.",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "bố già"
+  },
+  {
+    "id": 7,
+    "query": "Có sách \"Tôi thấy hoa vàng trên cỏ xanh\" không?",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "hoa vàng trên cỏ xanh"
+  },
+  {
+    "id": 8,
+    "query": "Tìm cho mình tác phẩm \"Kafka bên bờ biển\" của Murakami.",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "kafka bên bờ biển"
+  },
+  {
+    "id": 9,
+    "query": "Mình cần mượn cuốn \"Chiến binh cầu vồng\".",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "chiến binh cầu vồng"
+  },
+  {
+    "id": 10,
+    "query": "Thư viện có cuốn \"Hai số phận\" của Jeffrey Archer không?",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "hai số phận"
+  },
+  {
+    "id": 11,
+    "query": "Tìm cuốn \"Cho tôi xin một vé đi tuổi thơ\".",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "vé đi tuổi thơ"
+  },
+  {
+    "id": 12,
+    "query": "Cho mình hỏi cuốn \"Xa Ngoài Kia Nơi Loài Tôm Hát\".",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "loài tôm hát"
+  },
+  {
+    "id": 13,
+    "query": "Thư viện có bộ sách \"Harry Potter\" bản tiếng Việt không?",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "harry potter"
+  },
+  {
+    "id": 14,
+    "query": "Tìm cuốn \"Cấu trúc dữ liệu và thuật toán cài đặt bằng Python\" của Trần Thông Quế.",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "cấu trúc dữ liệu"
+  },
+  {
+    "id": 15,
+    "query": "Có sách \"Hành Trình Vào Tâm Trái Đất\" của Jules Verne không?",
+    "type": "EXACT_BOOK_PRESENT",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "tâm trái đất"
+  },
+  {
+    "id": 16,
+    "query": "Thư viện có giáo trình \"Hệ quản trị CSDL SQL Server 2019\" không?",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 17,
+    "query": "Tìm giúp mình cuốn \"Đắc nhân tâm\" của Dale Carnegie.",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 18,
+    "query": "Cho mình mượn cuốn \"Lập trình Rust thực chiến từ cơ bản đến nâng cao\".",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 19,
+    "query": "Ở đây có giáo trình \"Toán rời rạc ứng dụng trong tin học\" không?",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 20,
+    "query": "Tìm tiểu thuyết \"Vang bóng một thời\" của nhà văn Nguyễn Tuân.",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 21,
+    "query": "Có sách \"Kafka Streams in Action\" bản dịch tiếng Việt không?",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 22,
+    "query": "Thư viện có cuốn \"Vũ trụ trong một vỏ hạt dẻ\" của Stephen Hawking không?",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 23,
+    "query": "Cho mình mượn cuốn \"Dế Mèn Phiêu Lưu Ký\" của Tô Hoài.",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 24,
+    "query": "Tìm cuốn \"Kinh tế học vĩ mô thực tiễn\" của tác giả Mankiw.",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 25,
+    "query": "Có sách \"Deep Work - Làm ra làm, chơi ra chơi\" của Cal Newport không?",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 26,
+    "query": "Tìm bộ truyện \"Đại Việt sử ký toàn thư\" bản đầy đủ.",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 27,
+    "query": "Cho mình hỏi cuốn \"Giông tố\" của Vũ Trọng Phụng.",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 28,
+    "query": "Thư viện có sách \"Designing Data-Intensive Applications\" bản tiếng Việt không?",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 29,
+    "query": "Tìm tài liệu \"Lập trình mạng nâng cao với Golang\".",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 30,
+    "query": "Ở đây có cuốn \"Không bao giờ chia đôi lợi ích\" của Chris Voss không?",
+    "type": "EXACT_BOOK_MISSING",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "NOT_FOUND"
+  },
+  {
+    "id": 31,
+    "query": "Gợi ý cho mình các sách về kiến trúc Microservices và điện toán đám mây.",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Công nghệ thông tin"
+  },
+  {
+    "id": 32,
+    "query": "Mình muốn tìm giáo trình học lập trình hướng đối tượng OOP.",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Công nghệ thông tin"
+  },
+  {
+    "id": 33,
+    "query": "Có sách nào luyện thi IELTS cấp tốc từ 5.0 lên 6.5 không?",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Giáo dục – Ngoại ngữ"
+  },
+  {
+    "id": 34,
+    "query": "Tìm sách về quy trình kiểm thử phần mềm tự động Software Testing.",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Công nghệ thông tin"
+  },
+  {
+    "id": 35,
+    "query": "Gợi ý tài liệu nhập môn Machine Learning và Deep Learning cho người mới.",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Công nghệ thông tin"
+  },
+  {
+    "id": 36,
+    "query": "Thư viện có những cuốn sách nào hướng dẫn quản trị kinh doanh và khởi nghiệp?",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Kinh tế – Kinh doanh"
+  },
+  {
+    "id": 37,
+    "query": "Tìm sách học ngữ pháp và từ vựng tiếng Trung luyện thi HSK 4.",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Giáo dục – Ngoại ngữ"
+  },
+  {
+    "id": 38,
+    "query": "Có tài liệu nào dạy lập trình Docker, Kubernetes và triển khai CI/CD không?",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Công nghệ thông tin"
+  },
+  {
+    "id": 39,
+    "query": "Tìm sách hướng dẫn kỹ năng quản lý thời gian và lập kế hoạch công việc.",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Kỹ năng sống – Phát triển bản thân"
+  },
+  {
+    "id": 40,
+    "query": "Gợi ý các cuốn sách phân tích tâm lý hành vi con người trong giao tiếp.",
+    "type": "CATEGORY_TOPIC",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Tâm lý học"
+  },
+  {
+    "id": 41,
+    "query": "Đang làm đồ án tốt nghiệp kiệt sức quá, muốn tìm cuốn sách gì nhẹ đầu để xả stress.",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "stress"
+  },
+  {
+    "id": 42,
+    "query": "Hôm nay mình vừa chia tay người yêu, tâm trạng rất tệ, cần cuốn gì vỗ về cảm xúc.",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "thất tình"
+  },
+  {
+    "id": 43,
+    "query": "Sống một mình giữa thành phố thấy cô đơn lạc lõng quá, có sách nào đọc ấm lòng không?",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "cô đơn"
+  },
+  {
+    "id": 44,
+    "query": "Cần một cuốn truyện hài hước dí dỏm để cười xả láng xua tan một tuần u ám.",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "hài hước"
+  },
+  {
+    "id": 45,
+    "query": "Tối nay trằn trọc mất ngủ quá, gợi ý cho mình cuốn tản văn êm đềm dễ ngủ đi thủ thư.",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "mất ngủ"
+  },
+  {
+    "id": 46,
+    "query": "Đang bị mất phương hướng và bế tắc tương lai, cần cuốn sách truyền cảm hứng vực dậy.",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "mất động lực"
+  },
+  {
+    "id": 47,
+    "query": "Tìm giúp mình một liều thuốc tinh thần để tĩnh tâm và bớt suy nghĩ tiêu cực.",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "chữa lành"
+  },
+  {
+    "id": 48,
+    "query": "Muốn đọc cuốn tiểu thuyết kỳ ảo phép thuật để tạm thời thoát ly thực tại ngột ngạt.",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "kỳ ảo"
+  },
+  {
+    "id": 49,
+    "query": "Cảm thấy tự ti và luôn sợ thất bại trước mọi kỳ thi, có sách tâm lý nào đồng cảm không?",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "lo âu"
+  },
+  {
+    "id": 50,
+    "query": "Tìm cho mình một câu chuyện tình yêu ấm áp kết thúc có hậu để thấy đời đáng sống.",
+    "type": "EMOTIONAL_CONTEXT",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "hy vọng"
+  },
+  {
+    "id": 51,
+    "query": "Cuốn \"Mắt Biếc\" hiện đang ở kệ nào và còn bao nhiêu cuốn vậy bạn?",
+    "type": "LOCATION_STATUS",
+    "expected_intent": "LOCATION_STATUS",
+    "target_title_kw": "mắt biếc",
+    "target_shelf": "A"
+  },
+  {
+    "id": 52,
+    "query": "Cho mình hỏi sách \"Clean Code\" nằm ở Kệ nào, Tầng mấy?",
+    "type": "LOCATION_STATUS",
+    "expected_intent": "LOCATION_STATUS",
+    "target_title_kw": "clean code",
+    "target_shelf": "C"
+  },
+  {
+    "id": 53,
+    "query": "Vị trí của cuốn \"Nhà Giả Kim\" trên kệ sách là ở đâu?",
+    "type": "LOCATION_STATUS",
+    "expected_intent": "LOCATION_STATUS",
+    "target_title_kw": "nhà giả kim",
+    "target_shelf": "A"
+  },
+  {
+    "id": 54,
+    "query": "Khu vực Kệ B nằm ở tầng mấy của thư viện?",
+    "type": "LOCATION_STATUS",
+    "expected_intent": "LOCATION_STATUS"
+  },
+  {
+    "id": 55,
+    "query": "Cuốn \"Bố già\" còn bản nào trên kệ để mượn ngay không?",
+    "type": "LOCATION_STATUS",
+    "expected_intent": "LOCATION_STATUS",
+    "target_title_kw": "bố già"
+  },
+  {
+    "id": 56,
+    "query": "Tìm vị trí cuốn sách \"Chiến binh cầu vồng\" trong thư viện.",
+    "type": "LOCATION_STATUS",
+    "expected_intent": "LOCATION_STATUS",
+    "target_title_kw": "chiến binh cầu vồng"
+  },
+  {
+    "id": 57,
+    "query": "Thời tiết Hà Nội hôm nay mưa hay nắng vậy bạn?",
+    "type": "OUT_OF_DOMAIN",
+    "expected_intent": "OUT_OF_DOMAIN"
+  },
+  {
+    "id": 58,
+    "query": "Quán cơm tấm nào gần cổng trường PTIT ngon và rẻ?",
+    "type": "OUT_OF_DOMAIN",
+    "expected_intent": "OUT_OF_DOMAIN"
+  },
+  {
+    "id": 59,
+    "query": "Tính giúp mình 125 cộng với 380 bằng bao nhiêu?",
+    "type": "OUT_OF_DOMAIN",
+    "expected_intent": "OUT_OF_DOMAIN"
+  },
+  {
+    "id": 60,
+    "query": "Viết giúp mình một bài thơ tỏ tình bạn gái cùng lớp.",
+    "type": "OUT_OF_DOMAIN",
+    "expected_intent": "OUT_OF_DOMAIN"
+  },
+  {
+    "id": 61,
+    "query": "Giá vàng SJC hôm nay đang tăng hay giảm thế?",
+    "type": "OUT_OF_DOMAIN",
+    "expected_intent": "OUT_OF_DOMAIN"
+  },
+  {
+    "id": 62,
+    "query": "Máy tính của mình bị lỗi màn hình xanh, sửa như thế nào?",
+    "type": "OUT_OF_DOMAIN",
+    "expected_intent": "OUT_OF_DOMAIN"
+  },
+  {
+    "id": 63,
+    "query": "Mình muốn tìm sách học tiếng Anh giao tiếp nhưng không phải sách ngữ pháp khô khan.",
+    "type": "NEGATION_CONSTRAINT",
+    "expected_intent": "CATEGORY_TOPIC",
+    "negation_avoid": [
+      "ngữ pháp"
+    ]
+  },
+  {
+    "id": 64,
+    "query": "Tìm sách học lập trình Python, không muốn đọc giáo trình nặng lý thuyết hàn lâm.",
+    "type": "NEGATION_CONSTRAINT",
+    "expected_intent": "CATEGORY_TOPIC",
+    "negation_avoid": [
+      "hàn lâm",
+      "giáo trình"
+    ]
+  },
+  {
+    "id": 65,
+    "query": "Gợi ý sách về đầu tư tài chính cho sinh viên nhưng không phải các chiêu trò làm giàu nhanh.",
+    "type": "NEGATION_CONSTRAINT",
+    "expected_intent": "CATEGORY_TOPIC",
+    "negation_avoid": [
+      "làm giàu nhanh"
+    ]
+  },
+  {
+    "id": 66,
+    "query": "Tìm tài liệu về thuật toán Binary Search, không phải sách trinh thám tìm đồ.",
+    "type": "NEGATION_CONSTRAINT",
+    "expected_intent": "CATEGORY_TOPIC",
+    "negation_avoid": [
+      "trinh thám"
+    ]
+  },
+  {
+    "id": 67,
+    "query": "Có tài liệu về kiến trúc hệ thống mạng máy tính không, đừng gợi ý sách kiến trúc xây dựng.",
+    "type": "NEGATION_CONSTRAINT",
+    "expected_intent": "CATEGORY_TOPIC",
+    "negation_avoid": [
+      "kiến trúc xây dựng",
+      "kiến trúc dân dụng"
+    ]
+  },
+  {
+    "id": 68,
+    "query": "Gợi ý truyện trinh thám hồi hộp nhưng tuyệt đối đừng có yếu tố kinh dị máu me rùng rợn.",
+    "type": "NEGATION_CONSTRAINT",
+    "expected_intent": "CATEGORY_TOPIC",
+    "negation_avoid": [
+      "máu me",
+      "kinh dị rùng rợn"
+    ]
+  },
+  {
+    "id": 69,
+    "query": "Tìm sách lập trình ứng dụng Android trên điện thoại, không phải vi điều khiển Arduino.",
+    "type": "NEGATION_CONSTRAINT",
+    "expected_intent": "CATEGORY_TOPIC",
+    "negation_avoid": [
+      "arduino"
+    ]
+  },
+  {
+    "id": 70,
+    "query": "Recommend a good book about algorithm and data structure for beginners.",
+    "type": "ROBUSTNESS_EDGE",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Công nghệ thông tin"
+  },
+  {
+    "id": 71,
+    "query": "Lập chình Python",
+    "type": "ROBUSTNESS_EDGE",
+    "expected_intent": "CATEGORY_TOPIC",
+    "expected_category": "Công nghệ thông tin"
+  },
+  {
+    "id": 72,
+    "query": "Nha gia kim",
+    "type": "ROBUSTNESS_EDGE",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "nhà giả kim"
+  },
+  {
+    "id": 73,
+    "query": "Sapiens luoc su loai nguoi",
+    "type": "ROBUSTNESS_EDGE",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "sapiens"
+  },
+  {
+    "id": 74,
+    "query": "Clean Code",
+    "type": "ROBUSTNESS_EDGE",
+    "expected_intent": "EXACT_BOOK",
+    "expected_status": "FOUND",
+    "target_title_kw": "clean code"
+  },
+  {
+    "id": 75,
+    "query": "stress",
+    "type": "ROBUSTNESS_EDGE",
+    "expected_intent": "EMOTIONAL_CONTEXT",
+    "expected_emotion": "stress"
+  }
+]
