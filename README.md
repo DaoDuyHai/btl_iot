@@ -1,29 +1,30 @@
 # 📚 HỆ THỐNG SMART LIBRARY KIOSK - TRẠM MƯỢN TRẢ SÁCH TỰ PHỤC VỤ IOT & TRỢ LÝ THỦ THƯ AI (NOVA)
 
 [![CI Pipeline](https://github.com/DaoDuyHai/btl_iot/actions/workflows/ci.yml/badge.svg)](https://github.com/DaoDuyHai/btl_iot/actions/workflows/ci.yml)
-[![Architecture](https://img.shields.io/badge/Architecture-IoT_Level_3-blue.svg)]()
-[![Hardware](https://img.shields.io/badge/Hardware-ESP32_+_RC522-red.svg)]()
-[![Backend](https://img.shields.io/badge/Backend-Node.js_20_+_Express-green.svg)]()
-[![Frontend](https://img.shields.io/badge/Frontend-React_18_+_Vite-61dafb.svg)]()
-[![AI Service](https://img.shields.io/badge/AI_Engine-FastAPI_+_Hybrid_E5_+_BM25-yellow.svg)]()
-[![Test Suite](https://img.shields.io/badge/Vitest-55_Passed_100%25-brightgreen.svg)]()
-[![Code Quality](https://img.shields.io/badge/Code_Quality-ESLint_0_Errors-blueviolet.svg)]()
+[![Architecture](https://img.shields.io/badge/Architecture-IoT_Level_3-blue.svg)](<>)
+[![Hardware](https://img.shields.io/badge/Hardware-ESP32_+_RC522-red.svg)](<>)
+[![Backend](https://img.shields.io/badge/Backend-Node.js_20_+_Express-green.svg)](<>)
+[![Frontend](https://img.shields.io/badge/Frontend-React_18_+_Vite-61dafb.svg)](<>)
+[![AI Service](https://img.shields.io/badge/AI_Engine-FastAPI_+_Hybrid_E5_+_BM25-yellow.svg)](<>)
+[![Test Suite](https://img.shields.io/badge/Vitest-55_Passed_100%25-brightgreen.svg)](<>)
+[![Code Quality](https://img.shields.io/badge/Code_Quality-ESLint_0_Errors-blueviolet.svg)](<>)
 
 > **Đề tài tốt nghiệp / Đồ án IoT:** Nghiên cứu, thiết kế và chế tạo Trạm Kiosk Mượn/Trả Sách Tự Phục Vụ Thông Minh ứng dụng công nghệ **IoT (ESP32, RFID RC522, MQTT, WebSocket)** kết hợp **Trợ Lý Thủ Thư AI Rảnh Tay "Nova" (Hands-Free Voice Wake Word, Hybrid Multilingual-E5 + BM25Okapi, Sơ đồ chỉ đường vị trí kệ sách)**.
 
 ---
 
 ## 🖥️ CÁC ĐỊA CHỈ TRUY CẬP HỆ THỐNG (LOCALHOST)
-* 🖥️ **Màn hình Kiosk Tự Phục Vụ:** [http://localhost:5173/kiosk](http://localhost:5173/kiosk)
-* 🛡️ **Cổng Quản Trị Thủ Thư (Admin Portal):** [http://localhost:5173/admin](http://localhost:5173/admin)
-* ⚙️ **Hạ tầng Backend API (Express + Socket.IO):** [http://localhost:5000/api/health](http://localhost:5000/api/health)
-* 🤖 **Tài liệu API Trợ lý AI Nova (FastAPI Swagger Docs):** [http://localhost:8000/docs](http://localhost:8000/docs)
+
+- 🖥️ **Màn hình Kiosk Tự Phục Vụ:** [http://localhost:5173/kiosk](http://localhost:5173/kiosk)
+- 🛡️ **Cổng Quản Trị Thủ Thư (Admin Portal):** [http://localhost:5173/admin](http://localhost:5173/admin)
+- ⚙️ **Hạ tầng Backend API (Express + Socket.IO):** [http://localhost:5000/api/health](http://localhost:5000/api/health)
+- 🤖 **Tài liệu API Trợ lý AI Nova (FastAPI Swagger Docs):** [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
 
 ## 🏛️ 1. SƠ ĐỒ KIẾN TRÚC TỔNG THỂ HỆ THỐNG (SYSTEM ARCHITECTURE - IOT LEVEL 3)
 
-Hệ thống được thiết kế theo tiêu chuẩn quốc tế **IoT Level 3** (*Bahga & Madisetti*): Nút biên phần cứng (ESP32) chỉ đảm nhiệm việc thu thập mã thẻ RFID và phản hồi còi/LED; toàn bộ dữ liệu, phân tích nghiệp vụ, dịch vụ trí tuệ nhân tạo và giao diện hiển thị được xử lý tập trung trên nền tảng máy chủ.
+Hệ thống được thiết kế theo tiêu chuẩn quốc tế **IoT Level 3** (_Bahga & Madisetti_): Nút biên phần cứng (ESP32) chỉ đảm nhiệm việc thu thập mã thẻ RFID và phản hồi còi/LED; toàn bộ dữ liệu, phân tích nghiệp vụ, dịch vụ trí tuệ nhân tạo và giao diện hiển thị được xử lý tập trung trên nền tảng máy chủ.
 
 ```mermaid
 flowchart TD
@@ -66,7 +67,7 @@ flowchart TD
         direction TB
         FastAPI["AI Service Python FastAPI (Port 8000)<br/>• Semantic Engine (Multilingual-E5-Small)<br/>• Lexical Engine (BM25Okapi Ranking)<br/>• Query Understanding & Context Router"]
         ShelfLocator["Module Định Vị Kệ Sách Thực Tế<br/>• Bản đồ Tầng 1, 2, 3 • Kệ A, B, C, D"]
-        
+
         FastAPI <--> ShelfLocator
     end
 
@@ -162,15 +163,16 @@ flowchart LR
 ```
 
 ### 📋 Bảng Dự Toán Kinh Phí Linh Kiện Phần Cứng Thực Tế (BOM):
-| STT | Tên Linh Kiện | Thông Số / Giao Tiếp | Số Lượng | Đơn Giá Ước Tính | Vai Trò Trong Đề Tài |
-| :---: | :--- | :--- | :---: | :---: | :--- |
-| **1** | **ESP32 NodeMCU DevKit V1** | 30 chân, 2.4GHz Wi-Fi + BLE | 1 | ~65.000 VNĐ | Nút biên vi điều khiển trung tâm IoT |
-| **2** | **Module RFID RC522** | 13.56 MHz, chuẩn giao tiếp SPI | 1 | ~28.000 VNĐ | Đọc mã định danh UID thẻ sinh viên và thẻ sách |
-| **3** | **Thẻ & Nhãn Dán RFID** | Mifare 1K (Thẻ trắng / Sticker dán) | 5 | ~15.000 VNĐ | Gán mã định danh cho bạn đọc & bìa sách |
-| **4** | **Còi Active Buzzer 5V** | Tần số âm thanh 1.8kHz | 1 | ~3.000 VNĐ | Bíp xác nhận thao tác tức thì cho bạn đọc |
-| **5** | **LED Kép + Trở 220Ω** | LED 5mm Xanh lá & Đỏ | 2 bộ | ~2.000 VNĐ | Báo thị trạng thái hợp lệ hoặc từ chối |
-| **6** | **Breadboard & Dây Jumper** | Dây cắm đực - cái chống nhiễu | 1 bộ | ~25.000 VNĐ | Đấu nối linh kiện an toàn, thẩm mỹ |
-| **--** | **TỔNG KINH PHÍ PHẦN CỨNG** | | | **~138.000 VNĐ** | **Chi phí siêu tiết kiệm, tính khả thi cao** |
+
+|  STT   | Tên Linh Kiện               | Thông Số / Giao Tiếp                | Số Lượng | Đơn Giá Ước Tính | Vai Trò Trong Đề Tài                           |
+| :----: | :-------------------------- | :---------------------------------- | :------: | :--------------: | :--------------------------------------------- |
+| **1**  | **ESP32 NodeMCU DevKit V1** | 30 chân, 2.4GHz Wi-Fi + BLE         |    1     |   ~65.000 VNĐ    | Nút biên vi điều khiển trung tâm IoT           |
+| **2**  | **Module RFID RC522**       | 13.56 MHz, chuẩn giao tiếp SPI      |    1     |   ~28.000 VNĐ    | Đọc mã định danh UID thẻ sinh viên và thẻ sách |
+| **3**  | **Thẻ & Nhãn Dán RFID**     | Mifare 1K (Thẻ trắng / Sticker dán) |    5     |   ~15.000 VNĐ    | Gán mã định danh cho bạn đọc & bìa sách        |
+| **4**  | **Còi Active Buzzer 5V**    | Tần số âm thanh 1.8kHz              |    1     |    ~3.000 VNĐ    | Bíp xác nhận thao tác tức thì cho bạn đọc      |
+| **5**  | **LED Kép + Trở 220Ω**      | LED 5mm Xanh lá & Đỏ                |   2 bộ   |    ~2.000 VNĐ    | Báo thị trạng thái hợp lệ hoặc từ chối         |
+| **6**  | **Breadboard & Dây Jumper** | Dây cắm đực - cái chống nhiễu       |   1 bộ   |   ~25.000 VNĐ    | Đấu nối linh kiện an toàn, thẩm mỹ             |
+| **--** | **TỔNG KINH PHÍ PHẦN CỨNG** |                                     |          | **~138.000 VNĐ** | **Chi phí siêu tiết kiệm, tính khả thi cao**   |
 
 ---
 
@@ -261,32 +263,33 @@ flowchart TD
 ## 🔄 4. SƠ ĐỒ LUỒNG HOẠT ĐỘNG NGHIỆP VỤ (BUSINESS PROCESS FLOWCHARTS)
 
 ### A. Luồng Mượn Sách Theo Đợt (Batch Borrowing Flow):
+
 ```mermaid
 flowchart TD
     Start(["Bắt đầu giao dịch"]) --> Step1["Sinh viên chọn 'MƯỢN SÁCH' trên màn hình Kiosk"]
     Step1 --> Step2["Yêu cầu quẹt thẻ sinh viên lên đầu đọc RFID"]
     Step2 --> CheckCard{"Thẻ sinh viên<br/>hợp lệ?"}
-    
+
     CheckCard -- "Không / Thẻ lạ" --> Err1["Kêu 'Bíp Bíp', nháy LED đỏ<br/>Hiện thông báo thẻ không hợp lệ"] --> Step2
     CheckCard -- "Thẻ bị Khóa" --> Err2["Báo lỗi: Thẻ độc giả đang bị khóa<br/>Vui lòng liên hệ thủ thư"] --> End(["Kết thúc"])
-    
+
     CheckCard -- "Hợp lệ" --> CheckDebt{"Đang nợ phạt<br/>hoặc sách quá hạn?"}
     CheckDebt -- "Có sách quá hạn" --> Err3["Cảnh báo: Bạn đang có sách quá hạn<br/>Phải trả sách trước khi mượn mới"] --> End
-    
+
     CheckDebt -- "Không nợ" --> AuthOK["Xác thực thành công!<br/>Mở phiên làm việc của sinh viên"]
     AuthOK --> ScanBook["Sinh viên đặt lần lượt các cuốn sách lên khay RFID"]
-    
+
     ScanBook --> CheckDup{"Sách đã có<br/>trong giỏ?"}
     CheckDup -- "Đã có" --> WarnDup["Bỏ qua quét trùng lặp"] --> ScanBook
-    
+
     CheckDup -- "Mới" --> CheckAvail{"Sách có sẵn<br/>trong kho (available)?"}
     CheckAvail -- "Không khả dụng" --> ErrBook["Báo lỗi: Sách đang được mượn<br/>hoặc chưa trả kho"] --> ScanBook
-    
+
     CheckAvail -- "Khả dụng" --> AddCart["Kêu 'Bíp', nháy LED xanh<br/>Thêm sách vào Giỏ Mượn Kiosk"]
     AddCart --> CheckMax{"Số lượng sách<br/>mượn > 5 cuốn?"}
     CheckMax -- "Vượt quá" --> ErrMax["Thông báo đã đạt hạn mức 5 cuốn"] --> ShowCart
     CheckMax -- "Hợp lệ" --> ShowCart["Hiển thị danh sách giỏ sách trên màn hình"]
-    
+
     ShowCart --> UserConfirm{"Bấm nút<br/>'XÁC NHẬN MƯỢN'?"}
     UserConfirm -- "Quét tiếp" --> ScanBook
     UserConfirm -- "Đồng ý" --> Commit["1. Trừ số lượng sách khả dụng trong CSDL<br/>2. Tạo bản ghi Mượn sách (Loans) với hạn 14 ngày<br/>3. Kêu chuông thành công<br/>4. Tự động gửi Email Biên Lai điện tử<br/>5. Hiển thị Popup Biên Lai thành công"]
@@ -296,50 +299,52 @@ flowchart TD
 ---
 
 ### B. Luồng Trả Sách & Nộp Phạt Quá Hạn VietQR (Return & Fine Flow):
+
 ```mermaid
 flowchart TD
     Start(["Bắt đầu trả sách"]) --> S1["Sinh viên chọn 'TRẢ SÁCH' trên Kiosk"]
     S1 --> S2["Đặt cuốn sách cần trả lên khay quét RFID"]
     S2 --> S3["ESP32 đọc mã RFID sách gửi lên Server qua MQTT"]
     S3 --> S4["Server truy vấn thông tin mượn hiện tại của cuốn sách"]
-    
+
     S4 --> CheckLoan{"Sách có đang<br/>được mượn không?"}
     CheckLoan -- "Không" --> ErrNotBorrowed["Báo lỗi: Sách đang có sẵn trong kho,<br/>không có giao dịch mượn cần trả!"] --> End(["Kết thúc"])
-    
+
     CheckLoan -- "Đang mượn" --> CalcDate{"Kiểm tra hạn trả<br/>(Current Date vs Due Date)?"}
     CalcDate -- "Đúng hạn / Trước hạn" --> FineZero["Tiền phạt = 0 VNĐ<br/>Cập nhật trạng thái: Đã trả (Returned)"]
-    
+
     CalcDate -- "Quá hạn" --> CalcFine["Tính tiền phạt trễ hạn:<br/>Số ngày trễ x 1.000 VNĐ/ngày"]
     CalcFine --> ShowQR["Tạo mã chuẩn VietQR động (Ngân hàng, Số tiền, Nội dung)<br/>Hiển thị Modal QR trên màn hình Kiosk"]
     ShowQR --> PayCheck{"Sinh viên quét QR<br/>nộp phạt qua App Ngân hàng?"}
     PayCheck -- "Xác nhận nộp phạt" --> FineZero
-    
+
     FineZero --> UpdateDB["1. Cập nhật sách: status = 'available'<br/>2. Đóng bản ghi Loan: returnedAt = Now<br/>3. Kêu còi 'Bíp', nháy LED xanh<br/>4. Gửi Email thông báo trả sách thành công<br/>5. Cập nhật tức thì lên Dashboard Thủ thư"] --> End
 ```
 
 ---
 
 ### C. Luồng Trò Chuyện Tìm Sách Rảnh Tay với Thủ Thư AI "Nova" (Hands-Free AI Search):
+
 ```mermaid
 flowchart TD
     Start(["Màn hình Trợ lý AI (/kiosk/search)"]) --> Standby["Hệ thống ở chế độ Chờ (Standby: 'SẴN SÀNG: NOVA')<br/>Microphone lắng nghe thụ động từ khóa đánh thức"]
-    
+
     Standby --> Hear{"Người dùng nói:<br/>'Nova' hoặc 'Nova ơi'?"}
     Hear -- "Tạp âm / Tiếng điện thoại" --> Ignore["Bộ lọc âm vị tiếng Việt: Bỏ qua hoàn toàn!"] --> Standby
-    
+
     Hear -- "Khớp từ khóa 'Nova'" --> WakeUp["1. Phát chuông đánh thức 'Bính-Boong' 🔔<br/>2. Xả sạch bộ đệm âm thanh cũ (Flush Buffer)<br/>3. Hiện lời chào trợ lý trong chat box<br/>4. Chuyển trạng thái sang: 'NOVA ĐANG LẮNG NGHE' 🎙️"]
-    
+
     WakeUp --> SpeakQuery["Người dùng nói câu hỏi tự nhiên:<br/>'Tìm cho mình sách lập trình C++ và cấu trúc dữ liệu'"]
     SpeakQuery --> RealtimeText["Hiển thị văn bản nhận diện trực tiếp trên ô nhập liệu"]
-    
+
     RealtimeText --> SilenceDetect{"Dứt câu yên lặng<br/>đủ 1.6 giây?"}
     SilenceDetect -- "Đang nói tiếp" --> RealtimeText
     SilenceDetect -- "Đủ 1.6s" --> Submit["Tự động đóng chế độ nói (Mic tắt)<br/>Gửi câu hỏi tới AI Engine"]
-    
+
     Submit --> Reasoner["AI Engine phân tích (FastAPI + In-Memory Fallback):<br/>• Semantic Search Multilingual-E5 (Độ tương đồng ngữ nghĩa)<br/>• Lexical BM25Okapi (Khớp từ khóa chính xác)<br/>• Reciprocal Rank Fusion (RRF) xếp hạng 3.000 sách<br/>• Truy xuất vị trí kệ thực tế: Kệ A-D, Tầng 1-3"]
-    
+
     Reasoner --> Render["Hiển thị kết quả trong khung chat:<br/>• Lời tư vấn chu đáo từ Thủ thư AI<br/>• Thẻ sách: Tựa đề, Tác giả, Số lượng sẵn có<br/>• Nút bấm: 'Xem sơ đồ kệ X'"]
-    
+
     Render --> MapClick{"Người dùng bấm<br/>'Xem sơ đồ kệ'?"}
     MapClick -- "Có" --> ShowModal["Mở Modal Sơ Đồ Chỉ Đường Kệ Sách Thực Tế<br/>Vẽ lộ trình Kiosk ➔ Kệ sách chính xác theo Tầng & Ô"]
     MapClick -- "Không" --> StandbyNext["Trở về chế độ chờ 'Nova' cho đợt trò chuyện tiếp theo"]
@@ -368,7 +373,7 @@ sequenceDiagram
     MQTT->>Server: Chuyển tiếp Payload tới MQTT Handler
     Server->>Mongo: Truy vấn Reader.findOne({ rfidTag: "A1704E6D" }) & Active Loans
     Mongo-->>Server: Trả về thông tin Bạn đọc & Danh sách sách đang mượn
-    
+
     alt Thẻ Bạn Đọc Hợp Lệ
         Server->>MQTT: Publish Topic: kiosk/kiosk_01/command {"action": "feedback", "status": "success"}
         MQTT->>ESP32: Nhận lệnh phản hồi phần cứng
@@ -489,67 +494,46 @@ library-kiosk/
 
 Hệ thống tuân thủ hợp đồng giao tiếp MQTT phân cấp theo chuẩn thiết bị:
 
-| Chiều Truyền | Topic MQTT | Payload JSON Mẫu | Diễn Giải Nghiệp Vụ |
-| :--- | :--- | :--- | :--- |
-| **ESP32 ➔ Server** | `kiosk/{deviceId}/scan` | `{"uid": "A1704E6D", "type": "rfid"}` | Gửi mã UID thẻ vừa quẹt từ đầu đọc RC522 |
-| **ESP32 ➔ Server** | `kiosk/{deviceId}/status` | `{"status": "online", "rssi": -58, "uptime": 3600}` | Báo cáo nhịp tim định kỳ (Heartbeat 30 giây/lần) |
-| **ESP32 ➔ Server** | `kiosk/{deviceId}/status` *(LWT)* | `{"status": "offline"}` | Tự động bắn thông báo khi Kiosk mất điện/WiFi đột ngột |
-| **Server ➔ ESP32** | `kiosk/{deviceId}/command` | `{"action": "feedback", "status": "success"}` | Ra lệnh kêu 1 tiếng "Bíp" và nháy LED xanh (Hợp lệ) |
-| **Server ➔ ESP32** | `kiosk/{deviceId}/command` | `{"action": "feedback", "status": "error"}` | Ra lệnh kêu 2 tiếng "Bíp Bíp" và nháy LED đỏ (Từ chối) |
-| **Server ➔ ESP32** | `kiosk/{deviceId}/command` | `{"action": "reboot"}` | Khởi động lại vi điều khiển ESP32 từ xa qua Web Admin |
+| Chiều Truyền       | Topic MQTT                        | Payload JSON Mẫu                                    | Diễn Giải Nghiệp Vụ                                    |
+| :----------------- | :-------------------------------- | :-------------------------------------------------- | :----------------------------------------------------- |
+| **ESP32 ➔ Server** | `kiosk/{deviceId}/scan`           | `{"uid": "A1704E6D", "type": "rfid"}`               | Gửi mã UID thẻ vừa quẹt từ đầu đọc RC522               |
+| **ESP32 ➔ Server** | `kiosk/{deviceId}/status`         | `{"status": "online", "rssi": -58, "uptime": 3600}` | Báo cáo nhịp tim định kỳ (Heartbeat 30 giây/lần)       |
+| **ESP32 ➔ Server** | `kiosk/{deviceId}/status` _(LWT)_ | `{"status": "offline"}`                             | Tự động bắn thông báo khi Kiosk mất điện/WiFi đột ngột |
+| **Server ➔ ESP32** | `kiosk/{deviceId}/command`        | `{"action": "feedback", "status": "success"}`       | Ra lệnh kêu 1 tiếng "Bíp" và nháy LED xanh (Hợp lệ)    |
+| **Server ➔ ESP32** | `kiosk/{deviceId}/command`        | `{"action": "feedback", "status": "error"}`         | Ra lệnh kêu 2 tiếng "Bíp Bíp" và nháy LED đỏ (Từ chối) |
+| **Server ➔ ESP32** | `kiosk/{deviceId}/command`        | `{"action": "reboot"}`                              | Khởi động lại vi điều khiển ESP32 từ xa qua Web Admin  |
 
 ---
 
 ## 🚀 8. HƯỚNG DẪN CÀI ĐẶT & CHẠY THỬ NHANH (QUICK START)
 
 ### Yêu Cầu Tiên Quyết:
-* **Node.js:** Phiên bản 18 hoặc 20 trở lên.
-* **Python:** 3.10+ (để chạy dịch vụ AI FastAPI).
-* **Docker & Docker Compose** (khuyên dùng để chạy nhanh Mosquitto MQTT & MongoDB trong 1 lệnh) hoặc cài trực tiếp MongoDB và Mosquitto trên máy tính.
+
+- **Node.js:** Phiên bản 18 hoặc 20 trở lên.
+- **Python:** 3.10+ (để chạy dịch vụ AI FastAPI).
+- **Docker & Docker Compose** (khuyên dùng để chạy nhanh Mosquitto MQTT & MongoDB trong 1 lệnh) hoặc cài trực tiếp MongoDB và Mosquitto trên máy tính.
 
 ---
 
-### Cách 1: Khởi Chạy Tự Động 1-Click (Khuyên Dùng Để Demo)
-
-Chỉ cần double-click file **`start.bat`** tại thư mục gốc của dự án:
-1. Script sẽ tự động kiểm tra và tạo file `.env` nếu chưa có.
-2. Tự động kiểm tra cài đặt thư viện dependencies cho Server và Client.
-3. Tự động bật Docker Mosquitto Broker (Port 1883) và MongoDB (Port 27017).
-4. Tự động mở 3 cửa sổ console chuyên biệt:
-   - **Cửa sổ 1:** AI Search Service (Python FastAPI - Port 8000)
-   - **Cửa sổ 2:** Backend Server (Node.js Express + Socket.IO - Port 5000)
-   - **Cửa sổ 3:** Frontend Web App (React Kiosk & Admin - Port 5173)
-
-> 💡 **Khởi tạo dữ liệu mẫu lần đầu:** Mở một Terminal tại thư mục gốc và chạy:
-> ```bash
-> npm run seed
-> ```
-
 ---
 
-### Cách 2: Khởi Chạy Từng Dịch Vụ Bằng Lệnh Thủ Công
+### Cách 1: Khởi Chạy Từng Dịch Vụ Bằng Lệnh Thủ Công
 
 1. **Cài đặt thư viện toàn bộ dự án:**
+
    ```bash
    npm run setup
    ```
-2. **Khởi động Mosquitto MQTT và MongoDB (qua Docker):**
-   ```bash
-   docker-compose up -d
-   ```
-3. **Nạp dữ liệu 3.000 sách và thẻ bạn đọc:**
-   ```bash
-   npm run seed
-   ```
-4. **Khởi chạy AI Service (FastAPI):**
+
+2. **Khởi chạy AI Service (FastAPI):**
    ```bash
    npm run ai:dev
    ```
-5. **Khởi chạy Backend Server (Node.js):**
+3. **Khởi chạy Backend Server (Node.js):**
    ```bash
    npm run server:dev
    ```
-6. **Khởi chạy Frontend React (Kiosk & Admin):**
+4. **Khởi chạy Frontend React (Kiosk & Admin):**
    ```bash
    npm run client:dev
    ```
@@ -559,30 +543,32 @@ Chỉ cần double-click file **`start.bat`** tại thư mục gốc của dự 
 ## 🧪 9. KIỂM THỬ CHẤT LƯỢNG PHẦN MỀM (AUTOMATED TESTING & CI/CD)
 
 Hệ thống được trang bị bộ kiểm thử tự động toàn diện đảm bảo vận hành ổn định trước hội đồng:
-* **Chạy toàn bộ 55 Unit Tests:**
+
+- **Chạy toàn bộ 55 Unit Tests:**
   ```bash
   npm test
   ```
-  *(Kiểm tra toàn bộ logic mượn sách, trả sách, tính tiền phạt trễ hạn VietQR, xác thực thẻ, gửi email và cơ chế tự động phục hồi Fallback của AI Service).*
-* **Kiểm tra chuẩn mã nguồn (ESLint):**
+  _(Kiểm tra toàn bộ logic mượn sách, trả sách, tính tiền phạt trễ hạn VietQR, xác thực thẻ, gửi email và cơ chế tự động phục hồi Fallback của AI Service)._
+- **Kiểm tra chuẩn mã nguồn (ESLint):**
   ```bash
   npm run lint
   ```
-  *(Đạt kết quả hoàn hảo: 0 errors, 0 warnings).*
-* **Kiểm tra đóng gói Frontend (Production Build):**
+  _(Đạt kết quả hoàn hảo: 0 errors, 0 warnings)._
+- **Kiểm tra đóng gói Frontend (Production Build):**
   ```bash
   npm --prefix client run build
   ```
-  *(Vite tối ưu hóa và đóng gói thành công 100% trong ~4 giây).*
+  _(Vite tối ưu hóa và đóng gói thành công 100% trong ~4 giây)._
 
 ---
 
 ## 🎓 10. KẾT QUẢ ĐẠT ĐƯỢC & TÍNH ỨNG DỤNG THỰC TẾ
 
 1. **Hiệu năng vượt trội:** Thời gian phản hồi từ lúc quẹt thẻ vật lý đến khi giao diện Kiosk cập nhật chỉ **dưới 80ms** nhờ sự kết hợp tối ưu giữa giao thức MQTT và WebSocket (Socket.IO).
-2. **Độ ổn định cao:** Cơ chế tự động bù trừ ngoại tuyến (*Failover Fallback*) cho phép trạm Kiosk vẫn tìm kiếm và gợi ý sách chính xác kể cả khi mạng Internet bị ngắt hoặc dịch vụ Python ngoại tuyến.
-3. **Trải nghiệm người dùng thông minh:** Khả năng tương tác bằng giọng nói rảnh tay (*Hands-free Voice Wake Word "Nova"*) độc đáo, nhận diện chuẩn xác tiếng Việt và tự động loại bỏ tạp âm lớp học/hội trường.
+2. **Độ ổn định cao:** Cơ chế tự động bù trừ ngoại tuyến (_Failover Fallback_) cho phép trạm Kiosk vẫn tìm kiếm và gợi ý sách chính xác kể cả khi mạng Internet bị ngắt hoặc dịch vụ Python ngoại tuyến.
+3. **Trải nghiệm người dùng thông minh:** Khả năng tương tác bằng giọng nói rảnh tay (_Hands-free Voice Wake Word "Nova"_) độc đáo, nhận diện chuẩn xác tiếng Việt và tự động loại bỏ tạp âm lớp học/hội trường.
 4. **Chi phí chế tạo siêu tiết kiệm:** Với tổng kinh phí phần cứng chỉ khoảng **~138.000 VNĐ**, đề tài hoàn toàn khả thi để nhân rộng lắp đặt hàng loạt tại các thư viện trường học trên cả nước.
 
 ---
+
 **Đồ án hoàn thành bởi Sinh viên Học viện Công nghệ Bưu chính Viễn thông (PTIT) • Phiên bản: `final_v1`**
