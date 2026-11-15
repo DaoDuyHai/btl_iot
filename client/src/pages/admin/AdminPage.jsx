@@ -35,7 +35,7 @@ export default function AdminPage() {
   const [readerSearch, setReaderSearch] = useState('');
 
   // Phân trang danh mục sách theo Cursor-based Pagination Pattern
-  const [bookCursor, setBookCursor] = useState(null);
+  const [_bookCursor, setBookCursor] = useState(null);
   const [cursorHistory, setCursorHistory] = useState([]);
   const [hasMoreBooks, setHasMoreBooks] = useState(false);
   const [bookNextCursor, setBookNextCursor] = useState(null);
@@ -394,6 +394,194 @@ export default function AdminPage() {
     overdue: 'Quá hạn & tiền phạt',
     audit: 'Nhật ký kiểm toán'
   };
+
+  // Helper: Hiển thị chi tiết nhật ký thiết bị dạng thẻ trực quan (thay vì JSON thô)
+  function renderDevicePayload(log) {
+    const p = log?.payload || {};
+    if (p.role === 'book') {
+      return (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+          <span style={{ background: '#dcfce7', color: '#15803d', padding: '2px 8px', borderRadius: '4px', fontWeight: '800', fontSize: '11px' }}>SÁCH</span>
+          <span style={{ fontWeight: '700', color: '#0f172a' }}>{p.title || 'Tài liệu'}</span>
+          <span style={{ color: '#64748b', fontSize: '11.5px' }}>(UID: <code style={{ color: '#b91c1c' }}>{p.uid}</code>)</span>
+          <span style={{ 
+            background: p.status === 'available' ? '#f1f5f9' : '#fef2f2', 
+            color: p.status === 'available' ? '#475569' : '#b91c1c', 
+            padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: '600' 
+          }}>
+            {p.status === 'available' ? 'Sẵn sàng trong kho' : p.status === 'borrowed' ? 'Đang mượn' : p.status}
+          </span>
+        </div>
+      );
+    }
+
+    if (p.role === 'reader') {
+      return (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+          <span style={{ background: '#dbeafe', color: '#1e40af', padding: '2px 8px', borderRadius: '4px', fontWeight: '800', fontSize: '11px' }}>BẠN ĐỌC</span>
+          <span style={{ fontWeight: '700', color: '#0f172a' }}>{p.name || 'Sinh viên'}</span>
+          <span style={{ color: '#64748b', fontSize: '11.5px' }}>(UID: <code style={{ color: '#b91c1c' }}>{p.uid}</code>)</span>
+        </div>
+      );
+    }
+
+    if (p.status) {
+      return (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <span style={{ background: '#f1f5f9', color: '#334155', padding: '2px 8px', borderRadius: '4px', fontWeight: '700', fontSize: '11.5px' }}>
+            Trạng thái Kiosk: <strong style={{ color: p.status === 'online' ? '#16a34a' : '#dc2626' }}>{String(p.status).toUpperCase()}</strong>
+          </span>
+        </div>
+      );
+    }
+
+    const entries = Object.entries(p);
+    if (entries.length === 0) return <span style={{ color: '#94a3b8', fontStyle: 'italic' }}>Không có dữ liệu</span>;
+
+    return (
+      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
+        {entries.map(([k, v]) => (
+          <span key={k} style={{ background: '#f8fafc', border: '1px solid #e2e8f0', padding: '2px 6px', borderRadius: '4px', fontSize: '11.5px' }}>
+            <span style={{ color: '#64748b' }}>{k}:</span> <strong>{typeof v === 'object' ? JSON.stringify(v) : String(v)}</strong>
+          </span>
+        ))}
+      </div>
+    );
+  }
+
+  // Helper: Hiển thị chi tiết thao tác kiểm toán dạng trực quan chuyên nghiệp
+  function renderAuditDetails(audit) {
+    const d = audit?.details || {};
+    const action = audit?.action || '';
+
+    if (action === 'INSPECT_BOOK') {
+      const isNormal = d.result === 'normal';
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+            <span style={{ fontWeight: '700', color: '#0f172a' }}>{d.bookTitle || 'Tài liệu'}</span>
+            {d.readerStudentId && (
+              <span style={{ color: '#64748b', fontSize: '11.5px' }}>
+                • Bạn đọc: <strong style={{ color: '#1e40af' }}>{d.readerStudentId}</strong>
+              </span>
+            )}
+          </div>
+          <div style={{ display: 'flex', gap: '6px', alignItems: 'center', fontSize: '11.5px' }}>
+            <span style={{
+              background: isNormal ? '#dcfce7' : '#fee2e2',
+              color: isNormal ? '#166534' : '#991b1b',
+              padding: '1px 6px', borderRadius: '4px', fontWeight: '700'
+            }}>
+              {isNormal ? '✓ Nguyên vẹn' : d.result === 'damaged' ? '⚠ Hư hỏng vật lý' : '✕ Báo mất sách'}
+            </span>
+            {Number(d.damageFine) > 0 && (
+              <span style={{ color: '#dc2626', fontWeight: '700' }}>
+                Bồi thường: {Number(d.damageFine).toLocaleString()}đ
+              </span>
+            )}
+            {d.damagedDescription && (
+              <span style={{ color: '#64748b', fontStyle: 'italic' }}>({d.damagedDescription})</span>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    if (action === 'MANUAL_RETURN') {
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+          <div>
+            <span style={{ fontWeight: '700', color: '#0f172a' }}>{d.bookTitle || 'Tài liệu'}</span>
+            {d.readerStudentId && (
+              <span style={{ color: '#64748b', fontSize: '11.5px' }}>
+                • Bạn đọc: <strong style={{ color: '#1e40af' }}>{d.readerStudentId}</strong>
+              </span>
+            )}
+          </div>
+          <div style={{ fontSize: '11.5px', color: '#0369a1' }}>
+            Lý do: <em>{d.reason || 'Thủ thư nhận trả thủ công'}</em>
+          </div>
+        </div>
+      );
+    }
+
+    if (action === 'WAIVE_FINE') {
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+          <div>
+            <span style={{ color: '#15803d', fontWeight: '800' }}>
+              ✓ Đã miễn phạt: {Number(d.waivedAmount || 0).toLocaleString()}đ
+            </span>
+            {d.readerStudentId && (
+              <span style={{ color: '#64748b', fontSize: '11.5px' }}>
+                • Bạn đọc: <strong style={{ color: '#1e40af' }}>{d.readerStudentId}</strong>
+              </span>
+            )}
+          </div>
+          {d.reason && (
+            <div style={{ fontSize: '11.5px', color: '#64748b' }}>
+              Lý do: <em>{d.reason}</em>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    if (action === 'UPDATE_BOOK') {
+      const ch = d.changes || {};
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+          <div>
+            <span style={{ fontWeight: '700', color: '#0f172a' }}>{ch.title || d.title || 'Cập nhật tài liệu'}</span>
+            {ch.author && <span style={{ color: '#64748b', fontSize: '11.5px' }}> • Tác giả: {ch.author}</span>}
+          </div>
+          <div style={{ fontSize: '11.5px', color: '#475569', display: 'flex', gap: '6px' }}>
+            {ch.isbn && <span>ISBN: <code>{ch.isbn}</code></span>}
+            {ch.status && <span>• Trạng thái: <strong style={{ color: ch.status === 'available' ? '#16a34a' : '#ea580c' }}>{ch.status}</strong></span>}
+            {ch.physicalCondition && <span>• Tình trạng: <strong>{ch.physicalCondition}</strong></span>}
+          </div>
+        </div>
+      );
+    }
+
+    if (action === 'UPDATE_READER' || action === 'BLOCK_READER') {
+      const ch = d.changes || d;
+      const isBlocked = action === 'BLOCK_READER' || ch.active === false;
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+          <div>
+            <span style={{ 
+              background: isBlocked ? '#fef2f2' : '#f0fdf4',
+              color: isBlocked ? '#b91c1c' : '#15803d',
+              padding: '1px 6px', borderRadius: '4px', fontWeight: '800', fontSize: '11px', marginRight: '6px'
+            }}>
+              {isBlocked ? 'KHÓA THẺ' : 'CẬP NHẬT'}
+            </span>
+            <span style={{ fontWeight: '700', color: '#0f172a' }}>{d.name || ch.name || 'Hồ sơ độc giả'}</span>
+            {d.studentId && <span style={{ color: '#64748b', fontSize: '11.5px' }}> (MSSV: {d.studentId})</span>}
+          </div>
+          {ch.blockReason && (
+            <div style={{ fontSize: '11.5px', color: '#b91c1c', fontStyle: 'italic' }}>
+              Lý do: {ch.blockReason}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    const entries = Object.entries(d);
+    if (entries.length === 0) return <span style={{ color: '#94a3b8', fontStyle: 'italic' }}>Không có chi tiết</span>;
+
+    return (
+      <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+        {entries.map(([k, v]) => (
+          <span key={k} style={{ background: '#f8fafc', border: '1px solid #e2e8f0', padding: '1px 5px', borderRadius: '4px', fontSize: '11px' }}>
+            <span style={{ color: '#64748b' }}>{k}:</span> <strong>{typeof v === 'object' ? JSON.stringify(v) : String(v)}</strong>
+          </span>
+        ))}
+      </div>
+    );
+  }
 
   const currentDateStr = new Date().toLocaleDateString('vi-VN', {
     weekday: 'long',
@@ -764,7 +952,9 @@ export default function AdminPage() {
                             {log.event.toUpperCase()}
                           </span>
                         </td>
-                        <td style={{ padding: '8px' }}><code>{JSON.stringify(log.payload || {})}</code></td>
+                        <td style={{ padding: '8px' }}>
+                          {renderDevicePayload(log)}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -1316,7 +1506,7 @@ export default function AdminPage() {
                         {audit.targetType} (#{audit.targetId?.slice(-6)})
                       </td>
                       <td style={{ padding: '10px' }}>
-                        <code>{JSON.stringify(audit.details || {})}</code>
+                        {renderAuditDetails(audit)}
                       </td>
                     </tr>
                   ))}

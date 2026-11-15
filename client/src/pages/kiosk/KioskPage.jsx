@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { CheckCircle2, AlertTriangle, XCircle, Info, X } from 'lucide-react';
 import KioskHeader from '../../components/KioskHeader.jsx';
 import SwipeCardModal from '../../components/SwipeCardModal.jsx';
@@ -42,32 +42,54 @@ export default function KioskPage() {
     setToasts(prev => prev.filter(t => t.id !== id));
   }
 
-  // 1. Lắng nghe WebSocket Socket.IO (RFID và Trạng thái Kiosk)
+  // Refs lưu giữ state mới nhất để Socket listener đăng ký đúng 1 lần duy nhất ([]), không bị tháo/gắn liên tục khi scan sách
+  const currentReaderRef = useRef(currentReader);
+  currentReaderRef.current = currentReader;
+
+  const activeLoansRef = useRef(activeLoans);
+  activeLoansRef.current = activeLoans;
+
+  const targetFeatureRef = useRef(targetFeature);
+  targetFeatureRef.current = targetFeature;
+
+  const currentScreenRef = useRef(currentScreen);
+  currentScreenRef.current = currentScreen;
+
+  const borrowCartRef = useRef(borrowCart);
+  borrowCartRef.current = borrowCart;
+
+  // 1. Lắng nghe WebSocket Socket.IO (RFID và Trạng thái Kiosk) - Duy nhất 1 lần
   useEffect(() => {
     function handleKioskEvent(event) {
       console.log('📡 [Kiosk UI] Nhận sự kiện Socket:', event);
       const { type, data } = event;
 
+      const reader = currentReaderRef.current;
+      const screen = currentScreenRef.current;
+      const target = targetFeatureRef.current;
+      const loans = activeLoansRef.current;
+      const cart = borrowCartRef.current;
+
       if (type === 'READER_AUTHENTICATED') {
         // 1. Bảo vệ phiên làm việc: Nếu đang có độc giả A mà quẹt thẻ độc giả B khác
-        if (currentReader && String(currentReader._id) !== String(data.reader._id)) {
+        if (reader && String(reader._id) !== String(data.reader._id)) {
           playKioskBeep('error');
           showToast(
             'warning',
             'Đang có phiên làm việc',
-            `Kiosk đang phục vụ bạn đọc ${currentReader.name} (${currentReader.studentId}). Vui lòng bấm "Kết thúc phiên" trước khi quẹt thẻ người khác!`
+            `Kiosk đang phục vụ bạn đọc ${reader.name} (${reader.studentId}). Vui lòng bấm "Kết thúc phiên" trước khi quẹt thẻ người khác!`
           );
           return;
         }
 
         playKioskBeep('success');
         setCurrentReader(data.reader);
-        const loans = data.activeLoans || [];
-        setActiveLoans(loans);
+        const readerLoans = data.activeLoans || [];
+        setActiveLoans(readerLoans);
         setIsSwipeModalOpen(false);
         setTimeoutCounter(60);
 
-        const hasOverdue = loans.some(l => new Date() > new Date(l.dueDate));
+        const hasOverdue = readerLoans.some(l => new Date() > new Date(l.dueDate));
         // Kiểm tra độc giả có khoản phạt nợ chưa thanh toán không
         if (data.hasDebt) {
           showToast('warning', 'Tài khoản có nợ phạt', `Bạn đang có khoản nợ phạt ${data.totalUnpaidFine?.toLocaleString('vi-VN')} VNĐ chưa thanh toán. Thư viện tạm dừng cho mượn mới cho đến khi nộp phạt.`);
@@ -78,8 +100,8 @@ export default function KioskPage() {
         }
 
         // Chuyển màn hình tương ứng NẾU người dùng đã chọn trước
-        if (targetFeature) {
-          setCurrentScreen(targetFeature);
+        if (target) {
+          setCurrentScreen(target);
           setTargetFeature(null);
         }
         // Nếu đang ở HOME mà quẹt thẻ: Ở NGUYÊN TẠI HOME, KHÔNG tự ý nhảy vào MƯỢN!
@@ -88,11 +110,11 @@ export default function KioskPage() {
         setTimeoutCounter(60);
         const book = data.book;
 
-        if (currentScreen === 'RETURN') {
+        if (screen === 'RETURN') {
           // Xử lý trả sách
           processReturnBook(book.rfidTag);
-        } else if (currentScreen === 'BORROW') {
-          if (!currentReader) {
+        } else if (screen === 'BORROW') {
+          if (!reader) {
             playKioskBeep('error');
             showToast('warning', 'Chưa xác thực bạn đọc', 'Vui lòng quẹt thẻ sinh viên trước khi quét tài liệu mượn!');
             setIsSwipeModalOpen(true);
@@ -101,7 +123,7 @@ export default function KioskPage() {
           }
 
           // 1. Kiểm tra bạn đọc có sách quá hạn không (chặn mượn mới)
-          const hasOverdue = activeLoans.some(l => new Date() > new Date(l.dueDate));
+          const hasOverdue = loans.some(l => new Date() > new Date(l.dueDate));
           if (hasOverdue) {
             playKioskBeep('error');
             showToast('error', 'Chặn quyền mượn sách', 'Bạn đang có tài liệu quá hạn chưa trả! Thư viện tạm dừng cho mượn mới đến khi hoàn tất trả sách & nộp phạt.');
@@ -109,21 +131,20 @@ export default function KioskPage() {
           }
 
           // 2. Kiểm tra sách trùng trong giỏ
-          if (borrowCart.some(b => b._id === book._id)) {
+          if (cart.some(b => b._id === book._id)) {
             playKioskBeep('error');
             showToast('warning', 'Sách đã có trong giỏ', `Cuốn sách "${book.title}" đã được thêm vào giỏ mượn.`);
             return;
           }
 
           // 3. Kiểm tra hạn mức mượn tối đa 5 cuốn
-          if (activeLoans.length + borrowCart.length >= 5) {
+          if (loans.length + cart.length >= 5) {
             playKioskBeep('error');
-            showToast('error', 'Vượt quá hạn mức mượn', `Bạn chỉ được mượn tối đa 5 cuốn (Hiện đang mượn ${activeLoans.length}, giỏ có ${borrowCart.length}).`);
+            showToast('error', 'Vượt quá hạn mức mượn', `Bạn chỉ được mượn tối đa 5 cuốn (Hiện đang mượn ${loans.length}, giỏ có ${cart.length}).`);
             return;
           }
 
           // 4. KIỂM TRA TOÀN VẸN: Sách có đang khả dụng không?
-          // Nếu sách có status !== 'available' hoặc data.isAvailable === false
           if (book.status !== 'available' || data.isAvailable === false) {
             playKioskBeep('error');
             showToast('error', 'Tài liệu không khả dụng', `Cuốn sách "${book.title}" hiện đang được bạn đọc khác mượn hoặc chưa hoàn trả vào kho!`);
@@ -161,7 +182,7 @@ export default function KioskPage() {
       socket.off('kiosk:event', handleKioskEvent);
       socket.off('device:status', handleDeviceStatus);
     };
-  }, [currentScreen, targetFeature, currentReader, activeLoans, borrowCart]);
+  }, []);
 
   // 2. Bộ đếm thời gian tự động trở về Trang Chủ khi người dùng bỏ đi (Auto-timeout)
   // Không áp dụng cho Trang Chủ (HOME) và Trợ lý gợi ý / AI Search (AI_SEARCH) để bạn đọc thoải mái trò chuyện, tra cứu
@@ -199,10 +220,6 @@ export default function KioskPage() {
 
   // Điều hướng khi bấm các nút chức năng ở trang chủ
   function handleSelectFeature(feature) {
-    if (feature === 'RETURN') {
-      setCurrentScreen('RETURN');
-      return;
-    }
     if (feature === 'AI_SEARCH') {
       setCurrentScreen('AI_SEARCH');
       return;

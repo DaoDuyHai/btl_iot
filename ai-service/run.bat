@@ -1,33 +1,37 @@
 @echo off
-chcp 65001 > nul
+setlocal
+title PTIT Library Kiosk - AI Search Service
+
 echo ========================================================
-echo   🤖 KHỞI CHẠY AI SEARCH SERVICE (PTIT LIBRARY KIOSK)
+echo   AI SEARCH SERVICE - PTIT LIBRARY KIOSK (FastAPI)
 echo ========================================================
+echo.
+
 cd /d "%~dp0"
 
-:: 1. Kiểm tra môi trường ảo venv, nếu chưa có thì tự động tạo & cài thư viện
-if not exist venv\Scripts\activate.bat (
-    echo [*] Chưa tìm thấy môi trường venv. Đang tự động tạo venv và cài đặt thư viện...
-    python -m venv venv
-    if %ERRORLEVEL% EQU 0 (
-        call venv\Scripts\activate.bat
-        echo [*] Đang cài đặt thư viện từ requirements.txt...
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    ) else (
-        echo [!] Không thể tạo venv tự động. Đảm bảo máy tính đã cài Python 3.10+ và tick "Add Python to PATH".
-    )
+REM 1. Kich hoat Virtual Environment neu ton tai
+if exist "venv\Scripts\activate.bat" (
+    echo [*] Dang kich hoat virtual environment venv...
+    call "venv\Scripts\activate.bat"
 ) else (
-    echo [*] Kích hoạt Virtual Environment venv...
-    call venv\Scripts\activate.bat
+    echo [*] Su dung Python he thong...
 )
 
-:: 2. Khởi chạy FastAPI
-echo [*] Đang khởi chạy FastAPI tại http://127.0.0.1:8000...
+echo [*] Khoi chay FastAPI tai http://127.0.0.1:8000...
+echo [*] Swagger API Docs: http://127.0.0.1:8000/docs
+echo.
+
+REM 2. Chay FastAPI bang python
 python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 if %ERRORLEVEL% NEQ 0 (
-    echo.
-    echo [!] Thử khởi chạy bằng uvicorn trong Scripts...
-    venv\Scripts\uvicorn.exe main:app --host 0.0.0.0 --port 8000 --reload
+    if exist "venv\Scripts\python.exe" (
+        "venv\Scripts\python.exe" -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    )
 )
+if %ERRORLEVEL% NEQ 0 (
+    py -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+)
+
+echo.
+echo [!] AI Service da dung.
 pause
