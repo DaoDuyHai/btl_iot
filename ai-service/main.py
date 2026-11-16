@@ -13,14 +13,6 @@ from fastapi.middleware.cors import CORSMiddleware
 # Fix console encoding for Windows
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-# Ensure user site-packages (where Windows Application Control whitelists PyTorch) is prioritized
-import site
-user_site = site.getusersitepackages()
-if user_site and os.path.exists(user_site):
-    if user_site in sys.path:
-        sys.path.remove(user_site)
-    sys.path.insert(0, user_site)
-
 # Ensure ai-service and venv site-packages are in sys.path
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 if BASE_DIR not in sys.path:
@@ -28,22 +20,6 @@ if BASE_DIR not in sys.path:
 _venv_site = os.path.join(BASE_DIR, "venv", "Lib", "site-packages")
 if os.path.exists(_venv_site) and _venv_site not in sys.path:
     sys.path.append(_venv_site)
-
-# Mock sklearn to bypass Windows Application Control blocking DLLs on uvicorn reloader spawn
-import types
-if "sklearn" not in sys.modules:
-    def _create_dummy(name):
-        m = types.ModuleType(name)
-        m.__spec__ = types.SimpleNamespace(name=name, loader=None, origin=None, submodule_search_locations=[])
-        m.__path__ = []
-        m.__file__ = f"<dummy_{name}>"
-        return m
-    sys.modules['sklearn'] = _create_dummy('sklearn')
-    sys.modules['sklearn.__check_build'] = _create_dummy('sklearn.__check_build')
-    sys.modules['sklearn.__check_build._check_build'] = _create_dummy('sklearn.__check_build._check_build')
-    sys.modules['sklearn.metrics'] = _create_dummy('sklearn.metrics')
-    sys.modules['sklearn.metrics.pairwise'] = _create_dummy('sklearn.metrics.pairwise')
-    sys.modules['sklearn.metrics'].pairwise_distances = lambda *args, **kwargs: None
 
 from src.hybrid_search_v2 import HybridSearchEngineV2
 from src.query_understanding import QueryAnalyzer

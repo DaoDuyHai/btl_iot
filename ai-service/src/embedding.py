@@ -1,23 +1,7 @@
 # d:\TrainAI\src\embedding.py
 import sys
-import types
 import numpy as np
 import pandas as pd
-
-# Mock sklearn if needed to avoid Windows Application Control DLL load failure
-if "sklearn" not in sys.modules:
-    def _create_dummy(name):
-        m = types.ModuleType(name)
-        m.__spec__ = types.SimpleNamespace(name=name, loader=None, origin=None, submodule_search_locations=[])
-        m.__path__ = []
-        m.__file__ = f"<dummy_{name}>"
-        return m
-    sys.modules['sklearn'] = _create_dummy('sklearn')
-    sys.modules['sklearn.__check_build'] = _create_dummy('sklearn.__check_build')
-    sys.modules['sklearn.__check_build._check_build'] = _create_dummy('sklearn.__check_build._check_build')
-    sys.modules['sklearn.metrics'] = _create_dummy('sklearn.metrics')
-    sys.modules['sklearn.metrics.pairwise'] = _create_dummy('sklearn.metrics.pairwise')
-    sys.modules['sklearn.metrics'].pairwise_distances = lambda *args, **kwargs: None
 
 from sentence_transformers import SentenceTransformer
 from src.passage_builder import build_passage
