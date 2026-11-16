@@ -43,6 +43,7 @@ export default function AiSearchSection({ reader, onFinish }) {
   const isTypingRef = useRef(false);   // Bạn đọc đang chủ động gõ phím
   const latestTranscriptRef = useRef('');
   const lastProcessedIndexRef = useRef(0); // Vị trí kết quả SpeechRecognition đã xử lý (tránh dính buffer continuous)
+  const lastSubmittedQueryRef = useRef({ text: '', time: 0 }); // Bộ lọc chống gửi trùng lặp câu hỏi (Double-send Guard)
 
   // Timers
   const silenceTimerRef = useRef(null);
@@ -134,7 +135,7 @@ export default function AiSearchSection({ reader, onFinish }) {
     }, 7000);
 
     // 5. Xả sạch buffer audio cũ để không bị dính từ "nova" vào input câu hỏi
-    lastProcessedIndexRef.current = 0;
+    lastProcessedIndexRef.current = 999999;
     try {
       if (recognitionRef.current && isRunningRef.current) {
         recognitionRef.current.abort();
@@ -156,7 +157,17 @@ export default function AiSearchSection({ reader, onFinish }) {
       return;
     }
 
+    // Chống gửi trùng lặp câu hỏi (Double-send Guard trong 3s)
+    const now = Date.now();
+    if (cleanText.toLowerCase() === lastSubmittedQueryRef.current.text.toLowerCase() && (now - lastSubmittedQueryRef.current.time) < 3000) {
+      setInputMessage('');
+      latestTranscriptRef.current = '';
+      return;
+    }
+    lastSubmittedQueryRef.current = { text: cleanText, time: now };
+
     isSendingRef.current = true;
+    isAgentReplyingRef.current = true;
 
     // 1. Đóng ngay chế độ lắng nghe câu hỏi -> Trở về trạng thái chờ "Hey Nova" tiếp theo (chuẩn Siri)
     modeRef.current = 'WAITING_FOR_WAKE_WORD';
@@ -164,7 +175,8 @@ export default function AiSearchSection({ reader, onFinish }) {
     if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
     if (timeoutTimerRef.current) clearTimeout(timeoutTimerRef.current);
 
-    lastProcessedIndexRef.current = 0;
+    // Đánh dấu buffer cũ đã bị tiêu thụ hết (tránh onresult phát sinh khi abort đọc lại)
+    lastProcessedIndexRef.current = 999999;
 
     // Tạm dừng micro trong lúc gửi tin nhắn và chờ AI trả lời để không nhận nhầm tạp âm
     try {
@@ -174,7 +186,7 @@ export default function AiSearchSection({ reader, onFinish }) {
     } catch (_e) {}
 
     // 2. Gửi câu hỏi cho AI Agent
-    handleSendMessageRef.current?.(cleanText);
+    handleSendMessageRef.current?.(cleanText, true);
   }
 
   // Khởi tạo Web Speech Recognition chạy ngầm liên tục
@@ -208,11 +220,12 @@ export default function AiSearchSection({ reader, onFinish }) {
 
       recognition.onstart = () => {
         isRunningRef.current = true;
+        lastProcessedIndexRef.current = 0; // Reset an toàn khi phiên nhận diện mới bắt đầu
       };
 
       recognition.onresult = (event) => {
-        // Nếu bạn đọc đang chủ động gõ phím -> Tuyệt đối không ghi đè và không bật silence timer cướp lời
-        if (isTypingRef.current) {
+        // Nếu bạn đọc đang gõ phím hoặc AI đang bận trả lời / gửi -> Tuyệt đối không ghi đè và bỏ qua audio
+        if (isTypingRef.current || isAgentReplyingRef.current || isSendingRef.current) {
           return;
         }
 
@@ -309,6 +322,11 @@ export default function AiSearchSection({ reader, onFinish }) {
       if (restartTimerRef.current) clearTimeout(restartTimerRef.current);
       if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
       if (recognition) {
+        // Hủy toàn bộ event listener để không bắn sự kiện ma sau khi unmount
+        recognition.onstart = null;
+        recognition.onresult = null;
+        recognition.onerror = null;
+        recognition.onend = null;
         try {
           recognition.abort();
         } catch (_e) {}
@@ -383,15 +401,29 @@ export default function AiSearchSection({ reader, onFinish }) {
   }, [reader]);
 
   // Gửi tin nhắn trò chuyện tới AI Agent
-  async function handleSendMessage(customText) {
+  async function handleSendMessage(customText, isFromSubmit = false) {
     const textToSend = (customText !== undefined ? customText : (inputMessage || latestTranscriptRef.current)).trim();
-    if (!textToSend || isAgentReplyingRef.current) return;
+    if (!textToSend || (isAgentReplyingRef.current && !isFromSubmit)) return;
+
+    if (!isFromSubmit) {
+      const now = Date.now();
+      if (textToSend.toLowerCase() === lastSubmittedQueryRef.current.text.toLowerCase() && (now - lastSubmittedQueryRef.current.time) < 3000) {
+        setInputMessage('');
+        latestTranscriptRef.current = '';
+        return;
+      }
+      lastSubmittedQueryRef.current = { text: textToSend, time: now };
+    }
 
     // Đóng chế độ lắng nghe câu hỏi
     modeRef.current = 'WAITING_FOR_WAKE_WORD';
     setMode('WAITING_FOR_WAKE_WORD');
     if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
     if (timeoutTimerRef.current) clearTimeout(timeoutTimerRef.current);
+
+    isSendingRef.current = true;
+    isAgentReplyingRef.current = true;
+    setIsAgentReplying(true);
 
     playKioskBeep('success');
     const userMsg = {
@@ -403,7 +435,6 @@ export default function AiSearchSection({ reader, onFinish }) {
     setChatMessages(prev => [...prev, userMsg]);
     setInputMessage('');
     latestTranscriptRef.current = '';
-    setIsAgentReplying(true);
 
     try {
       // Lọc bỏ lời chào để giữ lịch sử hội thoại thuần túy câu hỏi - câu trả lời
@@ -450,6 +481,7 @@ export default function AiSearchSection({ reader, onFinish }) {
       ]);
     } finally {
       setIsAgentReplying(false);
+      isAgentReplyingRef.current = false;
       isSendingRef.current = false;
 
       // Sau khi AI hoàn tất, micro nền sẵn sàng chờ "Hey Nova"

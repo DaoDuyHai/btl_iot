@@ -2341,3 +2341,1201 @@
 
 ---
 
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:45:49`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `327.32 ms`
+- 🧑 **Bạn đọc nói:** **"có cuốn sách nào dạy lập trình mi ton từ con số 0 không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Con Gái Học Cách Lập Trình - Không Khó Khi Có Bí Quyết Trong Tay!** — Reshma Saujani | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  2. **sách Lập Trình Hay: Clean Code + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  3. **Em Học Lập Trình Coding** — Randy Lynn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Coding 6 Lập trình với Scratch 3** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  5. **2 sách Lập trình với Python cơ bản và nâng cao** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Văn Hóa Số - Gỡ bỏ rào cản trong chuyển đổi số** — Lê Quang Vũ | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  7. **ƯỚC VỌNG VỀ QUỐC GIA LẬP TRÌNH: TỪ TIẾNG ANH ĐẾN TIẾNG CODE - Nguyễn Thanh Tùng** — Nguyễn Thanh Tùng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Nhập môn thuật toán** — Bùi Việt Hà | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:45:52`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `293.42 ms`
+- 🧑 **Bạn đọc nói:** **"có cuốn sách nào dạy lập trình mi ton từ con số 0 không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Con Gái Học Cách Lập Trình - Không Khó Khi Có Bí Quyết Trong Tay!** — Reshma Saujani | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  2. **sách Lập Trình Hay: Clean Code + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  3. **Em Học Lập Trình Coding** — Randy Lynn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Coding 6 Lập trình với Scratch 3** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  5. **2 sách Lập trình với Python cơ bản và nâng cao** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Văn Hóa Số - Gỡ bỏ rào cản trong chuyển đổi số** — Lê Quang Vũ | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  7. **ƯỚC VỌNG VỀ QUỐC GIA LẬP TRÌNH: TỪ TIẾNG ANH ĐẾN TIẾNG CODE - Nguyễn Thanh Tùng** — Nguyễn Thanh Tùng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Nhập môn thuật toán** — Bùi Việt Hà | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:46:02`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `320.21 ms`
+- 🧑 **Bạn đọc nói:** **"có cuốn sách nào dạy lập trình biton từ con số 0 không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Con Gái Học Cách Lập Trình - Không Khó Khi Có Bí Quyết Trong Tay!** — Reshma Saujani | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  2. **Em Học Lập Trình Coding** — Randy Lynn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  3. **sách Lập Trình Hay: Clean Code + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Văn Hóa Số - Gỡ bỏ rào cản trong chuyển đổi số** — Lê Quang Vũ | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  5. **ƯỚC VỌNG VỀ QUỐC GIA LẬP TRÌNH: TỪ TIẾNG ANH ĐẾN TIẾNG CODE - Nguyễn Thanh Tùng** — Nguyễn Thanh Tùng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  6. **Coding 6 Lập trình với Scratch 3** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  7. **2 sách Lập trình với Scratch 3 và Lập trình với App Inventor** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  8. **/Lẻ: Hướng Dẫn No Code - Vibe Code: Không Cần Biết Lập Trình + 3 Cấp Độ Dùng AI & 50 Mẫu Prompt Chuẩn - Bản Quyền** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:47:10`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `229.43 ms`
+- 🧑 **Bạn đọc nói:** **"tìm cho mình sách về lịch sử Việt Nam thời kỳ phong kiến"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Khám phá dòng chảy lịch sử và văn hóa là cách tuyệt vời nhất để mở rộng thế giới quan. Thủ thư gợi ý cho bạn những ấn phẩm lịch sử sâu sắc và dễ tiếp cận nhất:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Việt Nam: Những tiếng vọng từ quá khứ** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử Việt Nam* (Khu vực: `Kệ F` - Tầng 1)
+  2. **Vua Gia Long** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử thế giới* (Khu vực: `Kệ F` - Tầng 2)
+  3. **Đất nước Việt Nam qua các đời - Ấn bản dấu ấn 10 năm** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử thế giới* (Khu vực: `Kệ F` - Tầng 3)
+  4. **tín ngưỡng và lịch sử tinh thần Việt Nam** — Không rõ tác giả | *Lịch sử – Văn hóa - Văn hóa truyền thống* (Khu vực: `Kệ F` - Tầng 3)
+  5. **Đất nước Việt Nam qua các đời** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử thế giới* (Khu vực: `Kệ F` - Tầng 3)
+  6. **Cuộc chiến kim loại hiếm** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử Việt Nam* (Khu vực: `Kệ F` - Tầng 3)
+  7. **Nghiên cứu bản đồ các cửa sông, hải cảng Việt Nam thế kỷ XV** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử thế giới* (Khu vực: `Kệ F` - Tầng 2)
+  8. **Pol Pot: Mổ xẻ một cơn ác mộng** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử Việt Nam* (Khu vực: `Kệ F` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:47:14`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `223.77 ms`
+- 🧑 **Bạn đọc nói:** **"tìm cho mình sách về lịch sử Việt Nam thời kỳ phong kiến"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Khám phá dòng chảy lịch sử và văn hóa là cách tuyệt vời nhất để mở rộng thế giới quan. Thủ thư gợi ý cho bạn những ấn phẩm lịch sử sâu sắc và dễ tiếp cận nhất:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Việt Nam: Những tiếng vọng từ quá khứ** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử Việt Nam* (Khu vực: `Kệ F` - Tầng 1)
+  2. **Vua Gia Long** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử thế giới* (Khu vực: `Kệ F` - Tầng 2)
+  3. **Đất nước Việt Nam qua các đời - Ấn bản dấu ấn 10 năm** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử thế giới* (Khu vực: `Kệ F` - Tầng 3)
+  4. **tín ngưỡng và lịch sử tinh thần Việt Nam** — Không rõ tác giả | *Lịch sử – Văn hóa - Văn hóa truyền thống* (Khu vực: `Kệ F` - Tầng 3)
+  5. **Đất nước Việt Nam qua các đời** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử thế giới* (Khu vực: `Kệ F` - Tầng 3)
+  6. **Cuộc chiến kim loại hiếm** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử Việt Nam* (Khu vực: `Kệ F` - Tầng 3)
+  7. **Nghiên cứu bản đồ các cửa sông, hải cảng Việt Nam thế kỷ XV** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử thế giới* (Khu vực: `Kệ F` - Tầng 2)
+  8. **Pol Pot: Mổ xẻ một cơn ác mộng** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử Việt Nam* (Khu vực: `Kệ F` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:47:27`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `263.55 ms`
+- 🧑 **Bạn đọc nói:** **"thư viện có sách nào hướng dẫn thiết kế cơ sở dữ liệu quan hệ không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Dữ Liệu Cá Nhân Trên Không Gian Mạng - Những Vấn Đề Đặt Ra Trong Kỷ Nguyên Phát Triển Mới** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  2. **Cấu trúc dữ liệu và thuật toán cài đặt bằng Python** — Trần Thông Quế | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  3. **Thiết Kế Hệ Thống Học Máy** — Chip Huyen | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  4. **/Lẻ: Hướng Dẫn No Code - Vibe Code: Không Cần Biết Lập Trình + 3 Cấp Độ Dùng AI & 50 Mẫu Prompt Chuẩn - Bản Quyền** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  5. **5 Sách Word - Excel - Power Point - 150TT - Power Query ĐÀO TẠO TIN HỌC Ứng Dụng Văn Phòng Kèm Video Hướng Dẫn** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Hướng Dẫn No Code - Vibe Code: Không Cần Biết Lập Trình + 3 Cấp Độ Dùng AI & 50 Mẫu Prompt Chuẩn** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  7. **Hướng Dẫn Thực Hành Google Sheets Từ Cơ Bản Đến Nâng Cao** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Hướng Dẫn Thực Hành Google Sheets - Từ Cơ Bản Đến Nâng Cao** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:47:41`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `257.44 ms`
+- 🧑 **Bạn đọc nói:** **"mình muốn tìm tiểu thuyết trinh thám của Nhật Bản"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Rất tiếc, hiện tại trong kho sách thư viện chưa có cuốn '' của tác giả 'Nhật Bản'.
+  > 
+  > Tuy nhiên, thủ thư đã chọn lọc các đầu sách gần nhất cùng chuyên ngành / chủ đề có sẵn trên kệ để bạn tham khảo thay thế:
+  > 
+  > 💬 *Bạn có muốn thủ thư hướng dẫn đường đến Kệ A - Tầng 1 để xem các cuốn sách thay thế trên không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Bí Mật Của Thiên Thần** — Guillaume Musso | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 1)
+  2. **Cục Điều Tra Thi Thể –Truy Tìm Bằng Chứng Thép** — Cửu Trích Thủy | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 3)
+  3. **Đêm Cho Chuột: Tuyển Tập Những Vụ Án Kì Ảo Của Mikihiko Renjo** — Mikihiko Renjo | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  4. **Vụ Án** — Franz Kafka | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 2)
+  5. **Con Gái Của Thời Gian** — Josephine Tey | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 3)
+  6. **Nhập Vai Thám Tử** — G.T. Karber | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 3)
+  7. **Thứ Bạn Tìm Đều Nằm Trong Thư Viện** — Aoyama Michiko | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 2)
+  8. **Agatha Christie. Tuyển tập kỳ án của Poirot** — Agatha Christie | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:47:54`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `263.27 ms`
+- 🧑 **Bạn đọc nói:** **"gợi ý vài đầu sách về tâm lý học Hành Vi dễ hiểu"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Với chủ đề bạn đang quan tâm, thủ thư đã rà soát kho 3.000 đầu sách và chọn ra các ấn phẩm tiêu biểu nhất:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Hành trình từ “Ra đi hai bàn tay trắng” đến “Trở về một dải giang san” và những trang bản thảo còn dang dở** — Không rõ tác giả | *Tâm lý học - Tâm lý học hành vi* (Khu vực: `Kệ E` - Tầng 3)
+  2. **Hồi ức, giấc mơ, suy ngẫm - Bản bỏ túi** — Không rõ tác giả | *Tâm lý học - Tâm lý học hành vi* (Khu vực: `Kệ E` - Tầng 3)
+  3. **hiểu cơ thể qua ăn uống** — Không rõ tác giả | *Tâm lý học - Tâm lý học hành vi* (Khu vực: `Kệ E` - Tầng 2)
+  4. **sống nhẹ giữa thế giới nhiều biến động** — Không rõ tác giả | *Tâm lý học - Tâm lý học hành vi* (Khu vực: `Kệ E` - Tầng 2)
+  5. **Ở Nhà – Lược sử đời sống riêng tư** — Không rõ tác giả | *Tâm lý học - Tâm lý học hành vi* (Khu vực: `Kệ E` - Tầng 1)
+  6. **Một chuyến du hành đến xứ Nam Hà (1792-1793)** — Không rõ tác giả | *Tâm lý học - Tâm lý học hành vi* (Khu vực: `Kệ E` - Tầng 2)
+  7. **Hiểu về sự chết** — Không rõ tác giả | *Tâm lý học - Tâm lý trị liệu* (Khu vực: `Kệ E` - Tầng 1)
+  8. **tâm lý học về tự do và trưởng thành** — Không rõ tác giả | *Tâm lý học - Tâm lý trị liệu* (Khu vực: `Kệ E` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:48:12`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `266.51 ms`
+- 🧑 **Bạn đọc nói:** **"Tìm sách chuyên ngành về mạng máy tính và giao thức tcpid"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Cuộc Rượt Đuổi Ngoạn Mục Trong Mê Lộ Máy Tính: Gián Điệp Mạng** — Clifford Stoll | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  2. **Trí Tuệ Nhân Tạo Học Máy Và Ứng Dụng** — Nguyễn Quốc Huy | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  3. **Chuẩn Đoán, Sửa Chữa, Bảo Trì, Hệ Thống Điều Khiển Bằng Máy Tính Trên Ô Tô ( Lý Thuyết, Thực Hành) - STK** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Quản trị an toàn an ninh mạng** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  5. **Giáo trình Thị giác máy tính** — PGS. TS. Phạm Văn Cường chủ biên | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Người Máy Thông Minh - Thiết Kế Lập Trình** — Nguyễn Văn Chử | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  7. **Chuyên tin 12 - Các chuyên đề chọn lọc với ngôn ngữ C++, Lý thuyết, bài tập và lời giải** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  8. **Giáo trình INTERNET và giao thức** — TS. Hoàng Trọng Minh | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:48:23`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `273.12 ms`
+- 🧑 **Bạn đọc nói:** **"máy tính"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ C - Tầng 2 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Chuẩn Đoán, Sửa Chữa, Bảo Trì, Hệ Thống Điều Khiển Bằng Máy Tính Trên Ô Tô ( Lý Thuyết, Thực Hành) - STK** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  2. **Bách Khoa Thư Về Phát Triển Kỹ Năng - Khoa Học Máy Tính** — DK | *Giáo dục – Ngoại ngữ - Luyện thi chứng chỉ* (Khu vực: `Kệ D` - Tầng 1)
+  3. **Cuộc Rượt Đuổi Ngoạn Mục Trong Mê Lộ Máy Tính: Gián Điệp Mạng** — Clifford Stoll | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Hello World- Làm Người Trong Kỷ Nguyên Máy Móc** — Hannah Fry | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  5. **Giáo trình Thị giác máy tính** — PGS. TS. Phạm Văn Cường chủ biên | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Tư Duy Python - Cách Tư Duy Như Một Nhà Khoa Học Máy Tính - Allen B. Downey** — Allen B. Downey | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Người Máy Thông Minh - Thiết Kế Lập Trình** — Nguyễn Văn Chử | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Thiết Kế Hệ Thống Học Máy** — Chip Huyen | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:48:29`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `258.38 ms`
+- 🧑 **Bạn đọc nói:** **"mạng máy tính"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Cuộc Rượt Đuổi Ngoạn Mục Trong Mê Lộ Máy Tính: Gián Điệp Mạng** — Clifford Stoll | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  2. **Quản trị an toàn an ninh mạng** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  3. **Chuẩn Đoán, Sửa Chữa, Bảo Trì, Hệ Thống Điều Khiển Bằng Máy Tính Trên Ô Tô ( Lý Thuyết, Thực Hành) - STK** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Cách Mạng Fintech** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Cyber Mania - Bí Mật Cường Quốc An Ninh Mạng** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Giáo trình Thị giác máy tính** — PGS. TS. Phạm Văn Cường chủ biên | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Người Máy Thông Minh - Thiết Kế Lập Trình** — Nguyễn Văn Chử | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Thiết Kế Hệ Thống Học Máy** — Chip Huyen | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:48:39`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `264.81 ms`
+- 🧑 **Bạn đọc nói:** **"gợi ý sách về triết học phương đông nhập môn"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ C - Tầng 1 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Nhập Môn Lập Trình Thi Đấu - Python** — La Dũng Quân, Dương Kiến Quốc | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  2. **Nhập Môn Lập Trình Thi Đấu – C/C++** — Đỗ Hạnh Ba, Phạm Đức Tân | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  3. **Nhập môn lập trình thi đấu – C/C++ - NTV** — Đỗ Hạnh Ba, Phạm Đức Tân | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Triết học Phật giáo Ấn Độ** — Không rõ tác giả | *Tâm lý học - Tâm lý học nhận thức* (Khu vực: `Kệ E` - Tầng 2)
+  5. **Lược sử triết học** — Không rõ tác giả | *Khoa học – Công nghệ - Vật lý đại cương* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Ngụ Ngôn Triết Học** — Alice Briere-Haquet, Émilie Vast | *Văn học – Tiểu thuyết - Truyện cổ tích - Ngụ ngôn* (Khu vực: `Kệ A` - Tầng 3)
+  7. **Nhập Môn Lập Trình Thi Đấu - C/C++** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Đầu Tư Thông Minh** — Anthony Robbins, Peter Mallouk | *Kinh tế – Kinh doanh - Đầu tư* (Khu vực: `Kệ B` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:48:49`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `213.78 ms`
+- 🧑 **Bạn đọc nói:** **"Mình cần tìm sách luyện thi TOEIC kỹ năng đọc hiểu"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **15.000 từ tiếng Anh phải biết (Quét mã QR và đăng ký để nghe file MP3)** — Nguyễn Thành Yến | *Giáo dục – Ngoại ngữ - Phương pháp giáo dục* (Khu vực: `Kệ D` - Tầng 3)
+  2. **Tactics For Listening – Chiến Thuật Luyện Nghe Tiếng Anh** — Oxford | *Giáo dục – Ngoại ngữ - Phương pháp giáo dục* (Khu vực: `Kệ D` - Tầng 2)
+  3. **YBM TOEIC Listening 1000 Tập 2: Mục Tiêu Đạt 700+ Điểm TOEIC** — YBM | *Giáo dục – Ngoại ngữ - Luyện thi TOEIC* (Khu vực: `Kệ D` - Tầng 3)
+  4. **Luyện thi NEW TOEIC. Trình độ Sơ - Trung cấp (Very Easy TOEIC 1 + Very Easy TOEIC 2 + TOEIC Upgrade)** — Không rõ tác giả | *Giáo dục – Ngoại ngữ - Luyện thi TOEIC* (Khu vực: `Kệ D` - Tầng 2)
+  5. **YBM Toeic Reading 1000 - Vol 2** — YBM Toeic R&D | *Giáo dục – Ngoại ngữ - Luyện thi TOEIC* (Khu vực: `Kệ D` - Tầng 1)
+  6. **Big Step Toeic 2** — Quan Đạo Hùng | *Giáo dục – Ngoại ngữ - Luyện thi TOEIC* (Khu vực: `Kệ D` - Tầng 1)
+  7. **Economy TOEIC RC1000 Volume 1** — Lori | *Giáo dục – Ngoại ngữ - Luyện thi TOEIC* (Khu vực: `Kệ D` - Tầng 3)
+  8. **New TOEIC 4n4 - 620 Level (Kèm CD)** — Neungyule Education | *Giáo dục – Ngoại ngữ - Luyện thi TOEIC* (Khu vực: `Kệ D` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:48:59`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `248.03 ms`
+- 🧑 **Bạn đọc nói:** **"có cuốn sách nào viết về vũ trụ học và lỗ đen không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Những điều sách giáo khoa không dạy bạn - Năng lượng** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 1)
+  2. **DHL - Từ khởi nghiệp đến đại nghiệp toàn cầu** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 1)
+  3. **Kinh khủng Gì - Đâu (TB 65.000)** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Lược sử kinh tế (2026)** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 1)
+  5. **Danh nhân đương đại - Cuộc đời phi thường của Neil Amstrong - Câu chuyện về người đàn ông có thành tựu vươn tầm vũ trụ** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Học vẽ bằng hình cơ bản 5 - 100 mẫu vẽ rừng xanh** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 1)
+  7. **Nhấc bút lên trong đêm cô đơn** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 1)
+  8. **Biết tuốt về đồ ăn - Đường** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:49:11`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `236.1 ms`
+- 🧑 **Bạn đọc nói:** **"gợi ý sách về nghệ thuật giao tiếp và thuyết trình trước đám đông"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Với chủ đề bạn đang quan tâm, thủ thư đã rà soát kho 3.000 đầu sách và chọn ra các ấn phẩm tiêu biểu nhất:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **[Pre - Order] Nghệ thuật ra quyết định (Tên cũ: Cư xử khôn giao tiếp khéo)** — Dan Ariely | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 2)
+  2. **Nghệ Thuật PR Bản Thân + Nghệ Thuật Đánh Cắp Ý Tưởng + Cứ Làm Đi** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 3)
+  3. **Hành Trình Viết Sách Từ Ý Tưởng Đến Hiện Thực** — Kelly Notaras | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 3)
+  4. **Nghệ thuật “thể hiện bản thân” trên mạng xã hội** — Amanda Bucci | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 2)
+  5. **storytelling - kể chuyện lay động lòng người** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 2)
+  6. **Nghệ Thuật Đánh Cắp Ý Tưởng** — Austin Kleon | *Kỹ năng sống – Phát triển bản thân - Quản lý thời gian* (Khu vực: `Kệ E` - Tầng 1)
+  7. **Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo** — nhà xuất bản thế giới | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  8. **Dám Nghĩ Dám Làm- Những bài học về nghĩ lớn, theo đuổi ước mơ và xây dựng cộng đồng** — Elliott Bisnow, Brett Leve, Jeff Rosenthal, Jeremy Schwartz | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:49:23`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `311.27 ms`
+- 🧑 **Bạn đọc nói:** **"sách về kiến trúc phần mềm và các mẫu thiết kế design button"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Giáo Trình Thực Hành Thiết Kế Kiến Trúc Với Revit (Dùng Cho Các Phiên Bản 2018 - 2017)** — Phạm Quang Hiển - Phạm Quang Huy | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  2. **Làm chủ các mẫu thiết kế kinh điển trong lập trình - Mastering Design Patterns** — Tạ Văn Dũng | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  3. **Thiết Kế Kiến Trúc - Hướng Dẫn Sử Dụng Vray & Sketchup - STK3** — Nguyễn Đức Tấn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Nguyên lý thiết kế kiến trúc dân dụng - Khái niệm kiến trúc và cơ sở sáng tác - GS.TS.KTS Nguyễn Đức Thiềm** — GS. TS. KTS. Nguyễn Đức Thiềm | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  5. **Revit Toàn Tập (Lý Thuyết - Thực Hành)** — Trần Tường Thụy | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **AI Agent - Thiết Kế Thực Hành Và Kiến Tạo Tác Nhân Thông Minh** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  7. **Kết Cấu Bê Tông Cốt Thép - Nguyên Lý Thiết Kế Các Cấu Kiện Cơ Bản** — Không rõ tác giả | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Em Muốn Học Thiết Kế Nhưng Mẹ Không Cho! (FS)** — Leo Dinh | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:49:37`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `241.61 ms`
+- 🧑 **Bạn đọc nói:** **"có sách nào về tiểu sử của các nhà khoa học nổi tiếng không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Tiểu sử các quốc gia qua góc nhìn lầy lội** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 1)
+  2. **Chia rẽ - Tại sao chúng ta sống trong thời đại của những bức tường** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 3)
+  3. **Cuốn sách lớn rực rỡ về nhà thiên văn học** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 1)
+  4. **Bênh vực thực phẩm: Huyền thoại về dinh dưỡng và thú vui ăn uống (In defense of food) (Michael Pollan)** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học thường thức* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Animorphs - Người hóa thú tập 13 - Thay đổi** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Những người tìm kiếm** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 3)
+  7. **Animorphs người hóa thú tập 5: Thú săn mồi** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Lược sử triết học** — Không rõ tác giả | *Khoa học – Công nghệ - Vật lý đại cương* (Khu vực: `Kệ C` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:49:47`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `274.45 ms`
+- 🧑 **Bạn đọc nói:** **"gợi ý một vài những cái quyển tiểu thuyết khoa học viễn tưởng kinh điển"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Với chủ đề bạn đang quan tâm, thủ thư đã rà soát kho 3.000 đầu sách và chọn ra các ấn phẩm tiêu biểu nhất:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Hành Trình Vào Tâm Trái Đất** — Jules Verne | *Văn học – Tiểu thuyết - Tác phẩm kinh điển* (Khu vực: `Kệ A` - Tầng 2)
+  2. **Xứ Cát** — Frank Herbert | *Văn học – Tiểu thuyết - Khoa học viễn tưởng* (Khu vực: `Kệ A` - Tầng 3)
+  3. **Văn học kinh điển. Vầng trăng và sáu xu** — Evelyn Waugh | *Văn học – Tiểu thuyết - Tác phẩm kinh điển* (Khu vực: `Kệ A` - Tầng 3)
+  4. **Chúa Ruồi - Tiểu Thuyết (Nobel Văn Chương 1983)** — William Golding | *Văn học – Tiểu thuyết - Tác phẩm kinh điển* (Khu vực: `Kệ A` - Tầng 1)
+  5. **Cú Rời Đất Xanh 2 - Người Nhà Đao** — Viên Hiểu Bồi (Bút danh: Vĩ Ngư) | *Văn học – Tiểu thuyết - Khoa học viễn tưởng* (Khu vực: `Kệ A` - Tầng 2)
+  6. **Harry Potter - MộT Năm Tràn Ngập Diệu Kỳ** — J.K.Rowling | *Văn học – Tiểu thuyết - Khoa học viễn tưởng* (Khu vực: `Kệ A` - Tầng 1)
+  7. **451 Độ F** — Ray Bradbury | *Văn học – Tiểu thuyết - Tiểu thuyết* (Khu vực: `Kệ A` - Tầng 1)
+  8. **Những Cuộc Phiêu Lưu Của Huckleberry Finn** — Không rõ tác giả | *Văn học – Tiểu thuyết - Tác phẩm kinh điển* (Khu vực: `Kệ A` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:50:00`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `248.78 ms`
+- 🧑 **Bạn đọc nói:** **"Khách nào hướng dẫn tự học tiếng Nhật giao tiếp cơ bản không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dưới đây là thông tin chi tiết về tác phẩm 'Bán Khống' cùng các ấn phẩm nổi bật liên quan đang có sẵn tại thư viện:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ C - Tầng 1 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Hướng Dẫn No Code - Vibe Code: Không Cần Biết Lập Trình - Bản Quyền** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  2. **/Lẻ: Hướng Dẫn No Code - Vibe Code: Không Cần Biết Lập Trình + 3 Cấp Độ Dùng AI & 50 Mẫu Prompt Chuẩn - Bản Quyền** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  3. **Marugoto - Ngôn Ngữ Và Văn Hóa Nhật Bản: Trung Cấp 2 - B1** — The Japan Foundation | *Giáo dục – Ngoại ngữ - Tiếng Nhật Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  4. **Tự Học Viết Tiếng Nhật Căn Bản Hiragana** — Jim Gleeson | *Giáo dục – Ngoại ngữ - Từ Vựng Tiếng Nhật* (Khu vực: `Kệ D` - Tầng 1)
+  5. **Tiếng Nhật Cho Mọi Người - Trình Độ Sơ Cấp 1 - Bản Tiếng Nhật** — 3A NETWORK | *Giáo dục – Ngoại ngữ - Tiếng Nhật Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Tự Học Đàm Thoại Tiếng Anh - Du Lịch** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  7. **Tự học tiếng Trung cấp tốc** — Nghiêm Minh | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  8. **Tiếng Nhật Cho Mọi Người: Trình Độ Sơ Cấp 1 – Hán Tự (Bản Tiếng Việt) (Bản Mới)** — Shinya Makiko, Koga Chiseko, Takada Toru, Mikogami Keiko | *Giáo dục – Ngoại ngữ - Ngữ pháp & Từ vựng* (Khu vực: `Kệ D` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:50:08`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `255.08 ms`
+- 🧑 **Bạn đọc nói:** **"tìm tài liệu và giải thuật và cấu trúc dữ liệu"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Cấu trúc dữ liệu và thuật toán cài đặt bằng Python** — Trần Thông Quế | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  2. **Giáo Trình C++ Và Lập Trình Hướng Đối Tượng** — Phạm Văn Ất, Lê Trường Thông | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  3. **Nhập Môn Lập Trình Thi Đấu – C/C++** — Đỗ Hạnh Ba, Phạm Đức Tân | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  4. **Kể Chuyện Bằng Dữ Liệu - Hành Trình Kiến Tạo Thay Đổi Trong Thời Đại Số** — Lại Thị Hạnh | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Nhập Môn Lập Trình Thi Đấu - Python** — La Dũng Quân, Dương Kiến Quốc | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Nhập Môn Lập Trình Thi Đấu - C/C++** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Google Sheet Ứng Dụng Văn Phòng - Tạo Báo Cáo Tự Động Và Trực Quan Dữ Liệu** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Sáng Tạo Trong Thuật Toán Và Lập Trình Với C++, Python Và Java, Tập 6: Các Bài Toán 26-50 Trong Dự Án Euler** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:50:18`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `420.45 ms`
+- 🧑 **Bạn đọc nói:** **"Dạo này mình thấy mất phương hướng trong sự nghiệp có cuốn nào giúp định hướng lại không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Ai trong chúng ta cũng có những giai đoạn chênh vênh và mất phương hướng. Dưới đây là những tác phẩm truyền cảm hứng mạnh mẽ, tiếp thêm lửa và niềm tin để bạn vững bước:
+  > 
+  > 💬 *Bạn muốn đọc thử trích đoạn của cuốn nào trong danh sách trên, hay cần mình hướng dẫn lối đi đến Kệ E ở Tầng 3?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Chuyện Của Chúng Tôi** — Võ Hồng Phúc | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  2. **Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo** — nhà xuất bản thế giới | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  3. **Khát vọng dấn thân** — Neil Patel Patrick Vlaskovits, Jonas koffler | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  4. **Hạnh Phúc - Từ Sông Bến Hải Đến Dinh Độc Lập + Hồi Ký Phóng Viên Chiến Trường + Chuyện Của Chúng Tôi + Hồi Ký Tù Binh Thương Trường** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  5. **Sống Bình Thường Mà Không Tầm Thường** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 1)
+  6. **Hành trình biến những điều tưởng như không thể thành có thể** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  7. **Xây Dựng Xã Hội Học Tập** — Joseph E. Stiglitz & Bruce C. Greenwal | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 2)
+  8. **Sáng Tạo Trong Công Việc Và Cuộc Sống: Playbook + Life Playbook** — Michael Lewrick, Patrick Link, Larry Leifer | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Mất động lực / Bế tắc (truyền cảm hứng, chữa lành)`
+  - **Từ khóa phạt né tránh:** `sách bi kịch, u ám, đau buồn, kỹ thuật, công nghệ thông tin, lập trình, arduino, thuật toán`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:50:32`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `459.48 ms`
+- 🧑 **Bạn đọc nói:** **"mình đang bị stress vì deadline gợi ý sách nào đọc nhẹ nhàng chữa lành tâm hồn đi"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Chuyện tình cảm tan vỡ hay vừa chia tay luôn để lại những khoảng trống và nỗi buồn không dễ gì vượt qua. Đừng ép mình phải mạnh mẽ ngay lúc này nhé. Thủ thư xin gửi đến bạn những cuốn sách dịu dàng vỗ về, chữa lành và giúp bạn tìm lại sự bình yên trong tâm hồn:
+  > 
+  > 💬 *Bạn có muốn xem thêm các tập tản văn vỗ về tâm hồn, hay cần thủ thư hướng dẫn đến Kệ A để lấy sách?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Chờ Ngày Bình Yên** — Sơn Phạm (nhungdieubinhyen) | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  2. **Thám tử ẩm thực Kamogawa** — Hisashi Kashiwai | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  3. **Ngày Xửa Ngày Xưa Có Một Trái Tim Vụn Vỡ** — Stephanie Garber | *Văn học – Tiểu thuyết - Truyện ngôn tình* (Khu vực: `Kệ A` - Tầng 1)
+  4. **Sống Bình Thường Mà Không Tầm Thường** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 1)
+  5. **Cảm Ơn Bạn Vì Đã Sống Tiếp - Thế Giới Ấm Áp Vì Vẫn Còn Bạn Ở Đây** — Opheliav | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  6. **Đời bừng sáng khi ta biết lãng quên** — Marc Levy | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 2)
+  7. **Ra Vườn Nhặt Nắng (Những Vần Thơ Sưởi Ấm Tâm Hồn)** — Nguyễn Thế Hoàng Linh | *Văn học – Tiểu thuyết - Thơ* (Khu vực: `Kệ A` - Tầng 3)
+  8. **Đi Ra Thế Giới Ngắm Nhìn Bản Thân** — Ngạn Hy | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Thất tình / Tan vỡ tình cảm (chữa lành, nhẹ nhàng, bình yên, vui vẻ)`
+  - **Từ khóa phạt né tránh:** `kỹ thuật, lập trình, toán học, án mạng, bạo lực, thăng tiến, quản trị, lãnh đạo, tài chính, áp lực, doanh số, đầu tư`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:50:44`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `419.78 ms`
+- 🧑 **Bạn đọc nói:** **"mới chia tay người yêu của cuốn sách nào đọc để thấy nhẹ lòng hơn không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Chuyện tình cảm tan vỡ hay vừa chia tay luôn để lại những khoảng trống và nỗi buồn không dễ gì vượt qua. Đừng ép mình phải mạnh mẽ ngay lúc này nhé. Thủ thư xin gửi đến bạn những cuốn sách dịu dàng vỗ về, chữa lành và giúp bạn tìm lại sự bình yên trong tâm hồn:
+  > 
+  > 💬 *Bạn có muốn xem thêm các tập tản văn vỗ về tâm hồn, hay cần thủ thư hướng dẫn đến Kệ A để lấy sách?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Chờ Ngày Bình Yên** — Sơn Phạm (nhungdieubinhyen) | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  2. **Ngày Xửa Ngày Xưa Có Một Trái Tim Vụn Vỡ** — Stephanie Garber | *Văn học – Tiểu thuyết - Truyện ngôn tình* (Khu vực: `Kệ A` - Tầng 1)
+  3. **Thám tử ẩm thực Kamogawa** — Hisashi Kashiwai | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  4. **Mất Bao Đêm Để Ước Người Ở Lại** — Vũ Ngọc Thuỷ | *Văn học – Tiểu thuyết - Thơ* (Khu vực: `Kệ A` - Tầng 1)
+  5. **Trốn Lên Mái Nhà Để Khóc** — Lam | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  6. **Ra Vườn Nhặt Nắng (Những Vần Thơ Sưởi Ấm Tâm Hồn)** — Nguyễn Thế Hoàng Linh | *Văn học – Tiểu thuyết - Thơ* (Khu vực: `Kệ A` - Tầng 3)
+  7. **Cảm Ơn Bạn Vì Đã Sống Tiếp - Thế Giới Ấm Áp Vì Vẫn Còn Bạn Ở Đây** — Opheliav | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  8. **Ăn Để Nhớ - Tản Văn** — Kim Em | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Thất tình / Tan vỡ tình cảm (chữa lành, nhẹ nhàng, bình yên, vui vẻ)`
+  - **Từ khóa phạt né tránh:** `kỹ thuật, lập trình, toán học, án mạng, bạo lực`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:50:54`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `248.91 ms`
+- 🧑 **Bạn đọc nói:** **"mình hay trì hoãn công việc tìm giúp sách nào giúp rèn luyện tính kỷ luật"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ B - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Hoàn Thành Mọi Việc Không Hề Khó** — David Allen | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  2. **Xây Dựng Nhóm Hiệu Quả Dành Cho Nhà Quản Lý Bận Rộn** — Brian Cole Miller | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  3. **Brain On! Rèn Luyện Tâm Trí Trong Công Việc** — Deb Smolensky | *Kinh tế – Kinh doanh - Tài chính - Ngân hàng* (Khu vực: `Kệ B` - Tầng 2)
+  4. **Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo** — nhà xuất bản thế giới | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  5. **Não bộ cũng cần "detox"** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  6. **Vượt Qua Giới Hạn** — Cameron R. Hanes | *Kỹ năng sống – Phát triển bản thân - Quản lý thời gian* (Khu vực: `Kệ E` - Tầng 2)
+  7. **Tư Duy Có Tổ Chức** — Daniel J. Levitin | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 1)
+  8. **Thay Đổi Tư Duy (Bộ sách Maxwell Moments)** — John C. Maxwell | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:51:07`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `504.84 ms`
+- 🧑 **Bạn đọc nói:** **"có cuốn nào viết về sự cô đơn của người trẻ ở thành phố lớn không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Cảm giác cô đơn giữa dòng người đông đúc đôi khi khiến chúng ta thấy mình thật nhỏ bé và trống trải. Một cuốn sách hay có thể trở thành người bạn tri kỷ lặng lẽ bầu bạn cùng bạn. Thủ thư đã chọn lọc những tác phẩm ấm áp nhất gửi đến bạn:
+  > 
+  > 💬 *Bạn muốn đọc thử trích đoạn của cuốn nào trong danh sách trên, hay cần mình hướng dẫn lối đi đến Kệ A ở Tầng 3?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Cảm Ơn Người Lớn** — Nguyễn Nhật Ánh | *Văn học – Tiểu thuyết - Truyện dài* (Khu vực: `Kệ A` - Tầng 3)
+  2. **Ăn Để Nhớ - Tản Văn** — Kim Em | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  3. **Thám tử ẩm thực Kamogawa** — Hisashi Kashiwai | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  4. **Chờ Ngày Bình Yên** — Sơn Phạm (nhungdieubinhyen) | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  5. **Ra Vườn Nhặt Nắng (Những Vần Thơ Sưởi Ấm Tâm Hồn)** — Nguyễn Thế Hoàng Linh | *Văn học – Tiểu thuyết - Thơ* (Khu vực: `Kệ A` - Tầng 3)
+  6. **Sống Bình Thường Mà Không Tầm Thường** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 1)
+  7. **Cảm Ơn Bạn Vì Đã Sống Tiếp - Thế Giới Ấm Áp Vì Vẫn Còn Bạn Ở Đây** — Opheliav | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  8. **Vui Cười Lên Cùng Chứng Khoán** — Cú Thông Thái | *Kỹ năng sống – Phát triển bản thân - Quản lý thời gian* (Khu vực: `Kệ E` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Buồn bã / Tâm trạng chùng (vui vẻ, hài hước, nhẹ nhàng, chữa lành)`
+  - **Từ khóa phạt né tránh:** `án mạng, cái chết, đám tang, tự tử, bạo lực, chiến tranh, tang thương, u uất, kinh dị, kỹ thuật`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:52:15`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `266.68 ms`
+- 🧑 **Bạn đọc nói:** **"Mình đang muốn thay đổi thói quen xấu và xây dựng một lối sống lành mạnh hơn"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Với chủ đề bạn đang quan tâm, thủ thư đã rà soát kho 3.000 đầu sách và chọn ra các ấn phẩm tiêu biểu nhất:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Thay Đổi Tư Duy (Bộ sách Maxwell Moments)** — John C. Maxwell | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 1)
+  2. **Xây Dựng Nhóm Hiệu Quả Dành Cho Nhà Quản Lý Bận Rộn** — Brian Cole Miller | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  3. **HBR – Combo Đổi Mới Từ Cốt Lõi** — Harvard Business Review | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 3)
+  4. **Từ Bỏ Thói Quen Giảm Giá** — Reek K. Holden & Mark Burton | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 1)
+  5. **Não bộ cũng cần "detox"** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  6. **Chế Ngự Tâm Lý " No Bụng Đói Con Mắt"** — Tác giả Michael Easter | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  7. **Charles Duhigg** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 2)
+  8. **Dẫn Dắt Sự Thay Đổi** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:52:29`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `247.11 ms`
+- 🧑 **Bạn đọc nói:** **"cần tìm sách dạy giúp rèn luyện tư duy phản biện để không bị rát mũi Bởi Tin giả"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Với chủ đề bạn đang quan tâm, thủ thư đã rà soát kho 3.000 đầu sách và chọn ra các ấn phẩm tiêu biểu nhất:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Tư Duy Phản Biện Như Luật Sư - TG Colin Seale** — Colin Seale | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  2. **Tư Duy Phản Biện** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 1)
+  3. **Tranh Biện Sao Cho Đúng** — Juseung Yi | *Kỹ năng sống – Phát triển bản thân - Phát triển sự nghiệp* (Khu vực: `Kệ E` - Tầng 2)
+  4. **Dạy học không theo lối mòn** — Barbara Oakley, Beth Rogowsky, Terrence J. Sejnowski | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 1)
+  5. **Não bộ cũng cần "detox"** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  6. **Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo** — nhà xuất bản thế giới | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  7. **Bơi Cùng Cá Mập Mà Không Bị Nuốt Chửng** — Harvey B. Mackay | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 1)
+  8. **Hành trình biến những điều tưởng như không thể thành có thể** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:52:39`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `295.92 ms`
+- 🧑 **Bạn đọc nói:** **"Dạo này thấy trí nhớ giảm sút có sách nào hướng dẫn cách ghi nhớ hiệu quả không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ B - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Đọc Nhiều Nhớ Được Bao Nhiêu?** — Zion Kabasawa | *Kinh tế – Kinh doanh - Kinh tế học* (Khu vực: `Kệ B` - Tầng 3)
+  2. **Sử Dụng Trí Nhớ Của Bạn - Use Your Memory** — Lê Huy Lâm | *Kinh tế – Kinh doanh - Tài chính - Ngân hàng* (Khu vực: `Kệ B` - Tầng 1)
+  3. **Nâng Tầm Ảnh Hưởng (Bộ sách Maxwell Moments)** — John C. Maxwell | *Kỹ năng sống – Phát triển bản thân - Quản lý thời gian* (Khu vực: `Kệ E` - Tầng 1)
+  4. **Tư Duy Có Tổ Chức - Phương Pháp Hiệu Quả Trong Điều Hướng Dòng Chảy Thông Tin - Alpha Books** — Không rõ tác giả | *Kinh tế – Kinh doanh - Marketing* (Khu vực: `Kệ B` - Tầng 3)
+  5. **hướng dẫn thực hành tin học 4** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Ăn để bình tâm - Hướng dẫn dinh dưỡng đột phá giảm lo âu hiệu quả** — Không rõ tác giả | *Khoa học – Công nghệ - Vật lý đại cương* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Hướng Dẫn Công Thức Trả Lương + Thưởng 3P (Vị trí, Năng lực, Hiệu suất)** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Não bộ cũng cần "detox"** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:52:49`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `486.41 ms`
+- 🧑 **Bạn đọc nói:** **"gợi ý sách giúp vượt qua nỗi sợ thất bại khi bắt đầu một dự án mới"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Thấu hiểu tâm trạng của bạn lúc này (Lo âu / Bất an), thủ thư đã rà soát kho sách và chọn ra những ấn phẩm phù hợp nhất:
+  > 
+  > 💬 *Bạn muốn đọc thử trích đoạn của cuốn nào trong danh sách trên, hay cần mình hướng dẫn lối đi đến Kệ E ở Tầng 2?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Chữa Lành Tổn Thương Hậu Thao Túng Tâm Lý** — Amelia Kelley | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  2. **Chào Ngày Mới, Chúc Bình An** — Tủ Sách Chữa Lành | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  3. **Thuật Quản Lý Khủng Hoảng Bản Thân** — Brian Tracy | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 3)
+  4. **Bẫy sợ hãi** — Nancy Stella | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  5. **999 Lá Thư Gửi Cho Chính Mình – Những Lá Thư Ấn Tượng Nhất (Phiên Bản Song Ngữ Trung - Việt)** — Miêu Công Tử | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  6. **Tạm Biệt Tôi Của Nhiều Năm Về Trước** — An | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  7. **Bong Bóng Lên Trời** — Nguyễn Nhật Ánh | *Văn học – Tiểu thuyết - Truyện dài* (Khu vực: `Kệ A` - Tầng 1)
+  8. **Quản Trị Xuyên Khủng Hoảng - HBR On Point** — Harvard Business Review | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Lo âu / Bất an (chữa lành, thư giãn, truyền cảm hứng)`
+  - **Từ khóa phạt né tránh:** `thuật toán, lập trình, kỹ thuật, thiên văn học, vũ trụ, khoa học, tài chính`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:53:01`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `449.85 ms`
+- 🧑 **Bạn đọc nói:** **"mình đang mình rất sợ thất bại"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Thấu hiểu tâm trạng của bạn lúc này (Lo âu / Bất an), thủ thư đã rà soát kho sách và chọn ra những ấn phẩm phù hợp nhất:
+  > 
+  > 💬 *Bạn muốn đọc thử trích đoạn của cuốn nào trong danh sách trên, hay cần mình hướng dẫn lối đi đến Kệ E ở Tầng 2?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Chữa Lành Tổn Thương Hậu Thao Túng Tâm Lý** — Amelia Kelley | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  2. **Thuật Quản Lý Khủng Hoảng Bản Thân** — Brian Tracy | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 3)
+  3. **Chào Ngày Mới, Chúc Bình An** — Tủ Sách Chữa Lành | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  4. **Bẫy sợ hãi** — Nancy Stella | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  5. **999 Lá Thư Gửi Cho Chính Mình – Những Lá Thư Ấn Tượng Nhất (Phiên Bản Song Ngữ Trung - Việt)** — Miêu Công Tử | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  6. **Quản Trị Xuyên Khủng Hoảng - HBR On Point** — Harvard Business Review | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 3)
+  7. **Tạm Biệt Tôi Của Nhiều Năm Về Trước** — An | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  8. **HBR On Point 2021 - Quản Trị Xuyên Khủng Hoảng** — Harvard Business Review | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Lo âu / Bất an (chữa lành, thư giãn, truyền cảm hứng)`
+  - **Từ khóa phạt né tránh:** `thuật toán, lập trình, kỹ thuật, thiên văn học, vũ trụ, khoa học, tài chính`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:53:12`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `425.35 ms`
+- 🧑 **Bạn đọc nói:** **"Mình đang làm đồ ăn tốt nghiệp và hệ thống nhúng và iot nên đọc tài liệu nào"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Rất tiếc hiện tại thư viện chưa tìm thấy đầu sách nào thực sự phù hợp với yêu cầu: 'Mình đang làm đồ ăn tốt nghiệp và hệ thống nhúng và iot nên đọc tài liệu nào'.
+  > 
+  > 💬 *Bạn có thể thử tìm theo tên tác giả, môn học hoặc từ khóa thể loại rộng hơn được không?*
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Căng thẳng / Áp lực (Stress) (thư giãn, nhẹ nhàng, hài hước)`
+  - **Từ khóa phạt né tránh:** `thăng tiến, quản trị, lãnh đạo, kỹ thuật, lập trình, tài chính, áp lực, doanh số, đầu tư, toán học`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:54:36`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `274.38 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy tiếng Anh"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Đàm Thoại Tiếng Anh Trong Xã Giao, Du Lịch Và Công Việc (Kèm 1 Đĩa DVD-Room)** — Doris Brougham | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Cười Và Học Tiếng Anh - 45 Truyện Cười Chơi Chữ Giúp Học Giỏi Tiếng Anh** — Nguyễn Quốc Hùng M.A | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 1)
+  3. **25 chuyên đề ngữ pháp tiếng Anh trọng tâm (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Anh* (Khu vực: `Kệ D` - Tầng 2)
+  4. **Tự Học Đàm Thoại Tiếng Anh - Cuộc Sống Hằng Ngày** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+  5. **30 chủ đề từ vựng tiếng Anh (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh, Huỳnh Tài | *Giáo dục – Ngoại ngữ - Từ Vựng Tiếng Anh* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Tự Học Đàm Thoại Tiếng Anh - Du Lịch** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  7. **The Langmaster - 35000 Câu Giao Tiếp Tiếng Anh** — Trần Mạnh Tường | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  8. **Hot English - Tiếng Anh Học Dễ, Dùng Ngay** — ML Thanisa Choombala, Kunthida Rungruengkiat | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:54:39`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `152.81 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy tiếng Anh"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Đàm Thoại Tiếng Anh Trong Xã Giao, Du Lịch Và Công Việc (Kèm 1 Đĩa DVD-Room)** — Doris Brougham | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Cười Và Học Tiếng Anh - 45 Truyện Cười Chơi Chữ Giúp Học Giỏi Tiếng Anh** — Nguyễn Quốc Hùng M.A | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 1)
+  3. **25 chuyên đề ngữ pháp tiếng Anh trọng tâm (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Anh* (Khu vực: `Kệ D` - Tầng 2)
+  4. **Tự Học Đàm Thoại Tiếng Anh - Cuộc Sống Hằng Ngày** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+  5. **30 chủ đề từ vựng tiếng Anh (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh, Huỳnh Tài | *Giáo dục – Ngoại ngữ - Từ Vựng Tiếng Anh* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Tự Học Đàm Thoại Tiếng Anh - Du Lịch** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  7. **The Langmaster - 35000 Câu Giao Tiếp Tiếng Anh** — Trần Mạnh Tường | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  8. **Hot English - Tiếng Anh Học Dễ, Dùng Ngay** — ML Thanisa Choombala, Kunthida Rungruengkiat | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:56:47`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `329.08 ms`
+- 🧑 **Bạn đọc nói:** **"Tìm sách lập trình miton cơ bản cho người mới bắt đầu"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Lập Trình AI cho người mới bắt đầu** — Tạ Văn Dũng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  2. **2 sách Lập trình với Python cơ bản và nâng cao** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  3. **AutoCAD Cơ bản cho người mới bắt đầu** — Không rõ tác giả | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 2)
+  4. **AutoCAD Dành Cho Người Bắt Đầu** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Nhập Môn Lập Trình Thi Đấu - Python** — La Dũng Quân, Dương Kiến Quốc | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Nhập Môn Lập Trình Thi Đấu – C/C++** — Đỗ Hạnh Ba, Phạm Đức Tân | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  7. **Nhập môn lập trình thi đấu – C/C++ - NTV** — Đỗ Hạnh Ba, Phạm Đức Tân | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Nhập Môn Lập Trình Thi Đấu - C/C++** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:56:58`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `532.36 ms`
+- 🧑 **Bạn đọc nói:** **"mình đang bị stress vì đồ án sline cần cuốn nào nhẹ đầu để xả hơi"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Áp lực học tập, thi cử và đồ án đôi khi khiến chúng ta cảm thấy kiệt sức và quá tải. Đừng quá khắt khe với bản thân nhé! Thủ thư gợi ý cho bạn những cuốn sách đọc nhẹ đầu, giải tỏa căng thẳng và lấy lại sự cân bằng:
+  > 
+  > 💬 *Bạn có muốn thủ thư chỉ đường tới khu vực đọc sách yên tĩnh tại Tầng 2 để ngồi thư giãn không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Ăn Để Nhớ - Tản Văn** — Kim Em | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  2. **Chờ Ngày Bình Yên** — Sơn Phạm (nhungdieubinhyen) | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  3. **Một Người Rừng Thông Thái** — Trần Văn Trản | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  4. **Đi Ra Thế Giới Ngắm Nhìn Bản Thân** — Ngạn Hy | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  5. **Cảm Ơn Bạn Vì Đã Sống Tiếp - Thế Giới Ấm Áp Vì Vẫn Còn Bạn Ở Đây** — Opheliav | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  6. **Đời bừng sáng khi ta biết lãng quên** — Marc Levy | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 2)
+  7. **Sống Bình Thường Mà Không Tầm Thường** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 1)
+  8. **Trốn Lên Mái Nhà Để Khóc** — Lam | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Căng thẳng / Áp lực (Stress) (thư giãn, nhẹ nhàng, hài hước)`
+  - **Từ khóa phạt né tránh:** `thăng tiến, quản trị, lãnh đạo, kỹ thuật, lập trình, tài chính, áp lực, doanh số, đầu tư, toán học`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:57:07`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `576.54 ms`
+- 🧑 **Bạn đọc nói:** **"cuốn sách nào giúp chữa lành tâm hồn sau khi chia tay không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Chuyện tình cảm tan vỡ hay vừa chia tay luôn để lại những khoảng trống và nỗi buồn không dễ gì vượt qua. Đừng ép mình phải mạnh mẽ ngay lúc này nhé. Thủ thư xin gửi đến bạn những cuốn sách dịu dàng vỗ về, chữa lành và giúp bạn tìm lại sự bình yên trong tâm hồn:
+  > 
+  > 💬 *Bạn có muốn xem thêm các tập tản văn vỗ về tâm hồn, hay cần thủ thư hướng dẫn đến Kệ A để lấy sách?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Ngày Xửa Ngày Xưa Có Một Trái Tim Vụn Vỡ** — Stephanie Garber | *Văn học – Tiểu thuyết - Truyện ngôn tình* (Khu vực: `Kệ A` - Tầng 1)
+  2. **Thám tử ẩm thực Kamogawa** — Hisashi Kashiwai | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  3. **Ra Vườn Nhặt Nắng (Những Vần Thơ Sưởi Ấm Tâm Hồn)** — Nguyễn Thế Hoàng Linh | *Văn học – Tiểu thuyết - Thơ* (Khu vực: `Kệ A` - Tầng 3)
+  4. **Chữa Lành Tổn Thương Hậu Thao Túng Tâm Lý** — Amelia Kelley | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  5. **Chờ Ngày Bình Yên** — Sơn Phạm (nhungdieubinhyen) | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  6. **Cảm Ơn Bạn Vì Đã Sống Tiếp - Thế Giới Ấm Áp Vì Vẫn Còn Bạn Ở Đây** — Opheliav | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  7. **999 Lá Thư Gửi Cho Chính Mình – Những Lá Thư Ấn Tượng Nhất (Phiên Bản Song Ngữ Trung - Việt)** — Miêu Công Tử | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  8. **Ăn Để Nhớ - Tản Văn** — Kim Em | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Thất tình / Tan vỡ tình cảm (chữa lành, nhẹ nhàng, bình yên, vui vẻ)`
+  - **Từ khóa phạt né tránh:** `kỹ thuật, lập trình, toán học, án mạng, bạo lực`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:57:17`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `294.9 ms`
+- 🧑 **Bạn đọc nói:** **"Tìm sách về kiến trúc phần mềm và các cái mẫu thiết kế"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Giáo Trình Thực Hành Thiết Kế Kiến Trúc Với Revit (Dùng Cho Các Phiên Bản 2018 - 2017)** — Phạm Quang Hiển - Phạm Quang Huy | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  2. **Làm chủ các mẫu thiết kế kinh điển trong lập trình - Mastering Design Patterns** — Tạ Văn Dũng | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  3. **Thiết Kế Kiến Trúc - Hướng Dẫn Sử Dụng Vray & Sketchup - STK3** — Nguyễn Đức Tấn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Nguyên lý thiết kế kiến trúc dân dụng - Khái niệm kiến trúc và cơ sở sáng tác - GS.TS.KTS Nguyễn Đức Thiềm** — GS. TS. KTS. Nguyễn Đức Thiềm | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  5. **Em Muốn Học Thiết Kế Nhưng Mẹ Không Cho! (FS)** — Leo Dinh | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  6. **Cấu trúc dữ liệu và thuật toán cài đặt bằng Python** — Trần Thông Quế | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Revit Toàn Tập (Lý Thuyết - Thực Hành)** — Trần Tường Thụy | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  8. **AI Agent - Thiết Kế Thực Hành Và Kiến Tạo Tác Nhân Thông Minh** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:57:35`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `280.18 ms`
+- 🧑 **Bạn đọc nói:** **"phim sex về iot"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **ARDUINO Và Lập Trình IoT (Internet Of Thing IoT)** — Nguyễn Tất Bảo Thiện | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  2. **Bảo mật iot thực tế, xây dựng và phát triển các hệ thống an toàn trong thế giới kết nối iot ( STK)** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  3. **ứng dụng iot trong lập trình nhà nông trại thông minh ( stk)** — Nguyễn Đức Tấn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Lập Trình Arduino Với IoT-Hệ Vạn Vật Kết Nối** — . | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  5. **Xây dựng các dự án iot ( Giao Thức) STK** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Làm Phim Với Premiere Pro CC** — Không rõ tác giả | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Định hình mạng 6G trong tương lai** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Trật Nhịp** — Lương Anh Đan | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:57:53`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `274.87 ms`
+- 🧑 **Bạn đọc nói:** **"Tìm sách về ioti"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ A - Tầng 2 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Rồi Ta Sẽ Lại Yêu, Vì Trái Tim Ta Còn** — moon. | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  2. **Thứ Bạn Tìm Đều Nằm Trong Thư Viện** — Aoyama Michiko | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 2)
+  3. **1Q84 - Tập 3** — Haruki Murakami | *Văn học – Tiểu thuyết - Truyện dài* (Khu vực: `Kệ A` - Tầng 1)
+  4. **ứng dụng iot trong lập trình nhà nông trại thông minh ( stk)** — Nguyễn Đức Tấn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  5. **Bảo mật iot thực tế, xây dựng và phát triển các hệ thống an toàn trong thế giới kết nối iot ( STK)** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  6. **Ngày Xửa Ngày Xưa Có Một Trái Tim Vụn Vỡ** — Stephanie Garber | *Văn học – Tiểu thuyết - Truyện ngôn tình* (Khu vực: `Kệ A` - Tầng 1)
+  7. **OTA Thực Chiến - Bí Quyết kinh doanh khách sạn đột phá qua OTA** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Phát triển sự nghiệp* (Khu vực: `Kệ E` - Tầng 3)
+  8. **Trái Tim Phù Thủy** — Genevieve Gornichec | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:58:00`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `294.27 ms`
+- 🧑 **Bạn đọc nói:** **"iot"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **ARDUINO Và Lập Trình IoT (Internet Of Thing IoT)** — Nguyễn Tất Bảo Thiện | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  2. **ứng dụng iot trong lập trình nhà nông trại thông minh ( stk)** — Nguyễn Đức Tấn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  3. **Bảo mật iot thực tế, xây dựng và phát triển các hệ thống an toàn trong thế giới kết nối iot ( STK)** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Lập Trình Arduino Với IoT-Hệ Vạn Vật Kết Nối** — . | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  5. **Xây dựng các dự án iot ( Giao Thức) STK** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **An ninh mạng trong kỷ nguyên Công nghiệp 5.0** — PGS.TS Trần Văn Hòa | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Định hình mạng 6G trong tương lai** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Chuẩn Đoán, Sửa Chữa, Bảo Trì, Hệ Thống Điều Khiển Bằng Máy Tính Trên Ô Tô ( Lý Thuyết, Thực Hành) - STK** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:58:20`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `280.97 ms`
+- 🧑 **Bạn đọc nói:** **"Tìm sách về dạy về thiết kế lập trình và các cái mẫu thiết kế"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Làm chủ các mẫu thiết kế kinh điển trong lập trình - Mastering Design Patterns** — Tạ Văn Dũng | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  2. **SÁNG TẠO TRONG THUẬT TOÁN VÀ LẬP TRÌNH VỚI C++ VÀ PYTHON - TẬP 7** — Không rõ tác giả | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 1)
+  3. **Sáng Tạo Trong Thuật Toán Và Lập Trình - Tập 5** — Nguyễn Xuân Huy | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 1)
+  4. **Em Muốn Học Thiết Kế Nhưng Mẹ Không Cho! (FS)** — Leo Dinh | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  5. **Những Nguyên Tắc Sống Còn Trong Lập Trình** — Tạ Văn Dũng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  6. **2 sách Lập trình với Scratch 3 và Lập trình với App Inventor** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  7. **Thiết Kế Hệ Thống Học Máy** — Chip Huyen | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  8. **Thiết Kế Kiến Trúc - Hướng Dẫn Sử Dụng Vray & Sketchup - STK3** — Nguyễn Đức Tấn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:58:38`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `516.09 ms`
+- 🧑 **Bạn đọc nói:** **"Dạo này đi ngủ buổi tối là tôi hay mất ngủ có cuốn sách nào đọc gọi là nhẹ nhàng trước khi đi ngủ không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Một cuốn sách dịu êm với câu chữ chậm rãi, bình yên sẽ giúp tâm trí bạn thả lỏng và dễ dàng chìm vào giấc ngủ hơn. Dưới đây là những ấn phẩm ru êm đêm muộn cho bạn:
+  > 
+  > 💬 *Bạn cần thủ thư chỉ đường đến Kệ sách tản văn ru êm giấc ngủ ở Tầng 3 không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Chờ Ngày Bình Yên** — Sơn Phạm (nhungdieubinhyen) | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  2. **Mất Bao Đêm Để Ước Người Ở Lại** — Vũ Ngọc Thuỷ | *Văn học – Tiểu thuyết - Thơ* (Khu vực: `Kệ A` - Tầng 1)
+  3. **Một Người Rừng Thông Thái** — Trần Văn Trản | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  4. **Ăn Để Nhớ - Tản Văn** — Kim Em | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  5. **Đời bừng sáng khi ta biết lãng quên** — Marc Levy | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 2)
+  6. **Đi Ra Thế Giới Ngắm Nhìn Bản Thân** — Ngạn Hy | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  7. **Ở đây có niềm vui - Khách sạn êm đềm** — Không rõ tác giả | *Thiếu nhi - Truyện tranh* (Khu vực: `Kệ A` - Tầng 3)
+  8. **Cà Phê Cùng Tony** — Tony Buổi Sáng | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Mất ngủ / Khó ngủ (nhẹ nhàng, thư giãn, vui vẻ)`
+  - **Từ khóa phạt né tránh:** `trinh thám, án mạng, rùng rợn, kinh dị, hồi hộp, kỹ thuật, giật gân, khoa học thường thức`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:58:51`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `298.12 ms`
+- 🧑 **Bạn đọc nói:** **"à sách về những cái lịch sử kháng chiến thời phong kiến bạn có không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Khám phá dòng chảy lịch sử và văn hóa là cách tuyệt vời nhất để mở rộng thế giới quan. Thủ thư gợi ý cho bạn những ấn phẩm lịch sử sâu sắc và dễ tiếp cận nhất:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Luận về chiến tranh** — Không rõ tác giả | *Lịch sử – Văn hóa - Triết học văn hóa* (Khu vực: `Kệ F` - Tầng 2)
+  2. **Cuộc chiến kim loại hiếm** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử Việt Nam* (Khu vực: `Kệ F` - Tầng 3)
+  3. **Chuyện những người An Nam ở Paris hay sự thật về Đông Dương** — Không rõ tác giả | *Lịch sử – Văn hóa - Văn hóa truyền thống* (Khu vực: `Kệ F` - Tầng 2)
+  4. **Vua Gia Long** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử thế giới* (Khu vực: `Kệ F` - Tầng 2)
+  5. **Những bài học lịch sử** — Không rõ tác giả | *Lịch sử – Văn hóa - Văn hóa truyền thống* (Khu vực: `Kệ F` - Tầng 3)
+  6. **Việt Nam: Những tiếng vọng từ quá khứ** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử Việt Nam* (Khu vực: `Kệ F` - Tầng 1)
+  7. **Hội kín xứ An Nam** — Không rõ tác giả | *Lịch sử – Văn hóa - Văn hóa truyền thống* (Khu vực: `Kệ F` - Tầng 2)
+  8. **Một chiến dịch ở Bắc Kỳ** — Không rõ tác giả | *Lịch sử – Văn hóa - Khảo cổ & Di sản* (Khu vực: `Kệ F` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:59:10`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `310.62 ms`
+- 🧑 **Bạn đọc nói:** **"tôi dạo này đang muốn học và lập trình cơ bản thì bắt đầu từ cuốn nào"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **2 sách Lập trình với Python cơ bản và nâng cao** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  2. **Nhập Môn Lập Trình Thi Đấu - Python** — La Dũng Quân, Dương Kiến Quốc | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  3. **Nhập Môn Lập Trình Thi Đấu – C/C++** — Đỗ Hạnh Ba, Phạm Đức Tân | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  4. **Nhập môn lập trình thi đấu – C/C++ - NTV** — Đỗ Hạnh Ba, Phạm Đức Tân | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  5. **Em học lập trình Coding - Bản Quyền** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Nhập Môn Lập Trình Thi Đấu - C/C++** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Bài tập lập trình với ngôn ngữ C++ từ cơ bản đến nâng cao tập 1** — Trần Thông Quế | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Lập Trình AI cho người mới bắt đầu** — Tạ Văn Dũng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 21:59:20`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `350.15 ms`
+- 🧑 **Bạn đọc nói:** **"cuốn sách nào mỗi ngày đọc khoảng 10 phút không"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ D - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **15 Phút Tiếng Anh Thực Dụng Mỗi Ngày (Kèm 1 Đĩa MP3)** — Jane Wightwick | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  2. **Vị Giám Đốc Một Phút** — Ken Blanchard, Spencer Johnson | *Kinh tế – Kinh doanh - Khởi nghiệp* (Khu vực: `Kệ B` - Tầng 3)
+  3. **10 Ngày Có Thể Nói 1000 Câu Tiếng Hoa Cuộc Sống Hàng Ngày (Kèm CD)** — Tri Thức Việt, TS. Phạm Xuân Thành | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 1)
+  4. **The Daily Drucker: Kim Chỉ Nam Mỗi Ngày Về Quản Trị Kinh Doanh** — Peter F. Drucker | *Kinh tế – Kinh doanh - Quản trị kinh doanh* (Khu vực: `Kệ B` - Tầng 2)
+  5. **HBR’s 10 Must Reads – Bộ 3 Cuốn Sách Tư Duy Chiến Lược Cho Lãnh Đạo Hiện Đại** — Harvard Business Review | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 3)
+  6. **10 Ngày Có Thể Nói 1000 Câu Tiếng Anh Du Lịch (Kèm CD)** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Luyện thi chứng chỉ* (Khu vực: `Kệ D` - Tầng 1)
+  7. **Những giấc mơ ở hiệu sách Morisaki (TB 90.000)** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Quy tắc số 1 - Chiến lược đơn giản để đầu tư hiệu quả chỉ với 15 phút mỗi tuần** — Phil Town | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:01:16`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `318.9 ms`
+- 🧑 **Bạn đọc nói:** **"cuốn sách Hello world"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ C - Tầng 1 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Hello World- Làm Người Trong Kỷ Nguyên Máy Móc** — Hannah Fry | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  2. **Bạn Đang Ở Đây: Cuốn Sách Ngắn Về Thế Giới** — Không rõ tác giả | *Tâm lý học - Tâm lý trị liệu* (Khu vực: `Kệ E` - Tầng 2)
+  3. **HBR’s 10 Must Reads – Bộ 3 Cuốn Sách Tư Duy Chiến Lược Cho Lãnh Đạo Hiện Đại** — Harvard Business Review | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 3)
+  4. **Thảo Luận Các Vấn Đề Thời Sự Bằng Tiếng Anh (Kèm 3 CD)** — Lê Huy Lâm | *Giáo dục – Ngoại ngữ - Luyện thi chứng chỉ* (Khu vực: `Kệ D` - Tầng 3)
+  5. **Cuốn Sách Về Tin Học Văn Phòng Hay- Blockchain Cơ Bản** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  6. **ƯỚC VỌNG VỀ QUỐC GIA LẬP TRÌNH: TỪ TIẾNG ANH ĐẾN TIẾNG CODE - Nguyễn Thanh Tùng** — Nguyễn Thanh Tùng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  7. **Cuốn sách lớn rực rỡ về Phi hành gia** — Không rõ tác giả | *Khoa học – Công nghệ - Sinh học môi trường* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo** — nhà xuất bản thế giới | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
