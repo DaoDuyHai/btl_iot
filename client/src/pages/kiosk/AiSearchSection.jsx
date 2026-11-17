@@ -14,8 +14,8 @@ import { apiService } from '../../api/apiService.js';
 import ShelfLocatorModal from '../../components/ShelfLocatorModal.jsx';
 import { playKioskBeep } from '../../utils/audio.js';
 
-// Regex nhận diện từ khóa đánh thức "Hey Nova" (và mọi biến thể phát âm tiếng Việt)
-const WAKE_WORD_REGEX = /(?:(?:hey|he|hê|ê|hay|hây|chào|ơi)\s+)?(?:nova|nô\s*va|nôva|no\s*va)(?:\s*ơi)?/i;
+// Regex nhận diện từ khóa đánh thức "Hey Nova" (và mọi biến thể phát âm tiếng Việt kể cả trong môi trường ồn)
+const WAKE_WORD_REGEX = /(?:(?:hey|he|hê|ê|hay|hây|chào|alo|a\s*lô|ơi)\s+)?(?:nova|nô\s*va|nôva|no\s*va|nô\s*ba|no\s*ba|lô\s*va|rô\s*va)(?:\s*ơi)?/i;
 
 export default function AiSearchSection({ reader, onFinish }) {
   // State tin nhắn trò chuyện cùng AI Agent
@@ -50,6 +50,8 @@ export default function AiSearchSection({ reader, onFinish }) {
   const timeoutTimerRef = useRef(null);
   const restartTimerRef = useRef(null);
   const typingTimeoutRef = useRef(null);
+  const maxSpeechTimerRef = useRef(null); // Giới hạn tối đa thời gian nói trong môi trường ồn
+  const audioStreamRef = useRef(null);    // Stream giữ bộ lọc chống ồn phần cứng WebRTC
 
   const chatMessagesRef = useRef(chatMessages);
   chatMessagesRef.current = chatMessages;
@@ -104,9 +106,10 @@ export default function AiSearchSection({ reader, onFinish }) {
       latestTranscriptRef.current = cleanedQuery;
 
       if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
+      if (maxSpeechTimerRef.current) clearTimeout(maxSpeechTimerRef.current);
       silenceTimerRef.current = setTimeout(() => {
         submitQuery(latestTranscriptRef.current);
-      }, 1500);
+      }, 1000);
       return;
     }
 
@@ -174,6 +177,7 @@ export default function AiSearchSection({ reader, onFinish }) {
     setMode('WAITING_FOR_WAKE_WORD');
     if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
     if (timeoutTimerRef.current) clearTimeout(timeoutTimerRef.current);
+    if (maxSpeechTimerRef.current) clearTimeout(maxSpeechTimerRef.current);
 
     // Đánh dấu buffer cũ đã bị tiêu thụ hết (tránh onresult phát sinh khi abort đọc lại)
     lastProcessedIndexRef.current = 999999;
@@ -262,17 +266,33 @@ export default function AiSearchSection({ reader, onFinish }) {
 
           if (timeoutTimerRef.current) clearTimeout(timeoutTimerRef.current);
 
+          const isTextChanged = cleanText !== latestTranscriptRef.current;
           setInputMessage(cleanText);
           latestTranscriptRef.current = cleanText;
 
-          // Dứt câu 1.6s -> Tự động gửi câu hỏi và TẮT CHẾ ĐỘ NÓI (chuẩn Siri)
-          if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
-          silenceTimerRef.current = setTimeout(() => {
-            const finalQuery = latestTranscriptRef.current?.trim();
-            if (finalQuery && finalQuery.length >= 2) {
-              submitQuery(finalQuery);
-            }
-          }, 1600);
+          // 1. Hard-cap Timer (2.5s): Chống kẹt mic trong môi trường ồn.
+          // Khi đã nhận được câu hỏi hợp lệ (>= 4 ký tự), tối đa 2.5s sau sẽ tự động chốt gửi
+          // để không bị tiếng ồn trong lớp liên tục cướp mic hoặc kéo dài vô tận!
+          if (!maxSpeechTimerRef.current && cleanText.length >= 4) {
+            maxSpeechTimerRef.current = setTimeout(() => {
+              const currentText = latestTranscriptRef.current?.trim();
+              if (currentText && currentText.length >= 2) {
+                submitQuery(currentText);
+              }
+            }, 2500);
+          }
+
+          // 2. Silence Timer (1.0s): Tự động gửi khi dứt câu 1 giây.
+          // Chỉ reset timer nếu nội dung có thêm từ mới (tránh tạp âm nền lặp lại liên tục trì hoãn việc gửi)
+          if (isTextChanged || !silenceTimerRef.current) {
+            if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
+            silenceTimerRef.current = setTimeout(() => {
+              const finalQuery = latestTranscriptRef.current?.trim();
+              if (finalQuery && finalQuery.length >= 2) {
+                submitQuery(finalQuery);
+              }
+            }, 1000);
+          }
         }
       };
 
@@ -313,6 +333,19 @@ export default function AiSearchSection({ reader, onFinish }) {
       } catch (_e) {}
     }
 
+    // Kích hoạt bộ lọc chống ồn phần cứng WebRTC của trình duyệt cho Microphone
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true
+        }
+      }).then(stream => {
+        audioStreamRef.current = stream;
+      }).catch(_e => {});
+    }
+
     initRecognition();
 
     return () => {
@@ -321,6 +354,12 @@ export default function AiSearchSection({ reader, onFinish }) {
       if (timeoutTimerRef.current) clearTimeout(timeoutTimerRef.current);
       if (restartTimerRef.current) clearTimeout(restartTimerRef.current);
       if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
+      if (maxSpeechTimerRef.current) clearTimeout(maxSpeechTimerRef.current);
+      if (audioStreamRef.current) {
+        try {
+          audioStreamRef.current.getTracks().forEach(track => track.stop());
+        } catch (_e) {}
+      }
       if (recognition) {
         // Hủy toàn bộ event listener để không bắn sự kiện ma sau khi unmount
         recognition.onstart = null;
@@ -420,6 +459,7 @@ export default function AiSearchSection({ reader, onFinish }) {
     setMode('WAITING_FOR_WAKE_WORD');
     if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
     if (timeoutTimerRef.current) clearTimeout(timeoutTimerRef.current);
+    if (maxSpeechTimerRef.current) clearTimeout(maxSpeechTimerRef.current);
 
     isSendingRef.current = true;
     isAgentReplyingRef.current = true;

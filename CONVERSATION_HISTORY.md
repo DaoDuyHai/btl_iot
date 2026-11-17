@@ -3539,3 +3539,1098 @@
 
 ---
 
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:06:08`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `266.02 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy tiếng Anh"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Đàm Thoại Tiếng Anh Trong Xã Giao, Du Lịch Và Công Việc (Kèm 1 Đĩa DVD-Room)** — Doris Brougham | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Cười Và Học Tiếng Anh - 45 Truyện Cười Chơi Chữ Giúp Học Giỏi Tiếng Anh** — Nguyễn Quốc Hùng M.A | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 1)
+  3. **25 chuyên đề ngữ pháp tiếng Anh trọng tâm (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Anh* (Khu vực: `Kệ D` - Tầng 2)
+  4. **Tự Học Đàm Thoại Tiếng Anh - Cuộc Sống Hằng Ngày** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+  5. **30 chủ đề từ vựng tiếng Anh (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh, Huỳnh Tài | *Giáo dục – Ngoại ngữ - Từ Vựng Tiếng Anh* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Tự Học Đàm Thoại Tiếng Anh - Du Lịch** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  7. **The Langmaster - 35000 Câu Giao Tiếp Tiếng Anh** — Trần Mạnh Tường | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  8. **Hot English - Tiếng Anh Học Dễ, Dùng Ngay** — ML Thanisa Choombala, Kunthida Rungruengkiat | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:06:10`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `267.88 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy tiếng Anh"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Đàm Thoại Tiếng Anh Trong Xã Giao, Du Lịch Và Công Việc (Kèm 1 Đĩa DVD-Room)** — Doris Brougham | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Cười Và Học Tiếng Anh - 45 Truyện Cười Chơi Chữ Giúp Học Giỏi Tiếng Anh** — Nguyễn Quốc Hùng M.A | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 1)
+  3. **25 chuyên đề ngữ pháp tiếng Anh trọng tâm (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Anh* (Khu vực: `Kệ D` - Tầng 2)
+  4. **Tự Học Đàm Thoại Tiếng Anh - Cuộc Sống Hằng Ngày** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+  5. **30 chủ đề từ vựng tiếng Anh (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh, Huỳnh Tài | *Giáo dục – Ngoại ngữ - Từ Vựng Tiếng Anh* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Tự Học Đàm Thoại Tiếng Anh - Du Lịch** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  7. **The Langmaster - 35000 Câu Giao Tiếp Tiếng Anh** — Trần Mạnh Tường | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  8. **Hot English - Tiếng Anh Học Dễ, Dùng Ngay** — ML Thanisa Choombala, Kunthida Rungruengkiat | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:07:25`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `281.04 ms`
+- 🧑 **Bạn đọc nói:** **"tiếng Trung"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Luyện Nói Tiếng Trung Quốc Cấp Tốc - Trình Độ Tiền Trung Cấp (Bản Thứ Ba) (Quét Mã Qr Để Nghe File Mp3)** — Mã Tiễn Phi, Lý Tiểu Vinh | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  2. **Luyện Nghe Tiếng Trung Quốc Cấp Tốc - Trình Độ Sơ Cấp(Quét Mã QR Để Nghe File MP3)** — Mao Duyệt | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  3. **Tự học tiếng Trung cấp tốc** — Nghiêm Minh | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  4. **301 Câu Đàm Thoại Tiếng Trung Quốc - Tập 2** — Khang Ngọc Hoa, Lai Tư Bình | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  5. **Luyện Nói Tiếng Trung Quốc Cấp Tốc Cho Người Bắt Đầu (Kèm CD)** — Mã Tiễn Phi | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Luyện Nói Tiếng Trung Quốc Cấp Tốc - Trình Độ Trung Cấp (Bản Thứ Ba) (Quét Mã Qr Để Nghe File Mp3)** — Mã Tiễn Phi | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  7. **Tự Học Tiếng Trung Cho Người Mới Bắt Đầu (Dùng Kèm App MCBooks)** — The Zhishi | *Giáo dục – Ngoại ngữ - Ngữ pháp & Từ vựng* (Khu vực: `Kệ D` - Tầng 3)
+  8. **Tiếng Trung dành cho học sinh trung học** — Chu Thuỵ Bình, Phùng Lệ Bình | *Giáo dục – Ngoại ngữ - Luyện thi chứng chỉ* (Khu vực: `Kệ D` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:07:39`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `267.64 ms`
+- 🧑 **Bạn đọc nói:** **"tiếng Nhật"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Tiếng Nhật Cho Mọi Người - Trình Độ Sơ Cấp 1 - Bản Tiếng Nhật** — 3A NETWORK | *Giáo dục – Ngoại ngữ - Tiếng Nhật Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  2. **Ngữ Pháp Tiếng Nhật Căn Bản** — Eriko Sato, Masahiro Tanimori | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Nhật* (Khu vực: `Kệ D` - Tầng 3)
+  3. **Try! Kỳ Thi Năng Lực Nhật Ngữ N3: Phát Triển Các Kỹ Năng Tiếng Nhật Từ Ngữ Pháp (Phiên Bản Tiếng Việt)** — Hiệp hội văn hóa sinh viên Châu Á ABK | *Giáo dục – Ngoại ngữ - Luyện thi Tiếng Nhật* (Khu vực: `Kệ D` - Tầng 2)
+  4. **Keep It Up - Tập Viết Tiếng Nhật Theo Bảng Chữ Cái Hiragana** — Jeong Eui Sang | *Giáo dục – Ngoại ngữ - Tiếng Anh* (Khu vực: `Kệ D` - Tầng 2)
+  5. **Tiếng Nhật Cho Mọi Người - Sơ Cấp 1 - Bản Dịch Và Giải Thích Ngữ Pháp - Tiếng Việt (Bản Mới)** — Không rõ tác giả | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Nhật* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Try! Kỳ Thi Năng Lực Nhật Ngữ N5 - Phát Triển Các Kỹ Năng Tiếng Nhật Từ Ngữ Pháp (Phiên Bản Tiếng Việt)** — Hiệp hội văn hóa sinh viên Châu Á ABK | *Giáo dục – Ngoại ngữ - Luyện thi Tiếng Nhật* (Khu vực: `Kệ D` - Tầng 1)
+  7. **Luyện Thi Năng Lực Nhật Ngữ N3 - Hán Tự** — Matsumoto Noriko | *Giáo dục – Ngoại ngữ - Luyện thi Tiếng Nhật* (Khu vực: `Kệ D` - Tầng 2)
+  8. **Luyện Thi Năng Lực Nhật Ngữ N3 - Từ Vựng** — Sasaki Hitoko, Matsumoto Noriko | *Giáo dục – Ngoại ngữ - Luyện thi Tiếng Nhật* (Khu vực: `Kệ D` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:07:47`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `265.66 ms`
+- 🧑 **Bạn đọc nói:** **"lập trình web"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Python Và Ứng Dụng Lập Trình Web ( STK)** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  2. **Lập trình ứng dụng di động với App Inventor** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  3. **Lập Trình Python** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  4. **Em học lập trình Coding - Bản Quyền** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Python lập trình thuật toán** — Bùi Việt Hà | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **ARDUINO Và Lập Trình IoT (Internet Of Thing IoT)** — Nguyễn Tất Bảo Thiện | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  7. **sách Lập Trình Hay: Clean Code + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  8. **2 sách Lập trình với Scratch 3 và Lập trình với App Inventor** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:07:54`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `283.86 ms`
+- 🧑 **Bạn đọc nói:** **"Đắc Nhân Đắc Nhân Tâm"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ E - Tầng 2 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Hạnh Phúc Đủ Đầy - Tác giả Đặng Minh Tâm** — Đặng Minh Tâm | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 2)
+  2. **Nhân Sinh Dù Rộng Lớn, Muôn Kiếp Vẫn Gặp Người** — littlebbear96 | *Văn học – Tiểu thuyết - Truyện đam mỹ* (Khu vực: `Kệ A` - Tầng 2)
+  3. **Một Thoáng Ta Rực Rỡ Ở Nhân Gian** — Ocean Vuong | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 1)
+  4. **KỸ THUẬT VÀ ĐẠO ĐỨC TRÍ TUỆ NHÂN TẠO** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  5. **AI AGENT – THIẾT KẾ, THỰC HÀNH VÀ KIẾN TẠO TÁC NHÂN THÔNG MINH** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Phát triển sự nghiệp* (Khu vực: `Kệ E` - Tầng 3)
+  6. **Trúng Số Độc Đắc** — Vũ Trọng Phụng | *Văn học – Tiểu thuyết - Tác phẩm kinh điển* (Khu vực: `Kệ A` - Tầng 2)
+  7. **tâm thức cá nhân và quy luật xã hội** — Không rõ tác giả | *Tâm lý học - Giải mã tâm lý* (Khu vực: `Kệ E` - Tầng 1)
+  8. **Phật giáo và tầm nhìn nhân loại** — Không rõ tác giả | *Tâm lý học - Tâm lý trị liệu* (Khu vực: `Kệ E` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:08:01`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `262.38 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy khởi nghiệp"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dưới đây là các tác phẩm chọn lọc về tư duy kinh doanh, quản trị và tài chính uy tín đang có sẵn tại thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Bạn đã có sẵn mọi tố chất cần thiết để khởi nghiệp thành công** — Ash Ali, Hasan Kubba | *Kinh tế – Kinh doanh - Kinh tế học* (Khu vực: `Kệ B` - Tầng 1)
+  2. **Dạy Con Dùng Tiền** — Adam Khoo | *Kinh tế – Kinh doanh - Khởi nghiệp* (Khu vực: `Kệ B` - Tầng 2)
+  3. **Mã nguồn: Khởi đầu của tôi - Bill Gates** — Bill Gates | *Kinh tế – Kinh doanh - Khởi nghiệp* (Khu vực: `Kệ B` - Tầng 1)
+  4. **Khởi Nghiệp Tinh Gọn (The Lean Startup)** — Eric Ries | *Kinh tế – Kinh doanh - Marketing* (Khu vực: `Kệ B` - Tầng 2)
+  5. **Storytelling With You – Kể Chuyện Từ Chính Bạn** — Cole Nussbaumer Knaflic | *Kinh tế – Kinh doanh - Khởi nghiệp* (Khu vực: `Kệ B` - Tầng 3)
+  6. **Những Nhà Sáng Lập Siêu Đẳng - Dữ Liệu Tiết Lộ Điều Gì Về Các Công Ty Khởi Nghiệp Tỉ Đô** — Ali Tamaseb | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  7. **Thiết Kế Giải Pháp Giá Trị** — Không rõ tác giả | *Kinh tế – Kinh doanh - Khởi nghiệp* (Khu vực: `Kệ B` - Tầng 3)
+  8. **R.I.C.H Mua Bán Doanh Nghiệp Nhỏ Sinh Lời - Chiến Lược Mua Lại Và Quản Lý Nhiều Doanh Nghiệp Nhỏ - Codie Sanchez - Alpha Books** — Codie Sanchez | *Kinh tế – Kinh doanh - Đầu tư chứng khoán* (Khu vực: `Kệ B` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:08:08`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `274.24 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy đầu tư"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dưới đây là các tác phẩm chọn lọc về tư duy kinh doanh, quản trị và tài chính uy tín đang có sẵn tại thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Đầu Tư Thông Minh** — Anthony Robbins, Peter Mallouk | *Kinh tế – Kinh doanh - Đầu tư* (Khu vực: `Kệ B` - Tầng 1)
+  2. **Dạy Con Làm Giàu - Tập 7 - Ai Đã Lấy Tiền Của Tôi** — Robert T Kiyosaki | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  3. **Boxset Dạy Con Làm Giàu** — Không rõ tác giả | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  4. **The Little Book - Đầu Tư Theo Chiến Lược Phòng Thủ** — Ben Stein và Phil DeMuth | *Kinh tế – Kinh doanh - Đầu tư* (Khu vực: `Kệ B` - Tầng 1)
+  5. **Kỹ Thuật Phân Tích Đầu Tư Chứng Khoán** — Yuichiro Ichikawa | *Kinh tế – Kinh doanh - Đầu tư* (Khu vực: `Kệ B` - Tầng 2)
+  6. **Phương Pháp Đầu Tư Warren Buffett** — Robert G. Hagstrom | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 2)
+  7. **Đầu Tư Vào Vàng - Khoản Đầu Tư Tuyệt Đối An Toàn Thiết Yếu Cho Mỗi Danh Mục Đầu Tư (Jonathan Spall)** — JONATHAN SPALL | *Kinh tế – Kinh doanh - Đầu tư* (Khu vực: `Kệ B` - Tầng 2)
+  8. **Những Bài Học Đầu Tư Từ Warren Buffett** — Lawrence A. Cunningham | *Kinh tế – Kinh doanh - Marketing* (Khu vực: `Kệ B` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:08:17`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `329.84 ms`
+- 🧑 **Bạn đọc nói:** **"bán Tôi đang mở một cửa hàng thời trang"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ E - Tầng 1 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Bí Quyết Kinh Doanh Cửa Hàng Thời Trang** — Lư Chung Minh | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 1)
+  2. **[Combo] Bí Quyết Kinh Doanh Thời Trang + HookPoint + Bán Hàng Livestreams** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 3)
+  3. **Bán Quần Áo Là Phải Bán Như Thế Này Này** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 1)
+  4. **Cửa Tiệm Chỉ Mở Vào Ngày Mưa** — You Yeong-gwang | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 3)
+  5. **Bán Hàng Thông Minh Trong Thời Đại AI** — Tim Cortinovis | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 2)
+  6. **Đam mê tìm kiếm khách hàng tiềm năng: Mở ra đối thoại và giành được thương vụ** — Jeb Blount | *Kinh tế – Kinh doanh - Kinh tế học* (Khu vực: `Kệ B` - Tầng 3)
+  7. **Nghệ Thuật Bán Hàng Bậc Cao - Bí Quyết Chốt Deal Mọi Thời Đại (Khổ Lớn)** — Zig Ziglar | *Kinh tế – Kinh doanh - Marketing* (Khu vực: `Kệ B` - Tầng 3)
+  8. **Kỹ năng bán hàng trực tuyến** — Jeb Blount | *Kỹ năng sống – Phát triển bản thân - Quản lý thời gian* (Khu vực: `Kệ E` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:08:29`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `333.82 ms`
+- 🧑 **Bạn đọc nói:** **"giờ tôi đang mở một quán cà phê"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ B - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Giải Mã Mô Hình Quán Cà Phê Độc Lập** — Võ Ngọc Phong | *Kinh tế – Kinh doanh - Đầu tư* (Khu vực: `Kệ B` - Tầng 3)
+  2. **KHI TÁCH CÀ PHÊ CÒN CHƯA NGUỘI - Toshikazu Kawaguchi – Bảo Chương dịch – NXB Trẻ** — Toshikazu Kawaguchi | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 3)
+  3. **Bản đồ thế giới cà phê - Từ hạt đến pha chế - Khám phá, giải thích và thưởng thức cà phê** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Một chỗ trong đời (TB 69.000)** — Không rõ tác giả | *Khoa học – Công nghệ - Toán học ứng dụng* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Hiểu Hết Về Cà Phê - How To Make Coffee** — Lani Kingston | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 2)
+  6. **KHI KÝ ỨC CÒN CHƯA PHAI NHẠT - Toshikazu Kawaguchi – Bảo Chương dịch – NXB Trẻ** — Toshikazu Kawaguchi | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 3)
+  7. **Dốc Hết Trái Tim - Cách Starbucks Xây Dựng Công Ty Bằng Từng Tách Cà Phê** — Howard Schultz, Dori Jones Yang | *Kinh tế – Kinh doanh - Tài chính - Ngân hàng* (Khu vực: `Kệ B` - Tầng 3)
+  8. **Bí Quyết Kinh Doanh Trà Sữa, Cà Phê, Bánh Ngọt: Hướng Dẫn Từ A-Z Cho Người Mới Bắt Đầu** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:08:42`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `313.63 ms`
+- 🧑 **Bạn đọc nói:** **"Tôi muốn tìm một cuốn sách dạy về làm giàu"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ B - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Boxset Dạy Con Làm Giàu** — Không rõ tác giả | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  2. **Dạy Con Làm Giàu - Để Không Có Tiền Vẫn Tạo Ra Tiền - Cha Giàu Cha Nghèo** — Robert T. Kiyosaki | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 2)
+  3. **Dạy Con Làm Giàu - Tập 7 - Ai Đã Lấy Tiền Của Tôi** — Robert T Kiyosaki | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  4. **Think & Grow Rich - 13 Nguyên Tắc Nghĩ Giàu Làm Giàu** — Napoleon Hill | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  5. **Dạy Con Làm Giàu 10 - Trước Khi Bạn Thôi Việc** — Robert T. Kiyosaki – Sharon L. Lechter | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  6. **Nghĩ Giàu Và Làm Giàu** — Napoleon Hill | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  7. **Tư Duy Của Người Giàu Gốc Á - Một Ấn Phẩm Về Nghĩ Giàu Và Làm Giàu** — John C. Shin | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  8. **Nền Giáo Dục Của Người Giàu - Những Bài Học Để Thành Công Chỉ Trường Đời Mới Dạy (Michael Ellsberg)** — Michael Ellsberg | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:10:46`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `297.22 ms`
+- 🧑 **Bạn đọc nói:** **"sách về dạy về thiết kế trong lập trình và các cái mẫu thiết kế designation"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Làm chủ các mẫu thiết kế kinh điển trong lập trình - Mastering Design Patterns** — Tạ Văn Dũng | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  2. **Sáng Tạo Trong Thuật Toán Và Lập Trình - Tập 5** — Nguyễn Xuân Huy | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 1)
+  3. **SÁNG TẠO TRONG THUẬT TOÁN VÀ LẬP TRÌNH VỚI C++ VÀ PYTHON - TẬP 7** — Không rõ tác giả | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 1)
+  4. **Em Muốn Học Thiết Kế Nhưng Mẹ Không Cho! (FS)** — Leo Dinh | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  5. **Những Nguyên Tắc Sống Còn Trong Lập Trình** — Tạ Văn Dũng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Giáo Trình Thực Hành Thiết Kế Kiến Trúc Với Revit (Dùng Cho Các Phiên Bản 2018 - 2017)** — Phạm Quang Hiển - Phạm Quang Huy | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  7. **Thiết Kế Kiến Trúc - Hướng Dẫn Sử Dụng Vray & Sketchup - STK3** — Nguyễn Đức Tấn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  8. **2 sách Lập trình với Scratch 3 và Lập trình với App Inventor** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:11:10`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `529.01 ms`
+- 🧑 **Bạn đọc nói:** **"à mình à Một mình tìm một cuốn sách gì đó vui vẻ nhẹ nhàng"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Cảm giác cô đơn giữa dòng người đông đúc đôi khi khiến chúng ta thấy mình thật nhỏ bé và trống trải. Một cuốn sách hay có thể trở thành người bạn tri kỷ lặng lẽ bầu bạn cùng bạn. Thủ thư đã chọn lọc những tác phẩm ấm áp nhất gửi đến bạn:
+  > 
+  > 💬 *Bạn muốn đọc thử trích đoạn ấm áp của cuốn nào trong danh sách trên, hay cần mình hướng dẫn đường tới Kệ A?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Chờ Ngày Bình Yên** — Sơn Phạm (nhungdieubinhyen) | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  2. **Ăn Để Nhớ - Tản Văn** — Kim Em | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  3. **Cảm Ơn Bạn Vì Đã Sống Tiếp - Thế Giới Ấm Áp Vì Vẫn Còn Bạn Ở Đây** — Opheliav | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  4. **Ra Vườn Nhặt Nắng (Những Vần Thơ Sưởi Ấm Tâm Hồn)** — Nguyễn Thế Hoàng Linh | *Văn học – Tiểu thuyết - Thơ* (Khu vực: `Kệ A` - Tầng 3)
+  5. **Thám tử ẩm thực Kamogawa** — Hisashi Kashiwai | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  6. **Một Người Rừng Thông Thái** — Trần Văn Trản | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  7. **Đi Ra Thế Giới Ngắm Nhìn Bản Thân** — Ngạn Hy | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  8. **Cà Phê Cùng Tony** — Tony Buổi Sáng | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Cô đơn / Lạc lõng (ấm áp, nhẹ nhàng, bình yên)`
+  - **Từ khóa phạt né tránh:** `án mạng, kinh dị, kỹ thuật`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:11:19`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `501.97 ms`
+- 🧑 **Bạn đọc nói:** **"quyển sách nào kiểu như là trinh thám rùng rợn"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Thấu hiểu tâm trạng của bạn lúc này (Hồi hộp / Trinh thám), thủ thư đã rà soát kho sách và chọn ra những ấn phẩm phù hợp nhất:
+  > 
+  > 💬 *Bạn muốn đọc thử trích đoạn của cuốn nào trong danh sách trên, hay cần mình hướng dẫn lối đi đến Kệ A ở Tầng 3?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Nhập Vai Thám Tử** — G.T. Karber | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 3)
+  2. **Chuộc Tội** — Minato Kanae | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 2)
+  3. **Phía Sau Nghi Can X** — Higashino Keigo | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 1)
+  4. **Bạch Dạ Hành** — Higashino Keigo | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 1)
+  5. **Hannibal** — Thomas Harris | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 2)
+  6. **Nhạc Công Bí Ẩn** — Miêu Đặc | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 1)
+  7. **Vụ Án** — Franz Kafka | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 2)
+  8. **Ma Trùng** — Chan Ho-Kei | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Hồi hộp / Trinh thám (hồi hộp)`
+  - **Từ khóa phạt né tránh:** `sách ru ngủ, nhẹ nhàng, tản văn`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-16 22:11:30`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `286.11 ms`
+- 🧑 **Bạn đọc nói:** **"sách về kháng chiến Việt Nam"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ F - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Cuộc chiến kim loại hiếm** — Không rõ tác giả | *Lịch sử – Văn hóa - Lịch sử Việt Nam* (Khu vực: `Kệ F` - Tầng 3)
+  2. **Quản Trị Chiến Lược Thực Chiến** — Trần Quốc Việt | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  3. **Chứng Khoán Việt Nam Dưới Lăng Kính Warren Buffett** — Thảo Tạ | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  4. **Tục Ngữ Ca Dao, Dân Ca Việt Nam** — Vũ Ngọc Phan | *Văn học – Tiểu thuyết - Ca Dao - Tục Ngữ - Thành ngữ* (Khu vực: `Kệ A` - Tầng 1)
+  5. **Chuyện những người An Nam ở Paris hay sự thật về Đông Dương** — Không rõ tác giả | *Lịch sử – Văn hóa - Văn hóa truyền thống* (Khu vực: `Kệ F` - Tầng 2)
+  6. **Việt Nam qua tuần san Indochine 1941 - 1944** — Không rõ tác giả | *Lịch sử – Văn hóa - Khảo cổ & Di sản* (Khu vực: `Kệ F` - Tầng 3)
+  7. **Từ Sông Bến Hải Đến Dinh Độc Lập - Thiếu Tướng Hoàng Đan** — Thiếu tướng Hoàng Đan | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 2)
+  8. **Sơn Nam Nói Về Miền Nam, Cá Tính Miền Nam, Thuần Phong Mỹ Tục Việt Nam** — Sơn Nam | *Văn học – Tiểu thuyết - Phóng sự - Ký sự - Bút ký* (Khu vực: `Kệ A` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:16:41`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `350.15 ms`
+- 🧑 **Bạn đọc nói:** **"gợi ý cho mình một cuốn sách dạy về quản lý phần mềm nó không bị bắt mic"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Hướng Dẫn No Code - Vibe Code: Không Cần Biết Lập Trình + 3 Cấp Độ Dùng AI & 50 Mẫu Prompt Chuẩn** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  2. **/Lẻ: Hướng Dẫn No Code - Vibe Code: Không Cần Biết Lập Trình + 3 Cấp Độ Dùng AI & 50 Mẫu Prompt Chuẩn - Bản Quyền** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  3. **No Code - Vibe Code: Không Cần Biết Lập Trình + Vibe Coding** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  4. **ƯỚC VỌNG VỀ QUỐC GIA LẬP TRÌNH: TỪ TIẾNG ANH ĐẾN TIẾNG CODE - Nguyễn Thanh Tùng** — Nguyễn Thanh Tùng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  5. **Số Ơi, Mở Ra! - Tư Duy Phân Tích Số Liệu Và Thiết Kế Báo Cáo Excel Dashboard Chuyên Nghiệp** — Nguyễn Thị Lan Phượng | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  6. **Giáo Trình Autocad Phần Cơ Bản (Lý Thuyết - Thực Hành)** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Mật mã và An toàn thông tin - Lý thuyết và Ứng dụng** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Cuộc Rượt Đuổi Ngoạn Mục Trong Mê Lộ Máy Tính: Gián Điệp Mạng** — Clifford Stoll | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:16:50`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `296.6 ms`
+- 🧑 **Bạn đọc nói:** **"gợi ý cho mình một cuốn sách dạy về quản lý phần mềm"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **30 Ngày Thành Thạo Photoshop - Cuốn 1: Làm Chủ Bộ Công Cụ** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  2. **Cuốn Sách Hướng Dẫn Bạn Phương Pháp Tư Duy Bằng Hình Ảnh Trong Việc Thiết Kế Slide: Học Cách Thiết Kế Slide** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  3. **Giáo Trình Autocad Phần Cơ Bản (Lý Thuyết - Thực Hành)** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Quản trị an toàn an ninh mạng** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  5. **Nhập môn thuật toán** — Bùi Việt Hà | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  6. **ƯỚC VỌNG VỀ QUỐC GIA LẬP TRÌNH: TỪ TIẾNG ANH ĐẾN TIẾNG CODE - Nguyễn Thanh Tùng** — Nguyễn Thanh Tùng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  7. **Học Cách Thiết Kế Slide** — Nancy Duarte | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  8. **Mật mã và An toàn thông tin - Lý thuyết và Ứng dụng** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:17:29`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `325.98 ms`
+- 🧑 **Bạn đọc nói:** **"sách về iot"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Bảo mật iot thực tế, xây dựng và phát triển các hệ thống an toàn trong thế giới kết nối iot ( STK)** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  2. **ARDUINO Và Lập Trình IoT (Internet Of Thing IoT)** — Nguyễn Tất Bảo Thiện | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  3. **ứng dụng iot trong lập trình nhà nông trại thông minh ( stk)** — Nguyễn Đức Tấn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Xây dựng các dự án iot ( Giao Thức) STK** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  5. **Lập Trình Arduino Với IoT-Hệ Vạn Vật Kết Nối** — . | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Chuẩn Đoán, Sửa Chữa, Bảo Trì, Hệ Thống Điều Khiển Bằng Máy Tính Trên Ô Tô ( Lý Thuyết, Thực Hành) - STK** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Cuốn Sách Về Tin Học Văn Phòng Hay- Blockchain Cơ Bản** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Nhập Môn Lập Trình Thi Đấu – C/C++** — Đỗ Hạnh Ba, Phạm Đức Tân | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:17:36`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `308.13 ms`
+- 🧑 **Bạn đọc nói:** **"sách về thiết kế hệ thống"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ C - Tầng 1 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Kỹ Thuật Điện Cao Áp Tập 1 Bảo Vệ Chống Sét Và Nối Đất Trong Hệ Thống Điện** — Nguyễn Đức Tường | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 1)
+  2. **Thiết Kế Hệ Thống Học Máy** — Chip Huyen | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  3. **ỨNG DỤNG SÁNG TẠO TRONG THIẾT KẾ** — Không rõ tác giả | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Thiết Kế Lấy Người Dùng Làm Trung Tâm** — Don Norman | *Kinh tế – Kinh doanh - Khởi nghiệp* (Khu vực: `Kệ B` - Tầng 2)
+  5. **Em Muốn Học Thiết Kế Nhưng Mẹ Không Cho! (FS)** — Leo Dinh | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  6. **AI Agent - Tập 1: Xây Dựng Hệ Thống AI Automation Với Make** — Nguyễn Văn Lượng | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Giáo Trình Thực Hành Thiết Kế Kiến Trúc Với Revit (Dùng Cho Các Phiên Bản 2018 - 2017)** — Phạm Quang Hiển - Phạm Quang Huy | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Tư Duy Thiết Kế Trong Kể Chuyện Thương Hiệu** — Miri Rodriguez | *Kỹ năng sống – Phát triển bản thân - Quản lý thời gian* (Khu vực: `Kệ E` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:17:47`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `693.85 ms`
+- 🧑 **Bạn đọc nói:** **"sách đọc mà lúc buồn"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Thấu hiểu tâm trạng của bạn lúc này (Buồn bã / Tâm trạng chùng), thủ thư đã rà soát kho sách và chọn ra những ấn phẩm phù hợp nhất:
+  > 
+  > 💬 *Bạn muốn đọc thử trích đoạn của cuốn nào trong danh sách trên, hay cần mình hướng dẫn lối đi đến Kệ A ở Tầng 3?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Chờ Ngày Bình Yên** — Sơn Phạm (nhungdieubinhyen) | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  2. **Sống Bình Thường Mà Không Tầm Thường** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 1)
+  3. **Thám tử ẩm thực Kamogawa** — Hisashi Kashiwai | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  4. **Ăn Để Nhớ - Tản Văn** — Kim Em | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  5. **Cảm Ơn Người Lớn** — Nguyễn Nhật Ánh | *Văn học – Tiểu thuyết - Truyện dài* (Khu vực: `Kệ A` - Tầng 3)
+  6. **Vui Cười Lên Cùng Chứng Khoán** — Cú Thông Thái | *Kỹ năng sống – Phát triển bản thân - Quản lý thời gian* (Khu vực: `Kệ E` - Tầng 2)
+  7. **Một Người Rừng Thông Thái** — Trần Văn Trản | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  8. **Ra Vườn Nhặt Nắng (Những Vần Thơ Sưởi Ấm Tâm Hồn)** — Nguyễn Thế Hoàng Linh | *Văn học – Tiểu thuyết - Thơ* (Khu vực: `Kệ A` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EMOTIONAL_CONTEXT` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Buồn bã / Tâm trạng chùng (vui vẻ, hài hước, nhẹ nhàng, chữa lành)`
+  - **Từ khóa phạt né tránh:** `án mạng, cái chết, đám tang, tự tử, bạo lực, chiến tranh, tang thương, u uất, kinh dị`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:19:03`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `323.6 ms`
+- 🧑 **Bạn đọc nói:** **"Địt mẹ mày chiều nay để mua mà gọi nhau không lên thì phiền lắm  trường này nó ồn quá"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ A - Tầng 2 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Sĩ Số Lớp Vắng 0** — Emma Hạ My | *Văn học – Tiểu thuyết - Truyện kinh dị* (Khu vực: `Kệ A` - Tầng 2)
+  2. **EM LÀM QUEN VỚI KHOA HỌC - HEO ỤT IT MAY MẮN** — Không rõ tác giả | *Khoa học – Công nghệ - Sinh học môi trường* (Khu vực: `Kệ C` - Tầng 2)
+  3. **Chào cấp một - Mình không ngừng cố gắng** — Không rõ tác giả | *Khoa học – Công nghệ - Toán học ứng dụng* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Hít hà mùi đất nước - úm ba la! nảy mầm ra cây chuối** — Không rõ tác giả | *Khoa học – Công nghệ - Sinh học môi trường* (Khu vực: `Kệ C` - Tầng 3)
+  5. **Sự Lên Ngôi Của Các Nền Tảng Đa Chiều** — Richard Schmalensee | *Kinh tế – Kinh doanh - Quản trị kinh doanh* (Khu vực: `Kệ B` - Tầng 2)
+  6. **Mẹ ơi con sẽ... Chăm sóc hành tinh** — Không rõ tác giả | *Khoa học – Công nghệ - Vật lý đại cương* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Giáo dục giới tính nhi đồng - Bố mẹ ơi con từ đâu tới** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Buổi Chiều Windows** — Nguyễn Nhật Ánh | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:19:49`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `332.78 ms`
+- 🧑 **Bạn đọc nói:** **"đang ở nhà quê thôi"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ A - Tầng 1 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Vị Hôn Thê Giản Dị Của Tôi Rất Dễ Thương Lúc Ở Nhà** — Yuu Hidaka, Tantan | *Văn học – Tiểu thuyết - Light novel* (Khu vực: `Kệ A` - Tầng 1)
+  2. **Giáo sư Võ Đặng Hùng & Những Người Bạn Nhà Báo** — nhà xuất bản thế giới | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  3. **Lũ trẻ đường tàu (TB 105.000)** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Ở Nhà – Lược sử đời sống riêng tư** — Không rõ tác giả | *Tâm lý học - Tâm lý học hành vi* (Khu vực: `Kệ E` - Tầng 1)
+  5. **Kho tàng câu đố dân gian bằng tranh - Quê hương đất nước (Dành cho tuổi mẫu giáo và tiểu học)** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học thường thức* (Khu vực: `Kệ C` - Tầng 2)
+  6. **Về Nhà Nhặt Nắng Trong Vườn** — Tú. | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  7. **Trốn Lên Mái Nhà Để Khóc** — Lam | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  8. **Từ Rừng Thẳm Amazon Đến Quê Hương Bolero** — Nguyễn Tập | *Văn học – Tiểu thuyết - Du ký* (Khu vực: `Kệ A` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:20:02`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `286.88 ms`
+- 🧑 **Bạn đọc nói:** **"Anh"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ D - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Daily English Conversation - Hội Thoại Tiếng Anh** — Thiptida Budchui | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  2. **Thực Hành Dịch Thương Mại Việt - Anh** — Tô Hà Thanh Phương | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  3. **Tiếng Anh Giao Tiếp - Communicative English (Kèm file MP3)** — Amy Huang | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  4. **Gọi Em Bằng Tên Anh - Call Me By Your Name** — André Aciman | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 2)
+  5. **Giải Mật Ngoại Hạng Anh** — . | *Kinh tế – Kinh doanh - Marketing* (Khu vực: `Kệ B` - Tầng 3)
+  6. **Anh Em Nhà Karamazov** — Fyodor Dostoyevsky | *Văn học – Tiểu thuyết - Tác phẩm kinh điển* (Khu vực: `Kệ A` - Tầng 2)
+  7. **Tìm Em Nơi Anh** — André Aciman | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 2)
+  8. **Trật Nhịp** — Lương Anh Đan | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:20:11`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `351.12 ms`
+- 🧑 **Bạn đọc nói:** **"sex đánh nhau  2i rảnh rỗi"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ A - Tầng 2 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Cú Rời Đất Xanh 2 - Người Nhà Đao** — Viên Hiểu Bồi (Bút danh: Vĩ Ngư) | *Văn học – Tiểu thuyết - Khoa học viễn tưởng* (Khu vực: `Kệ A` - Tầng 2)
+  2. **Spotify Và Những Chuyện Chưa Kể - Hành Trình Đánh Bại Apple, Google Và Amazon Trong Cuộc Đua Âm Thanh Số Của Nhà Sáng Lập Daniel Ek** — Sven Carlsson, Jonas Leijonhufvud | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  3. **Hồ Sơ Máu** — Đường (biên soạn) | *Văn học – Tiểu thuyết - Truyện kinh dị* (Khu vực: `Kệ A` - Tầng 2)
+  4. **Cú rời đất xanh 3 - Người nhà roi** — Không rõ tác giả | *Khoa học – Công nghệ - Sinh học môi trường* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Trinh thám- Giờ Đi Săn - Jeffery Deaver - Bách Việt** — Jeffery Daever | *Văn học – Tiểu thuyết - Truyện trinh thám* (Khu vực: `Kệ A` - Tầng 3)
+  6. **Trật Nhịp** — Lương Anh Đan | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  7. **Kẹo Dâu Tây Và Tiểu Tiên Nữ Của Anh – Tập 2** — Xuân Đao Hàn | *Văn học – Tiểu thuyết - Truyện ngôn tình* (Khu vực: `Kệ A` - Tầng 3)
+  8. **Nghệ Thuật PR Bản Thân + Nghệ Thuật Đánh Cắp Ý Tưởng + Cứ Làm Đi** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:20:21`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `330.8 ms`
+- 🧑 **Bạn đọc nói:** **"sách đánh nhau lúc 2"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ A - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Cửa Hàng Tiện Lợi Nguy Hiểm - Tập 2** — 945 | *Văn học – Tiểu thuyết - Truyện đam mỹ* (Khu vực: `Kệ A` - Tầng 3)
+  2. **2 sách Lập trình với Python cơ bản và nâng cao** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  3. **2 sách Luyện thi hội thi tin học trẻ với Scratch 3 cấp Tiểu học** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Những giấc mơ ở hiệu sách Morisaki (TB 90.000)** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 3)
+  5. **Beartown 2: Chúng tôi đấu với các bạn** — Fredrik Backman | *Văn học – Tiểu thuyết - Truyện dài* (Khu vực: `Kệ A` - Tầng 1)
+  6. **Vị Hôn Thê Giản Dị Của Tôi Rất Dễ Thương Lúc Ở Nhà** — Yuu Hidaka, Tantan | *Văn học – Tiểu thuyết - Light novel* (Khu vực: `Kệ A` - Tầng 1)
+  7. **Ngày Xưa Có Một Chuyện Tình** — Nguyễn Nhật Ánh | *Văn học – Tiểu thuyết - Truyện dài* (Khu vực: `Kệ A` - Tầng 2)
+  8. **Giáo trình chuẩn YCT 2 - Sách Bài Tập** — Tô Anh Hà | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:20:42`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `250.17 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy tiếng Anh"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Đàm Thoại Tiếng Anh Trong Xã Giao, Du Lịch Và Công Việc (Kèm 1 Đĩa DVD-Room)** — Doris Brougham | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Cười Và Học Tiếng Anh - 45 Truyện Cười Chơi Chữ Giúp Học Giỏi Tiếng Anh** — Nguyễn Quốc Hùng M.A | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 1)
+  3. **25 chuyên đề ngữ pháp tiếng Anh trọng tâm (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Anh* (Khu vực: `Kệ D` - Tầng 2)
+  4. **Tự Học Đàm Thoại Tiếng Anh - Cuộc Sống Hằng Ngày** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+  5. **30 chủ đề từ vựng tiếng Anh (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh, Huỳnh Tài | *Giáo dục – Ngoại ngữ - Từ Vựng Tiếng Anh* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Tự Học Đàm Thoại Tiếng Anh - Du Lịch** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  7. **The Langmaster - 35000 Câu Giao Tiếp Tiếng Anh** — Trần Mạnh Tường | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  8. **Hot English - Tiếng Anh Học Dễ, Dùng Ngay** — ML Thanisa Choombala, Kunthida Rungruengkiat | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:21:07`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `332.19 ms`
+- 🧑 **Bạn đọc nói:** **"anh dành tiền"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ B - Tầng 2 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Dạy Con Dùng Tiền** — Adam Khoo | *Kinh tế – Kinh doanh - Khởi nghiệp* (Khu vực: `Kệ B` - Tầng 2)
+  2. **Kiếm Tiền Bằng Claude AI** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  3. **Tiền Đẻ Ra Tiền: Đầu Tư Tài Chính Thông Minh** — Dr Money | *Kinh tế – Kinh doanh - Đầu tư* (Khu vực: `Kệ B` - Tầng 2)
+  4. **Tư Duy Đầu Tư - Tiền Đẻ Ra Tiền** — JL Collins | *Kinh tế – Kinh doanh - Đầu tư* (Khu vực: `Kệ B` - Tầng 3)
+  5. **Tư Duy Tiền Bạc, Tiền Sinh Ra Tiền** — Derrick Kinney | *Kinh tế – Kinh doanh - Quản trị kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  6. **Dạy Con Làm Giàu - Để Không Có Tiền Vẫn Tạo Ra Tiền - Cha Giàu Cha Nghèo** — Robert T. Kiyosaki | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 2)
+  7. **21 Ngày Thực Chiến Claude + Gemini Omni Capcut + Kiếm Tiền Bằng Claude AI + Xu Hướng Kiếm Tiền 2026 - Bản Quyền** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  8. **Dạy Con Làm Giàu - Tập 7 - Ai Đã Lấy Tiền Của Tôi** — Robert T Kiyosaki | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:23:24`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `289.56 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy tiếng Trung"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **301 Câu Đàm Thoại Tiếng Trung Quốc - Tập 2** — Khang Ngọc Hoa, Lai Tư Bình | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Tiếng Trung dành cho học sinh tiểu học - Sách bài tập - Tập 3** — Vương Nguy, Kim Phi Phi | *Giáo dục – Ngoại ngữ - Giáo trình Hán ngữ* (Khu vực: `Kệ D` - Tầng 1)
+  3. **Tiếng Trung Quốc Trong Giải Trí (Kèm CD)** — Lý Thục Quyên | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 3)
+  4. **Học Tiếng Trung Quốc Cấp Tốc Trong 90 Ngày** — Lưu Hồng Mẫn | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 3)
+  5. **Trải nghiệm tiếng Trung dành cho học sinh tiểu học** — Không rõ tác giả | *Giáo dục – Ngoại ngữ - Luyện thi Tiếng Hoa HSK* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Tự học tiếng Trung cấp tốc** — Nghiêm Minh | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  7. **Bí Quyết Học Nhanh Nhớ Lâu 214 Bộ Thủ Tiếng Trung** — Đăng Khoa | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 3)
+  8. **Tiêu chuẩn các cấp độ tiếng Trung trong giáo dục tiếng Trung quốc tế - Giáo trình ngữ pháp - Cao cấp** — Phương Hưng Long | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Hoa* (Khu vực: `Kệ D` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:23:31`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `305.8 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy đi xe máy"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ C - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Những điều sách giáo khoa không dạy bạn - Kỹ thuật công nghệ** — Không rõ tác giả | *Khoa học – Công nghệ - Sinh học môi trường* (Khu vực: `Kệ C` - Tầng 3)
+  2. **Những điều sách giáo khoa không dạy bạn - Rừng** — Không rõ tác giả | *Khoa học – Công nghệ - Vật lý đại cương* (Khu vực: `Kệ C` - Tầng 1)
+  3. **Chuẩn Đoán, Sửa Chữa, Bảo Trì, Hệ Thống Điều Khiển Bằng Máy Tính Trên Ô Tô ( Lý Thuyết, Thực Hành) - STK** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  4. **phương tiện xanh, xe điện( ev) và xe lai(hybrid) HA** — Nguyễn Anh Hoàng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  5. **Những điều sách giáo khoa không dạy bạn - Năng lượng** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Bách Khoa Thư Về Phát Triển Kỹ Năng - Khoa Học Máy Tính** — DK | *Giáo dục – Ngoại ngữ - Luyện thi chứng chỉ* (Khu vực: `Kệ D` - Tầng 1)
+  7. **Trí Tuệ Nhân Tạo Học Máy Và Ứng Dụng** — Nguyễn Quốc Huy | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  8. **TẠI SAO MÁY HỌC - Anil Ananthaswamy - Tuệ Phong dịch - Lyceum** — Anil Ananthaswamy | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:28:50`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `255.79 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy lập trình"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dành cho lĩnh vực Công nghệ Thông tin, việc trang bị nền tảng chuẩn mực và cập nhật thực tiễn là rất cần thiết. Dưới đây là các giáo trình và tài liệu tiêu biểu nhất hiện có trên kệ:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **2 sách Lập trình với Scratch 3 và Lập trình với App Inventor** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  2. **4 sách học lập trình kéo thả cho học sinh từ 6 - 18 tuổi** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  3. **Coding 6 Lập trình với Scratch 3** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+  4. **sách Lập Trình Hay: Clean Code + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Python lập trình thuật toán** — Bùi Việt Hà | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Giáo Trình Kỹ Thuật Lập Trình C Căn Bản Và Nâng Cao + Giáo Trình C++ Và Lập Trình Hướng Đối Tượng (2 quyển)** — . | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Em Học Lập Trình Coding** — Randy Lynn | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Giáo trình lập trình C ứng dụng** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:29:06`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `264.07 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy tiếng Anh"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Đàm Thoại Tiếng Anh Trong Xã Giao, Du Lịch Và Công Việc (Kèm 1 Đĩa DVD-Room)** — Doris Brougham | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Cười Và Học Tiếng Anh - 45 Truyện Cười Chơi Chữ Giúp Học Giỏi Tiếng Anh** — Nguyễn Quốc Hùng M.A | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 1)
+  3. **25 chuyên đề ngữ pháp tiếng Anh trọng tâm (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Anh* (Khu vực: `Kệ D` - Tầng 2)
+  4. **Tự Học Đàm Thoại Tiếng Anh - Cuộc Sống Hằng Ngày** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+  5. **30 chủ đề từ vựng tiếng Anh (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh, Huỳnh Tài | *Giáo dục – Ngoại ngữ - Từ Vựng Tiếng Anh* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Tự Học Đàm Thoại Tiếng Anh - Du Lịch** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  7. **The Langmaster - 35000 Câu Giao Tiếp Tiếng Anh** — Trần Mạnh Tường | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  8. **Hot English - Tiếng Anh Học Dễ, Dùng Ngay** — ML Thanisa Choombala, Kunthida Rungruengkiat | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:29:16`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `326.57 ms`
+- 🧑 **Bạn đọc nói:** **"Google"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ C - Tầng 1 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Google AI Studio Toàn Tập** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  2. **Quy Tắc Của Google** — Laszlo Bock | *Kinh tế – Kinh doanh - Marketing* (Khu vực: `Kệ B` - Tầng 3)
+  3. **Làm Việc Hiệu Quả: Quy Tắc Làm Việc Của Google + Siêu Năng Suất + Làm Ra Làm, Chơi Ra Chơi Tặng Những Người Thành Công Nhất Làm Gì Trước Bữa Sáng** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Quản lý thời gian* (Khu vực: `Kệ E` - Tầng 2)
+  4. **Google Gemini Toàn Tập** — Nguyễn Văn Lượng | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Hướng Dẫn Thực Hành Google Sheets - Từ Cơ Bản Đến Nâng Cao** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Hướng Dẫn Thực Hành Google Sheets Từ Cơ Bản Đến Nâng Cao** — Không rõ tác giả | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  7. **Google - Gemini Toàn Tập** — Nguyễn Văn Lượng | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 2)
+  8. **Always Day One - Công Thức Thành Công Của Amazon Face.book Google Microsoft** — Alex Kantrowitz | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:29:29`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `307.04 ms`
+- 🧑 **Bạn đọc nói:** **"lớp mà tưởng yên tĩnh đi ra nó bắt ngay mà lớp mình có lần Khê"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ A - Tầng 2 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Sĩ Số Lớp Vắng 0** — Emma Hạ My | *Văn học – Tiểu thuyết - Truyện kinh dị* (Khu vực: `Kệ A` - Tầng 2)
+  2. **1111 - Nhật Ký Sáu Vạn Dặm Trên Yên Xe Cà Tàng** — Trần Đặng Đăng Khoa | *Văn học – Tiểu thuyết - Du ký* (Khu vực: `Kệ A` - Tầng 3)
+  3. **Đi Ra Thế Giới Ngắm Nhìn Bản Thân** — Ngạn Hy | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+  4. **Gi gỉ gì gi cái gì cũng biết - lớp 2 (TB 160.000)** — Không rõ tác giả | *Khoa học – Công nghệ - Toán học ứng dụng* (Khu vực: `Kệ C` - Tầng 2)
+  5. **Hành trình từ “Ra đi hai bàn tay trắng” đến “Trở về một dải giang san” và những trang bản thảo còn dang dở** — Không rõ tác giả | *Tâm lý học - Tâm lý học hành vi* (Khu vực: `Kệ E` - Tầng 3)
+  6. **Gi gỉ gi gi cái gì cũng biết dành cho lớp 1 (TB 155.000)** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 1)
+  7. **Phá Linh - Lời Nguyền Phong Lan Ma** — Hương Cô Tương, Xiang Gu Jiang | *Văn học – Tiểu thuyết - Truyện kinh dị* (Khu vực: `Kệ A` - Tầng 3)
+  8. **Còn chút gì để nhớ** — Nguyễn Nhật Ánh | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:29:38`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `313.58 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy mẹ đánh nhau"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ A - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Người Mẹ** — Minato Kanae | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 3)
+  2. **Hãy Chăm Sóc Mẹ** — Shin Kyung-sook | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 3)
+  3. **Giáo dục giới tính nhi đồng - Bố mẹ ơi con từ đâu tới** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 2)
+  4. **Dạy học không theo lối mòn** — Barbara Oakley, Beth Rogowsky, Terrence J. Sejnowski | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 1)
+  5. **Dạy Con Dùng Tiền** — Adam Khoo | *Kinh tế – Kinh doanh - Khởi nghiệp* (Khu vực: `Kệ B` - Tầng 2)
+  6. **Em Muốn Học Thiết Kế Nhưng Mẹ Không Cho! (FS)** — Leo Dinh | *Công nghệ thông tin - Thiết Kế - Đồ Họa* (Khu vực: `Kệ C` - Tầng 3)
+  7. **Đánh Thức Bản Ngã Nghệ Sĩ : The Artist's Way** — Julia Cameron | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 1)
+  8. **3 Sách - Ứng Dụng AI Thực Tiễn Trong Giảng Dạy Và Học Tập** — Không rõ tác giả | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:29:49`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `303.41 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy làm giàu"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ B - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Boxset Dạy Con Làm Giàu** — Không rõ tác giả | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  2. **Dạy Con Làm Giàu - Để Không Có Tiền Vẫn Tạo Ra Tiền - Cha Giàu Cha Nghèo** — Robert T. Kiyosaki | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 2)
+  3. **Think & Grow Rich - 13 Nguyên Tắc Nghĩ Giàu Làm Giàu** — Napoleon Hill | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  4. **Dạy Con Làm Giàu - Tập 7 - Ai Đã Lấy Tiền Của Tôi** — Robert T Kiyosaki | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  5. **Dạy Con Làm Giàu 10 - Trước Khi Bạn Thôi Việc** — Robert T. Kiyosaki – Sharon L. Lechter | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  6. **Dạy Con Làm Giàu - Sử Dụng Đồng Vốn** — Robert T. Kiyosaki | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  7. **Nghĩ Giàu Và Làm Giàu** — Napoleon Hill | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  8. **Nền Giáo Dục Của Người Giàu - Những Bài Học Để Thành Công Chỉ Trường Đời Mới Dạy (Michael Ellsberg)** — Michael Ellsberg | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:29:56`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `374.1 ms`
+- 🧑 **Bạn đọc nói:** **"sách Kể đi luộc à"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ E - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Sách Chiến Lược Giá & Chiến Lược Tốt Và Chiến Lược Tồi** — Richard P. Rumelt, Cynthia A. Montgomery | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 3)
+  2. **Sinh năm 1972 - Khát vọng sống của kẻ đi ngược chiều** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 1)
+  3. **storytelling - kể chuyện lay động lòng người** — Không rõ tác giả | *Kỹ năng sống – Phát triển bản thân - Nghệ thuật lãnh đạo* (Khu vực: `Kệ E` - Tầng 2)
+  4. **Kiếm Tiền Từ Bất Cứ Thứ Gì ( Kể Cả Những Thứ Tưởng Chừng Vô Lý )** — Chris Guillebeau | *Kỹ năng sống – Phát triển bản thân - Phát triển sự nghiệp* (Khu vực: `Kệ E` - Tầng 3)
+  5. **Lược sử ngôn ngữ - Chuyện kể về phát minh vĩ đại nhất của loài người** — Không rõ tác giả | *Lịch sử – Văn hóa - Văn hóa truyền thống* (Khu vực: `Kệ F` - Tầng 1)
+  6. **Thông Tin Di Động 5G Và Lộ Trình Phát Triển Lên 6G** — TS. Nguyễn Phạm Anh Dũng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  7. **Thầy Cúng Kể Chuyện Trừ Tà – Tổng Hợp 100 Câu Chuyện Ma Quái** — Shindo Gonai | *Văn học – Tiểu thuyết - Truyện kinh dị* (Khu vực: `Kệ A` - Tầng 1)
+  8. **Ngồi Khóc Trên Cây** — Nguyễn Nhật Ánh | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:30:10`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `313.12 ms`
+- 🧑 **Bạn đọc nói:** **"sách để đi luộc à"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ E - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Sách Chiến Lược Giá & Chiến Lược Tốt Và Chiến Lược Tồi** — Richard P. Rumelt, Cynthia A. Montgomery | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 3)
+  2. **Sách Lãnh Đạo John C.Maxwell** — John C. Maxwell | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  3. **50 CUỐN SÁCH KINH ĐIỂN VỀ KINH DOANH - Những bài học về chiến lược, đổi mới và marketing hiệu quả – Tom Butler-Bowdon – AlphaBooks** — Tom Butler-Bowdon | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 2)
+  4. **HBR’s 10 Must Reads – Bộ 3 Cuốn Sách Tư Duy Chiến Lược Cho Lãnh Đạo Hiện Đại** — Harvard Business Review | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 3)
+  5. **Thông Tin Di Động 5G Và Lộ Trình Phát Triển Lên 6G** — TS. Nguyễn Phạm Anh Dũng | *Công nghệ thông tin - Lập Trình* (Khu vực: `Kệ C` - Tầng 1)
+  6. **Viết & Sống** — Anne Lamott | *Văn học – Tiểu thuyết - Phóng sự - Ký sự - Bút ký* (Khu vực: `Kệ A` - Tầng 1)
+  7. **Chiến Lược Gia - The Strategist** — Cynthia A. Montgomery | *Kỹ năng sống – Phát triển bản thân - Quản lý thời gian* (Khu vực: `Kệ E` - Tầng 3)
+  8. **Lorenzo de’ Medici: Cuộc đời rực rỡ và thời đại dữ dội** — Không rõ tác giả | *Lịch sử – Văn hóa - Khảo cổ & Di sản* (Khu vực: `Kệ F` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:30:19`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `234.18 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy lớp 9"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ D - Tầng 2 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **90 Ngày Ôn Hè Tiếng Anh 5 (Dành cho học sinh lớp 5 lên lớp 6)** — Bùi Văn Vinh - Th.S Thái Văn Anh | *Giáo dục – Ngoại ngữ - Phương pháp giáo dục* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Dạy học không theo lối mòn** — Barbara Oakley, Beth Rogowsky, Terrence J. Sejnowski | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 1)
+  3. **Coding 10 lập trình với Python (Dành cho học sinh lớp 10)** — Nguyễn Hữu Hưng (chủ biên) | *Công nghệ thông tin - Tin Học Văn Phòng* (Khu vực: `Kệ C` - Tầng 3)
+  4. **Phát triển kỹ năng tư duy phản biện lớp 5 nâng cao** — Không rõ tác giả | *Khoa học – Công nghệ - Toán học ứng dụng* (Khu vực: `Kệ C` - Tầng 1)
+  5. **To Understand English Lớp 4 + 1 CD** — Joanna Le May | *Giáo dục – Ngoại ngữ - Tiếng Anh Thiếu Nhi* (Khu vực: `Kệ D` - Tầng 2)
+  6. **Những điều sách giáo khoa không dạy bạn - Năng lượng** — Không rõ tác giả | *Khoa học – Công nghệ - Khoa học vũ trụ* (Khu vực: `Kệ C` - Tầng 1)
+  7. **Boxset Dạy Con Làm Giàu** — Không rõ tác giả | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 3)
+  8. **Phát triển kỹ năng tư duy phản biện lớp 4** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:30:28`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `259.2 ms`
+- 🧑 **Bạn đọc nói:** **"quyển sách dạy tiếng Anh"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Đàm Thoại Tiếng Anh Trong Xã Giao, Du Lịch Và Công Việc (Kèm 1 Đĩa DVD-Room)** — Doris Brougham | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Đàm Thoại Tiếng Anh Trong Ngành Ngân Hàng - Kèm CD** — Lê Huy Lâm - Phạm Văn Thuận | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  3. **Sử Dụng Tiếng Anh Trong Sinh Hoạt Thường Ngày Từ Sáng Đến Tối (Kèm CD Hoặc File MP3)** — Baek Sun Yeop | *Giáo dục – Ngoại ngữ - Tiếng Anh* (Khu vực: `Kệ D` - Tầng 3)
+  4. **Restaurant English** — Live ABC | *Giáo dục – Ngoại ngữ - Tiếng Anh* (Khu vực: `Kệ D` - Tầng 2)
+  5. **Cười Và Học Tiếng Anh - 45 Truyện Cười Chơi Chữ Giúp Học Giỏi Tiếng Anh** — Nguyễn Quốc Hùng M.A | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 1)
+  6. **Tiếng Anh Cho Mọi Người - English For Everyone Level 2 Beginner Practice Book (Kèm CD)** — Rachel Harding | *Giáo dục – Ngoại ngữ - Luyện thi chứng chỉ* (Khu vực: `Kệ D` - Tầng 3)
+  7. **25 chuyên đề ngữ pháp tiếng Anh trọng tâm (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Anh* (Khu vực: `Kệ D` - Tầng 2)
+  8. **30 chủ đề từ vựng tiếng Anh (Bám sát chương trình sách giáo khoa mới; Theo định hướng thi mới)** — Trang Anh, Huỳnh Tài | *Giáo dục – Ngoại ngữ - Từ Vựng Tiếng Anh* (Khu vực: `Kệ D` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:30:40`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `235.63 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy về cuộc sống"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ E - Tầng 3 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Tư Duy Thiết Kế Ứng Dụng Trong Cuộc Sống - Design Thinking Life Playbook** — Michael Lewrick, Patrick Link, Larry Leifer | *Kỹ năng sống – Phát triển bản thân - Động lực sống* (Khu vực: `Kệ E` - Tầng 3)
+  2. **Nền Giáo Dục Của Người Giàu - Những Bài Học Để Thành Công Chỉ Trường Đời Mới Dạy (Michael Ellsberg)** — Michael Ellsberg | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  3. **Sáng Tạo Trong Công Việc Và Cuộc Sống: Playbook + Life Playbook** — Michael Lewrick, Patrick Link, Larry Leifer | *Kỹ năng sống – Phát triển bản thân - Tư duy tích cực* (Khu vực: `Kệ E` - Tầng 2)
+  4. **Tự Học Đàm Thoại Tiếng Anh - Cuộc Sống Hằng Ngày** — Tri Thức Việt | *Giáo dục – Ngoại ngữ - Tiếng Anh giao tiếp* (Khu vực: `Kệ D` - Tầng 1)
+  5. **Dạy học không theo lối mòn** — Barbara Oakley, Beth Rogowsky, Terrence J. Sejnowski | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 1)
+  6. **Quản Trị Cuộc Đời - Tác giả Bùi Gia Hiếu** — Bùi Gia Hiếu | *Kỹ năng sống – Phát triển bản thân - Kỹ năng giao tiếp* (Khu vực: `Kệ E` - Tầng 1)
+  7. **Bạn Đang Ở Đây: Cuốn Sách Ngắn Về Thế Giới** — Không rõ tác giả | *Tâm lý học - Tâm lý trị liệu* (Khu vực: `Kệ E` - Tầng 2)
+  8. **Người Phụ Nữ Giàu - Kiểm Soát Đồng Tiền. Quản Lý Cuộc Đời!** — Kim Kiyosaki | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 2)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:30:49`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `222.44 ms`
+- 🧑 **Bạn đọc nói:** **"sách dạy tiếng Trung"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Năng lực ngoại ngữ mở ra cánh cửa tri thức quốc tế và rất nhiều cơ hội nghề nghiệp. Dưới đây là các đầu sách luyện thi, ngữ pháp và đàm thoại chuẩn xác nhất trong kho sách thư viện:
+  > 
+  > 💬 *Bạn cần tài liệu ở mức độ cơ bản cho người mới bắt đầu hay tài liệu chuyên sâu nâng cao để mình lọc thêm cho bạn?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **301 Câu Đàm Thoại Tiếng Trung Quốc - Tập 2** — Khang Ngọc Hoa, Lai Tư Bình | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 2)
+  2. **Tiếng Trung dành cho học sinh tiểu học - Sách bài tập - Tập 3** — Vương Nguy, Kim Phi Phi | *Giáo dục – Ngoại ngữ - Giáo trình Hán ngữ* (Khu vực: `Kệ D` - Tầng 1)
+  3. **Tiếng Trung Quốc Trong Giải Trí (Kèm CD)** — Lý Thục Quyên | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 3)
+  4. **Học Tiếng Trung Quốc Cấp Tốc Trong 90 Ngày** — Lưu Hồng Mẫn | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 3)
+  5. **Trải nghiệm tiếng Trung dành cho học sinh tiểu học** — Không rõ tác giả | *Giáo dục – Ngoại ngữ - Luyện thi Tiếng Hoa HSK* (Khu vực: `Kệ D` - Tầng 3)
+  6. **Tự học tiếng Trung cấp tốc** — Nghiêm Minh | *Giáo dục – Ngoại ngữ - Tiếng Hoa Giao Tiếp* (Khu vực: `Kệ D` - Tầng 3)
+  7. **Bí Quyết Học Nhanh Nhớ Lâu 214 Bộ Thủ Tiếng Trung** — Đăng Khoa | *Giáo dục – Ngoại ngữ - Sách tham khảo* (Khu vực: `Kệ D` - Tầng 3)
+  8. **Tiêu chuẩn các cấp độ tiếng Trung trong giáo dục tiếng Trung quốc tế - Giáo trình ngữ pháp - Cao cấp** — Phương Hưng Long | *Giáo dục – Ngoại ngữ - Ngữ pháp Tiếng Hoa* (Khu vực: `Kệ D` - Tầng 3)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `CATEGORY_TOPIC` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
+## 💬 [HỘI THOẠI CHAT BOX] 🕒 `2026-11-17 10:31:03`
+- 👤 **Bạn đọc:** `Bạn đọc Kiosk` | ⚡ **Độ trễ:** `334.97 ms`
+- 🧑 **Bạn đọc nói:** **"thôi"**
+
+- 🤖 **Thủ thư AI trả lời:**
+
+  > Chào bạn! Dựa trên nhu cầu tìm kiếm của bạn, thủ thư đã chọn lọc các ấn phẩm tiêu biểu và phù hợp nhất hiện có trên kệ sách:
+  > 
+  > 💬 *Bạn có cần thủ thư hướng dẫn lối đi nhanh nhất tới Khu vực Kệ C - Tầng 2 để nhận sách ngay không?*
+
+- 📚 **Sách AI gợi ý (8 cuốn):**
+  1. **Mun ơi, chạy đi** — Không rõ tác giả | *Khoa học – Công nghệ - Vật lý đại cương* (Khu vực: `Kệ C` - Tầng 2)
+  2. **Như Chiếc Lá Gần Rơi** — Mì xưa Studio | *Văn học – Tiểu thuyết - Trinh thám* (Khu vực: `Kệ A` - Tầng 1)
+  3. **Dạy Con Làm Giàu 10 - Trước Khi Bạn Thôi Việc** — Robert T. Kiyosaki – Sharon L. Lechter | *Kinh tế – Kinh doanh - Bài học kinh doanh* (Khu vực: `Kệ B` - Tầng 1)
+  4. **Ươm mầm giỏi toán từ tiểu học 3 - phép cộng trừ chẳng khó** — Không rõ tác giả | *Khoa học – Công nghệ - Thiên văn học* (Khu vực: `Kệ C` - Tầng 1)
+  5. **Bến Xe** — Thương Thái Vi | *Văn học – Tiểu thuyết - Truyện ngôn tình* (Khu vực: `Kệ A` - Tầng 1)
+  6. **Còn chút gì để nhớ** — Nguyễn Nhật Ánh | *Văn học – Tiểu thuyết - Truyện ngắn - Tản văn - Tạp Văn* (Khu vực: `Kệ A` - Tầng 1)
+  7. **Check Your English Vocabulary For Ielts** — Rawdon Wyatt | *Giáo dục – Ngoại ngữ - Luyện thi IELTS* (Khu vực: `Kệ D` - Tầng 3)
+  8. **Hãy Về Với Cha** — Shin Kyung-sook | *Văn học – Tiểu thuyết - Tiểu Thuyết* (Khu vực: `Kệ A` - Tầng 1)
+
+- ⚙️ **Phân tích kỹ thuật ngầm của AI:**
+  - **Ý định (Intent):** `EXACT_BOOK` | **Nỗ lực đọc:** `vừa`
+  - **Tâm trạng nhận diện:** `Không có`
+
+---
+
